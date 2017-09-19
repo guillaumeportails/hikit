@@ -279,6 +279,30 @@ function addKml(f, n, c='blue') {
 }
 
 
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+
+    // Check if the XMLHttpRequest object has a "withCredentials" property.
+    // "withCredentials" only exists on XMLHTTPRequest2 objects.
+    xhr.open(method, url, true);
+
+  } else if (typeof XDomainRequest != "undefined") {
+
+    // Otherwise, check if XDomainRequest.
+    // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+
+  } else {
+
+    // Otherwise, CORS is not supported by the browser.
+    xhr = null;
+
+  }
+  return xhr;
+}
+
 
 function loadInfos() {
   if (zanim) { clearInterval(zanim); zanim = null; }
@@ -301,14 +325,54 @@ function loadInfos() {
 //addKml("MatukitukiW2.kml",		"West Matukituki");
 //addKml("MatukitukiE.kml",			"East Matukituki");
 
-  // TODO : CORS problem
+  const inreachfeed = "https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2017-01-01T00:00Z";
+  
+  // CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
+  // Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
   // https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
-  omnivore.kml("https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2012-10-16T06:19Z")
-  .bindPopup("Thierry's holidays")
-  .addTo(map);
-  addKml("feed.kml",				"Thierry's holidays");
+//  console.log("download omnivore");
+//  omnivore.kml(inreachfeed).bindPopup("Thierry's holidays").addTo(map);
+
+/***
+  console.log("download raw");
+  var xhr = createCORSRequest('GET', inreachfeed);
+  if (!xhr) {
+    console.log('CORS not supported');
+  } else {
+    xhr.onload  = function() { console.log(xhr.responseText); };
+    xhr.onerror = function() { console.log("error"); };
+    xhr.withCredentials = true;
+    xhr.send();
+  }
+***/
+
+  console.log("download ajax");
+  $.ajax({
+    type: 'GET',
+    url: 'http://query.yahooapis.com/v1/public/'
+	     + encodeURI('yql?q=select * from xml where url="' + inreachfeed + '"'),
+	dataType: 'xml',
+
+    // The 'contentType' property sets the 'Content-Type' header.
+    // The JQuery default for this property is
+    // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
+    // a preflight. If you set this value to anything other than
+    // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
+    // you will trigger a preflight request.
+    contentType: 'text/plain',
+
+    xhrFields: { withCredentials: true  },
+
+    headers: { },
+
+    success: function(data, textstatus, xhdr) {
+		console.log("ajax success " + data);
+		omnivore.kml.parse(data).addTo(map); },
+    error:   function() { console.log("ajax error"); },
+  });
 
 }
+
 
 function zAnim() { map.zoomIn(1); if (map.getZoom() >= 5) loadInfos(); }
 if (! zanim) loadInfos();
