@@ -151,10 +151,10 @@ var overlays = {
 };
 
 
-const CEN = [-41.228249, 174.484863];
-const CDG = [49.023433, 2.565565];
-const AKL = [-37.01184, 174.786966];
+const CDG = [ 49.023433, 2.565565];
+const AKL = [-37.011840, 174.786966];
 const INV = [-46.418097, 168.30338];
+const CEN = [-41.228249, 174.484863];
 
 
 var map = new L.Map('eltmap', {
@@ -307,9 +307,11 @@ function createCORSRequest(method, url) {
 function loadInfos() {
   if (zanim) { clearInterval(zanim); zanim = null; }
   
-//new L.circle(CEN, {radius: 20000}).bindPopup("Circle").addTo(map);
-  new L.polyline([CDG,AKL], {color:'#A8A8A8', weight:1 }).addTo(map);
-  new L.polyline([INV,CDG], {color:'#A8A8A8', weight:1 }).addTo(map);
+  const s = {radius: 100000.0, color:'#A8A8A8', weight:1};
+  new L.circle([-CDG[0], CDG[1]+180], s).bindPopup("CDG Antipode").addTo(map);
+  new L.circle([-INV[0], INV[1]-180], s).bindPopup("Invercargill Antipode").addTo(map);
+  new L.polyline([CDG,AKL], {color:'#A8A8A8', weight:1}).addTo(map);
+  new L.polyline([INV,CDG], {color:'#A8A8A8', weight:1}).addTo(map);
 
   addGpx("TeAraroaTrail.gpx", 		"<P>Official Te Araroa</p><p>2016/17 (v35)</p>");
 
@@ -351,24 +353,21 @@ function loadInfos() {
     type: 'GET',
     url: 'http://query.yahooapis.com/v1/public/'
 	     + encodeURI('yql?q=select * from xml where url="' + inreachfeed + '"'),
+
 	dataType: 'xml',
+	contentType: 'text/plain',
+	xhrFields: { withCredentials: true  },
+	headers: { },
 
-    // The 'contentType' property sets the 'Content-Type' header.
-    // The JQuery default for this property is
-    // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
-    // a preflight. If you set this value to anything other than
-    // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
-    // you will trigger a preflight request.
-    contentType: 'text/plain',
-
-    xhrFields: { withCredentials: true  },
-
-    headers: { },
-
-    success: function(data, textstatus, xhdr) {
-		console.log("ajax success " + data);
-		omnivore.kml.parse(data).addTo(map); },
-    error:   function() { console.log("ajax error"); },
+	success: function(data, textstatus, xhdr) {
+		console.log("ajax " + data + " " + textstatus);
+		omnivore.kml.parse(data).bindPopup('Inreach Feed',
+				null,
+				L.geoJson(null, {
+					filter: function(f) { return (f.geometry.type == "LineString"); },
+					style:  function(f) { return { color: 'green'}; }})
+		).addTo(map); },
+	error:   function() { console.log("ajax error"); },
   });
 
 }
