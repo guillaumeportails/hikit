@@ -76,7 +76,12 @@ var tilesToner = new L.TileLayer(
 	{   maxZoom: 15,
 		attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0' });
 
-// StamenTerrain
+var tilesTerrain = L.tileLayer(
+    'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}',
+	{	maxZoom: 18,
+		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		subdomains: 'abcd',
+		ext: 'png' });
 
 var tilesOSM = new L.TileLayer(
 	'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -113,6 +118,14 @@ var tilesDelorme = new L.TileLayer(
 	{   minZoom: 1, maxZoom: 11,
 		attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme' });
 
+var tilesWorldStreets = L.tileLayer(
+	'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+	{	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012' });
+
+var tilesImagery = L.tileLayer(
+	'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+	{	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community' });
+	
 var tilesKorona = new L.TileLayer(
 	'http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}',
 	{   minZoom: 1, maxZoom: 18,
@@ -135,9 +148,12 @@ var basemaps = {
 	'Hike,Bike': tilesHikeBike,
 	'Outdoors': tilesOutdoors,
     'DeLorme': tilesDelorme,
+	'WorldStreets': tilesWorldStreets,
     'Korona': tilesKorona,
 	'watercolor': tilesWatercolor,
-	'toner': tilesToner
+	'toner': tilesToner,
+	'terrain': tilesTerrain,
+	'imagery': tilesImagery
 };
 
 // Overlays
@@ -303,6 +319,21 @@ function createCORSRequest(method, url) {
   return xhr;
 }
 
+function inreachBubble(prop) {
+  return "<ul>" +
+	"<li>" + prop.Time + "</li>" +
+	"<li>" + prop.Text + "</li>" +
+	"</ul>";
+}
+
+// Extrait de leaflet-omnivore car options n'y est pas transmis
+function myKmlParse(kml, options) {		// kml: XMLDocument (not str)
+	console.log('myKmlParse ' + kml);
+    return  L.geoJson(toGeoJSON.kml(kml), options);
+}
+
+const iconPoint = L.icon({ iconUrl: 'icon-walk.png', iconAnchor: [ 5,  5] });
+const iconCamp  = L.icon({ iconUrl: 'icon-camp.png', iconAnchor: [15, 15] });
 
 function loadInfos() {
   if (zanim) { clearInterval(zanim); zanim = null; }
@@ -327,31 +358,25 @@ function loadInfos() {
 //addKml("MatukitukiW2.kml",		"West Matukituki");
 //addKml("MatukitukiE.kml",			"East Matukituki");
 
-  const inreachfeed = "https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2017-01-01T00:00Z";
+  const inreachfeed = "https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2017-07-01T00:00Z";
   
   // CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
   // Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
   // https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
 //  console.log("download omnivore");
 //  omnivore.kml(inreachfeed).bindPopup("Thierry's holidays").addTo(map);
-
-/***
-  console.log("download raw");
-  var xhr = createCORSRequest('GET', inreachfeed);
-  if (!xhr) {
-    console.log('CORS not supported');
-  } else {
-    xhr.onload  = function() { console.log(xhr.responseText); };
-    xhr.onerror = function() { console.log("error"); };
-    xhr.withCredentials = true;
-    xhr.send();
-  }
-***/
-
-  console.log("download ajax");
+//  var xhr = createCORSRequest('GET', inreachfeed);
+//  if (!xhr) {
+//    console.log('CORS not supported');
+//  } else {
+//    xhr.onload  = function() { console.log(xhr.responseText); };
+//    xhr.onerror = function() { console.log("error"); };
+//    xhr.withCredentials = true;
+//    xhr.send();
+//  }
   $.ajax({
     type: 'GET',
-    url: 'http://query.yahooapis.com/v1/public/'
+    url: 'https://query.yahooapis.com/v1/public/'
 	     + encodeURI('yql?q=select * from xml where url="' + inreachfeed + '"'),
 
 	dataType: 'xml',
@@ -359,15 +384,28 @@ function loadInfos() {
 	xhrFields: { withCredentials: true  },
 	headers: { },
 
-	success: function(data, textstatus, xhdr) {
+	// TODO:	Cf https://github.com/mapbox/leaflet-omnivore/blob/master/index.js
+	//			pour les param de kml.Parse, qui est kmlParse, qui appelle toGEOJSON mais sans lui passer
+	//			d'options : a faire a la main en incluant ici le code d'appel de toGeoJSON ?
+	success: function(data, textstatus, xhdr) {		// data : XMLDocument
 		console.log("ajax " + data + " " + textstatus);
-		omnivore.kml.parse(data).bindPopup('Inreach Feed',
-				null,
-				L.geoJson(null, {
-					filter: function(f) { return (f.geometry.type == "LineString"); },
-					style:  function(f) { return { color: 'green'}; }})
-		).addTo(map); },
-	error:   function() { console.log("ajax error"); },
+		// Convertir le XMLDocument data en texte geoJSON puis en layer geojson
+		line = [];
+		var lgeo = L.geoJson(toGeoJSON.kml(data), options = {
+			// L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
+			filter: function(f) { return f.geometry.type == 'Point'; },
+			pointToLayer: function(p,latlng) {
+				line.push([latlng.lat, latlng.lng]);
+				return L.marker(latlng, options = {
+					title : "Time: " + p.properties.Time + "",		// no HTML
+					icon: (p.properties.Text == 'OK, je dors ici.') ? iconCamp : iconPoint
+					}); } });
+		console.log(lgeo);
+		L.polyline(line, {color: 'firebrick', weight: 2, smoothFactor: 2}).addTo(map);
+		lgeo.bindPopup(function (layer) { return inreachBubble(layer.feature.properties); })
+		.addTo(map);
+		},
+	error: function() { console.log("ajax error"); },
   });
 
 }

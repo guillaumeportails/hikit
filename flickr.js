@@ -14,7 +14,7 @@ $(document).ready(function(){
 //	}
 
 	$('#flickrfeed').jflickrfeed({
-		limit: 4,
+		limit: 12,
 		qstrings: { id: ID,	tagmode:'all', tags: document.getElementById("flickrfeed").tagSelected },
 		useTemplate: false,
 		itemTemplate: '{{date_taken}}<br><a href="{{image}}"><img src="{{image_m}}" alt="{{title}}" /></a><br>',
