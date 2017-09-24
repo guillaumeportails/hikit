@@ -3,7 +3,7 @@
  */
  
 html, body {
-	background-color: light red;
+	background-color: white;
 	display: flex;
 	flex-flow: colum wrap;
 	width: 100%;
@@ -11,7 +11,6 @@ html, body {
 }
 	
 #divmap {
-	background-color: grey;
 	flex: auto;
 	position: relative;		/* Pour que le logo herite */
 	min-width: 50%;
@@ -21,14 +20,12 @@ html, body {
 }
 
 #divinsta {
-	background-color: lightgreen;
 	flex: initial;
 	width: 340px;
 	padding: 0 0 0 0;
 }
 
 #divflickr {
-	background-color: lightblue;
 	display: inline-block;
 	position: relative;
 	width: 280px;

@@ -320,20 +320,38 @@ function createCORSRequest(method, url) {
 }
 
 function inreachBubble(prop) {
-  return "<ul>" +
-	"<li>" + prop.Time + "</li>" +
-	"<li>" + prop.Text + "</li>" +
-	"</ul>";
+  return "<table>" +
+		"<tr><td><h6>Time</h6></td><td><h6>" + prop.Time + "</h6></td></tr>" +
+		"<tr><td>Message</td><td>" + prop.Text + "</td></tr>" +
+		 "</table></h6>";
 }
 
-// Extrait de leaflet-omnivore car options n'y est pas transmis
-function myKmlParse(kml, options) {		// kml: XMLDocument (not str)
-	console.log('myKmlParse ' + kml);
-    return  L.geoJson(toGeoJSON.kml(kml), options);
-}
+
 
 const iconPoint = L.icon({ iconUrl: 'icon-walk.png', iconAnchor: [ 5,  5] });
 const iconCamp  = L.icon({ iconUrl: 'icon-camp.png', iconAnchor: [15, 15] });
+
+function myKmlParse(xmldoc) {
+	line = [];	// Pour reconstruire une L.Polyline des kml <Placemark>
+	// Convertir le XMLDocument data en texte geoJSON puis en layer geojson
+	// ! toGeoJson.kml() perd les <TimeStamp>
+	const spy = toGeoJSON.kml(xmldoc);
+	var lgeo = L.geoJson(toGeoJSON.kml(xmldoc), options = {
+		// L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
+		filter: function(f) { return f.geometry.type == 'Point'; },
+		pointToLayer: function(p,latlng) {		// p.geometry = <Point> (<TimeStamp> est perdu ?) p.properties = <ExtendedData>
+			console.log("togeoJson.pointToLayer " + p);
+			line.push([latlng.lat, latlng.lng]);
+			const camp = (p.properties.Text == 'OK, je dors ici.');
+			return L.marker(latlng, options = {
+					title : "Time: " + p.properties.timestamp + "," + p.properties['Time UTC'] + "",		// no HTML
+					icon: (camp) ? iconCamp : iconPoint,
+					zIndexOffset: (camp) ? 100 : 0 
+				}); } });
+		L.polyline(line, {color: 'firebrick', weight: 2, smoothFactor: 2}).bindPopup("Actual journey").addTo(map);
+		lgeo.bindPopup(function (layer) { return inreachBubble(layer.feature.properties); }).addTo(map);
+}
+
 
 function loadInfos() {
   if (zanim) { clearInterval(zanim); zanim = null; }
@@ -358,27 +376,53 @@ function loadInfos() {
 //addKml("MatukitukiW2.kml",		"West Matukituki");
 //addKml("MatukitukiE.kml",			"East Matukituki");
 
-  const inreachfeed = "https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2017-07-01T00:00Z";
+//addKml("feed-example-full.kml",		"Large feed test");
+  addKml("2017-07-15-XSD-TBe-01.kml",	"GpsBipBip example<br>2017-07-15-XSD-TBe-01.kml");
+  $.ajax({
+	url: "tracks",
+	success: function(data){
+		$(data).find("a:contains(.kml)").each(function(){
+			console.log("this " + data + " " + $(this)); });
+		},
+	error: function() { console.log("ajax ls tracks error"); }
+  });
+  console.log("done");
+
+  // https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
+  const inreachfeed = 'https://inreach.garmin.com/Feed/Share/'
+						+ 'ThierryBernier?d1=2017-07-14T00:00Z'
+									+ '%26d2=2017-07-16T23:59Z';
   
   // CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
   // Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
-  // https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
-//  console.log("download omnivore");
-//  omnivore.kml(inreachfeed).bindPopup("Thierry's holidays").addTo(map);
-//  var xhr = createCORSRequest('GET', inreachfeed);
-//  if (!xhr) {
-//    console.log('CORS not supported');
-//  } else {
-//    xhr.onload  = function() { console.log(xhr.responseText); };
-//    xhr.onerror = function() { console.log("error"); };
-//    xhr.withCredentials = true;
-//    xhr.send();
-//  }
+  // Cf https://github.com/rndme/download : hors-sujet
+  //  console.log("download omnivore");
+  //  omnivore.kml(inreachfeed).bindPopup("Thierry's holidays").addTo(map);
+  //  var xhr = createCORSRequest('GET', inreachfeed);
+  //  if (!xhr) {
+  //    console.log('CORS not supported');
+  //  } else {
+  //    xhr.onload  = function() { console.log(xhr.responseText); };
+  //    xhr.onerror = function() { console.log("error"); };
+  //    xhr.withCredentials = true;
+  //    xhr.send();
+  //  }
+  //
+  // Emploi du web service YQL pour resoudre CORS :
+  // + feed depuis 201507 : 1634 elements ... mais retour vide (trop grand ?)
+  // + feed depuis 201707 :  525 elements ... ok.
+  // Limiter via https://developer.yahoo.com/yql/guide/paging.html ne semble pas marcher
+  // => Changer les dates d1 et d2 dans l'URL de feed inreach
+  //    Ex: chartreuse 2017/07 3 jours = 658 items, 1608 Document.elements : ok 
+
+  const yql_query = 'https://query.yahooapis.com/v1/public/'
+					+ encodeURI('yql?q=select * from xml where url=')
+					+ "%22" + inreachfeed + '%22';
+  console.log("InReach  " + inreachfeed);
+  console.log("ajax GET " + yql_query);
   $.ajax({
     type: 'GET',
-    url: 'https://query.yahooapis.com/v1/public/'
-	     + encodeURI('yql?q=select * from xml where url="' + inreachfeed + '"'),
-
+    url: yql_query,
 	dataType: 'xml',
 	contentType: 'text/plain',
 	xhrFields: { withCredentials: true  },
@@ -388,24 +432,10 @@ function loadInfos() {
 	//			pour les param de kml.Parse, qui est kmlParse, qui appelle toGEOJSON mais sans lui passer
 	//			d'options : a faire a la main en incluant ici le code d'appel de toGeoJSON ?
 	success: function(data, textstatus, xhdr) {		// data : XMLDocument
-		console.log("ajax " + data + " " + textstatus);
-		// Convertir le XMLDocument data en texte geoJSON puis en layer geojson
-		line = [];
-		var lgeo = L.geoJson(toGeoJSON.kml(data), options = {
-			// L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
-			filter: function(f) { return f.geometry.type == 'Point'; },
-			pointToLayer: function(p,latlng) {
-				line.push([latlng.lat, latlng.lng]);
-				return L.marker(latlng, options = {
-					title : "Time: " + p.properties.Time + "",		// no HTML
-					icon: (p.properties.Text == 'OK, je dors ici.') ? iconCamp : iconPoint
-					}); } });
-		console.log(lgeo);
-		L.polyline(line, {color: 'firebrick', weight: 2, smoothFactor: 2}).addTo(map);
-		lgeo.bindPopup(function (layer) { return inreachBubble(layer.feature.properties); })
-		.addTo(map);
-		},
-	error: function() { console.log("ajax error"); },
+		console.log("GOT " + data.getElementsByTagName('*').length + " elements");
+		console.log(data);
+		myKmlParse(xmldoc = data);	},
+	error: function() { console.log("ajax error"); }
   });
 
 }
