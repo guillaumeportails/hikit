@@ -390,11 +390,15 @@ function loadInfos() {
   });
   console.log("done");
 
+  const days = 100;
+  var d1 = new Date();
+  d1.setTime(Date.now() - days*86400*1000)
+
   // KML du tracking emis par la balise InReach :
   // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
   const inreachfeed = 'https://inreach.garmin.com/Feed/Share/'
-						+ 'ThierryBernier?d1=2017-07-14T00:00Z'
-									+ '%26d2=2017-07-16T23:59Z';
+						+ 'ThierryBernier?d1=' + d1.toJSON();
+//									+ '%26d2=' + d2.toJSON();
   
   // omnivore.kml(inreachfeed).bindPopup("Thierry's holidays").addTo(map);
   // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
@@ -422,7 +426,7 @@ function loadInfos() {
   //    }
   //
   
-  if (false) {
+  if (true) {
     // Emploi du web service YQL pour resoudre CORS :
     // + feed depuis 201507 : 1634 elements ... mais retour vide (trop grand ?)
     // + feed depuis 201707 :  525 elements ... ok.
