@@ -1,12 +1,11 @@
 
 
 REM download du feed via bitsadmin
-bitsadmin /reset
-bitsadmin /create /download abc
-bitsadmin /addfile abc "https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2017-07-14T00:00Z" feed.kml
-bitsadmin /resume abc
-bitsadmin /complete abc
-goto browse
+REM bitsadmin /reset
+REM bitsadmin /create /download abc
+REM bitsadmin /addfile abc "https://inreach.garmin.com/Feed/Share/ThierryBernier?d1=2017-07-14T00:00Z" feed.kml
+REM bitsadmin /resume abc
+REM bitsadmin /complete abc
 
 REM Serveur HTTP local et download du feed
 CD server
