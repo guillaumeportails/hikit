@@ -1,3 +1,22 @@
+// Carte Leaflet comprenant :
+// + un fond a choisir, possible depuis un serveur localhost:3000
+// + des traces (linestrings) de chemins heberges sur le meme site que ce script
+// + le feed InReach (points)
+ 
+
+ // Decoder un parametre "?param=valeur" de l'URI
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+
 // nztopomaps:
 //      Sur Z=5..9, c'est une photo d'assemblage de cartes => légende illisible (trop petit)
 //      Les Z=10,11,12 ont le meme detail, le 10 est illisible (légende minuscule)
@@ -276,7 +295,7 @@ var zanim = null; //setInterval(zAnim,1000);
 map.setView(CEN, (zanim) ? 1 : 6);
 
 
-function addGpx(f, n, c='red') {
+function addGpxLine(f, n, c='red') {
   omnivore.gpx("tracks/" + f,
 		null,
 		L.geoJson(null, {
@@ -285,7 +304,7 @@ function addGpx(f, n, c='red') {
 	.bindPopup(n).addTo(map);
 }
 
-function addKml(f, n, c='blue') {
+function addKmlLine(f, n, c='blue') {
   omnivore.kml("tracks/" + f,
 		null,
 		L.geoJson(null, {
@@ -315,7 +334,7 @@ function addKml(f, n, c='blue') {
 
 function inreachBubble(prop) {
   return "<table>" +
-		"<tr><td><h6>Time</h6></td><td><h6>" + prop.Time + "</h6></td></tr>" +
+		"<tr><td><h6>Time</h6></td><td><h6>" + (new Date(prop.timestamp)).toLocaleString() + "</h6></td></tr>" +
 		"<tr><td>Message</td><td>" + prop.Text + "</td></tr>" +
 		 "</table></h6>";
 }
@@ -325,13 +344,40 @@ function inreachBubble(prop) {
 const iconPoint = L.icon({ iconUrl: 'icon-walk.png', iconAnchor: [ 5,  5] });
 const iconCamp  = L.icon({ iconUrl: 'icon-camp.png', iconAnchor: [15, 15] });
 
+var feedAdd = function(feed) {
+	line = [];
+	toGeoJSON.kml(feed, options = {
+		// L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
+		filter: function(f) { return f.geometry.type == 'Point'; },
+		pointToLayer: function(p,latlng) {		// p.geometry = <Point> (<TimeStamp> est perdu ?) p.properties = <ExtendedData>
+			//console.log("togeoJson.pointToLayer " + p);
+			line.push([latlng.lat, latlng.lng]);
+			const camp = (p.properties.Text == 'OK, je dors ici.');
+			return L.marker(latlng, options = {
+				title : "UTC: " + (p.properties.timestamp || p.properties['Time UTC']),	// no HTML
+				icon: (camp) ? iconCamp : iconPoint,
+				zIndexOffset: (camp) ? 100 : 0 
+			}); }
+	});
+	console.log("ADD " + line.length + " inreach points");
+	if (line.length > 1) {
+		L.polyline(line, {color: 'firebrick', weight: 2, smoothFactor: 2}).bindPopup("Actual journey").addTo(map);
+		lgeo.bindPopup(function (layer) { return inreachBubble(layer.feature.properties); }).addTo(map);
+		return true;
+	}
+	return false;
+}
+
 
 // Cf https://github.com/mapbox/leaflet-omnivore/blob/master/index.js
 //	pour les param de kml.Parse, qui est kmlParse, qui appelle toGEOJSON mais sans lui passer
 //	d'options : fait a la main en incluant ici le code d'appel de toGeoJSON
 
-function myKmlParse(xmldoc) {
-	line = [];	// Pour reconstruire une L.Polyline des kml <Placemark>
+function myKmlParse(xmldoc, title) {
+	var line = [];	// Pour reconstruire une L.Polyline des kml <Placemark>
+	var prev = null;
+	var wasz = false;
+	var timl = new Date();
 	// Convertir le XMLDocument data en texte geoJSON puis en layer geojson
 	// ! toGeoJson.kml() de mapbox 0.3.1 perd les <TimeStamp>
 	//   La spec KML dit juste que TimeStamp est au format std de date XML,
@@ -340,32 +386,30 @@ function myKmlParse(xmldoc) {
 	//      https://www.w3.org/TR/xmlschema-2/#isoformats
 	// TODO : si on peut filter-out YQL de ExtendedData pour permettre plus de Placemark,
 	//        alors suivre le TimeStamp pour trouver les "Je dors ici".
-	const spy = toGeoJSON.kml(xmldoc);
 	var lgeo = L.geoJson(toGeoJSON.kml(xmldoc), options = {
-		// L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
-		filter: function(f) { return f.geometry.type == 'Point'; },
-		pointToLayer: function(p,latlng) {		// p.geometry = <Point> (<TimeStamp> est perdu ?) p.properties = <ExtendedData>
-			//console.log("togeoJson.pointToLayer " + p);
+		filter: function(f) {
+			// L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
+			return f.geometry.type == 'Point'; },
+		pointToLayer: function(p,latlng) {
 			line.push([latlng.lat, latlng.lng]);
-			const camp = (p.properties.Text == 'OK, je dors ici.');
-			return L.marker(latlng, options = {
-					title : "UTC: " + (p.properties.timestamp || p.properties['Time UTC']),	// no HTML
-					icon: (camp) ? iconCamp : iconPoint,
-					zIndexOffset: (camp) ? 100 : 0 
-				}); } });
-		console.log("ADD " + line.length + " inreach points");
-		L.polyline(line, {color: 'firebrick', weight: 2, smoothFactor: 2}).bindPopup("Actual journey").addTo(map);
+			const ts = new Date(p.properties.timestamp);
+			wasz = (ts > timl); 							//(p.properties.Text == 'OK, je dors ici.');
+			timl.setTime(ts.getTime() + 5*3600*1000);		// Arret de plus de 5h = Zzzz
+			if (prev && wasz) {
+				prev.setIcon(iconCamp);
+			prev.setZIndexOffset(100); }
+			//console.log("togeoJson.pointToLayer " + p.properties.timestamp + " " + wasz + " " + p.properties.Text);
+			prev = L.marker(latlng, options = {
+				title : "UTC: " + (p.properties.timestamp || p.properties['Time UTC']),	// no HTML
+				icon: iconPoint,
+				zIndexOffset: 0 });
+			return prev;
+		} });
+	console.log("ADD " + line.length + " inreach points");
+	if (line.length > 0) {
+		L.polyline(line, {color: 'firebrick', weight: 2, smoothFactor: 2}).bindPopup(title).addTo(map);
 		lgeo.bindPopup(function (layer) { return inreachBubble(layer.feature.properties); }).addTo(map);
-}
-
-function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
 }
 
 
@@ -378,22 +422,22 @@ function loadInfos() {
   new L.polyline([CDG,AKL], {color:'#A8A8A8', weight:1}).addTo(map);
   new L.polyline([INV,CDG], {color:'#A8A8A8', weight:1}).addTo(map);
 
-  addGpx("TeAraroaTrail.gpx", 		"<P>Official Te Araroa</p><p>2016/17 (v35)</p>");
+  addGpxLine("TeAraroaTrail.gpx", 		"<P>Official Te Araroa</p><p>2016/17 (v35)</p>");
 
-  addKml("pyke-track.kml", 			"Pyke");
-  addKml("hollyford-track.kml",		"Hollyford");
-  addKml("caples-track.kml",		"Caples");
-  addKml("greenstone-track.kml",	"Greenstone");
-  addKml("routeburn-track-2.kml",	"Routeburn");
+  addKmlLine("pyke-track.kml", 			"Pyke");
+  addKmlLine("hollyford-track.kml",		"Hollyford");
+  addKmlLine("caples-track.kml",		"Caples");
+  addKmlLine("greenstone-track.kml",	"Greenstone");
+  addKmlLine("routeburn-track-2.kml",	"Routeburn");
 
-  addKml("FrenchRidge.kml",			"French Ridge");
-  addKml("aspiring.kml",			"Aspiring");
-//addKml("MatukitukiW.kml",			"West Matukituki");
-//addKml("MatukitukiW2.kml",		"West Matukituki");
-//addKml("MatukitukiE.kml",			"East Matukituki");
+  addKmlLine("FrenchRidge.kml",			"French Ridge");
+  addKmlLine("aspiring.kml",			"Aspiring");
+//addKmlLine("MatukitukiW.kml",			"West Matukituki");
+//addKmlLine("MatukitukiW2.kml",		"West Matukituki");
+//addKmlLine("MatukitukiE.kml",			"East Matukituki");
 
-//addKml("feed-example-full.kml",		"Large feed test");
-  addKml("2017-07-15-XSD-TBe-01.kml",	"GpsBipBip example<br>2017-07-15-XSD-TBe-01.kml");
+//addKmlLine("feed-example-full.kml",		"Large feed test");
+  addKmlLine("2017-07-15-XSD-TBe-01.kml",	"GpsBipBip example<br>2017-07-15-XSD-TBe-01.kml");
   
   console.log("check all KML's");
   $.ajax({
@@ -406,9 +450,26 @@ function loadInfos() {
   });
   console.log("done");
 
+  // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
+  $.ajax({
+	type: 'GET',
+	url: 'tracks/feed.kml',
+	dataType: 'xml',
+	contentType: 'text/plain',
+	xhrFields: { withCredentials: true  },
+	headers: { },
+	success: function(data, textstatus, xhdr) {		// data : XMLDocument
+	  console.log("GOT " + data.getElementsByTagName('*').length + " elements (same-domain)");
+	  myKmlParse(xmldoc = data, title = "InReach feed");
+	},
+	error: function() { console.log("GET tracks/feed.kml error"); }
+  });
+
+  // Recherche du feed sur le domaine InReach
+  //  
   // + Expansion XML du feed InReach = 47 eltXML par Placemark
   // + YQL accepte au moins 84 Placemark = 8 jours
-  // + TODO: vu un succes avec 320 points (14764 eltXML) : Time-out ajax.GET a régler ?
+  //       vu un succes avec 320 points (14764 eltXML)
   const days = getParameterByName('days') || 30;
   console.log('days = ' + days);
   var d1 = new Date();
@@ -420,7 +481,8 @@ function loadInfos() {
 						+ 'ThierryBernier?d1=' + d1.toJSON();
 //									+ '%26d2=' + d2.toJSON();
   
-  // omnivore.kml(inreachfeed).bindPopup("Thierry's holidays").addTo(map);
+  // Tentative de GET Cross-Domain (en principe cela echoue avec un browser moderne / par défaut)
+  // omnivore.kml(inreachfeed).addTo(map);
   $.ajax({
 	type: 'GET',
 	url: inreachfeed,
@@ -431,50 +493,35 @@ function loadInfos() {
 	crossDomain: true,
 	success: function(data, textstatus, xhdr) {		// data : XMLDocument
 	  console.log("GOT " + data.getElementsByTagName('*').length + " elements (CORS)");
-	  myKmlParse(xmldoc = data);
+	  myKmlParse(xmldoc = data, title = "InReach since " + d1);
 	},
 	error: function() {
-	  console.log("GET CORS feed.kml error");
-	}
-  });
-  // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
-  //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
-  //    (meme localhost) different de inreachfeed.
-  // Quelques contournement possibles :
-  // 1) Utiliser un proxy
-  // 	Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
-  //    Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
-  //    plusieurs, en trouvant la taille limite
-  // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
-  // 	2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
-  //         alors il suffit de precharger le inreachfeed.
-  //         Par exemple en profitant du code node.js qui permet de servir localement
-  //         des tuiles de a Leaflet.
-  //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
-  // 3) ?
-  //    Cf https://github.com/rndme/download : hors-sujet
-  //    var xhr = createCORSRequest('GET', inreachfeed);
-  //    if (!xhr) { console.log('CORS not supported'); } else {
-  //      xhr.onload  = function() { console.log(xhr.responseText); };
-  //      xhr.onerror = function() { console.log("error"); };
-  //      xhr.withCredentials = true;
-  //      xhr.send();
-  //    }
-  //
-
-  // Lecture du tracks/feed.kml qui est arrive ici par ses propres moyens ...
-  $.ajax({
-	type: 'GET',
-	url: 'tracks/feed.kml',
-	dataType: 'xml',
-	contentType: 'text/plain',
-	xhrFields: { withCredentials: true  },
-	headers: { },
-	success: function(data, textstatus, xhdr) {		// data : XMLDocument
-	  console.log("GOT " + data.getElementsByTagName('*').length + " elements (same-domain)");
-	  myKmlParse(xmldoc = data);
-	},
-	error: function() {
+	  // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
+	  //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
+	  //    (meme localhost) different de inreachfeed.
+	  // Quelques contournement possibles :
+	  // 1) Utiliser un proxy
+      // 	Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
+	  //    Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
+	  //    plusieurs, en trouvant la taille limite
+	  // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
+	  // 	2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
+	  //         alors il suffit de precharger le inreachfeed.
+	  //         Par exemple en profitant du code node.js qui permet de servir localement
+	  //         des tuiles de a Leaflet.
+	  //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
+	  // 3) ?
+	  //    Cf https://github.com/rndme/download : hors-sujet
+	  //    var xhr = createCORSRequest('GET', inreachfeed);
+	  //    if (!xhr) { console.log('CORS not supported'); } else {
+	  //      xhr.onload  = function() { console.log(xhr.responseText); };
+	  //      xhr.onerror = function() { console.log("error"); };
+	  //      xhr.withCredentials = true;
+	  //      xhr.send();
+	  //    }
+	  // 4) Faire que le browser accepte un GET cross domain.
+	  //    C'est possible pour firefox avec ce plugin :
+	  //		https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/ 
 	  console.log("GET tracks/feed.kml error reverting to YQL");
       // Emploi du web service publique YQL pour resoudre CORS :
       // + limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
@@ -498,7 +545,7 @@ function loadInfos() {
 	    success: function(data, textstatus, xhdr) {		// data : XMLDocument
 		  console.log("GOT " + data.getElementsByTagName('*').length + " XML elements (proxyed)");
 		  if (data.getElementsByTagName('*').length < 40) console.log(data);  // TODO: recommencer avec 0.8*days 
-		  myKmlParse(xmldoc = data);
+		  myKmlParse(xmldoc = data, title = "Inreach since " + d1);
 		},
 	    error: function() { console.log("ajax/YQL error"); }
       });
