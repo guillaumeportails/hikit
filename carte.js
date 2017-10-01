@@ -358,12 +358,12 @@ function addKmlLine(f, c = 'blue') {
                         color: c
                     };
                 },
-				onEachFeature: function(f, layer) {
-					if (f.properties && f.properties.name) {
-						layer.bindPopup(f.properties.name);
-					}
-				}
-			})).addTo(map);
+                onEachFeature: function(f, layer) {
+                    if (f.properties && f.properties.name) {
+                        layer.bindPopup(f.properties.name);
+                    }
+                }
+            })).addTo(map);
 }
 
 
@@ -467,13 +467,31 @@ function loadInfos() {
     addGpxLine("TeAraroaTrail.gpx",
         "<p>Official Te Araroa</p><p>2016/17 (v35)</p>");
 
-	const kmls = [
-		"pyke-hollyford.kml", "routeburn.kml", 
-	    "aspiring.kml",
-	];
-	kmls.forEach(function(item,index) {
-        addKmlLine(item);
-	});
+    const c_hitch = 'dimgray';
+    const c_cycle = 'purple';
+    const c_feet  = 'blue';
+    const kmls = [
+	    [ "Russel.kml",               c_hitch ],
+		[ "brett.kml" ],
+	    [ "Hunua-Coromandel.kml",     c_hitch ],
+		[ "coromandel.kml" ],
+	    [ "Coromandel-Kaimai.kml",    c_hitch ],
+		[ "kaimai.kml" ],
+	    [ "Kaimai-Waikato.kml",       c_hitch ],
+	    [ "Waikato.kml",              c_cycle ],
+		[ "Waikato-Pureroa.kml" ],
+		[ "tongariro.kml" ],
+	    [ "Whanganui-Taranaki.kml",   c_hitch ],
+		[ "taranaki.kml" ],
+        [ "Hawea-Aspiring.kml",       c_hitch ],
+        [ "aspiring.kml" ],
+        [ "routeburn.kml" ],
+        [ "pyke-hollyford.kml" ],
+        [ "caples.kml" ],
+    ];
+    kmls.forEach(function(item,index) {
+        addKmlLine(item[0], (item[1]) ? item[1] : c_feet);
+    });
 
     addKmlLine("mytrack/2017-07-15-XSD-TBe-01.kml",
         "GpsBipBip example<br>2017-07-15-XSD-TBe-01.kml");
