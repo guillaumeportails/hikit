@@ -369,9 +369,9 @@ function addKmlLine(f, c = 'blue') {
 
 function inreachBubble(prop) {
     return "<table>"
-		+ "<tr><td><h6>Time</h6></td><td><h6>"
-		+ (new Date(prop.timestamp)).toLocaleString() + "</h6></td></tr>"
-		+ "</table>"
+        + "<tr><td><h6>Time</h6></td><td><h6>"
+        + (new Date(prop.timestamp)).toLocaleString() + "</h6></td></tr>"
+        + "</table>"
         + ((prop.Text) ? ("<h5>" + prop.Text + "</h5>") : "");
 }
 
@@ -394,10 +394,10 @@ function myKmlParse(xmldoc, title, cmt) {
     var prev = null;
     var wasz = false;
     var timl = new Date();
-	var mgrp = L.markerClusterGroup({
-		animate: true,
-		disableClusteringAtZoom: 12 
-	});
+    var mgrp = L.markerClusterGroup({
+        animate: true,
+        disableClusteringAtZoom: 12 
+    });
     // Convertir le XMLDocument data en texte geoJSON puis en layer geojson
     // ! toGeoJson.kml() de mapbox 0.3.1 perd les <TimeStamp>
     //   La spec KML dit juste que TimeStamp est au format std de date XML,
@@ -421,17 +421,21 @@ function myKmlParse(xmldoc, title, cmt) {
                 prev.setZIndexOffset(100);
             }
             //console.log("togeoJson.pointToLayer " + p.properties.timestamp + " " + wasz + " " + p.properties.Text);
+            var t = null;
+            if (p.properties.timestamp)
+                t = new Date(p.properties.timestamp).toLocaleString();
+            else
+                t = "UTC: " + new Date(p.properties['Time UTC']).toLocaleString();
             prev = L.marker(latlng, options = {
-                title: "UTC: " + (p.properties.timestamp ||
-                    p.properties['Time UTC']), // no HTML
+                title: t, // no HTML
                 icon: iconPoint,
                 zIndexOffset: 0
             });
-			mgrp.addLayer(prev);
+            //mgrp.addLayer(prev);
             return prev;
         }
     });
-	setInfo(line.length + " InReach points " + cmt);
+    setInfo(line.length + " InReach points " + cmt);
     if (line.length > 0) {
         mlin = L.polyline(line, {
             color: 'firebrick',
@@ -477,18 +481,18 @@ function loadInfos() {
     const c_cycle = 'purple';
     const c_feet  = 'blue';
     const kmls = [
-	    [ "Russel.kml",               c_hitch ],
-		[ "brett.kml" ],
-	    [ "Hunua-Coromandel.kml",     c_hitch ],
-		[ "coromandel.kml" ],
-	    [ "Coromandel-Kaimai.kml",    c_hitch ],
-		[ "kaimai.kml" ],
-	    [ "Kaimai-Waikato.kml",       c_hitch ],
-	    [ "Waikato.kml",              c_cycle ],
-		[ "Waikato-Pureroa.kml" ],
-		[ "tongariro.kml" ],
-	    [ "Whanganui-Taranaki.kml",   c_hitch ],
-		[ "taranaki.kml" ],
+        [ "Russel.kml",               c_hitch ],
+        [ "brett.kml" ],
+        [ "Hunua-Coromandel.kml",     c_hitch ],
+        [ "coromandel.kml" ],
+        [ "Coromandel-Kaimai.kml",    c_hitch ],
+        [ "kaimai.kml" ],
+        [ "Kaimai-Waikato.kml",       c_hitch ],
+        [ "Waikato.kml",              c_cycle ],
+        [ "Waikato-Pureroa.kml" ],
+        [ "tongariro.kml" ],
+        [ "Whanganui-Taranaki.kml",   c_hitch ],
+        [ "taranaki.kml" ],
         [ "Hawea-Aspiring.kml",       c_hitch ],
         [ "aspiring.kml" ],
         [ "routeburn.kml" ],
