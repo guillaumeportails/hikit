@@ -29,11 +29,11 @@ $(document).ready(function(){
 
     $("button").click(function(){
 		var me = $(this);
- 		console.log('clic ' + document.getElementById('flickrfeed').aaa);
+		console.log('clic ' + document.getElementById('flickrfeed').aaa);
 		// TODO: transmettre aaa (date de la photo) à la carte
 		// TODO: comment remonter le flickr.photos.geo.getLocation() vers la carte ?
 		// Utiliser une URL du service map de flickr :
-		// 	https://www.flickr.com/map?&fLat=-34.4739&fLon=172.7122&zl=13
+		//	https://www.flickr.com/map?&fLat=-34.4739&fLon=172.7122&zl=13
 		//	https://www.flickr.com/photos/tags/Te%20Araroa/map?&fLat=-34.4739&fLon=172.7121&zl=13
 		//	https://www.flickr.com/map?&fLat=-34.4739&fLon=172.7122&zl=13&tags=animal#
 		//	https://www.flickr.com/photos/flyingkiwigirl/map?&fLat=-34.4739&fLon=172.7122&zl=13
