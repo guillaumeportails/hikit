@@ -1,2 +1,2 @@
 # hikit
-A html page with , a flickr feed, an instagram feed, and a leaflet map showing a delorme/inreach live track
+A html page containing a leaflet map showing a (hopefully) live track and an instagram feed.
