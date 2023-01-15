@@ -1,3 +1,4 @@
+// patch de omnivore: le 0.3.1 de api.mapbox.com n'a pas TimeStamp
 var toGeoJSON = (function() {
     'use strict';
 
