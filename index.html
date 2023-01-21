@@ -19,11 +19,12 @@
 	<script src="https://unpkg.com/leaflet.markercluster@1.1.0/dist/leaflet.markercluster.js"></script>
 	<script src="leaflet.filelayer.js"></script>
 	<script src="togeojson.js"></script>
+
 </head>
 
 
 <body style="margin:0;height:100%;overflow-y:hidden">
-	<div id="divflickr">
+<!--	<div id="divflickr">
 		<p style="align:center; margin:4px">
 			<a href="https://continentaldividetrail.org/explore-the-trail/">CDTC</a>
 		</p>
@@ -41,7 +42,7 @@
 		<ul id="flickrfeed"></ul>
 		<script src="flickr.js"></script>
 	</div>
-
+-->
 	<div id="divmap">
 		<p id="msgmap">Planned and actual routes
 			<a href="https://continentaldividetrail.org/explore-the-trail/">CDTC</a>
@@ -51,7 +52,9 @@
 		<script src="carte.js"></script>
 	</div>
 
-	<div id="divinsta" style="height:100%;width=25%;overflow-y:auto">
+	<div id="divinsta"
+                        onmousemove="toto()"
+                        style="height:100%;width=25%;overflow-y:auto">
 <!-- Juicer	--
 		<iframe src="https://www.juicer.io/api/feeds/thierrysholidays/iframe?per=10"
 				frameborder="0" scrolling="true" width="100%" height="100%">
@@ -67,14 +70,61 @@
 		<h1 class="referral"><a href="https://www.juicer.io">InstaFeed Powered by Juicer</a></h1></ul>
 !--	-->
 <!-- LightWidget WIDGET -->
-<!-- LightWidget WIDGET -->
+                <button onclick="tutu()">HERE</button> 
 		<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-		<iframe src="https://cdn.lightwidget.com/widgets/b9c78f86ff165262b3093e1cbc23bbd1.html"
+		<iframe id="igfeed"
+                        src="https://cdn.lightwidget.com/widgets/b9c78f86ff165262b3093e1cbc23bbd1.html"
 			scrolling="no" allowtransparency="true" class="lightwidget-widget"
 			style="width:100%;height:100%;border:0;overflow-x:hidden;overflow-y:auto;"></iframe>
+                        <!-- "pointer-events:none;" pour capter onmousexx mais tue lightwidget -->
 		</iframe>
 <!--	-->
 	</div>
+
+<div id="test">TEST</div>
+
+<script>
+let nnn=0;
+function toto()
+{
+  nnn = nnn+1;
+  document.getElementById('test').innerHTML = "<p>++" + nnn + "++</p>";
+}
+function tutu()
+{
+  // made by chatGPT
+  var iframe = document.getElementById("igfeed");
+  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;      // Viole CORS
+  var elements = iframeDoc.getElementsByTagName("*");
+  var textList = [];
+  for (var i = 0; i < elements.length; i++) {
+    var elementText = elements[i].innerText;
+    if (elementText) {
+        textList.push(elementText);
+    }
+  }
+
+  document.getElementById('test').innerHTML = "<p>" + textList + "</p>";
+}
+</script>
+
+<script>
+//setInterval(function(){
+//    var element = $(':hover');
+//    if (element.length)
+//    {
+//        var r = "";
+//        for (let i = 0; i < element.length; i++)
+//        {
+//            var domElement = element[i];
+//            var tagName = domElement.tagName;
+//            var id = domElement.id ? ' id="' + domElement.id + '"' : "";
+//            r = r + "<p>hover: &lt;" + tagName.toLowerCase() + id + "&gt;</p>";
+//        }
+//        document.getElementById('test').innerHTML = r;
+//    }
+//}, 1000);
+</script>
 
 </body>
 </html>
