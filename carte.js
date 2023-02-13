@@ -17,77 +17,20 @@ function getParameterByName(name, url) {
 }
 
 
-
-// nztopomaps:
-//      Sur Z=5..9, c'est une photo d'assemblage de cartes => l�gende illisible (trop petit)
-//      Les Z=10,11,12 ont le meme detail, le 10 est illisible (l�gende minuscule)
-//      Les Z=13,14,15 ont le meme detail, le 13 est illisible (l�gende minuscule)
-//      Il vaut mieux alors utiliser OTM a ces Z.
-//
-// LINZ Data Service    https://data.linz.govt.nz/layer/767-nz-topo50-maps/webservices/
-//      http://tiles-{s}.data-cdn.linz.govt.nz/services;key='   // s='abcd'
-//      + 'b0542c447ceb4901a8363b54f2441727'
-//      + '/tiles/v4/layer=xxx/EPSG:3857/{z}/{x}/{y}.png';
-//    layer 2343 : NZ Topo50  gridless   details constants 1cm=500m
-//                 valable pour Z=13..14 l�gendes et routes illisibles a Z<=12
-//    layer 2324 : NZ Topo250 gridless   details constant 1cm=2500m
-//                 valable pour Z=10..12 l�gendes et routes illisibles a Z<=9, limite pour 10
-//
-// Meilleure carte de Nouvelle-Zelande selon Z :
-//  <=8   OTM
-//    9
-//   10   OSM ou outdoors
-//   11   nztopomaps  (un peu petit)
-//   12   nztopomaps
-//   13   nztopomaps (plus de nom), ou OTM (camp mieux visibles)
-//   14   nztopomaps  (mais camp pas tous marques)
-//   15   nztopomaps
-//   16   OSM         (ou outdoors mais le TA y est en dur)
-//   17   OSM
-// On peut construire cet empilement avec MOBAC et ses customMapSource/minZoom/maxZoom, ou bien avec
-// un server HTTP local dedie
+// Source de tuiles/cartes 
 //
 // Cf http://wiki.openstreetmap.org/wiki/Zoom_levels
 //    Z    m/pixel    km/tile   (256pixels/tile, m pour lat=0)
-//   10    152        39
-//   11     76        19
-//   12     38        10
-//   13     19         4.9
-//   14      9.5       2.440
-//   15      4.8       1.220
-//   16      2.4       0.610
-//   17      1.2       0.306
-//   18      0.6       0.153
+//   10    152.0        39.0
+//   11     76.0        19.0
+//   12     38.0        10.0
+//   13     19.0         4.9
+//   14      9.5         2.440
+//   15      4.8         1.220
+//   16      2.4         0.610
+//   17      1.2         0.306
+//   18      0.6         0.153
 
-var tilesNztopomaps = new L.TileLayer(
-    'http://nz1.nztopomaps.com/{z}/{x}/{y}.png', {
-        maxZoom: 15, // Offre du z=15 mais 15 n'a pas plus de detail que 14 et 13.
-        continuousWorld: true,
-        tms: true, //true pour nztopomaps
-        attribution: 'nztopomaps.com, Sourced from LINZ. CC-BY 3.0'
-    });
-
-var tilesLDS50 = new L.TileLayer(
-    'https://tiles-{s}.data-cdn.linz.govt.nz/services;key=' +
-    'b0542c447ceb4901a8363b54f2441727' +
-    '/tiles/v4/layer=2343,style=auto/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        subdomains: 'ab',
-        continuousWorld: true,
-        tms: true,
-        attribution: 'LINZ Data Service, CC-BY 3.0'
-    });
-
-var tilesLDS250 = new L.TileLayer(
-    'http://tiles-{s}.data-cdn.linz.govt.nz/services;key=' +
-    'b0542c447ceb4901a8363b54f2441727' +
-    '/tiles/v4/layer=2324/EPSG:3857/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        subdomains: 'ab',
-        continuousWorld: true,
-        tms: true,
-        attribution: 'LINZ Data Service, CC-BY 3.0'
-    });
 
 var tilesWatercolor = new L.TileLayer(
     'http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
@@ -116,15 +59,8 @@ var tilesOSM = new L.TileLayer(
         attribution: 'OpenStreetMap. CC-BY 3.0'
     });
 
-var tilesOCM = new L.TileLayer(
-    'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        subdomains: 'ab',
-        attribution: 'OpenCycleMap. CC-BY 3.0'
-    });
-
 var tilesOTM = new L.TileLayer(
-    'http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', /* https pour le site OTM uniquement */ {
+    'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', /* https pour le site OTM uniquement ?*/ {
         maxZoom: 17,
         subdomains: 'abc',
         attribution: '&copy; <a href="http://opentopomap.org/credits">OpenTopoMap</a> CC-BY-SA'
@@ -175,19 +111,13 @@ var tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
     });
 
 const basemaps = {
-    '<i>local</i>': tilesLocal,
-    'nztopomaps': tilesNztopomaps,
-    'NZ Topo50': tilesLDS50,
-    'NZ Topo250': tilesLDS250,
-    'nztopomaps': tilesNztopomaps,
-    'OCM': tilesOCM,
     'OSM': tilesOSM,
     'OTM': tilesOTM,
-    'Hike,Bike': tilesHikeBike,
+//  'Hike,Bike': tilesHikeBike,
     'Outdoors': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
-    'Korona': tilesKorona,
+//  'Korona': tilesKorona,
     'watercolor': tilesWatercolor,
     'toner': tilesToner,
     'terrain': tilesTerrain,
@@ -195,21 +125,20 @@ const basemaps = {
 };
 
 // Overlays
-var tilesLonvia = new L.TileLayer(
-    'http://tile.lonvia.de/hiking/{z}/{x}/{y}.png', {
-        maxZoom: 17,
-        attribution: '<a hrf="http://lonvia.de/">Lonvia</a>, et al. CC-BY 3.0'
+var tilesWayMarkedTrails = new L.TileLayer(
+    'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '<a href="hiking.waymarkedtrails.org">waymarkedtrails.org</a>. CC-SA 3.0'
     });
 
+
 const overlays = {
-    'Lonvia': tilesLonvia
+    'Waymarkedtrails': tilesWayMarkedTrails
 };
 
 
-const CDG = [49.023433, 2.565565];
-const AKL = [-37.011840, 174.786966];
-const INV = [-46.418097, 168.30338];
-const CEN = [-41.228249, 174.484863];
+var firstfly = true;
+var flownTo = new Set();
 
 
 var map = new L.Map('eltmap', {
@@ -289,13 +218,13 @@ map.on('keypress', function onKeyPressed(e) {
     }
 });
 
-map.on('click', function onMapClick(e) {
-    setInfo(latlonImage(e.latlng) + "  z" + map.getZoom());
+map.on('click', e => {
+    setInfo(`${latlonImage(e.latlng)}  z${map.getZoom()}`);
 });
 
 
-/* Emploi du plugin FileLayer pour charger du KML sur la carte
- */
+// Emploi du plugin FileLayer pour charger du KML local sur la carte
+// + Cas ou l'utilisateur voudrait ajouter ses propres GPX/KML
 var control = L.Control.fileLayerLoad({
     //Allows you to use a customized version of L.geoJson.
     //For example if you are using the Proj4Leaflet leaflet plugin,
@@ -327,35 +256,39 @@ control.loader.on('data:loaded', function(e) {
 var zanim = null; //setInterval(zAnim,1000);
 
 
-map.setView(CEN, (zanim) ? 1 : 6);
+// Commencer avec :
+// + une vue globale trajet     [31.803, -42.367]   z3
+map.setView([31.803, -42.367], (zanim) ? 1 : 3);
 
 
-function addGpxLine(f, n, c = 'red') {
-    omnivore.gpx("tracks/" + f,
+function addGpx(f, n, s = { color: 'red'} ) {
+    const layer = omnivore.gpx("tracks/" + f,
             null,
             L.geoJson(null, {
                 filter: function(f) {
                     return (f.geometry.type == "LineString");
                 },
-                style: function(f) {
-                    return {
-                        color: c
-                    };
-                }
-            }))
-        .bindPopup(n).addTo(map);
+                style: function(f) { return s; }
+            }));
+    layer.bindPopup(n).addTo(map);
+    return layer;
 }
 
-function addKmlLine(f, c = 'blue') {
-    omnivore.kml("tracks/" + f,
-            null,
-            L.geoJson(null, {
-                filter: function(f) {
-                    return (f.geometry.type == "LineString");
-                },
-                style: function(f) {
-                    return {
-                        color: c
+
+function addKml(f, c = 'blue') {
+    fetch('tracks/' + f)
+        .then(function (response) {
+            //console.log(`addKmlLine(${f}) response ${response}`);
+            return response.text();
+        })
+        .then(function (xml) {
+            //console.log(`addKmlLine(${f}) xml ${xml}`);
+            let doc = toGeoJSON.kml(new DOMParser().parseFromString(xml, "text/xml"));
+            L.geoJson(doc, {
+                style: function (feature) {
+                    return {  // Use the KML file styling
+                        color:  feature.properties.stroke
+                        //weight: feature.properties.stroke-width
                     };
                 },
                 onEachFeature: function(f, layer) {
@@ -363,7 +296,25 @@ function addKmlLine(f, c = 'blue') {
                         layer.bindPopup(f.properties.name);
                     }
                 }
-            })).addTo(map);
+            }).addTo(map);
+        });
+    // omnivore.kml("tracks/" + f,
+    //         null,
+    //         L.geoJson(null, {
+    //             filter: function(f) {
+    //                 return (f.geometry.type == "LineString");
+    //             },
+    //             style: function(f) {
+    //                 return {
+    //                     color: c
+    //                 };
+    //             },
+    //             onEachFeature: function(f, layer) {
+    //                 if (f.properties && f.properties.name) {
+    //                     layer.bindPopup(f.properties.name);
+    //                 }
+    //             }
+    //         })).addTo(map);
 }
 
 
@@ -461,86 +412,45 @@ function loadInfos() {
         color: '#A8A8A8',
         weight: 1
     };
-    new L.circle([-CDG[0], CDG[1] + 180], s).bindPopup("CDG Antipode")
-        .addTo(map);
-    new L.circle([-INV[0], INV[1] - 180], s).bindPopup(
-        "Invercargill Antipode").addTo(map);
-    new L.polyline([CDG, AKL], {
-        color: '#A8A8A8',
-        weight: 1
-    }).bindPopup('flight in').addTo(map);
-    new L.polyline([INV, CDG], {
-        color: '#A8A8A8',
-        weight: 1
-    }).bindPopup('flight out').addTo(map);
 
-    addGpxLine("TeAraroaTrail.gpx",
-        "<p>Official Te Araroa</p><p>2017/18 (v36)</p>");
+    addKml('CDG_CrazyCook.kml');
+    const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT', { color: 'red', weight: 8, opacity: 0.7 });
+    addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
 
-    const c_hitch = 'dimgray';
-    const c_cycle = 'purple';
-    const c_feet  = 'blue';
-    const kmls = [
-        [ "Russel.kml",               c_hitch ],
-        [ "brett.kml" ],
-        [ "Hunua-Coromandel.kml",     c_hitch ],
-        [ "coromandel.kml" ],
-        [ "Coromandel-Kaimai.kml",    c_hitch ],
-        [ "kaimai.kml" ],
-        [ "Kaimai-Waikato.kml",       c_hitch ],
-        [ "Waikato.kml",              c_cycle ],
-        [ "Waikato-Pureroa.kml" ],
-        [ "tongariro.kml" ],
-        [ "Whanganui-Taranaki.kml",   c_hitch ],
-        [ "taranaki.kml" ],
-        [ "Hawea-Aspiring.kml",       c_hitch ],
-        [ "aspiring.kml" ],
-        [ "routeburn.kml" ],
-        [ "pyke-hollyford.kml" ],
-        [ "caples.kml" ],
-    ];
-    kmls.forEach(function(item,index) {
-        addKmlLine(item[0], (item[1]) ? item[1] : c_feet);
+    // http://adoroszlai.github.io/leaflet-distance-markers/
+    // TODO: utiliser les noms du GPX, ce calcul de distance ne colle pas a cause de la discretisation du chemin
+    hm.on('ready', function (e) {
+        const fc = e.target.toGeoJSON();
+        // ? Qui a inverse lng,lat ?
+        const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
+        const line = L.polyline(coords, {
+            distanceMarkers: { showAll: 13, offset: 1609, iconSize: [32, 16] }
+        });
+        // line.on('mouseover', line.addDistanceMarkers);
+        // line.on('mouseout', line.removeDistanceMarkers);
+        map.addLayer(line);
     });
 
-    addKmlLine("mytrack/2017-07-15-XSD-TBe-01.kml",
-        "GpsBipBip example<br>2017-07-15-XSD-TBe-01.kml");
-
-// Ceci ne donne rien de bon : juste le HTML qui publie le contenu du repertoire
-//    console.log("check all KML's");
-//    $.ajax({
-//        url: "tracks",
-//        success: function(data) {
-//            $(data).find("a:contains(.kmz)").each(
-//                function() {
-//                    console.log("this " + data + " " + $(this));
-//                });
-//        },
-//        error: function() {
-//            console.log("ajax ls tracks error");
-//        }
-//    });
-
-    // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
-    $.ajax({
-        type: 'GET',
-        url: 'tracks/feed.kml',
-        dataType: 'xml',
-        contentType: 'text/plain',
-        xhrFields: {
-            withCredentials: true
-        },
-        headers: {},
-        success: function(data, textstatus, xhdr) { // data : XMLDocument
-            console.log("GOT " + data.getElementsByTagName(
-                    '*').length +
-                " elements (same-domain)");
-            myKmlParse(xmldoc = data, title = "InReach feed", cmt = "(hosted)");
-        },
-        error: function() {
-            console.log("GET tracks/feed.kml error");
-        }
-    });
+    // // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
+    // $.ajax({
+    //     type: 'GET',
+    //     url: 'tracks/feed.kml',
+    //     dataType: 'xml',
+    //     contentType: 'text/plain',
+    //     xhrFields: {
+    //         withCredentials: true
+    //     },
+    //     headers: {},
+    //     success: function(data, textstatus, xhdr) { // data : XMLDocument
+    //         console.log("GOT " + data.getElementsByTagName(
+    //                 '*').length +
+    //             " elements (same-domain)");
+    //         myKmlParse(xmldoc = data, title = "InReach feed", cmt = "(hosted)");
+    //     },
+    //     error: function() {
+    //         console.log("GET tracks/feed.kml error");
+    //     }
+    // });
 
     // Recherche du feed sur le domaine InReach
     //
@@ -558,7 +468,7 @@ function loadInfos() {
         'ThierryBernier?d1=' + d1.toJSON();
     //                                  + '%26d2=' + d2.toJSON();
 
-    // Tentative de GET Cross-Domain (en principe cela echoue avec un browser moderne / par d�faut)
+    // Tentative de GET Cross-Domain (en principe cela echoue avec un browser moderne / par defaut)
     // omnivore.kml(inreachfeed).addTo(map);
     $.ajax({
         type: 'GET',
@@ -661,5 +571,13 @@ if (!zanim) loadInfos();
 // External call (from divphoto / drive.js)
 function mapFlyTo(lat,lon)
 {
-    map.setView(L.latLng(lat,lon), map.getZoom(), { animate: true });
+    const s = `${lat} ${lon}`;
+    if (! flownTo.has(s)) {
+        flownTo.add(s);
+        L.circleMarker([lat,lon], { interactive: false }).addTo(map);
+    }
+    var z = map.getZoom();
+    if (firstfly) z = 12;
+    firstfly = false;
+    map.setView(L.latLng(lat,lon), z, { animate: true, duration: 1.5 });
 }

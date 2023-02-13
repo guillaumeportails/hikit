@@ -1,21 +1,37 @@
 /*  display:flex ... si browser "moderne". Pas parfait qd meme.
  *
  */
- 
-html, body {
+
+html,
+body {
 	background-color: white;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-flow: column wrap;
-	width: 100%;
-    height: 100%;
 }
-	
+
+/*---- Vertical division */
+/*****
+#divdbg {
+	width: 100%;
+}
+
+#divapp {
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+}
+****/
+
+/*---- Horizontal division */
+
 #divmap {
 	flex: auto;
-	position: relative;		/* Pour que le logo herite */
-	min-width: 50%;
-	min-height: 50%;
+	position: relative;
+	/* Pour que le logo herite */
 	height: 100%;
+	width: 75%; /*calc(100%-340px-280px);*/
 	resize: horizontal;
 	overflow: hidden;
 	padding: 0 0 0 0;
@@ -37,8 +53,8 @@ html, body {
 	resize: horizontal;
 	width: 280px;
 	height: 100%;
-	max-height: 100%;	/* scroll-bars if ... */
-	overflow: auto;		/* scroll-bars if ... */
+	max-height: 100%;
+	overflow: auto;			/* scroll-bars if ... */
 	padding: 0 0 0 0;
 }
 
@@ -47,9 +63,9 @@ html, body {
 	display: block;
 	position: absolute;
 	bottom: 20px;
-	right: 0;
-	width: 92px;
-	height: 129px;
+	right: 8px;
+	width: 92px;  /* No way to reference png size ? 100% is enclosing element size */
+	height: 95px;
 	background: transparent url("logo.png") center center no-repeat;
 	z-index: 800;
 }
@@ -58,10 +74,27 @@ html, body {
 	text-align: center;
 	margin: 4px;
 	position: absolute;
-	top:0;
+	top: 0;
 	left: 60px;
 	right: 60px;
 	z-index: 800;
-	border:none;
+	border: none;
 	padding: 0 0 0 0;
 }
+
+
+/*---- Collapisble elements */
+
+.collapsible {
+	border: none;         /* contrer le style button */
+	cursor: pointer;
+	text-align: left;
+  }
+  .active, .collapsible:hover {
+	background-color: #e0e0e0;
+  }
+  .content {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+  }

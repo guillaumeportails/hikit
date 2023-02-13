@@ -20,6 +20,8 @@ tof.nextPageToken = '';
 //
 // ! Does not work if loaded with file://url protocol (gapi.client.init won't return)
 //   so this page needs a HTTP server
+//
+// TODO: switch to ServiceAccount to see if there is a better allowed bandwidth  
 
 // https://console.cloud.google.com/apis/credentials
 const API_KEY = 'AIzaSyA1IFKmTOXEHiA5w9QHRNOR64pLTk2ZCSw';
@@ -62,6 +64,11 @@ function fileAdd(gf) {
 }
 
 // Get next page of files
+//
+// TODO: if nextPageToken is '' and tof already filled then it's done and we shall not
+//       load a copy
+//       or else keep tof.files[], sort them, add map markers relations, link with IG feed 
+
 async function feedDrive() {
     const who = 'feedDrive';
     console.log(`${who}: start`);
@@ -83,12 +90,13 @@ async function feedDrive() {
     try {
         response = await gapi.client.drive.files.list(fileSelection);
     } catch (err) {
-        console.log('caught ' + err.message);
-        domdbg.innerText = err.message;
+        console.log(`Error: ${err}`);
+        domdbg.innerText = err;
         return;
     }
     // Token for the next page
     tof.nextPageToken = response.result.nextPageToken;
+    console.log(`${who} nextToken ${tof.nextPageToken}`);
     // Gotten files[]
     const files = response.result.files;
     if (!files || files.length == 0) {
@@ -104,16 +112,16 @@ async function feedDrive() {
 
 // Center the map here
 function flyTo(img, lat, lon) {
-    console.log("flyTo lat=" + lat + " lon=" + lon + "  enabled=" + domfly.checked);
+    console.log(`flyTo lat,lon=${lat},${lon} enabled=${domfly.checked}`);
     if (domfly.checked) {
-        img.parentNode.style.borderStyle = 'ridge';
-        mapFlyTo(lat,lon);
+        img.parentNode.style.borderStyle = 'solid';  // 'ridge'
+        mapFlyTo(lat, lon);
     }
 }
 
 // User update request
-function bphoto() {
-    console.log("bphoto");
+function photoUpdate() {
+    console.log('photoUpdate');
     feedDrive().catch(function handle(e) { domdbg.innerText = `catch1=${e}`; });
 }
 
