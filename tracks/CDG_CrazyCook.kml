@@ -72,6 +72,7 @@
 		</Point>
 	</Placemark>
 
+<!--
 	<Placemark id="Flight1">
 		<name>CDG to YYC</name>
 		<styleUrl>#fly</styleUrl>
@@ -91,7 +92,7 @@
 	</Placemark>
 
 	<Placemark id="Flight2">
-		<name>LLC to PHX</name>
+		<name>YYC to PHX</name>
 		<styleUrl>#fly</styleUrl>
 		<LineString>
 			<altitudeMode>clampToGround </altitudeMode>
@@ -103,6 +104,7 @@
 			</coordinates>
 		</LineString>
 	</Placemark>
+-->
 
 	<Placemark id="Greyhound">
 		<name>Greyhound bus from PHX to Lordsburg</name>

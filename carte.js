@@ -413,6 +413,12 @@ function loadInfos() {
         weight: 1
     };
 
+    const CDG = { lng: 2.5509443,    lat: 49.0080713 };
+    const YYC = { lng: -114.0101401, lat: 51.131069 };
+    const PHX = { lng: -112.010124,  lat: 33.435249 };
+    const g1 = new L.Geodesic([CDG, YYC]).bindPopup('CDG to YYC').addTo(map);
+    const g2 = new L.Geodesic([YYC, PHX]).bindPopup('YYC to PHX').addTo(map);
+
     addKml('CDG_CrazyCook.kml');
     const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT', { color: 'red', weight: 8, opacity: 0.7 });
     addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
@@ -430,6 +436,9 @@ function loadInfos() {
         // line.on('mouseout', line.removeDistanceMarkers);
         map.addLayer(line);
     });
+
+
+    // TODO: https://github.com/henrythasler/Leaflet.Geodesic
 
     // // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
     // $.ajax({
