@@ -109,6 +109,10 @@
 	<Placemark id="Greyhound">
 		<name>Greyhound bus from PHX to Lordsburg</name>
 		<styleUrl>#bus</styleUrl>
+		<LineStyle>
+			<color>ff0066cc</color>
+			<width>5</width>
+		</LineStyle>
 		<LineString>
 			<altitudeMode>clampToGround</altitudeMode>
 			<coordinates>
@@ -120,6 +124,10 @@
 	<Placemark id="Shuttle">
 		<name>4WD shuttle from Lordsburg to Crazy Cook</name>
 		<styleUrl>#shuttle</styleUrl>
+		<LineStyle>
+			<color>ffcccc00</color>
+			<width>5</width>
+		</LineStyle>
 		<LineString>
 			<altitudeMode>clampToGround</altitudeMode>
 			<coordinates>

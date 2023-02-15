@@ -152,9 +152,12 @@ var map = new L.Map('eltmap', {
     attributionControl: true
 });
 
-L.control.layers(basemaps, overlays, {
+var mapCtrlLayers = L.control.layers(basemaps, overlays, {
     collapsed: true
 }).addTo(map);
+
+var lgPlaces = null;
+//mapCtrlLayers.addOverlay(lgPlaces, 'Places');
 
 L.control.scale({
     metric: true,
@@ -262,33 +265,29 @@ map.setView([31.803, -42.367], (zanim) ? 1 : 3);
 
 
 function addGpx(f, n, s = { color: 'red'} ) {
-    const layer = omnivore.gpx("tracks/" + f,
+    const layer = omnivore.gpx('tracks/' + f,
             null,
             L.geoJson(null, {
                 filter: function(f) {
-                    return (f.geometry.type == "LineString");
+                    return (f.geometry.type == 'LineString');
                 },
                 style: function(f) { return s; }
             }));
-    layer.bindPopup(n).addTo(map);
+    layer.bindPopup(n);
+    // layer.addTo(map);
     return layer;
 }
 
 
 function addKml(f, c = 'blue') {
-    fetch('tracks/' + f)
-        .then(function (response) {
-            //console.log(`addKmlLine(${f}) response ${response}`);
-            return response.text();
-        })
-        .then(function (xml) {
-            //console.log(`addKmlLine(${f}) xml ${xml}`);
-            let doc = toGeoJSON.kml(new DOMParser().parseFromString(xml, "text/xml"));
-            L.geoJson(doc, {
-                style: function (feature) {
-                    return {  // Use the KML file styling
-                        color:  feature.properties.stroke
-                        //weight: feature.properties.stroke-width
+    const layer = omnivore.kml('tracks/' + f,
+            null,
+            L.geoJson(null, {
+                style: function (f) {   // https://leafletjs.com/reference.html#path-option
+                    return {            // Transcode the styling found in KML
+                        color:   (f.properties.stroke) ? '#'+f.properties.stroke : c,
+                        opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : 1.0,
+                        weight:  (f.properties['stroke-width']) ? f.properties['stroke-width'] : 1.0
                     };
                 },
                 onEachFeature: function(f, layer) {
@@ -296,25 +295,10 @@ function addKml(f, c = 'blue') {
                         layer.bindPopup(f.properties.name);
                     }
                 }
-            }).addTo(map);
-        });
-    // omnivore.kml("tracks/" + f,
-    //         null,
-    //         L.geoJson(null, {
-    //             filter: function(f) {
-    //                 return (f.geometry.type == "LineString");
-    //             },
-    //             style: function(f) {
-    //                 return {
-    //                     color: c
-    //                 };
-    //             },
-    //             onEachFeature: function(f, layer) {
-    //                 if (f.properties && f.properties.name) {
-    //                     layer.bindPopup(f.properties.name);
-    //                 }
-    //             }
-    //         })).addTo(map);
+            }));
+    // layer.addTo(map);
+    return layer;
+
 }
 
 
@@ -413,16 +397,27 @@ function loadInfos() {
         weight: 1
     };
 
+    // Couches du voyage Aller
+    var lgStart = L.layerGroup();
     const CDG = { lng: 2.5509443,    lat: 49.0080713 };
     const YYC = { lng: -114.0101401, lat: 51.131069 };
     const PHX = { lng: -112.010124,  lat: 33.435249 };
-    const g1 = new L.Geodesic([CDG, YYC]).bindPopup('CDG to YYC').addTo(map);
-    const g2 = new L.Geodesic([YYC, PHX]).bindPopup('YYC to PHX').addTo(map);
+    const g1 = new L.Geodesic([[CDG, YYC],[YYC, PHX]], { steps: 6, opacity: 0.5 }).bindPopup('CDG to PHX via YYC');
+    lgStart.addLayer(g1);
+    lgStart.addLayer(addKml('CDG_CrazyCook.kml'));
+    mapCtrlLayers.addOverlay(lgStart, 'Go to Crazy Cook');
+    lgStart.addTo(map);
 
-    addKml('CDG_CrazyCook.kml');
-    const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT', { color: 'red', weight: 8, opacity: 0.7 });
-    addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
+    // Couche du Prevu
+    var lgPlan = addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
+    mapCtrlLayers.addOverlay(lgPlan, 'The Plan');
+    lgPlan.addTo(map);
 
+    // Couche du chemin officiel
+    var lgRL = L.layerGroup();
+    const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
+    const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT'); //, rlStyle);
+    mapCtrlLayers.addOverlay(lgRL, 'Official CDT');
     // http://adoroszlai.github.io/leaflet-distance-markers/
     // TODO: utiliser les noms du GPX, ce calcul de distance ne colle pas a cause de la discretisation du chemin
     hm.on('ready', function (e) {
@@ -430,11 +425,12 @@ function loadInfos() {
         // ? Qui a inverse lng,lat ?
         const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
         const line = L.polyline(coords, {
+            color: 'red', weight: 8, opacity: 0.7,
             distanceMarkers: { showAll: 13, offset: 1609, iconSize: [32, 16] }
         });
         // line.on('mouseover', line.addDistanceMarkers);
         // line.on('mouseout', line.removeDistanceMarkers);
-        map.addLayer(line);
+        lgRL.addLayer(line);
     });
 
 
@@ -583,10 +579,15 @@ function mapFlyTo(lat,lon)
     const s = `${lat} ${lon}`;
     if (! flownTo.has(s)) {
         flownTo.add(s);
-        L.circleMarker([lat,lon], { interactive: false }).addTo(map);
+        if (lgPlaces == null) {
+            lgPlaces = L.layerGroup();
+            mapCtrlLayers.addOverlay(lgPlaces, 'Places');
+        }
+        const p = L.circleMarker([lat,lon], { interactive: false, radius: 8 });
+//      p.addTo(map);
+        lgPlaces.addLayer(p).addTo(map);
     }
-    var z = map.getZoom();
-    if (firstfly) z = 12;
+    const z = (firstfly) ? 8 : map.getZoom();
     firstfly = false;
     map.setView(L.latLng(lat,lon), z, { animate: true, duration: 1.5 });
 }
