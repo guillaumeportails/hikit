@@ -49,23 +49,42 @@ async function initializeGapiClient() {
 
 
 // GoogleDrive JPG file to HTML presentation in the divphoto
-// 
+//
+var numPhoto = 0;
 function fileAdd(gf) {
+    let n = ++numPhoto;
     let o = '';
     let t = '';
     try {
         const lat = gf.imageMediaMetadata.location.latitude;
         const lon = gf.imageMediaMetadata.location.longitude;
-//      const tooltip = `'<img src="${gf.thumbnailLink}" alt="${gf.imageMediaMetadata.time}">'`;
+//      const tooltip = `'<img src="${gf.thumbnailLink}"><br><center>${gf.imageMediaMetadata.time}</center>'`;
         const tooltip = `'${gf.imageMediaMetadata.time}'`;
-        o = ` onmouseover="flyTo(this,${lat.toFixed(6)},${lon.toFixed(6)},${tooltip})"`;
-        t = `<br><button disabled="yes">${gf.imageMediaMetadata.time}</button>`;
+        o = ` onmouseover="flyToIf(this,${lat.toFixed(6)},${lon.toFixed(6)},${n})"`;
+        t = `<br><center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
     } catch { };
     r = '<hr>'
-        + `<a href="${gf.webViewLink}" target="_blank" onmouseout="this.style.borderStyle='none';">`
-        + `<img src="${gf.thumbnailLink}" alt="${gf.name}" ${o}>`
-        + `</a>` + t;
+        + `<a href="${gf.webViewLink}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
+        +   `<figure id="photo${n}">`
+        +     `<img src="${gf.thumbnailLink}" alt="${gf.name}">`
+        +     `<figcaption>${t}</figcaption>`
+        +   '</figure>'
+        + '</a>';
     return r;
+}
+
+// Center the map here
+// ! Il semble etre un bug de passer un DOM Element a bindTooltip(), qui devient
+//   alors partage et quand le tooltip est ferme, les deux Element sont clos
+//   => Il faut le dupliquer
+function flyToIf(img, lat, lon, ref) {
+    console.log(`flyTo lat,lon=${lat},${lon} enabled=${domfly.checked} ref=${ref}`);
+    if (domfly.checked) {
+        if (typeof(ref) == 'number')
+            ref = document.getElementById(`photo${ref}`).cloneNode(true);
+        img.firstChild.firstChild.style.borderStyle = 'solid';  // 'ridge'
+        mapFlyTo(lat, lon, ref);
+    }
 }
 
 // Get next page of files
@@ -115,14 +134,6 @@ async function feedDrive() {
         (str, file) => `${str}${fileAdd(file)}`, '');
 }
 
-// Center the map here
-function flyTo(img, lat, lon, name) {
-    console.log(`flyTo lat,lon=${lat},${lon} enabled=${domfly.checked}`);
-    if (domfly.checked) {
-        img.parentNode.style.borderStyle = 'solid';  // 'ridge'
-        mapFlyTo(lat, lon, name);
-    }
-}
 
 // User update request
 function photoUpdate() {

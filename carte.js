@@ -19,8 +19,13 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function addslashes(str) {
+    return (str + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0');
+}
 
 // Source de tuiles/cartes 
+//
+// Cf https://leaflet-extras.github.io/leaflet-providers/preview/
 //
 // Cf http://wiki.openstreetmap.org/wiki/Zoom_levels
 //    Z    m/pixel    km/tile   (256pixels/tile, m pour lat=0)
@@ -35,19 +40,19 @@ function getParameterByName(name, url) {
 //   18      0.6         0.153
 
 
-var tilesWatercolor = new L.TileLayer(
+const tilesWatercolor = new L.TileLayer(
     'http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
     maxZoom: 17,
     attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
 });
 
-var tilesToner = new L.TileLayer(
+const tilesToner = new L.TileLayer(
     'http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
     maxZoom: 15,
     attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
 });
 
-var tilesTerrain = L.tileLayer(
+const tilesTerrain = L.tileLayer(
     'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
     maxZoom: 18,
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -55,59 +60,69 @@ var tilesTerrain = L.tileLayer(
     ext: 'png'
 });
 
-var tilesOSM = new L.TileLayer(
+const tilesOSM = new L.TileLayer(
     'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     subdomains: 'abc',
     attribution: 'OpenStreetMap. CC-BY 3.0'
 });
 
-var tilesOTM = new L.TileLayer(
+const tilesOTM = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', /* https pour le site OTM uniquement ?*/ {
     maxZoom: 17,
     subdomains: 'abc',
     attribution: '&copy; <a href="http://opentopomap.org/credits">OpenTopoMap</a> CC-BY-SA'
 });
 
-var tilesOutdoors = new L.TileLayer(
+const tilesUSGS = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 20,
+	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+});
+
+const tilesUSGSimageryTopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 20,
+	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+});
+
+const tilesOutdoors = new L.TileLayer(
     'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=d2842e9679314b55a9c0a84e94961f0e', {
     maxZoom: 17,
     subdomains: 'ab',
     attribution: 'Thunderforest.com. CC-BY 3.0'
 });
 
-var tilesHikeBike = new L.TileLayer(
+const tilesHikeBike = new L.TileLayer(
     'http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
     maxZoom: 17,
     subdomains: 'abc',
     attribution: 'Thunderforest.com. CC-BY 3.0'
 });
 
-var tilesDelorme = new L.TileLayer(
+const tilesDelorme = new L.TileLayer(
     'http://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
     minZoom: 1,
     maxZoom: 11,
     attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme'
 });
 
-var tilesWorldStreets = L.tileLayer(
+const tilesWorldStreets = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
 
-var tilesImagery = L.tileLayer(
+const tilesImagery = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
-var tilesKorona = new L.TileLayer(
+const tilesKorona = new L.TileLayer(
     'http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
     minZoom: 1,
     maxZoom: 18,
     attribution: 'Tiles &copy; Korona Uni-Heidelberg'
 });
 
-var tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
+const tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
     'http://localhost:3000/tiles/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: 'OSM, LINZ, et al., CC-BY-SA'
@@ -116,11 +131,13 @@ var tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
 const basemaps = {
     'OSM': tilesOSM,
     'OTM': tilesOTM,
-    //  'Hike,Bike': tilesHikeBike,
+//  'Hike,Bike': tilesHikeBike,
+    'USGS': tilesUSGS,
+    'USGS imagery': tilesUSGSimageryTopo,
     'Outdoors': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
-    //  'Korona': tilesKorona,
+//  'Korona': tilesKorona,
     'watercolor': tilesWatercolor,
     'toner': tilesToner,
     'terrain': tilesTerrain,
@@ -128,7 +145,7 @@ const basemaps = {
 };
 
 // Overlays
-var tilesWayMarkedTrails = new L.TileLayer(
+const tilesWayMarkedTrails = new L.TileLayer(
     'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '<a href="hiking.waymarkedtrails.org">waymarkedtrails.org</a>. CC-SA 3.0'
@@ -170,9 +187,9 @@ const cdtPolygon = [
     [-114.775113,48.992727]
 ];
 
-var map = new L.Map('eltmap', {
+const map = new L.Map('eltmap', {
     crs: L.CRS.EPSG3857,
-    layers: [tilesOutdoors],
+    layers: [tilesUSGSimageryTopo],
     continuousWorld: true,
     worldCopyJump: false,
     zoomControl: false,
@@ -181,7 +198,7 @@ var map = new L.Map('eltmap', {
     attributionControl: true
 });
 
-var mapCtrlLayers = L.control.layers(basemaps, overlays, {
+const mapCtrlLayers = L.control.layers(basemaps, overlays, {
     collapsed: true
 }).addTo(map);
 
@@ -650,7 +667,7 @@ if (!zanim) loadInfos();
 
 
 // External call (from divphoto / drive.js)
-function mapFlyTo(lat, lon, name) {
+function mapFlyTo(lat, lon, ref) {
     const s = `${lat} ${lon}`;
     if (!flownTo.has(s)) {
         flownTo.add(s);
@@ -658,7 +675,7 @@ function mapFlyTo(lat, lon, name) {
             lgPlaces = L.featureGroup();
             mapCtrlLayers.addOverlay(lgPlaces, 'Places');
         }
-        const p = L.circleMarker([lat, lon], { interactive: true, radius: 8 }).bindTooltip(name);
+        const p = L.circleMarker([lat, lon], { interactive: true, radius: 8 }).bindTooltip(ref);
         lgPlaces.addLayer(p).addTo(map);
     }
     const z = (firstfly) ? 8 : map.getZoom();
