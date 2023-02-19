@@ -3,6 +3,7 @@
 // Refefences :
 //   https://developers.google.com/drive/api/v3/reference/files/list?apix=true#try-it
 //   https://medium.com/google-cloud/gapi-the-google-apis-client-library-for-browser-javascript-5896b12dbbd5
+//   https://bretcameron.medium.com/how-to-use-the-google-drive-api-with-javascript-57a6cc9e5262
 //
 // + iframe is not supported byt gapi.drive (can't insert a drive UI with a simple iframe)
 
@@ -51,15 +52,19 @@ async function initializeGapiClient() {
 // 
 function fileAdd(gf) {
     let o = '';
+    let t = '';
     try {
         const lat = gf.imageMediaMetadata.location.latitude;
         const lon = gf.imageMediaMetadata.location.longitude;
-        o = ` onmouseover="flyTo(this,${lat.toFixed(6)},${lon.toFixed(6)})"`;
+//      const tooltip = `'<img src="${gf.thumbnailLink}" alt="${gf.imageMediaMetadata.time}">'`;
+        const tooltip = `'${gf.imageMediaMetadata.time}'`;
+        o = ` onmouseover="flyTo(this,${lat.toFixed(6)},${lon.toFixed(6)},${tooltip})"`;
+        t = `<br><button disabled="yes">${gf.imageMediaMetadata.time}</button>`;
     } catch { };
-    r = '<br>'
+    r = '<hr>'
         + `<a href="${gf.webViewLink}" target="_blank" onmouseout="this.style.borderStyle='none';">`
         + `<img src="${gf.thumbnailLink}" alt="${gf.name}" ${o}>`
-        + `</a>`;
+        + `</a>` + t;
     return r;
 }
 
@@ -111,11 +116,11 @@ async function feedDrive() {
 }
 
 // Center the map here
-function flyTo(img, lat, lon) {
+function flyTo(img, lat, lon, name) {
     console.log(`flyTo lat,lon=${lat},${lon} enabled=${domfly.checked}`);
     if (domfly.checked) {
         img.parentNode.style.borderStyle = 'solid';  // 'ridge'
-        mapFlyTo(lat, lon);
+        mapFlyTo(lat, lon, name);
     }
 }
 

@@ -28,7 +28,6 @@
 	<script src="https://unpkg.com/leaflet-filelayer@1.2.0"></script>
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.geodesic"></script>
 	<script src="leaflet.geometryutil.js"></script>
-	<script src="leaflet-distance-marker.js"></script>
 </head>
 
 
@@ -42,21 +41,19 @@
 
 	<!-- ======= PHOTO div -->
 	<div id="divphoto">
-		<button type="button" onclick="photoUpdate()">Update</button>
+		<button type="button" onclick="photoUpdate()">Show more</button>
 		<span style="float:right;">
 			<label for="autoFlyTo">auto fly to</label>
 			<input type="checkbox" id="photo:autoFlyTo" name="FlyTo">&rarr;
 		</span>
 		<pre id="photo:debug" style="white-space: pre-wrap;">DEBUGZONE</pre>
-		<div id="photo:feed"></div>
+		<div id="photo:feed" style="margin:auto;"></div>
 		<script src="drive.js"></script>
 	</div>
 
 	<!-- ======= MAP div -->
 	<div id="divmap">
-		<p id="msgmap">Planned and actual routes
-			<a href="https://continentaldividetrail.org/explore-the-trail/">CDTC</a>
-		</p>
+		<p id="msgmap">Planned and actual routes</p>
 		<a id="logo" href="https://continentaldividetrail.org/" target="_blank"></a>
 		<div id="eltmap" style="width:100%; height:100%"></div>
 		<script src="carte.js"></script>

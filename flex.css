@@ -82,6 +82,13 @@ body {
 	padding: 0 0 0 0;
 }
 
+.phototitle {  /* else button disabled */
+	border-style: groove;
+	border-width: 1px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 0.75em;
+}
 
 /*---- Collapisble elements */
 

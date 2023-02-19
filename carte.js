@@ -2,6 +2,9 @@
 // + un fond a choisir, possiblement depuis un serveur local (localhost:3000)
 // + des traces linestrings des chemins heberges sur le meme site que ce script
 // + le feed InReach (points)
+//
+// Refs :
+//  https://geojson.org/geojson-spec.html
 
 
 
@@ -34,90 +37,90 @@ function getParameterByName(name, url) {
 
 var tilesWatercolor = new L.TileLayer(
     'http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
-        maxZoom: 17,
-        attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
-    });
+    maxZoom: 17,
+    attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
+});
 
 var tilesToner = new L.TileLayer(
     'http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
-        maxZoom: 15,
-        attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
-    });
+    maxZoom: 15,
+    attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
+});
 
 var tilesTerrain = L.tileLayer(
     'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
-        maxZoom: 18,
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        subdomains: 'abcd',
-        ext: 'png'
-    });
+    maxZoom: 18,
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: 'abcd',
+    ext: 'png'
+});
 
 var tilesOSM = new L.TileLayer(
     'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        subdomains: 'abc',
-        attribution: 'OpenStreetMap. CC-BY 3.0'
-    });
+    maxZoom: 19,
+    subdomains: 'abc',
+    attribution: 'OpenStreetMap. CC-BY 3.0'
+});
 
 var tilesOTM = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', /* https pour le site OTM uniquement ?*/ {
-        maxZoom: 17,
-        subdomains: 'abc',
-        attribution: '&copy; <a href="http://opentopomap.org/credits">OpenTopoMap</a> CC-BY-SA'
-    });
+    maxZoom: 17,
+    subdomains: 'abc',
+    attribution: '&copy; <a href="http://opentopomap.org/credits">OpenTopoMap</a> CC-BY-SA'
+});
 
 var tilesOutdoors = new L.TileLayer(
     'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=d2842e9679314b55a9c0a84e94961f0e', {
-        maxZoom: 17,
-        subdomains: 'ab',
-        attribution: 'Thunderforest.com. CC-BY 3.0'
-    });
+    maxZoom: 17,
+    subdomains: 'ab',
+    attribution: 'Thunderforest.com. CC-BY 3.0'
+});
 
 var tilesHikeBike = new L.TileLayer(
     'http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
-        maxZoom: 17,
-        subdomains: 'abc',
-        attribution: 'Thunderforest.com. CC-BY 3.0'
-    });
+    maxZoom: 17,
+    subdomains: 'abc',
+    attribution: 'Thunderforest.com. CC-BY 3.0'
+});
 
 var tilesDelorme = new L.TileLayer(
     'http://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
-        minZoom: 1,
-        maxZoom: 11,
-        attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme'
-    });
+    minZoom: 1,
+    maxZoom: 11,
+    attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme'
+});
 
 var tilesWorldStreets = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-    });
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+});
 
 var tilesImagery = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    });
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
 
 var tilesKorona = new L.TileLayer(
     'http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-        minZoom: 1,
-        maxZoom: 18,
-        attribution: 'Tiles &copy; Korona Uni-Heidelberg'
-    });
+    minZoom: 1,
+    maxZoom: 18,
+    attribution: 'Tiles &copy; Korona Uni-Heidelberg'
+});
 
 var tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
     'http://localhost:3000/tiles/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: 'OSM, LINZ, et al., CC-BY-SA'
-    });
+    maxZoom: 19,
+    attribution: 'OSM, LINZ, et al., CC-BY-SA'
+});
 
 const basemaps = {
     'OSM': tilesOSM,
     'OTM': tilesOTM,
-//  'Hike,Bike': tilesHikeBike,
+    //  'Hike,Bike': tilesHikeBike,
     'Outdoors': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
-//  'Korona': tilesKorona,
+    //  'Korona': tilesKorona,
     'watercolor': tilesWatercolor,
     'toner': tilesToner,
     'terrain': tilesTerrain,
@@ -127,9 +130,9 @@ const basemaps = {
 // Overlays
 var tilesWayMarkedTrails = new L.TileLayer(
     'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '<a href="hiking.waymarkedtrails.org">waymarkedtrails.org</a>. CC-SA 3.0'
-    });
+    maxZoom: 18,
+    attribution: '<a href="hiking.waymarkedtrails.org">waymarkedtrails.org</a>. CC-SA 3.0'
+});
 
 
 const overlays = {
@@ -140,6 +143,32 @@ const overlays = {
 var firstfly = true;
 var flownTo = new Set();
 
+// Approx bounds of the CDT, geoJSON format  [ lng lat ]
+const cdtBounds = [
+    [-114.0, 49.0],
+    [-105.0, 49.0],
+    [-105.0, 31.0],
+    [-114.0, 31.0]
+];
+// less approx
+const cdtPolygon = [
+    [-113.326252,46.375386],
+    [-114.775113,48.992727],
+    [-114.695734,45.700459],
+    [-113.460733,44.118182],
+    [-107.028708,39.752045],
+    [-108.408835,37.928690],
+    [-107.100957,36.536929],
+    [-108.790538,35.000747],
+    [-108.965692,31.299239],
+    [-107.743995,31.297717],
+    [-107.198116,34.979334],
+    [-105.709069,36.582693],
+    [-105.207683,40.708463],
+    [-111.465271,45.531042],
+    [-112.300283,49.037458],
+    [-114.775113,48.992727]
+];
 
 var map = new L.Map('eltmap', {
     crs: L.CRS.EPSG3857,
@@ -239,7 +268,7 @@ var control = L.Control.fileLayerLoad({
         style: {
             color: 'black'
         },
-        filter: function(feature) {
+        filter: function (feature) {
             return (feature.geometry.type == "LineString");
         }
     },
@@ -251,7 +280,7 @@ var control = L.Control.fileLayerLoad({
     formats: ['.geojson', '.kml', '.gpx']
 }).addTo(map);
 
-control.loader.on('data:loaded', function(e) {
+control.loader.on('data:loaded', function (e) {
     //Add to map layer switcher
     layerswitcher.addOverlay(e.layer, e.filename);
 });
@@ -264,16 +293,16 @@ var zanim = null; //setInterval(zAnim,1000);
 map.setView([31.803, -42.367], (zanim) ? 1 : 3);
 
 
-function addGpx(f, n, s = { color: 'red'} ) {
+function addGpx(f, n, s = { color: 'red' }) {
     const layer = omnivore.gpx('tracks/' + f,
-            null,
-            L.geoJson(null, {
-                filter: function(f) {
-                    return (f.geometry.type == 'LineString');
-                },
-                style: function(f) { return s; }
-            }));
-    layer.bindPopup(n);
+        null,
+        L.geoJson(null, {
+            filter: function (f) {
+                return (f.geometry.type == 'LineString');
+            },
+            style: function (f) { return s; }
+        }));
+    layer.bindTooltip(n);
     // layer.addTo(map);
     return layer;
 }
@@ -281,21 +310,26 @@ function addGpx(f, n, s = { color: 'red'} ) {
 
 function addKml(f, c = 'blue') {
     const layer = omnivore.kml('tracks/' + f,
-            null,
-            L.geoJson(null, {
-                style: function (f) {   // https://leafletjs.com/reference.html#path-option
-                    return {            // Transcode the styling found in KML
-                        color:   (f.properties.stroke) ? '#'+f.properties.stroke : c,
-                        opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : 1.0,
-                        weight:  (f.properties['stroke-width']) ? f.properties['stroke-width'] : 1.0
-                    };
-                },
-                onEachFeature: function(f, layer) {
-                    if (f.properties && f.properties.name) {
-                        layer.bindPopup(f.properties.name);
-                    }
+        null,
+        L.geoJson(null, {
+            style: function (f) {   // https://leafletjs.com/reference.html#path-option
+                return {            // Transcode the styling found in KML  !Placemarks not caught here
+                    color: (f.properties.stroke) ? '#' + f.properties.stroke : c,
+                    opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : 1.0,
+                    weight: (f.properties['stroke-width']) ? f.properties['stroke-width'] : 1.0
+                };
+            },
+            onEachFeature: function (f, layer) {
+                var tt = '';
+                if (f.properties && f.properties.name) {
+                    tt = '<strong><center>' + f.properties.name + '</center></strong>';
                 }
-            }));
+                if (f.properties && f.properties.description) {
+                    tt = tt + '<p>' + f.properties.description + '</p>';
+                }
+                if (tt != '') layer.bindTooltip(tt);
+            }
+        }));
     // layer.addTo(map);
     return layer;
 
@@ -331,7 +365,7 @@ function myKmlParse(xmldoc, title, cmt) {
     var timl = new Date();
     var mgrp = L.markerClusterGroup({
         animate: true,
-        disableClusteringAtZoom: 12 
+        disableClusteringAtZoom: 12
     });
     // Convertir le XMLDocument data en texte geoJSON puis en layer geojson
     // ! toGeoJson.kml() de mapbox 0.3.1 perd les <TimeStamp>
@@ -342,11 +376,11 @@ function myKmlParse(xmldoc, title, cmt) {
     // TODO : si on peut filter-out YQL de ExtendedData pour permettre plus de Placemark,
     //        alors suivre le TimeStamp pour trouver les "Je dors ici".
     var lgeo = L.geoJson(toGeoJSON.kml(xmldoc), options = {
-        filter: function(f) {
+        filter: function (f) {
             // L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
             return f.geometry.type == 'Point';
         },
-        pointToLayer: function(p, latlng) {
+        pointToLayer: function (p, latlng) {
             line.push([latlng.lat, latlng.lng]);
             const ts = new Date(p.properties.timestamp);
             wasz = (ts > timl); //(p.properties.Text == 'OK, je dors ici.');
@@ -377,15 +411,15 @@ function myKmlParse(xmldoc, title, cmt) {
             weight: 2,
             smoothFactor: 2
         }).bindPopup(title).addTo(mgrp);
-        lgeo.bindPopup(function(layer) {
+        lgeo.bindPopup(function (layer) {
             return inreachBubble(layer.feature.properties);
         }).addTo(mgrp);
-    map.addLayer(mgrp);
+        map.addLayer(mgrp);
     }
 }
 
 
-function loadInfos() {
+async function loadInfos() {
     if (zanim) {
         clearInterval(zanim);
         zanim = null;
@@ -397,44 +431,85 @@ function loadInfos() {
         weight: 1
     };
 
-    // Couches du voyage Aller
-    var lgStart = L.layerGroup();
-    const CDG = { lng: 2.5509443,    lat: 49.0080713 };
+    // Layer : Going there from home
+    // Ref: https://github.com/henrythasler/Leaflet.Geodesic
+    var lgStart = L.featureGroup();
+    const CDG = { lng: 2.5509443, lat: 49.0080713 };
     const YYC = { lng: -114.0101401, lat: 51.131069 };
-    const PHX = { lng: -112.010124,  lat: 33.435249 };
-    const g1 = new L.Geodesic([[CDG, YYC],[YYC, PHX]], { steps: 6, opacity: 0.5 }).bindPopup('CDG to PHX via YYC');
+    const PHX = { lng: -112.010124, lat: 33.435249 };
+    const g1 = new L.Geodesic([[CDG, YYC], [YYC, PHX]], {
+        steps: 6, weight: 5, opacity: 0.5
+    }).bindTooltip('CDG to PHX via YYC');
     lgStart.addLayer(g1);
     lgStart.addLayer(addKml('CDG_CrazyCook.kml'));
-    mapCtrlLayers.addOverlay(lgStart, 'Go to Crazy Cook');
+    mapCtrlLayers.addOverlay(lgStart, 'Going to Crazy Cook');
     lgStart.addTo(map);
 
-    // Couche du Prevu
+    // Layer : The Plan
     var lgPlan = addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
     mapCtrlLayers.addOverlay(lgPlan, 'The Plan');
     lgPlan.addTo(map);
 
-    // Couche du chemin officiel
-    var lgRL = L.layerGroup();
+    // Layer : Offical trail
+    var lgRL = L.featureGroup(null, { attribution: 'CDTC'});
     const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
     const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT'); //, rlStyle);
-    mapCtrlLayers.addOverlay(lgRL, 'Official CDT');
-    // http://adoroszlai.github.io/leaflet-distance-markers/
-    // TODO: utiliser les noms du GPX, ce calcul de distance ne colle pas a cause de la discretisation du chemin
-    hm.on('ready', function (e) {
+    hm.once('ready', function (e) {
         const fc = e.target.toGeoJSON();
         // ? Qui a inverse lng,lat ?
         const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
-        const line = L.polyline(coords, {
-            color: 'red', weight: 8, opacity: 0.7,
-            distanceMarkers: { showAll: 13, offset: 1609, iconSize: [32, 16] }
-        });
-        // line.on('mouseover', line.addDistanceMarkers);
-        // line.on('mouseout', line.removeDistanceMarkers);
+        const line = L.polyline(coords, rlStyle);
         lgRL.addLayer(line);
+    });
+    mapCtrlLayers.addOverlay(lgRL, 'Official CDT');
+
+    // https://github.com/adoroszlai/leaflet-distance-markers
+    //  	<script src="leaflet-distance-marker.js"></script>
+    // => KO, le calcul de distance ne convient pas car le GPX est trop grossier
+    //    utiliser les noms du GPX
+    // lgRL.getBounds() ... il faut attendre hm.once('ready')
+
+    // Layer : Native Land
+    // Ref:     https://native-land.ca/resources/api-docs/
+    //          geoJsonFeature.properties: 
+    //​             ID: 12345,
+    //​             Name: "Newe Sogobia (Eastern Shoshone)"
+    //​             Slug: "eastern-shoshone"
+    //​             color: "#386ECB"
+    //​             description: "https://native-land.ca/maps/territories/eastern-shoshone/"
+    var lgNative = L.featureGroup(null, { attribution: '<a href="https://native-land.ca">native-land.ca</a>' });
+    fetch('https://native-land.ca/wp-json/nativeland/v1/api/index.php', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'maps': 'territories',
+            'polygon_geojson': {
+                'type': 'FeatureCollection',
+                'features': [{
+                    'type': 'Feature',
+                    'properties': {},
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [cdtPolygon]
+                    }
+                }]
+            }
+        })
+    }).then(resp => resp.json()
+    ).then(json => {
+        const layerNative = L.geoJson({'type': 'FeatureCollection', 'features': json }, {
+            style: f => { return { color: f.properties.color }; }
+        }).bindPopup(layer => layer.feature.properties.Name);
+        setTimeout(function() {
+            lgNative.addLayer(layerNative).addTo(map);
+            mapCtrlLayers.addOverlay(lgNative, 'Native Land');
+        }, 4*1000);
     });
 
 
-    // TODO: https://github.com/henrythasler/Leaflet.Geodesic
 
     // // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
     // $.ajax({
@@ -475,93 +550,94 @@ function loadInfos() {
 
     // Tentative de GET Cross-Domain (en principe cela echoue avec un browser moderne / par defaut)
     // omnivore.kml(inreachfeed).addTo(map);
-    $.ajax({
-        type: 'GET',
-        url: inreachfeed,
-        dataType: 'xml',
-        contentType: 'text/plain',
-        xhrFields: {
-            withCredentials: true
-        },
-        headers: {},
-        crossDomain: true,
-        success: function(data, textstatus, xhdr) { // data : XMLDocument
-            console.log("GOT " + data.getElementsByTagName(
-                '*').length + " elements (CORS)");
-            myKmlParse(xmldoc = data, title = "InReach since " + d1, cmt = "(CORS)");
-        },
-        error: function() {
-            // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
-            //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
-            //    (meme localhost) different de inreachfeed.
-            // Quelques contournement possibles :
-            // 1) Utiliser un proxy
-            //  Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
-            //    Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
-            //    plusieurs, en trouvant la taille limite
-            // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
-            //  2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
-            //         alors il suffit de precharger le inreachfeed.
-            //         Par exemple en profitant du code node.js qui permet de servir localement
-            //         des tuiles de a Leaflet.
-            //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
-            // 3) ?
-            //    Cf https://github.com/rndme/download : hors-sujet
-            //    var xhr = createCORSRequest('GET', inreachfeed);
-            //    if (!xhr) { console.log('CORS not supported'); } else {
-            //      xhr.onload  = function() { console.log(xhr.responseText); };
-            //      xhr.onerror = function() { console.log("error"); };
-            //      xhr.withCredentials = true;
-            //      xhr.send();
-            //    }
-            // 4) Faire que le browser accepte un GET cross domain.
-            //    C'est possible pour firefox avec ce plugin :
-            //      https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/
-            console.log(
-                "GET tracks/feed.kml error reverting to YQL"
-            );
-            // Emploi du web service publique YQL pour resoudre CORS :
-            // + limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
-            // Limiter via https://developer.yahoo.com/yql/guide/paging.html ne semble pas marcher
-            // => Changer les dates d1 et d2 dans l'URL de feed inreach
-            //    Ex: chartreuse 2017/07 3 jours = 658 items, 1608 Document.elements : ok
+    // $.ajax({
+    //     type: 'GET',
+    //     url: inreachfeed,
+    //     dataType: 'xml',
+    //     contentType: 'text/plain',
+    //     xhrFields: {
+    //         withCredentials: true
+    //     },
+    //     headers: {},
+    //     crossDomain: true,
+    //     success: function (data, textstatus, xhdr) { // data : XMLDocument
+    //         console.log("GOT " + data.getElementsByTagName(
+    //             '*').length + " elements (CORS)");
+    //         myKmlParse(xmldoc = data, title = "InReach since " + d1, cmt = "(CORS)");
+    //     },
+    //     error: function () {
+    //         // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
+    //         //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
+    //         //    (meme localhost) different de inreachfeed.
+    //         // Quelques contournement possibles :
+    //         // 1) Utiliser un proxy
+    //         //  Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
+    //         //    Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
+    //         //    plusieurs, en trouvant la taille limite
+    //         // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
+    //         //  2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
+    //         //         alors il suffit de precharger le inreachfeed.
+    //         //         Par exemple en profitant du code node.js qui permet de servir localement
+    //         //         des tuiles de a Leaflet.
+    //         //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
+    //         // 3) ?
+    //         //    Cf https://github.com/rndme/download : hors-sujet
+    //         //    var xhr = createCORSRequest('GET', inreachfeed);
+    //         //    if (!xhr) { console.log('CORS not supported'); } else {
+    //         //      xhr.onload  = function() { console.log(xhr.responseText); };
+    //         //      xhr.onerror = function() { console.log("error"); };
+    //         //      xhr.withCredentials = true;
+    //         //      xhr.send();
+    //         //    }
+    //         // 4) Faire que le browser accepte un GET cross domain.
+    //         //    C'est possible pour firefox avec ce plugin :
+    //         //      https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/
+    //         console.log(
+    //             "GET tracks/feed.kml error reverting to YQL"
+    //         );
+    //         // Emploi du web service publique YQL pour resoudre CORS :
+    //         // + limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
+    //         // Limiter via https://developer.yahoo.com/yql/guide/paging.html ne semble pas marcher
+    //         // => Changer les dates d1 et d2 dans l'URL de feed inreach
+    //         //    Ex: chartreuse 2017/07 3 jours = 658 items, 1608 Document.elements : ok
 
-            const yql_query =
-                'https://query.yahooapis.com/v1/public/' +
-                encodeURI(
-                    'yql?q=select * from xml where url=') +
-                "%22" + inreachfeed + '%22';
-            console.log("ajax GET " + yql_query);
-            $.ajax({
-                type: 'GET',
-                url: yql_query,
-                dataType: 'xml',
-                contentType: 'text/plain',
-                xhrFields: {
-                    withCredentials: true
-                },
-                headers: {},
-                crossDomain: true,
-                timeout: 7 * 1000, // YQL peut etre lent
-                success: function(data,
-                    textstatus, xhdr) { // data : XMLDocument
-                    console.log("GOT " + data
-                        .getElementsByTagName(
-                            '*').length +
-                        " XML elements (proxyed)"
-                    );
-                    if (data.getElementsByTagName(
-                            '*').length < 40)
-                        console.log(data); // TODO: recommencer avec 0.8*days
-                    myKmlParse(xmldoc = data, title = "Inreach since " + d1, cmt = "(proxyed)");
-                },
-                error: function() {
-                    console.log(
-                        "ajax/YQL error");
-                }
-            });
-        } // Cas error du ajax.GET direct
-    });
+    //         const yql_query =
+    //             'https://query.yahooapis.com/v1/public/' +
+    //             encodeURI(
+    //                 'yql?q=select * from xml where url=') +
+    //             "%22" + inreachfeed + '%22';
+    //         console.log("ajax GET " + yql_query);
+    //         $.ajax({
+    //             type: 'GET',
+    //             url: yql_query,
+    //             dataType: 'xml',
+    //             contentType: 'text/plain',
+    //             xhrFields: {
+    //                 withCredentials: true
+    //             },
+    //             headers: {},
+    //             crossDomain: true,
+    //             timeout: 7 * 1000, // YQL peut etre lent
+    //             success: function (data,
+    //                 textstatus, xhdr) { // data : XMLDocument
+    //                 console.log("GOT " + data
+    //                     .getElementsByTagName(
+    //                         '*').length +
+    //                     " XML elements (proxyed)"
+    //                 );
+    //                 if (data.getElementsByTagName(
+    //                     '*').length < 40)
+    //                     console.log(data); // TODO: recommencer avec 0.8*days
+    //                 myKmlParse(xmldoc = data, title = "Inreach since " + d1, cmt = "(proxyed)");
+    //             },
+    //             error: function () {
+    //                 console.log(
+    //                     "ajax/YQL error");
+    //             }
+    //         });
+    //     } // Cas error du ajax.GET direct
+    // });
+
 
 } // loadInfos()
 
@@ -574,20 +650,18 @@ if (!zanim) loadInfos();
 
 
 // External call (from divphoto / drive.js)
-function mapFlyTo(lat,lon)
-{
+function mapFlyTo(lat, lon, name) {
     const s = `${lat} ${lon}`;
-    if (! flownTo.has(s)) {
+    if (!flownTo.has(s)) {
         flownTo.add(s);
         if (lgPlaces == null) {
-            lgPlaces = L.layerGroup();
+            lgPlaces = L.featureGroup();
             mapCtrlLayers.addOverlay(lgPlaces, 'Places');
         }
-        const p = L.circleMarker([lat,lon], { interactive: false, radius: 8 });
-//      p.addTo(map);
+        const p = L.circleMarker([lat, lon], { interactive: true, radius: 8 }).bindTooltip(name);
         lgPlaces.addLayer(p).addTo(map);
     }
     const z = (firstfly) ? 8 : map.getZoom();
     firstfly = false;
-    map.setView(L.latLng(lat,lon), z, { animate: true, duration: 1.5 });
+    map.setView(L.latLng(lat, lon), z, { animate: true, duration: 1.5 });
 }
