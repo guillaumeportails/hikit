@@ -314,10 +314,13 @@ function addGpx(f, n, s = { color: 'red' }) {
     const layer = omnivore.gpx('tracks/' + f,
         null,
         L.geoJson(null, {
-            filter: function (f) {
-                return (f.geometry.type == 'LineString');
-            },
+//            filter: function (f) {
+//                return (f.geometry.type == 'LineString');
+//            },
             style: function (f) { return s; }
+//            onEachFeature: function (f, layer) {
+//                console.log(f);
+//            }
         }));
     layer.bindTooltip(n);
     // layer.addTo(map);
@@ -468,7 +471,14 @@ async function loadInfos() {
     lgPlan.addTo(map);
 
     // Layer : Offical trail
+    // ! Le GPX lu est "en dur" avec un point par 0.5mi, donc on peut reconstruire les 3000 tooltip
+    //   de chaque mile
     var lgRL = L.featureGroup(null, { attribution: 'CDTC'});
+    var lgMI = L.markerClusterGroup({
+        spiderfyOnMaxZoom: false,
+        showCoverageOnHover: false,
+        zoomToBoundsOnClick: false
+    });
     const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
     const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT'); //, rlStyle);
     hm.once('ready', function (e) {
@@ -477,8 +487,15 @@ async function loadInfos() {
         const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
         const line = L.polyline(coords, rlStyle);
         lgRL.addLayer(line);
+        for (let i = 0; i < coords.length; i += 2) {
+            var tooltip = L.tooltip()
+                .setLatLng(coords[i])
+                .setContent(`${i/2}`);
+            lgMI.addLayer(tooltip);
+        }
     });
     mapCtrlLayers.addOverlay(lgRL, 'Official CDT');
+    mapCtrlLayers.addOverlay(lgMI, 'Official CDT Miles');
 
     // https://github.com/adoroszlai/leaflet-distance-markers
     //  	<script src="leaflet-distance-marker.js"></script>
