@@ -29,6 +29,7 @@ function addslashes(str) {
 //
 // Cf http://wiki.openstreetmap.org/wiki/Zoom_levels
 //    Z    m/pixel    km/tile   (256pixels/tile, m pour lat=0)
+//    9                 80.0
 //   10    152.0        39.0
 //   11     76.0        19.0
 //   12     38.0        10.0
@@ -38,6 +39,12 @@ function addslashes(str) {
 //   16      2.4         0.610
 //   17      1.2         0.306
 //   18      0.6         0.153
+
+const Zoom2Mile = [ 
+//     0     1     2     3     4     5     6
+    1000, 1000, 1000, 1000, 1000, 1000, 1000, 
+//    7    8    9  10  11  12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    100,  50,  20, 10,  5,  5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ];
 
 
 const tilesWatercolor = new L.TileLayer(
@@ -75,12 +82,12 @@ const tilesOTM = new L.TileLayer(
 });
 
 const tilesUSGS = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
-	maxZoom: 20,
+	maxZoom: 16,    // said 20, but seems 16
 	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
 });
 
 const tilesUSGSimageryTopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
-	maxZoom: 20,
+	maxZoom: 16,    // said 20 but seems 16
 	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
 });
 
@@ -88,14 +95,14 @@ const tilesOutdoors = new L.TileLayer(
     'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=d2842e9679314b55a9c0a84e94961f0e', {
     maxZoom: 17,
     subdomains: 'ab',
-    attribution: 'Thunderforest.com. CC-BY 3.0'
+    attribution: '<a href="https://www.thunderforest.com">Thunderforest, CC-BY 3.0</a>'
 });
 
 const tilesHikeBike = new L.TileLayer(
     'http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
     maxZoom: 17,
     subdomains: 'abc',
-    attribution: 'Thunderforest.com. CC-BY 3.0'
+    attribution: '<a href="https://www.thunderforest.com">Thunderforest, CC-BY 3.0</a>'
 });
 
 const tilesDelorme = new L.TileLayer(
@@ -157,8 +164,23 @@ const overlays = {
 };
 
 
+const iconPoint = L.icon({
+    iconUrl: 'icon-walk.png',
+    iconAnchor: [5, 5]
+});
+const iconCamp = L.icon({
+    iconUrl: 'icon-camp.png',
+    iconAnchor: [5, 5]
+});
+const iconTarget = L.icon({
+    iconUrl: 'icon-target.png',
+    iconAnchor: [15, 15]
+});
+
+
 var firstfly = true;
 var flownTo = new Set();
+var ttMileMark = [];            // TooTip array : miles mark
 
 // Approx bounds of the CDT, geoJSON format  [ lng lat ]
 const cdtBounds = [
@@ -189,7 +211,7 @@ const cdtPolygon = [
 
 const map = new L.Map('eltmap', {
     crs: L.CRS.EPSG3857,
-    layers: [tilesUSGSimageryTopo],
+    layers: [tilesOutdoors],
     continuousWorld: true,
     worldCopyJump: false,
     zoomControl: false,
@@ -348,6 +370,7 @@ function addKml(f, c = 'blue') {
                     tt = tt + '<p>' + f.properties.description + '</p>';
                 }
                 if (tt != '') layer.bindTooltip(tt);
+                if (f.geometry.type == 'Point') layer.setIcon(iconTarget);
             }
         }));
     // layer.addTo(map);
@@ -363,15 +386,6 @@ function inreachBubble(prop) {
         + "</table>"
         + ((prop.Text) ? ("<h5>" + prop.Text + "</h5>") : "");
 }
-
-const iconPoint = L.icon({
-    iconUrl: 'icon-walk.png',
-    iconAnchor: [5, 5]
-});
-const iconCamp = L.icon({
-    iconUrl: 'icon-camp.png',
-    iconAnchor: [5, 5]
-});
 
 
 // Cf https://github.com/mapbox/leaflet-omnivore/blob/master/index.js
@@ -451,7 +465,7 @@ async function loadInfos() {
         weight: 1
     };
 
-    // Layer : Going there from home
+    //------ Layer : Going there from home
     // Ref: https://github.com/henrythasler/Leaflet.Geodesic
     var lgStart = L.featureGroup();
     const CDG = { lng: 2.5509443, lat: 49.0080713 };
@@ -470,15 +484,13 @@ async function loadInfos() {
     mapCtrlLayers.addOverlay(lgPlan, 'The Plan');
     lgPlan.addTo(map);
 
-    // Layer : Offical trail
+    //------ Layer : Offical trail
     // ! Le GPX lu est "en dur" avec un point par 0.5mi, donc on peut reconstruire les 3000 tooltip
     //   de chaque mile
     var lgRL = L.featureGroup(null, { attribution: 'CDTC'});
-    var lgMI = L.markerClusterGroup({
-        spiderfyOnMaxZoom: false,
-        showCoverageOnHover: false,
-        zoomToBoundsOnClick: false
-    });
+//  var lgMI = L.markerClusterGroup({ spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false });
+//  var lgMI = L.featureGroup();
+    ttMileMark = [];
     const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
     const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT'); //, rlStyle);
     hm.once('ready', function (e) {
@@ -487,15 +499,36 @@ async function loadInfos() {
         const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
         const line = L.polyline(coords, rlStyle);
         lgRL.addLayer(line);
+        const z = map.getZoom(); // e.zoom;
+        const m = Zoom2Mile[z];
         for (let i = 0; i < coords.length; i += 2) {
-            var tooltip = L.tooltip()
-                .setLatLng(coords[i])
-                .setContent(`${i/2}`);
-            lgMI.addLayer(tooltip);
+            const j = i / 2;
+            const tt = L.tooltip();
+            ttMileMark[j] = tt;
+            tt.setLatLng(coords[i]).setContent(j.toString());
+//          if ((j % m) == 0) tt.addTo(map);
+//          lgMI.addLayer(tt);
         }
     });
     mapCtrlLayers.addOverlay(lgRL, 'Official CDT');
-    mapCtrlLayers.addOverlay(lgMI, 'Official CDT Miles');
+//  mapCtrlLayers.addOverlay(lgMI, 'Official CDT Miles');
+//  map.addLayer(lgMI);
+
+    function toggleMileMark() {
+        if (! map.hasLayer(lgRL)) return;
+        const z = map.getZoom(); // e.zoom;
+        const m = Zoom2Mile[z];
+        ttMileMark.forEach((tt, i) => {
+            if ( ((i % m) == 0) && map.getBounds().contains(tt.getLatLng()))
+                tt.addTo(map);
+            else
+                tt.remove();
+        });
+//      ttMileMark[0].openTooltip();
+        ttMileMark[ttMileMark.length-1].addTo(map);
+    }
+    map.on('zoomend', toggleMileMark);
+    map.on('moveend', toggleMileMark);
 
     // https://github.com/adoroszlai/leaflet-distance-markers
     //  	<script src="leaflet-distance-marker.js"></script>
@@ -503,7 +536,7 @@ async function loadInfos() {
     //    utiliser les noms du GPX
     // lgRL.getBounds() ... il faut attendre hm.once('ready')
 
-    // Layer : Native Land
+    //------ Layer : Native Land
     // Ref:     https://native-land.ca/resources/api-docs/
     //          geoJsonFeature.properties: 
     //​             ID: 12345,
@@ -689,7 +722,7 @@ function mapFlyTo(lat, lon, ref) {
     if (!flownTo.has(s)) {
         flownTo.add(s);
         if (lgPlaces == null) {
-            lgPlaces = L.featureGroup();
+            lgPlaces = L.markerClusterGroup();
             mapCtrlLayers.addOverlay(lgPlaces, 'Places');
         }
         const p = L.circleMarker([lat, lon], { interactive: true, radius: 8 }).bindTooltip(ref);
