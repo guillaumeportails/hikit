@@ -41,8 +41,8 @@ function addslashes(str) {
 //   18      0.6         0.153
 
 const Zoom2Mile = [ 
-//     0     1     2     3     4     5     6
-    1000, 1000, 1000, 1000, 1000, 1000, 1000, 
+//     0     1     2     3     4    5    6
+    1000, 1000, 1000, 1000, 1000, 500, 200, 
 //    7    8    9  10  11  12 13 14 15 16 17 18 19 20 21 22 23 24 25
     100,  50,  20, 10,  5,  5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ];
 
@@ -137,11 +137,11 @@ const tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
 
 const basemaps = {
     'OSM': tilesOSM,
-    'OTM': tilesOTM,
+    'OTM (m)': tilesOTM,
 //  'Hike,Bike': tilesHikeBike,
-    'USGS': tilesUSGS,
+    'USGS (ft)': tilesUSGS,
     'USGS imagery': tilesUSGSimageryTopo,
-    'Outdoors': tilesOutdoors,
+    'Outdoors (m)': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
 //  'Korona': tilesKorona,
@@ -180,7 +180,7 @@ const iconTarget = L.icon({
 
 var firstfly = true;
 var flownTo = new Set();
-var ttMileMark = [];            // TooTip array : miles mark
+var ttMilestone = [];            // Tootip array : miles mark
 
 // Approx bounds of the CDT, geoJSON format  [ lng lat ]
 const cdtBounds = [
@@ -481,16 +481,31 @@ async function loadInfos() {
 
     // Layer : The Plan
     var lgPlan = addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
-    mapCtrlLayers.addOverlay(lgPlan, 'The Plan');
+    mapCtrlLayers.addOverlay(lgPlan, 'The Plan (hopefully)');
     lgPlan.addTo(map);
 
     //------ Layer : Offical trail
     // ! Le GPX lu est "en dur" avec un point par 0.5mi, donc on peut reconstruire les 3000 tooltip
     //   de chaque mile
+    //   Les milestone doivent etre filtrees : faire des openTooltip ne suffit pas, du moment qu'il y
+    //   a 3000 Tooltip dans map, ca rame. Il ne faut en inclure qu'un nombre limite (qq 10),
+    //   seulement ceux qui sont visible au zoom/position actuelle
+    //   Comme il n'y a pas de plugin adequat, on controle le pseudo groupe de milestone de facon
+    //   liee a la polyline Red Line
+    //
+    // Alternatives :
+    // + https://github.com/adoroszlai/leaflet-distance-markers
+    //   <script src="leaflet-distance-marker.js"></script>
+    //   => KO, le calcul de distance ne convient pas car le GPX est trop grossier
+    //      utiliser les noms du GPX
+    // + var lgMI = L.markerClusterGroup({ spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false });
+    //   var lgMI = L.featureGroup();
+    //  mapCtrlLayers.addOverlay(lgMI, 'Official CDT Miles');
+    //  map.addLayer(lgMI);
+    //
+    // lgRL.getBounds() ... il faut attendre hm.once('ready') => C'est aussi simple d'avoir en dur ce Bounds
     var lgRL = L.featureGroup(null, { attribution: 'CDTC'});
-//  var lgMI = L.markerClusterGroup({ spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false });
-//  var lgMI = L.featureGroup();
-    ttMileMark = [];
+    ttMilestone = [];
     const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
     const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT'); //, rlStyle);
     hm.once('ready', function (e) {
@@ -502,39 +517,33 @@ async function loadInfos() {
         const z = map.getZoom(); // e.zoom;
         const m = Zoom2Mile[z];
         for (let i = 0; i < coords.length; i += 2) {
-            const j = i / 2;
-            const tt = L.tooltip();
-            ttMileMark[j] = tt;
-            tt.setLatLng(coords[i]).setContent(j.toString());
-//          if ((j % m) == 0) tt.addTo(map);
-//          lgMI.addLayer(tt);
+            const mile = i / 2;
+            const tt = L.tooltip(coords[i], { content: mile.toString(), className: 'milestone'});
+            ttMilestone[mile] = tt;
         }
     });
-    mapCtrlLayers.addOverlay(lgRL, 'Official CDT');
-//  mapCtrlLayers.addOverlay(lgMI, 'Official CDT Miles');
-//  map.addLayer(lgMI);
+    mapCtrlLayers.addOverlay(lgRL, 'Official CDT Milestones');
 
-    function toggleMileMark() {
-        if (! map.hasLayer(lgRL)) return;
-        const z = map.getZoom(); // e.zoom;
-        const m = Zoom2Mile[z];
-        ttMileMark.forEach((tt, i) => {
-            if ( ((i % m) == 0) && map.getBounds().contains(tt.getLatLng()))
-                tt.addTo(map);
-            else
-                tt.remove();
-        });
-//      ttMileMark[0].openTooltip();
-        ttMileMark[ttMileMark.length-1].addTo(map);
+    function toggleMilestone(data) {
+        if (data.layer && (data.layer != lgRL)) return;
+        if (map.hasLayer(lgRL)) {
+            const z = map.getZoom(); // e.zoom;
+            const m = Zoom2Mile[z];
+            ttMilestone.forEach((tt, i) => {
+                if ( ((i % m) == 0) && map.getBounds().contains(tt.getLatLng()))
+                    tt.addTo(map);
+                else
+                    tt.remove();
+            });
+            ttMilestone[ttMilestone.length-1].addTo(map);
+        } else
+            ttMilestone.forEach((tt) => tt.remove());
     }
-    map.on('zoomend', toggleMileMark);
-    map.on('moveend', toggleMileMark);
+    map.on('zoomend', toggleMilestone);
+    map.on('moveend', toggleMilestone);
+    map.on('overlayadd', toggleMilestone);
+    map.on('overlayremove', toggleMilestone);
 
-    // https://github.com/adoroszlai/leaflet-distance-markers
-    //  	<script src="leaflet-distance-marker.js"></script>
-    // => KO, le calcul de distance ne convient pas car le GPX est trop grossier
-    //    utiliser les noms du GPX
-    // lgRL.getBounds() ... il faut attendre hm.once('ready')
 
     //------ Layer : Native Land
     // Ref:     https://native-land.ca/resources/api-docs/
