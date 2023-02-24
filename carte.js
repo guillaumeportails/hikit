@@ -176,6 +176,10 @@ const iconTarget = L.icon({
     iconUrl: 'icon-target.png',
     iconAnchor: [15, 15]
 });
+const iconCross = L.icon({
+    iconUrl: 'icon-cross.png',
+    iconAnchor: [7, 7]
+});
 
 
 var firstfly = true;
@@ -339,13 +343,18 @@ function addGpx(f, n, s = { color: 'red' }) {
 //            filter: function (f) {
 //                return (f.geometry.type == 'LineString');
 //            },
-            style: function (f) { return s; }
-//            onEachFeature: function (f, layer) {
-//                console.log(f);
-//            }
+            style: function (f) { return s; },
+            onEachFeature: function (f, layer) {
+                var tt = '';
+                if (f.properties && f.properties.name) {
+                    tt = '<strong><center>' + f.properties.name + '</center></strong>';
+                }
+                if (tt != '') layer.bindTooltip(tt, { sticky: true });
+                if (f.geometry.type == 'Point') layer.setIcon(iconCross);
+            }
         }));
-    layer.bindTooltip(n);
-    // layer.addTo(map);
+//  layer.bindTooltip(n, { sticky: true });
+//  layer.addTo(map);
     return layer;
 }
 
@@ -369,7 +378,7 @@ function addKml(f, c = 'blue') {
                 if (f.properties && f.properties.description) {
                     tt = tt + '<p>' + f.properties.description + '</p>';
                 }
-                if (tt != '') layer.bindTooltip(tt);
+                if (tt != '') layer.bindTooltip(tt, { sticky: true });
                 if (f.geometry.type == 'Point') layer.setIcon(iconTarget);
             }
         }));
@@ -473,7 +482,7 @@ async function loadInfos() {
     const PHX = { lng: -112.010124, lat: 33.435249 };
     const g1 = new L.Geodesic([[CDG, YYC], [YYC, PHX]], {
         steps: 6, weight: 5, opacity: 0.5
-    }).bindTooltip('CDG to PHX via YYC');
+    }).bindTooltip('CDG to PHX via YYC', { sticky: true });
     lgStart.addLayer(g1);
     lgStart.addLayer(addKml('CDG_CrazyCook.kml'));
     mapCtrlLayers.addOverlay(lgStart, 'Going to Crazy Cook');
@@ -507,13 +516,13 @@ async function loadInfos() {
     var lgRL = L.featureGroup(null, { attribution: 'CDTC'});
     ttMilestone = [];
     const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
-    const hm = addGpx('CDT_HalfMile_2020.gpx', 'The Official "Red Line" CDT'); //, rlStyle);
+    const hm = addGpx('CDT_HalfMile_2020.gpx'); //, rlStyle);
     hm.once('ready', function (e) {
         const fc = e.target.toGeoJSON();
         // ? Qui a inverse lng,lat ?
         const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
         const line = L.polyline(coords, rlStyle);
-        lgRL.addLayer(line);
+        lgRL.addLayer(line).bindTooltip('The Official "Red Line" CDT', { sticky: true });
         const z = map.getZoom(); // e.zoom;
         const m = Zoom2Mile[z];
         for (let i = 0; i < coords.length; i += 2) {
