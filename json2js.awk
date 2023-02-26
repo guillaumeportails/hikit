@@ -2,7 +2,9 @@
 #
 # + Produce a JS file from a JSON
 # + 5 digits of latitude is 1852*60*0.00001 = 1.1m : enough
-# + the JSON fil is an output of gpsbabel (from GPX/KML), with a regular pattern
+# + altitude can be ignored
+# + the JSON file output of gpsbabel (from GPX/KML) or js-beautify,
+#   adheres to a regular pattern
 
 
 BEGIN {
@@ -13,6 +15,8 @@ BEGIN {
   printf "};\n"
   next
 }
+
+# gps babel output
 
 /^ +-?[0-9]+\.[0-9]+,$/ {
   x = $1 + 0.0
@@ -25,6 +29,17 @@ BEGIN {
   printf " %.5f\n", x
   next
 }
+
+
+# js-beautify output
+/^ +\[-?[0-9\.]+, +-?[0-9\.]+, +-?[0-9\.]+\],?$/ {
+  lng = substr($1, 2) + 0.0
+  lat = $2 + 0.0
+  end = (substr($3, length($3), 1) == ",")
+  printf "  [ %.5f, %.5f ]%s    // %s\n", lng, lat, (end) ? "," : " ", $0
+  next
+}
+
 
 {
   print $0

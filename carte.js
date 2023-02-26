@@ -385,13 +385,14 @@ function addGpx(f, s = { color: 'red' }) {
 
 
 // KML layer from a JSON   (KML is more style'able than GPX)
-function layerKml(geojson, color) {
+// ! GpsBabel de transcode pas les styles (il s'occupe de geometrie)
+function layerKml(geojson, style = { color: '', weight: 3, opacity: 1} ) {
     return L.geoJson(geojson, {
         style: function (f) {   // https://leafletjs.com/reference.html#path-option
             return {            // Transcode the styling found in KML  !Placemarks not caught here
-                color: (f.properties.stroke) ? '#' + f.properties.stroke : color,
-                opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : 1.0,
-                weight: (f.properties['stroke-width']) ? f.properties['stroke-width'] : 1.0
+                color: (f.properties.stroke) ? f.properties.stroke : style.color,
+                opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : style.opacity,
+                weight: (f.properties['stroke-width']) ? f.properties['stroke-width'] : style.weight
             };
         },
         onEachFeature: function (f, layer) {
@@ -409,8 +410,8 @@ function layerKml(geojson, color) {
 }
 
 // KML layer from a file
-function addKml(f, c = 'blue') {
-    return omnivore.kml('tracks/' + f, null, layerKml(null, c));
+function addKml(f, style) {
+    return omnivore.kml('tracks/' + f, null, layerKml(null, style.color));
 }
 
 
