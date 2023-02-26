@@ -5,6 +5,13 @@
 //
 // Refs :
 //  https://geojson.org/geojson-spec.html
+//
+//
+// Autres que LeafLet :
+// + mapbox             meme filiation,   support 3D
+// + cesiumjs           vise la 3D
+// + openlayers
+// + maplibre-gl-js     open-source fork of mapbox-gl-js
 
 
 
@@ -23,6 +30,20 @@ function addslashes(str) {
     return (str + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0');
 }
 
+
+// Static map features (tracks, etc)
+// + without assert, strict MIME type checking forbids load of a JSON file
+//   + Edge 110.0.1587.56  : OK
+//   + Firefox 97          : KO "import assertions are not currently supported"
+//   https://caniuse.com/mdn-javascript_statements_import_import_assertions
+//      "This feature is non-standard and should not be used without careful consideration."
+//   https://marian-caikovski.medium.com/how-to-import-json-into-javascript-module-json-modules-e6721e19a314
+//import geoCDG_CrazyCook  from './tracks/CDG_CrazyCook.json';       //assert {type: 'json'};
+//import geoCDT_HalfMile   from './tracks/CDT_HalfMile_2020.json';   //assert {type: 'json'};
+//import geoCDT_Plan       from './tracks/CDT2023_Plan.json';        //assert {type: 'json'};
+// Cf build.sh
+
+
 // Source de tuiles/cartes 
 //
 // Cf https://leaflet-extras.github.io/leaflet-providers/preview/
@@ -31,20 +52,25 @@ function addslashes(str) {
 //    Z    m/pixel    km/tile   (256pixels/tile, m pour lat=0)
 //    9                 80.0
 //   10    152.0        39.0
-//   11     76.0        19.0
-//   12     38.0        10.0
-//   13     19.0         4.9
-//   14      9.5         2.440
+//   11     76.0        19.0            1 degre     = 111km
+//   12     38.0        10.0            0.001 deg   = 111m
+//   13     19.0         4.9            4 decimales = 11m
+//   14      9.5         2.440          5 decimales = 1m
 //   15      4.8         1.220
 //   16      2.4         0.610
 //   17      1.2         0.306
 //   18      0.6         0.153
+//
+// Autres :
+// + https://www.tracestrack.com/
+//   Est en fait OSM et OTM
+//
 
-const Zoom2Mile = [ 
-//     0     1     2     3     4    5    6
-    1000, 1000, 1000, 1000, 1000, 500, 200, 
-//    7    8    9  10  11  12 13 14 15 16 17 18 19 20 21 22 23 24 25
-    100,  50,  20, 10,  5,  5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ];
+const Zoom2Mile = [
+    // 0     1     2     3     4    5    6
+    0, 0, 0, 0, 1000, 500, 200,
+    // 7    8    9  10  11  12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    100, 50, 20, 10, 5, 5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
 
 const tilesWatercolor = new L.TileLayer(
@@ -82,13 +108,13 @@ const tilesOTM = new L.TileLayer(
 });
 
 const tilesUSGS = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
-	maxZoom: 16,    // said 20, but seems 16
-	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    maxZoom: 16,    // said 20, but seems 16
+    attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
 });
 
 const tilesUSGSimageryTopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
-	maxZoom: 16,    // said 20 but seems 16
-	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    maxZoom: 16,    // said 20 but seems 16
+    attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
 });
 
 const tilesOutdoors = new L.TileLayer(
@@ -138,13 +164,13 @@ const tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
 const basemaps = {
     'OSM': tilesOSM,
     'OTM (m)': tilesOTM,
-//  'Hike,Bike': tilesHikeBike,
+    //  'Hike,Bike': tilesHikeBike,
     'USGS (ft)': tilesUSGS,
     'USGS imagery': tilesUSGSimageryTopo,
     'Outdoors (m)': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
-//  'Korona': tilesKorona,
+    //  'Korona': tilesKorona,
     'watercolor': tilesWatercolor,
     'toner': tilesToner,
     'terrain': tilesTerrain,
@@ -195,22 +221,22 @@ const cdtBounds = [
 ];
 // less approx
 const cdtPolygon = [
-    [-113.326252,46.375386],
-    [-114.775113,48.992727],
-    [-114.695734,45.700459],
-    [-113.460733,44.118182],
-    [-107.028708,39.752045],
-    [-108.408835,37.928690],
-    [-107.100957,36.536929],
-    [-108.790538,35.000747],
-    [-108.965692,31.299239],
-    [-107.743995,31.297717],
-    [-107.198116,34.979334],
-    [-105.709069,36.582693],
-    [-105.207683,40.708463],
-    [-111.465271,45.531042],
-    [-112.300283,49.037458],
-    [-114.775113,48.992727]
+    [-113.326252, 46.375386],
+    [-114.775113, 48.992727],
+    [-114.695734, 45.700459],
+    [-113.460733, 44.118182],
+    [-107.028708, 39.752045],
+    [-108.408835, 37.928690],
+    [-107.100957, 36.536929],
+    [-108.790538, 35.000747],
+    [-108.965692, 31.299239],
+    [-107.743995, 31.297717],
+    [-107.198116, 34.979334],
+    [-105.709069, 36.582693],
+    [-105.207683, 40.708463],
+    [-111.465271, 45.531042],
+    [-112.300283, 49.037458],
+    [-114.775113, 48.992727]
 ];
 
 const map = new L.Map('eltmap', {
@@ -336,56 +362,57 @@ var zanim = null; //setInterval(zAnim,1000);
 map.setView([31.803, -42.367], (zanim) ? 1 : 3);
 
 
-function addGpx(f, n, s = { color: 'red' }) {
-    const layer = omnivore.gpx('tracks/' + f,
-        null,
-        L.geoJson(null, {
-//            filter: function (f) {
-//                return (f.geometry.type == 'LineString');
-//            },
-            style: function (f) { return s; },
-            onEachFeature: function (f, layer) {
-                var tt = '';
-                if (f.properties && f.properties.name) {
-                    tt = '<strong><center>' + f.properties.name + '</center></strong>';
-                }
-                if (tt != '') layer.bindTooltip(tt, { sticky: true });
-                if (f.geometry.type == 'Point') layer.setIcon(iconCross);
+// GPX layer from a JSON
+function layerGpx(geojson, style) {
+    return L.geoJson(geojson, {
+        //      filter: function (f) { return (f.geometry.type == 'LineString'); },
+        style: function (f) { return style; },
+        onEachFeature: function (f, layer) {
+            var tt = '';
+            if (f.properties && f.properties.name) {
+                tt = '<strong><center>' + f.properties.name + '</center></strong>';
             }
-        }));
-//  layer.bindTooltip(n, { sticky: true });
-//  layer.addTo(map);
-    return layer;
+            if (tt != '') layer.bindTooltip(tt, { sticky: true });       // For polylines !
+            if (f.geometry.type == 'Point') layer.setIcon(iconCross);
+        }
+    });
+}
+
+// GPX layer from a file
+function addGpx(f, s = { color: 'red' }) {
+    return omnivore.gpx('tracks/' + f, null, layerGpx(null, s));
 }
 
 
+// KML layer from a JSON   (KML is more style'able than GPX)
+function layerKml(geojson, color) {
+    return L.geoJson(geojson, {
+        style: function (f) {   // https://leafletjs.com/reference.html#path-option
+            return {            // Transcode the styling found in KML  !Placemarks not caught here
+                color: (f.properties.stroke) ? '#' + f.properties.stroke : color,
+                opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : 1.0,
+                weight: (f.properties['stroke-width']) ? f.properties['stroke-width'] : 1.0
+            };
+        },
+        onEachFeature: function (f, layer) {
+            var tt = '';
+            if (f.properties && f.properties.name) {
+                tt = '<strong><center>' + f.properties.name + '</center></strong>';
+            }
+            if (f.properties && f.properties.description) {
+                tt = tt + '<p>' + f.properties.description + '</p>';
+            }
+            if (tt != '') layer.bindTooltip(tt, { sticky: true });
+            if (f.geometry.type == 'Point') layer.setIcon(iconTarget);
+        }
+    });
+}
+
+// KML layer from a file
 function addKml(f, c = 'blue') {
-    const layer = omnivore.kml('tracks/' + f,
-        null,
-        L.geoJson(null, {
-            style: function (f) {   // https://leafletjs.com/reference.html#path-option
-                return {            // Transcode the styling found in KML  !Placemarks not caught here
-                    color: (f.properties.stroke) ? '#' + f.properties.stroke : c,
-                    opacity: (f.properties['stroke-opacity']) ? f.properties['stroke-opacity'] : 1.0,
-                    weight: (f.properties['stroke-width']) ? f.properties['stroke-width'] : 1.0
-                };
-            },
-            onEachFeature: function (f, layer) {
-                var tt = '';
-                if (f.properties && f.properties.name) {
-                    tt = '<strong><center>' + f.properties.name + '</center></strong>';
-                }
-                if (f.properties && f.properties.description) {
-                    tt = tt + '<p>' + f.properties.description + '</p>';
-                }
-                if (tt != '') layer.bindTooltip(tt, { sticky: true });
-                if (f.geometry.type == 'Point') layer.setIcon(iconTarget);
-            }
-        }));
-    // layer.addTo(map);
-    return layer;
-
+    return omnivore.kml('tracks/' + f, null, layerKml(null, c));
 }
+
 
 
 function inreachBubble(prop) {
@@ -484,14 +511,15 @@ async function loadInfos() {
         steps: 6, weight: 5, opacity: 0.5
     }).bindTooltip('CDG to PHX via YYC', { sticky: true });
     lgStart.addLayer(g1);
-    lgStart.addLayer(addKml('CDG_CrazyCook.kml'));
+    const k1 = layerKml(geoCDG_CrazyCook);
+    lgStart.addLayer(k1);
     mapCtrlLayers.addOverlay(lgStart, 'Going to Crazy Cook');
     lgStart.addTo(map);
 
-    // Layer : The Plan
-    var lgPlan = addGpx('CDT2023_plan.gpx', 'The Plan (hopefully)', { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
-    mapCtrlLayers.addOverlay(lgPlan, 'The Plan (hopefully)');
-    lgPlan.addTo(map);
+    //------ Layer : The Plan
+    const layerPlan = layerGpx(geoCDT2023_plan, { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
+    mapCtrlLayers.addOverlay(layerPlan, 'The Plan (hopefully)');
+    layerPlan.addTo(map);
 
     //------ Layer : Offical trail
     // ! Le GPX lu est "en dur" avec un point par 0.5mi, donc on peut reconstruire les 3000 tooltip
@@ -513,38 +541,32 @@ async function loadInfos() {
     //  map.addLayer(lgMI);
     //
     // lgRL.getBounds() ... il faut attendre hm.once('ready') => C'est aussi simple d'avoir en dur ce Bounds
-    var lgRL = L.featureGroup(null, { attribution: 'CDTC'});
-    ttMilestone = [];
+    var lgRL = L.featureGroup(null, { attribution: 'CDTC' });
     const rlStyle = { color: 'red', weight: 8, opacity: 0.7 };
-    const hm = addGpx('CDT_HalfMile_2020.gpx'); //, rlStyle);
-    hm.once('ready', function (e) {
-        const fc = e.target.toGeoJSON();
-        // ? Qui a inverse lng,lat ?
-        const coords = fc.features[0].geometry.coordinates.map(x => { return [ x[1], x[0]]; });
-        const line = L.polyline(coords, rlStyle);
-        lgRL.addLayer(line).bindTooltip('The Official "Red Line" CDT', { sticky: true });
-        const z = map.getZoom(); // e.zoom;
-        const m = Zoom2Mile[z];
+    const layerRL = layerGpx(geoCDT_HalfMile_2020, rlStyle);
+    lgRL.addLayer(layerRL);
+    ttMilestone = [];
+    {                                                                         // ? Qui a inverse lng,lat ?
+        const coords = geoCDT_HalfMile_2020.features[0].geometry.coordinates; //.map(x => { return [x[1], x[0]]; });
         for (let i = 0; i < coords.length; i += 2) {
             const mile = i / 2;
-            const tt = L.tooltip(coords[i], { content: mile.toString(), className: 'milestone'});
-            ttMilestone[mile] = tt;
+            ttMilestone[mile] = L.tooltip([coords[i][1], coords[i][0]], { content: mile.toString(), className: 'milestone' });
         }
-    });
+    }
     mapCtrlLayers.addOverlay(lgRL, 'Official CDT Milestones');
-
+    //
+    // Les ttMilestone[] sont ajoutes ou non a la carte selon le zoom
     function toggleMilestone(data) {
         if (data.layer && (data.layer != lgRL)) return;
-        if (map.hasLayer(lgRL)) {
-            const z = map.getZoom(); // e.zoom;
-            const m = Zoom2Mile[z];
+        const m = Zoom2Mile[map.getZoom()];
+        if ((m != 0) && map.hasLayer(lgRL)) {
             ttMilestone.forEach((tt, i) => {
-                if ( ((i % m) == 0) && map.getBounds().contains(tt.getLatLng()))
+                if (((i % m) == 0) && map.getBounds().contains(tt.getLatLng()))
                     tt.addTo(map);
                 else
                     tt.remove();
             });
-            ttMilestone[ttMilestone.length-1].addTo(map);
+            if (ttMilestone.length > 0) ttMilestone[ttMilestone.length - 1].addTo(map);
         } else
             ttMilestone.forEach((tt) => tt.remove());
     }
@@ -585,13 +607,13 @@ async function loadInfos() {
         })
     }).then(resp => resp.json()
     ).then(json => {
-        const layerNative = L.geoJson({'type': 'FeatureCollection', 'features': json }, {
+        //      console.log("got native land json");
+        const layerNative = L.geoJson({ 'type': 'FeatureCollection', 'features': json }, {
             style: f => { return { color: f.properties.color }; }
         }).bindPopup(layer => layer.feature.properties.Name);
-        setTimeout(function() {
-            lgNative.addLayer(layerNative).addTo(map);
-            mapCtrlLayers.addOverlay(lgNative, 'Native Land');
-        }, 4*1000);
+        lgNative.addLayer(layerNative).addTo(map);
+        mapCtrlLayers.addOverlay(lgNative, 'Native Land');
+        setTimeout(function () { lgNative.remove(); }, 2000);
     });
 
 

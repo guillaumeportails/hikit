@@ -1,0 +1,2119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gpx version="1.1" creator="GPS Visualizer https://www.gpsvisualizer.com/" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <name>GDT </name>
+<desc>
+  Extracts de https://greatdividetrail.com/
+  Filtrage 1 trkpt sur 100
+  Continuation possible (!?) du CDT après la frontière USA/Canada 
+</desc>
+
+
+  <trk>
+    <name>GDT    A01: International boundary to Cameron Lake</name>
+    <trkseg>
+      <trkpt lat="49.003536000" lon="-113.907154000"> </trkpt>
+      <trkpt lat="49.009661000" lon="-113.908689000"> </trkpt>
+      <trkpt lat="49.015821000" lon="-113.910323000"> </trkpt>
+      <trkpt lat="49.021633000" lon="-113.910399000"> </trkpt>
+      <trkpt lat="49.028421000" lon="-113.910644000"> </trkpt>
+      <trkpt lat="49.034863000" lon="-113.912219000"> </trkpt>
+      <trkpt lat="49.041142000" lon="-113.915103000"> </trkpt>
+      <trkpt lat="49.047605000" lon="-113.917525000"> </trkpt>
+      <trkpt lat="49.053076000" lon="-113.919876000"> </trkpt>
+      <trkpt lat="49.054145000" lon="-113.925220000"> </trkpt>
+      <trkpt lat="49.053549000" lon="-113.933709000"> </trkpt>
+      <trkpt lat="49.051267000" lon="-113.941020000"> </trkpt>
+      <trkpt lat="49.050591000" lon="-113.950125000"> </trkpt>
+      <trkpt lat="49.048666000" lon="-113.959224000"> </trkpt>
+      <trkpt lat="49.045143000" lon="-113.967149000"> </trkpt>
+      <trkpt lat="49.039927000" lon="-113.969457000"> </trkpt>
+      <trkpt lat="49.033416000" lon="-113.972097000"> </trkpt>
+      <trkpt lat="49.030049000" lon="-113.979756000"> </trkpt>
+      <trkpt lat="49.031273000" lon="-113.987447000"> </trkpt>
+      <trkpt lat="49.030103000" lon="-113.991728000"> </trkpt>
+      <trkpt lat="49.025985000" lon="-113.997518000"> </trkpt>
+      <trkpt lat="49.021856000" lon="-114.002147000"> </trkpt>
+      <trkpt lat="49.019672000" lon="-114.002948000"> </trkpt>
+      <trkpt lat="49.018281000" lon="-114.018252000"> </trkpt>
+      <trkpt lat="49.010116000" lon="-114.023349000"> </trkpt>
+      <trkpt lat="49.013378000" lon="-114.029462000"> </trkpt>
+      <trkpt lat="49.018023000" lon="-114.033195000"> </trkpt>
+      <trkpt lat="49.017910000" lon="-114.034883000"> </trkpt>
+      <trkpt lat="49.015207000" lon="-114.040333000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    A02: Cameron Lake to Sage Pass</name>
+    <trkseg>
+      <trkpt lat="49.015207000" lon="-114.040333000"> </trkpt>
+      <trkpt lat="49.060014000" lon="-114.013230000"> </trkpt>
+      <trkpt lat="49.060180000" lon="-114.033750000"> </trkpt>
+      <trkpt lat="49.057040000" lon="-114.053810000"> </trkpt>
+      <trkpt lat="49.054940000" lon="-114.070570000"> </trkpt>
+      <trkpt lat="49.064830000" lon="-114.074970000"> </trkpt>
+      <trkpt lat="49.067540000" lon="-114.080660000"> </trkpt>
+      <trkpt lat="49.067670000" lon="-114.085140000"> </trkpt>
+      <trkpt lat="49.060930000" lon="-114.089110000"> </trkpt>
+      <trkpt lat="49.064340000" lon="-114.100870000"> </trkpt>
+      <trkpt lat="49.071080000" lon="-114.108700000"> </trkpt>
+      <trkpt lat="49.078120000" lon="-114.113230000"> </trkpt>
+      <trkpt lat="49.081760000" lon="-114.121470000"> </trkpt>
+      <trkpt lat="49.086030000" lon="-114.125270000"> </trkpt>
+      <trkpt lat="49.090840000" lon="-114.135330000"> </trkpt>
+      <trkpt lat="49.096720000" lon="-114.145610000"> </trkpt>
+      <trkpt lat="49.106400000" lon="-114.146100000"> </trkpt>
+      <trkpt lat="49.116800000" lon="-114.140870000"> </trkpt>
+      <trkpt lat="49.130490000" lon="-114.155290000"> </trkpt>
+      <trkpt lat="49.137851000" lon="-114.152297000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    A03: Sage Pass to Castle Mtn Ski Resort</name>
+    <trkseg>
+      <trkpt lat="49.137851000" lon="-114.152297000"> </trkpt>
+      <trkpt lat="49.145635000" lon="-114.155710000"> </trkpt>
+      <trkpt lat="49.149706000" lon="-114.159380000"> </trkpt>
+      <trkpt lat="49.155245000" lon="-114.167024000"> </trkpt>
+      <trkpt lat="49.162527000" lon="-114.173403000"> </trkpt>
+      <trkpt lat="49.165923000" lon="-114.184500000"> </trkpt>
+      <trkpt lat="49.168697000" lon="-114.193675000"> </trkpt>
+      <trkpt lat="49.170989000" lon="-114.200629000"> </trkpt>
+      <trkpt lat="49.175882000" lon="-114.202445000"> </trkpt>
+      <trkpt lat="49.182555000" lon="-114.200662000"> </trkpt>
+      <trkpt lat="49.182235000" lon="-114.208790000"> </trkpt>
+      <trkpt lat="49.182894000" lon="-114.217302000"> </trkpt>
+      <trkpt lat="49.184009000" lon="-114.228544000"> </trkpt>
+      <trkpt lat="49.182574000" lon="-114.240841000"> </trkpt>
+      <trkpt lat="49.181271000" lon="-114.251799000"> </trkpt>
+      <trkpt lat="49.180672000" lon="-114.260823000"> </trkpt>
+      <trkpt lat="49.179314000" lon="-114.269071000"> </trkpt>
+      <trkpt lat="49.177709000" lon="-114.280252000"> </trkpt>
+      <trkpt lat="49.178809000" lon="-114.285394000"> </trkpt>
+      <trkpt lat="49.186522000" lon="-114.291871000"> </trkpt>
+      <trkpt lat="49.192640000" lon="-114.311467000"> </trkpt>
+      <trkpt lat="49.199491000" lon="-114.322281000"> </trkpt>
+      <trkpt lat="49.199171000" lon="-114.331940000"> </trkpt>
+      <trkpt lat="49.195592000" lon="-114.339795000"> </trkpt>
+      <trkpt lat="49.194877000" lon="-114.350911000"> </trkpt>
+      <trkpt lat="49.204354000" lon="-114.349977000"> </trkpt>
+      <trkpt lat="49.215671000" lon="-114.350282000"> </trkpt>
+      <trkpt lat="49.229997000" lon="-114.354073000"> </trkpt>
+      <trkpt lat="49.246081000" lon="-114.352529000"> </trkpt>
+      <trkpt lat="49.259359000" lon="-114.351778000"> </trkpt>
+      <trkpt lat="49.275005000" lon="-114.360901000"> </trkpt>
+      <trkpt lat="49.285292000" lon="-114.385317000"> </trkpt>
+      <trkpt lat="49.304921000" lon="-114.402414000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    A04: Castle Mtn to Lynx Creek CG</name>
+    <trkseg>
+      <trkpt lat="49.304921000" lon="-114.402414000"> </trkpt>
+      <trkpt lat="49.366200000" lon="-114.400474000"> </trkpt>
+      <trkpt lat="49.367189000" lon="-114.404603000"> </trkpt>
+      <trkpt lat="49.369639000" lon="-114.410275000"> </trkpt>
+      <trkpt lat="49.369485000" lon="-114.414676000"> </trkpt>
+      <trkpt lat="49.367237000" lon="-114.419387000"> </trkpt>
+      <trkpt lat="49.369216000" lon="-114.424407000"> </trkpt>
+      <trkpt lat="49.370362000" lon="-114.424191000"> </trkpt>
+      <trkpt lat="49.372865000" lon="-114.423200000"> </trkpt>
+      <trkpt lat="49.375415000" lon="-114.421684000"> </trkpt>
+      <trkpt lat="49.378129000" lon="-114.419818000"> </trkpt>
+      <trkpt lat="49.381320000" lon="-114.421111000"> </trkpt>
+      <trkpt lat="49.385113000" lon="-114.418924000"> </trkpt>
+      <trkpt lat="49.386730000" lon="-114.412237000"> </trkpt>
+      <trkpt lat="49.390080000" lon="-114.407190000"> </trkpt>
+      <trkpt lat="49.393712000" lon="-114.404599000"> </trkpt>
+      <trkpt lat="49.398075000" lon="-114.402879000"> </trkpt>
+      <trkpt lat="49.402747000" lon="-114.404260000"> </trkpt>
+      <trkpt lat="49.416868000" lon="-114.406209000"> </trkpt>
+      <trkpt lat="49.421844000" lon="-114.404518000"> </trkpt>
+      <trkpt lat="49.426138000" lon="-114.407260000"> </trkpt>
+      <trkpt lat="49.429072000" lon="-114.406086000"> </trkpt>
+      <trkpt lat="49.431845000" lon="-114.409160000"> </trkpt>
+      <trkpt lat="49.434958000" lon="-114.410912000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    A05: Lynx Creek CG to Lynx Creek Rd</name>
+    <trkseg>
+      <trkpt lat="49.434958000" lon="-114.410912000"> </trkpt>
+      <trkpt lat="49.461673000" lon="-114.425098000"> </trkpt>
+      <trkpt lat="49.466029000" lon="-114.440317000"> </trkpt>
+      <trkpt lat="49.471490000" lon="-114.445105000"> </trkpt>
+      <trkpt lat="49.477166000" lon="-114.447183000"> </trkpt>
+      <trkpt lat="49.482641000" lon="-114.450508000"> </trkpt>
+      <trkpt lat="49.487293000" lon="-114.454816000"> </trkpt>
+      <trkpt lat="49.493723000" lon="-114.458735000"> </trkpt>
+      <trkpt lat="49.499316000" lon="-114.463935000"> </trkpt>
+      <trkpt lat="49.506079000" lon="-114.468325000"> </trkpt>
+      <trkpt lat="49.513326000" lon="-114.469601000"> </trkpt>
+      <trkpt lat="49.519111000" lon="-114.472427000"> </trkpt>
+      <trkpt lat="49.525502000" lon="-114.477907000"> </trkpt>
+      <trkpt lat="49.531899000" lon="-114.480524000"> </trkpt>
+      <trkpt lat="49.538269000" lon="-114.484888000"> </trkpt>
+      <trkpt lat="49.544296000" lon="-114.483435000"> </trkpt>
+      <trkpt lat="49.549480000" lon="-114.486986000"> </trkpt>
+      <trkpt lat="49.545278000" lon="-114.494906000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    A06: Lynx Creek Rd to Coleman</name>
+    <trkseg>
+      <trkpt lat="49.545278000" lon="-114.494906000"> </trkpt>
+      <trkpt lat="49.541382000" lon="-114.503600000"> </trkpt>
+      <trkpt lat="49.546653000" lon="-114.507574000"> </trkpt>
+      <trkpt lat="49.554213000" lon="-114.509140000"> </trkpt>
+      <trkpt lat="49.557412000" lon="-114.518076000"> </trkpt>
+      <trkpt lat="49.564450000" lon="-114.524137000"> </trkpt>
+      <trkpt lat="49.571875000" lon="-114.519705000"> </trkpt>
+      <trkpt lat="49.579802000" lon="-114.517841000"> </trkpt>
+      <trkpt lat="49.588951000" lon="-114.517221000"> </trkpt>
+      <trkpt lat="49.593924000" lon="-114.514117000"> </trkpt>
+      <trkpt lat="49.597035000" lon="-114.508924000"> </trkpt>
+      <trkpt lat="49.599833000" lon="-114.503611000"> </trkpt>
+      <trkpt lat="49.600998000" lon="-114.503330000"> </trkpt>
+      <trkpt lat="49.603332000" lon="-114.500359000"> </trkpt>
+      <trkpt lat="49.603054000" lon="-114.501695000"> </trkpt>
+      <trkpt lat="49.605904000" lon="-114.499245000"> </trkpt>
+      <trkpt lat="49.608475000" lon="-114.495033000"> </trkpt>
+      <trkpt lat="49.617767000" lon="-114.503278000"> </trkpt>
+      <trkpt lat="49.621925000" lon="-114.501256000"> </trkpt>
+      <trkpt lat="49.626478000" lon="-114.503016000"> </trkpt>
+      <trkpt lat="49.629242000" lon="-114.501175000"> </trkpt>
+      <trkpt lat="49.630396000" lon="-114.497482000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    B07: Coleman to Atlas staging area</name>
+    <trkseg>
+      <trkpt lat="49.630396000" lon="-114.497482000"> </trkpt>
+      <trkpt lat="49.637081000" lon="-114.527048000"> </trkpt>
+      <trkpt lat="49.639691000" lon="-114.527722000"> </trkpt>
+      <trkpt lat="49.642100000" lon="-114.525149000"> </trkpt>
+      <trkpt lat="49.649928000" lon="-114.526208000"> </trkpt>
+      <trkpt lat="49.652334000" lon="-114.527571000"> </trkpt>
+      <trkpt lat="49.653082000" lon="-114.531665000"> </trkpt>
+      <trkpt lat="49.655263000" lon="-114.534471000"> </trkpt>
+      <trkpt lat="49.655825000" lon="-114.542537000"> </trkpt>
+      <trkpt lat="49.656393000" lon="-114.546715000"> </trkpt>
+      <trkpt lat="49.666729000" lon="-114.586955000"> </trkpt>
+      <trkpt lat="49.669319000" lon="-114.590542000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    B08: High Rock Trail</name>
+    <trkseg>
+      <trkpt lat="49.669319000" lon="-114.590542000"> </trkpt>
+      <trkpt lat="49.669956000" lon="-114.595968000"> </trkpt>
+      <trkpt lat="49.673788000" lon="-114.600515000"> </trkpt>
+      <trkpt lat="49.679564000" lon="-114.605149000"> </trkpt>
+      <trkpt lat="49.689516000" lon="-114.611855000"> </trkpt>
+      <trkpt lat="49.692902000" lon="-114.620594000"> </trkpt>
+      <trkpt lat="49.699300000" lon="-114.627839000"> </trkpt>
+      <trkpt lat="49.711352000" lon="-114.627722000"> </trkpt>
+      <trkpt lat="49.723754000" lon="-114.625003000"> </trkpt>
+      <trkpt lat="49.732010000" lon="-114.626693000"> </trkpt>
+      <trkpt lat="49.738080000" lon="-114.620575000"> </trkpt>
+      <trkpt lat="49.743190000" lon="-114.623550000"> </trkpt>
+      <trkpt lat="49.748528000" lon="-114.628918000"> </trkpt>
+      <trkpt lat="49.754106000" lon="-114.627498000"> </trkpt>
+      <trkpt lat="49.759021000" lon="-114.627615000"> </trkpt>
+      <trkpt lat="49.763873000" lon="-114.629637000"> </trkpt>
+      <trkpt lat="49.763493000" lon="-114.639859000"> </trkpt>
+      <trkpt lat="49.767276000" lon="-114.638843000"> </trkpt>
+      <trkpt lat="49.771326000" lon="-114.639526000"> </trkpt>
+      <trkpt lat="49.776587000" lon="-114.625926000"> </trkpt>
+      <trkpt lat="49.785480000" lon="-114.624693000"> </trkpt>
+      <trkpt lat="49.788471000" lon="-114.626335000"> </trkpt>
+      <trkpt lat="49.793246000" lon="-114.628429000"> </trkpt>
+      <trkpt lat="49.800201000" lon="-114.626917000"> </trkpt>
+      <trkpt lat="49.803142000" lon="-114.626094000"> </trkpt>
+      <trkpt lat="49.811545000" lon="-114.624393000"> </trkpt>
+      <trkpt lat="49.821247000" lon="-114.629084000"> </trkpt>
+      <trkpt lat="49.826592000" lon="-114.628670000"> </trkpt>
+      <trkpt lat="49.835796000" lon="-114.621982000"> </trkpt>
+      <trkpt lat="49.851264000" lon="-114.621568000"> </trkpt>
+      <trkpt lat="49.859116000" lon="-114.628272000"> </trkpt>
+      <trkpt lat="49.863986000" lon="-114.633946000"> </trkpt>
+      <trkpt lat="49.870205000" lon="-114.642498000"> </trkpt>
+      <trkpt lat="49.871328000" lon="-114.654238000"> </trkpt>
+      <trkpt lat="49.873615000" lon="-114.646607000"> </trkpt>
+      <trkpt lat="49.877541000" lon="-114.634567000"> </trkpt>
+      <trkpt lat="49.885558000" lon="-114.625346000"> </trkpt>
+      <trkpt lat="49.900021000" lon="-114.659275000"> </trkpt>
+      <trkpt lat="49.907857000" lon="-114.666297000"> </trkpt>
+      <trkpt lat="49.913769000" lon="-114.667259000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    B09: Dutch Creek bridge to Hidden Creek CG</name>
+    <trkseg>
+      <trkpt lat="49.913769000" lon="-114.667259000"> </trkpt>
+      <trkpt lat="49.921782000" lon="-114.668713000"> </trkpt>
+      <trkpt lat="49.927187000" lon="-114.669539000"> </trkpt>
+      <trkpt lat="49.929917000" lon="-114.669785000"> </trkpt>
+      <trkpt lat="49.935220000" lon="-114.673816000"> </trkpt>
+      <trkpt lat="49.941169000" lon="-114.675134000"> </trkpt>
+      <trkpt lat="49.945480000" lon="-114.677111000"> </trkpt>
+      <trkpt lat="49.951204000" lon="-114.676693000"> </trkpt>
+      <trkpt lat="49.955988000" lon="-114.674129000"> </trkpt>
+      <trkpt lat="49.961491000" lon="-114.672121000"> </trkpt>
+      <trkpt lat="49.967790000" lon="-114.671584000"> </trkpt>
+      <trkpt lat="49.963656000" lon="-114.666140000"> </trkpt>
+      <trkpt lat="49.958426000" lon="-114.658910000"> </trkpt>
+      <trkpt lat="49.958514000" lon="-114.654708000"> </trkpt>
+      <trkpt lat="49.957464000" lon="-114.648864000"> </trkpt>
+      <trkpt lat="49.953617000" lon="-114.642829000"> </trkpt>
+      <trkpt lat="49.952321000" lon="-114.635568000"> </trkpt>
+      <trkpt lat="49.954655000" lon="-114.627509000"> </trkpt>
+      <trkpt lat="49.956930000" lon="-114.617763000"> </trkpt>
+      <trkpt lat="49.961604000" lon="-114.606029000"> </trkpt>
+      <trkpt lat="49.973815000" lon="-114.590410000"> </trkpt>
+      <trkpt lat="49.984322000" lon="-114.581604000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    B10: Hidden Creek CG to Oldman CG</name>
+    <trkseg>
+      <trkpt lat="49.984322000" lon="-114.581604000"> </trkpt>
+      <trkpt lat="49.988497000" lon="-114.595634000"> </trkpt>
+      <trkpt lat="49.990111000" lon="-114.604403000"> </trkpt>
+      <trkpt lat="49.992043000" lon="-114.608412000"> </trkpt>
+      <trkpt lat="49.996212000" lon="-114.609040000"> </trkpt>
+      <trkpt lat="49.999383000" lon="-114.610748000"> </trkpt>
+      <trkpt lat="50.004899000" lon="-114.615562000"> </trkpt>
+      <trkpt lat="50.011872000" lon="-114.612672000"> </trkpt>
+      <trkpt lat="50.020011000" lon="-114.614992000"> </trkpt>
+      <trkpt lat="50.025876000" lon="-114.612030000"> </trkpt>
+      <trkpt lat="50.033187000" lon="-114.612805000"> </trkpt>
+      <trkpt lat="50.037348000" lon="-114.611720000"> </trkpt>
+      <trkpt lat="50.041165000" lon="-114.611741000"> </trkpt>
+      <trkpt lat="50.045827000" lon="-114.615317000"> </trkpt>
+      <trkpt lat="50.049109000" lon="-114.620113000"> </trkpt>
+      <trkpt lat="50.052758000" lon="-114.621935000"> </trkpt>
+      <trkpt lat="50.054460000" lon="-114.630927000"> </trkpt>
+      <trkpt lat="50.053224000" lon="-114.639090000"> </trkpt>
+      <trkpt lat="50.055708000" lon="-114.648132000"> </trkpt>
+      <trkpt lat="50.061291000" lon="-114.649482000"> </trkpt>
+      <trkpt lat="50.066676000" lon="-114.652131000"> </trkpt>
+      <trkpt lat="50.072310000" lon="-114.653971000"> </trkpt>
+      <trkpt lat="50.076498000" lon="-114.661365000"> </trkpt>
+      <trkpt lat="50.081972000" lon="-114.666974000"> </trkpt>
+      <trkpt lat="50.088100000" lon="-114.671079000"> </trkpt>
+      <trkpt lat="50.092277000" lon="-114.672631000"> </trkpt>
+      <trkpt lat="50.098966000" lon="-114.675477000"> </trkpt>
+      <trkpt lat="50.105329000" lon="-114.678399000"> </trkpt>
+      <trkpt lat="50.109395000" lon="-114.687161000"> </trkpt>
+      <trkpt lat="50.111587000" lon="-114.695813000"> </trkpt>
+      <trkpt lat="50.112408000" lon="-114.704663000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    B11: Oldman CG to Cataract Creek</name>
+    <trkseg>
+      <trkpt lat="50.112408000" lon="-114.704663000"> </trkpt>
+      <trkpt lat="50.123288000" lon="-114.705705000"> </trkpt>
+      <trkpt lat="50.127050000" lon="-114.703097000"> </trkpt>
+      <trkpt lat="50.127696000" lon="-114.711019000"> </trkpt>
+      <trkpt lat="50.132289000" lon="-114.718179000"> </trkpt>
+      <trkpt lat="50.136464000" lon="-114.716139000"> </trkpt>
+      <trkpt lat="50.141038000" lon="-114.712593000"> </trkpt>
+      <trkpt lat="50.146295000" lon="-114.715531000"> </trkpt>
+      <trkpt lat="50.152266000" lon="-114.720217000"> </trkpt>
+      <trkpt lat="50.157700000" lon="-114.723530000"> </trkpt>
+      <trkpt lat="50.160739000" lon="-114.715444000"> </trkpt>
+      <trkpt lat="50.167572000" lon="-114.710307000"> </trkpt>
+      <trkpt lat="50.167862000" lon="-114.702210000"> </trkpt>
+      <trkpt lat="50.171009000" lon="-114.693401000"> </trkpt>
+      <trkpt lat="50.175570000" lon="-114.687829000"> </trkpt>
+      <trkpt lat="50.180422000" lon="-114.679773000"> </trkpt>
+      <trkpt lat="50.187563000" lon="-114.683016000"> </trkpt>
+      <trkpt lat="50.194113000" lon="-114.685264000"> </trkpt>
+      <trkpt lat="50.199963000" lon="-114.686967000"> </trkpt>
+      <trkpt lat="50.205115000" lon="-114.682090000"> </trkpt>
+      <trkpt lat="50.212849000" lon="-114.680509000"> </trkpt>
+      <trkpt lat="50.216308000" lon="-114.689568000"> </trkpt>
+      <trkpt lat="50.219813000" lon="-114.695090000"> </trkpt>
+      <trkpt lat="50.220667000" lon="-114.703548000"> </trkpt>
+      <trkpt lat="50.224234000" lon="-114.707459000"> </trkpt>
+      <trkpt lat="50.226418000" lon="-114.717098000"> </trkpt>
+      <trkpt lat="50.226898000" lon="-114.724412000"> </trkpt>
+      <trkpt lat="50.233225000" lon="-114.728599000"> </trkpt>
+      <trkpt lat="50.239834000" lon="-114.731444000"> </trkpt>
+      <trkpt lat="50.243313000" lon="-114.727888000"> </trkpt>
+      <trkpt lat="50.247410000" lon="-114.728507000"> </trkpt>
+      <trkpt lat="50.251133000" lon="-114.725385000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT    B12: Cataract Creek to Elk River Rd</name>
+    <trkseg>
+      <trkpt lat="50.251133000" lon="-114.725385000"> </trkpt>
+      <trkpt lat="50.255732000" lon="-114.729920000"> </trkpt>
+      <trkpt lat="50.261105000" lon="-114.726035000"> </trkpt>
+      <trkpt lat="50.267072000" lon="-114.716520000"> </trkpt>
+      <trkpt lat="50.271616000" lon="-114.706148000"> </trkpt>
+      <trkpt lat="50.277928000" lon="-114.698425000"> </trkpt>
+      <trkpt lat="50.285983000" lon="-114.701529000"> </trkpt>
+      <trkpt lat="50.289041000" lon="-114.704509000"> </trkpt>
+      <trkpt lat="50.293574000" lon="-114.708941000"> </trkpt>
+      <trkpt lat="50.300595000" lon="-114.713589000"> </trkpt>
+      <trkpt lat="50.307151000" lon="-114.719146000"> </trkpt>
+      <trkpt lat="50.313002000" lon="-114.720988000"> </trkpt>
+      <trkpt lat="50.317124000" lon="-114.725882000"> </trkpt>
+      <trkpt lat="50.322762000" lon="-114.732000000"> </trkpt>
+      <trkpt lat="50.328185000" lon="-114.734409000"> </trkpt>
+      <trkpt lat="50.330845000" lon="-114.737947000"> </trkpt>
+      <trkpt lat="50.329294000" lon="-114.747820000"> </trkpt>
+      <trkpt lat="50.326903000" lon="-114.755600000"> </trkpt>
+      <trkpt lat="50.328221000" lon="-114.763751000"> </trkpt>
+      <trkpt lat="50.328827000" lon="-114.772820000"> </trkpt>
+      <trkpt lat="50.327091000" lon="-114.779060000"> </trkpt>
+      <trkpt lat="50.320583000" lon="-114.785858000"> </trkpt>
+      <trkpt lat="50.318756000" lon="-114.798668000"> </trkpt>
+      <trkpt lat="50.320617000" lon="-114.807613000"> </trkpt>
+      <trkpt lat="50.324246000" lon="-114.815848000"> </trkpt>
+      <trkpt lat="50.324619000" lon="-114.826096000"> </trkpt>
+      <trkpt lat="50.323666000" lon="-114.836127000"> </trkpt>
+      <trkpt lat="50.328637000" lon="-114.844571000"> </trkpt>
+      <trkpt lat="50.335394000" lon="-114.850269000"> </trkpt>
+      <trkpt lat="50.341161000" lon="-114.855864000"> </trkpt>
+      <trkpt lat="50.345998000" lon="-114.865779000"> </trkpt>
+      <trkpt lat="50.343699000" lon="-114.878009000"> </trkpt>
+      <trkpt lat="50.335746000" lon="-114.891152000"> </trkpt>
+      <trkpt lat="50.335900000" lon="-114.901795000"> </trkpt>
+      <trkpt lat="50.345220000" lon="-114.899719000"> </trkpt>
+      <trkpt lat="50.354852000" lon="-114.902335000"> </trkpt>
+      <trkpt lat="50.363504000" lon="-114.904700000"> </trkpt>
+      <trkpt lat="50.372836000" lon="-114.906362000"> </trkpt>
+      <trkpt lat="50.380082000" lon="-114.908505000"> </trkpt>
+      <trkpt lat="50.388551000" lon="-114.913335000"> </trkpt>
+      <trkpt lat="50.397384000" lon="-114.917584000"> </trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>GDT   B13: Elk River Rd to Elk Pass trailhead</name>
+    <trkseg>
+      <trkpt lat="50.397384000" lon="-114.917584000"> </trkpt>
+      <trkpt lat="50.407641000" lon="-114.921808000"> </trkpt>
+      <trkpt lat="50.416228000" lon="-114.924534000"> </trkpt>
+      <trkpt lat="50.423732000" lon="-114.930239000"> </trkpt>
+      <trkpt lat="50.433086000" lon="-114.933721000"> </trkpt>
+      <trkpt lat="50.441019000" lon="-114.936361000"> </trkpt>
+      <trkpt lat="50.448435000" lon="-114.942811000"> </trkpt>
+      <trkpt lat="50.456218000" lon="-114.948073000"> </trkpt>
+      <trkpt lat="50.465645000" lon="-114.951474000"> </trkpt>
+      <trkpt lat="50.473878000" lon="-114.957876000"> </trkpt>
+      <trkpt lat="50.481162000" lon="-114.965671000"> </trkpt>
+      <trkpt lat="50.489769000" lon="-114.973932000"> </trkpt>
+      <trkpt lat="50.498441000" lon="-114.981975000"> </trkpt>
+      <trkpt lat="50.507720000" lon="-114.990417000"> </trkpt>
+      <trkpt lat="50.516478000" lon="-114.998531000"> </trkpt>
+      <trkpt lat="50.522553000" lon="-115.005243000"> </trkpt>
+      <trkpt lat="50.526114000" lon="-115.019339000"> </trkpt>
+      <trkpt lat="50.532160000" lon="-115.035297000"> </trkpt>
+      <trkpt lat="50.540563000" lon="-115.046757000"> </trkpt>
+      <trkpt lat="50.546334000" lon="-115.057678000"> </trkpt>
+      <trkpt lat="50.551055000" lon="-115.071035000"> </trkpt>
+      <trkpt lat="50.549873000" lon="-115.082545000"> </trkpt>
+      <trkpt lat="50.554924000" lon="-115.090226000"> </trkpt>
+      <trkpt lat="50.560218000" lon="-115.090870000"> </trkpt>
+      <trkpt lat="50.565144000" lon="-115.086698000"> </trkpt>
+      <trkpt lat="50.572682000" lon="-115.086618000"> </trkpt>
+      <trkpt lat="50.578840000" lon="-115.084405000"> </trkpt>
+      <trkpt lat="50.583787000" lon="-115.084380000"> </trkpt>
+      <trkpt lat="50.589967000" lon="-115.088089000"> </trkpt>
+      <trkpt lat="50.597193000" lon="-115.092463000"> </trkpt>
+      <trkpt lat="50.602173000" lon="-115.100358000"> </trkpt>
+      <trkpt lat="50.609928000" lon="-115.102263000"> </trkpt>
+      <trkpt lat="50.616664000" lon="-115.109450000"> </trkpt>
+    </trkseg>
+  </trk>
+
+<!-- TAG -->
+
+
+
+
+<!-- TAG unused RedLine chunks
+
+<trk><name>unused RedLine - Gila</name><trkseg>
+<trkpt lat="32.866292656" lon="-108.291820428"> <name>RL0173.5-NM</name></trkpt>
+<trkpt lat="32.868440296" lon="-108.297713172"> <name>RL0174.0-NM</name></trkpt>
+<trkpt lat="32.874263932" lon="-108.299316331"> <name>RL0174.5-NM</name></trkpt>
+<trkpt lat="32.877458832" lon="-108.295088583"> <name>RL0175.0-NM</name></trkpt>
+<trkpt lat="32.878715059" lon="-108.287811773"> <name>RL0175.5-NM</name></trkpt>
+<trkpt lat="32.879765234" lon="-108.282103358"> <name>RL0176.0-NM</name></trkpt>
+<trkpt lat="32.882858745" lon="-108.27779912"> <name>RL0176.5-NM</name></trkpt>
+<trkpt lat="32.883560597" lon="-108.271389754"> <name>RL0177.0-NM</name></trkpt>
+<trkpt lat="32.887200975" lon="-108.267068193"> <name>RL0177.5-NM</name></trkpt>
+<trkpt lat="32.890320675" lon="-108.26119907"> <name>RL0178.0-NM</name></trkpt>
+<trkpt lat="32.884031003" lon="-108.261310516"> <name>RL0178.5-NM</name></trkpt>
+<trkpt lat="32.882348267" lon="-108.255525953"> <name>RL0179.0-NM</name></trkpt>
+<trkpt lat="32.883003738" lon="-108.249761729"> <name>RL0179.5-NM</name></trkpt>
+<trkpt lat="32.881885406" lon="-108.246260534"> <name>RL0180.0-NM</name></trkpt>
+<trkpt lat="32.885054083" lon="-108.241060318"> <name>RL0180.5-NM</name></trkpt>
+<trkpt lat="32.881974678" lon="-108.236890143"> <name>RL0181.0-NM</name></trkpt>
+<trkpt lat="32.88383527" lon="-108.23182946"> <name>RL0181.5-NM</name></trkpt>
+<trkpt lat="32.885459967" lon="-108.225662592"> <name>RL0182.0-NM</name></trkpt>
+<trkpt lat="32.883685733" lon="-108.221360618"> <name>RL0182.5-NM</name></trkpt>
+<trkpt lat="32.889726231" lon="-108.224137583"> <name>RL0183.0-NM</name></trkpt>
+<trkpt lat="32.890423266" lon="-108.218583604"> <name>RL0183.5-NM</name></trkpt>
+<trkpt lat="32.888616492" lon="-108.214673166"> <name>RL0184.0-NM</name></trkpt>
+<trkpt lat="32.887450259" lon="-108.206594774"> <name>RL0184.5-NM</name></trkpt>
+<trkpt lat="32.882105324" lon="-108.201755174"> <name>RL0185.0-NM</name></trkpt>
+<trkpt lat="32.882171949" lon="-108.194270219"> <name>RL0185.5-NM</name></trkpt>
+<trkpt lat="32.885483013" lon="-108.187790756"> <name>RL0186.0-NM</name></trkpt>
+<trkpt lat="32.890831774" lon="-108.185368432"> <name>RL0186.5-NM</name></trkpt>
+<trkpt lat="32.89581067" lon="-108.182194483"> <name>RL0187.0-NM</name></trkpt>
+<trkpt lat="32.897981321" lon="-108.175704169"> <name>RL0187.5-NM</name></trkpt>
+<trkpt lat="32.901710663" lon="-108.16979431"> <name>RL0188.0-NM</name></trkpt>
+<trkpt lat="32.903110782" lon="-108.165002195"> <name>RL0188.5-NM</name></trkpt>
+<trkpt lat="32.908259468" lon="-108.164255996"> <name>RL0189.0-NM</name></trkpt>
+<trkpt lat="32.909736195" lon="-108.160975676"> <name>RL0189.5-NM</name></trkpt>
+<trkpt lat="32.915720497" lon="-108.164883833"> <name>RL0190.0-NM</name></trkpt>
+<trkpt lat="32.919507353" lon="-108.161139621"> <name>RL0190.5-NM</name></trkpt>
+<trkpt lat="32.918922389" lon="-108.153684718"> <name>RL0191.0-NM</name></trkpt>
+<trkpt lat="32.918863348" lon="-108.148402497"> <name>RL0191.5-NM</name></trkpt>
+<trkpt lat="32.91996746" lon="-108.142781141"> <name>RL0192.0-NM</name></trkpt>
+<trkpt lat="32.920869617" lon="-108.138246914"> <name>RL0192.5-NM</name></trkpt>
+<trkpt lat="32.924733631" lon="-108.135671229"> <name>RL0193.0-NM</name></trkpt>
+<trkpt lat="32.924903044" lon="-108.130200117"> <name>RL0193.5-NM</name></trkpt>
+<trkpt lat="32.927773534" lon="-108.126822497"> <name>RL0194.0-NM</name></trkpt>
+<trkpt lat="32.932224024" lon="-108.132633113"> <name>RL0194.5-NM</name></trkpt>
+<trkpt lat="32.935046232" lon="-108.139693656"> <name>RL0195.0-NM</name></trkpt>
+<trkpt lat="32.938281662" lon="-108.146673092"> <name>RL0195.5-NM</name></trkpt>
+<trkpt lat="32.943264158" lon="-108.149762258"> <name>RL0196.0-NM</name></trkpt>
+<trkpt lat="32.948678916" lon="-108.152661342"> <name>RL0196.5-NM</name></trkpt>
+<trkpt lat="32.953938794" lon="-108.155147145"> <name>RL0197.0-NM</name></trkpt>
+<trkpt lat="32.958717613" lon="-108.154294207"> <name>RL0197.5-NM</name></trkpt>
+<trkpt lat="32.96212816" lon="-108.147668583"> <name>RL0198.0-NM</name></trkpt>
+<trkpt lat="32.967618502" lon="-108.145313393"> <name>RL0198.5-NM</name></trkpt>
+<trkpt lat="32.971991898" lon="-108.139617205"> <name>RL0199.0-NM</name></trkpt>
+<trkpt lat="32.978246549" lon="-108.138012527"> <name>RL0199.5-NM</name></trkpt>
+<trkpt lat="32.984888039" lon="-108.138183172"> <name>RL0200.0-NM</name></trkpt>
+<trkpt lat="32.989274915" lon="-108.13506615"> <name>RL0200.5-NM</name></trkpt>
+<trkpt lat="32.994634203" lon="-108.131198132"> <name>RL0201.0-NM</name></trkpt>
+<trkpt lat="32.999226207" lon="-108.128101197"> <name>RL0201.5-NM</name></trkpt>
+<trkpt lat="33.001057397" lon="-108.121540098"> <name>RL0202.0-NM</name></trkpt>
+<trkpt lat="32.999268332" lon="-108.11377127"> <name>RL0202.5-NM</name></trkpt>
+<trkpt lat="33.005081294" lon="-108.115280014"> <name>RL0203.0-NM</name></trkpt>
+<trkpt lat="33.008898727" lon="-108.113345986"> <name>RL0203.5-NM</name></trkpt>
+<trkpt lat="33.015709399" lon="-108.11572272"> <name>RL0204.0-NM</name></trkpt>
+<trkpt lat="33.02154065" lon="-108.11308837"> <name>RL0204.5-NM</name></trkpt>
+<trkpt lat="33.027728055" lon="-108.109748555"> <name>RL0205.0-NM</name></trkpt>
+<trkpt lat="33.033220794" lon="-108.105375353"> <name>RL0205.5-NM</name></trkpt>
+<trkpt lat="33.039790411" lon="-108.102910506"> <name>RL0206.0-NM</name></trkpt>
+<trkpt lat="33.044590347" lon="-108.098088428"> <name>RL0206.5-NM</name></trkpt>
+<trkpt lat="33.049314757" lon="-108.100143099"> <name>RL0207.0-NM</name></trkpt>
+<trkpt lat="33.055661907" lon="-108.09959334"> <name>RL0207.5-NM</name></trkpt>
+<trkpt lat="33.061080716" lon="-108.094770185"> <name>RL0208.0-NM</name></trkpt>
+<trkpt lat="33.066979836" lon="-108.090366673"> <name>RL0208.5-NM</name></trkpt>
+<trkpt lat="33.070926768" lon="-108.084884168"> <name>RL0209.0-NM</name></trkpt>
+<trkpt lat="33.073413047" lon="-108.078376226"> <name>RL0209.5-NM</name></trkpt>
+<trkpt lat="33.077359811" lon="-108.0727443"> <name>RL0210.0-NM</name></trkpt>
+<trkpt lat="33.082905416" lon="-108.06922202"> <name>RL0210.5-NM</name></trkpt>
+<trkpt lat="33.083380856" lon="-108.06253009"> <name>RL0211.0-NM</name></trkpt>
+<trkpt lat="33.085737415" lon="-108.054995476"> <name>RL0211.5-NM</name></trkpt>
+<trkpt lat="33.091393446" lon="-108.050655161"> <name>RL0212.0-NM</name></trkpt>
+<trkpt lat="33.097474861" lon="-108.047075438"> <name>RL0212.5-NM</name></trkpt>
+<trkpt lat="33.10289815" lon="-108.046589608"> <name>RL0213.0-NM</name></trkpt>
+<trkpt lat="33.104842677" lon="-108.039856823"> <name>RL0213.5-NM</name></trkpt>
+<trkpt lat="33.107470547" lon="-108.032990038"> <name>RL0214.0-NM</name></trkpt>
+<trkpt lat="33.107050755" lon="-108.027143345"> <name>RL0214.5-NM</name></trkpt>
+<trkpt lat="33.106693201" lon="-108.019839208"> <name>RL0215.0-NM</name></trkpt>
+<trkpt lat="33.106985766" lon="-108.016073086"> <name>RL0215.5-NM</name></trkpt>
+<trkpt lat="33.113526149" lon="-108.015988803"> <name>RL0216.0-NM</name></trkpt>
+<trkpt lat="33.117032366" lon="-108.011066358"> <name>RL0216.5-NM</name></trkpt>
+<trkpt lat="33.122048317" lon="-108.00883537"> <name>RL0217.0-NM</name></trkpt>
+<trkpt lat="33.123806325" lon="-108.004727184"> <name>RL0217.5-NM</name></trkpt>
+<trkpt lat="33.124640511" lon="-107.997129953"> <name>RL0218.0-NM</name></trkpt>
+<trkpt lat="33.123519302" lon="-107.991279486"> <name>RL0218.5-NM</name></trkpt>
+<trkpt lat="33.121374858" lon="-107.986072715"> <name>RL0219.0-NM</name></trkpt>
+<trkpt lat="33.123294295" lon="-107.982192584"> <name>RL0219.5-NM</name></trkpt>
+<trkpt lat="33.123115496" lon="-107.97476124"> <name>RL0220.0-NM</name></trkpt>
+<trkpt lat="33.117161587" lon="-107.971653756"> <name>RL0220.5-NM</name></trkpt>
+<trkpt lat="33.111016265" lon="-107.968308323"> <name>RL0221.0-NM</name></trkpt>
+<trkpt lat="33.106470423" lon="-107.966677973"> <name>RL0221.5-NM</name></trkpt>
+<trkpt lat="33.103694836" lon="-107.960672382"> <name>RL0222.0-NM</name></trkpt>
+<trkpt lat="33.100688014" lon="-107.955476975"> <name>RL0222.5-NM</name></trkpt>
+<trkpt lat="33.100344043" lon="-107.949112877"> <name>RL0223.0-NM</name></trkpt>
+<trkpt lat="33.101210129" lon="-107.941706569"> <name>RL0223.5-NM</name></trkpt>
+<trkpt lat="33.103886848" lon="-107.9365835"> <name>RL0224.0-NM</name></trkpt>
+<trkpt lat="33.104040984" lon="-107.931432917"> <name>RL0224.5-NM</name></trkpt>
+<trkpt lat="33.108398298" lon="-107.926712105"> <name>RL0225.0-NM</name></trkpt>
+<trkpt lat="33.109844592" lon="-107.921887203"> <name>RL0225.5-NM</name></trkpt>
+<trkpt lat="33.111959357" lon="-107.915350996"> <name>RL0226.0-NM</name></trkpt>
+<trkpt lat="33.115101112" lon="-107.908862188"> <name>RL0226.5-NM</name></trkpt>
+<trkpt lat="33.117382197" lon="-107.906645753"> <name>RL0227.0-NM</name></trkpt>
+<trkpt lat="33.121845448" lon="-107.900769987"> <name>RL0227.5-NM</name></trkpt>
+<trkpt lat="33.12471291" lon="-107.898050138"> <name>RL0228.0-NM</name></trkpt>
+<trkpt lat="33.127147909" lon="-107.89404143"> <name>RL0228.5-NM</name></trkpt>
+<trkpt lat="33.128387057" lon="-107.887094844"> <name>RL0229.0-NM</name></trkpt>
+<trkpt lat="33.132090302" lon="-107.880436198"> <name>RL0229.5-NM</name></trkpt>
+<trkpt lat="33.135164724" lon="-107.878298876"> <name>RL0230.0-NM</name></trkpt>
+<trkpt lat="33.138913207" lon="-107.872064357"> <name>RL0230.5-NM</name></trkpt>
+<trkpt lat="33.142191469" lon="-107.865021065"> <name>RL0231.0-NM</name></trkpt>
+<trkpt lat="33.142546135" lon="-107.859476861"> <name>RL0231.5-NM</name></trkpt>
+<trkpt lat="33.14688447" lon="-107.856628758"> <name>RL0232.0-NM</name></trkpt>
+<trkpt lat="33.15260002" lon="-107.855299956"> <name>RL0232.5-NM</name></trkpt>
+<trkpt lat="33.157569396" lon="-107.855456121"> <name>RL0233.0-NM</name></trkpt>
+<trkpt lat="33.163419479" lon="-107.852704545"> <name>RL0233.5-NM</name></trkpt>
+<trkpt lat="33.168864698" lon="-107.853624962"> <name>RL0234.0-NM</name></trkpt>
+<trkpt lat="33.171900237" lon="-107.847333354"> <name>RL0234.5-NM</name></trkpt>
+<trkpt lat="33.175744445" lon="-107.851916389"> <name>RL0235.0-NM</name></trkpt>
+<trkpt lat="33.179935688" lon="-107.853020513"> <name>RL0235.5-NM</name></trkpt>
+<trkpt lat="33.186846982" lon="-107.850789746"> <name>RL0236.0-NM</name></trkpt>
+<trkpt lat="33.192575057" lon="-107.854727754"> <name>RL0236.5-NM</name></trkpt>
+<trkpt lat="33.197640894" lon="-107.86038396"> <name>RL0237.0-NM</name></trkpt>
+<trkpt lat="33.20159306" lon="-107.866581479"> <name>RL0237.5-NM</name></trkpt>
+<trkpt lat="33.208178686" lon="-107.867070115"> <name>RL0238.0-NM</name></trkpt>
+<trkpt lat="33.212968271" lon="-107.861290353"> <name>RL0238.5-NM</name></trkpt>
+<trkpt lat="33.217392008" lon="-107.858697148"> <name>RL0239.0-NM</name></trkpt>
+<trkpt lat="33.22043326" lon="-107.854554412"> <name>RL0239.5-NM</name></trkpt>
+<trkpt lat="33.224884524" lon="-107.849024372"> <name>RL0240.0-NM</name></trkpt>
+<trkpt lat="33.230358227" lon="-107.845715076"> <name>RL0240.5-NM</name></trkpt>
+<trkpt lat="33.234255698" lon="-107.843276701"> <name>RL0241.0-NM</name></trkpt>
+<trkpt lat="33.240117158" lon="-107.841764487"> <name>RL0241.5-NM</name></trkpt>
+<trkpt lat="33.245051582" lon="-107.838581569"> <name>RL0242.0-NM</name></trkpt>
+<trkpt lat="33.248898822" lon="-107.833084438"> <name>RL0242.5-NM</name></trkpt>
+<trkpt lat="33.252082193" lon="-107.8327822"> <name>RL0243.0-NM</name></trkpt>
+<trkpt lat="33.257361287" lon="-107.834501975"> <name>RL0243.5-NM</name></trkpt>
+<trkpt lat="33.259682193" lon="-107.829564288"> <name>RL0244.0-NM</name></trkpt>
+<trkpt lat="33.265457241" lon="-107.827919054"> <name>RL0244.5-NM</name></trkpt>
+<trkpt lat="33.27172128" lon="-107.82729298"> <name>RL0245.0-NM</name></trkpt>
+<trkpt lat="33.277025181" lon="-107.822953658"> <name>RL0245.5-NM</name></trkpt>
+<trkpt lat="33.283703789" lon="-107.822427044"> <name>RL0246.0-NM</name></trkpt>
+<trkpt lat="33.286920654" lon="-107.820907964"> <name>RL0246.5-NM</name></trkpt>
+<trkpt lat="33.292858828" lon="-107.821031372"> <name>RL0247.0-NM</name></trkpt>
+<trkpt lat="33.299505288" lon="-107.82134365"> <name>RL0247.5-NM</name></trkpt>
+<trkpt lat="33.303552515" lon="-107.825686996"> <name>RL0248.0-NM</name></trkpt>
+<trkpt lat="33.304890712" lon="-107.830025274"> <name>RL0248.5-NM</name></trkpt>
+<trkpt lat="33.310529008" lon="-107.830316319"> <name>RL0249.0-NM</name></trkpt>
+<trkpt lat="33.312397411" lon="-107.829118428"> <name>RL0249.5-NM</name></trkpt>
+<trkpt lat="33.316247961" lon="-107.829238805"> <name>RL0250.0-NM</name></trkpt>
+<trkpt lat="33.32288203" lon="-107.830902345"> <name>RL0250.5-NM</name></trkpt>
+<trkpt lat="33.329605491" lon="-107.828660905"> <name>RL0251.0-NM</name></trkpt>
+<trkpt lat="33.335207665" lon="-107.826917487"> <name>RL0251.5-NM</name></trkpt>
+<trkpt lat="33.335368309" lon="-107.834371645"> <name>RL0252.0-NM</name></trkpt>
+<trkpt lat="33.337068911" lon="-107.840026131"> <name>RL0252.5-NM</name></trkpt>
+<trkpt lat="33.334041416" lon="-107.842130774"> <name>RL0253.0-NM</name></trkpt>
+<trkpt lat="33.340127652" lon="-107.843834662"> <name>RL0253.5-NM</name></trkpt>
+<trkpt lat="33.345614156" lon="-107.841552901"> <name>RL0254.0-NM</name></trkpt>
+<trkpt lat="33.350248714" lon="-107.836819101"> <name>RL0254.5-NM</name></trkpt>
+<trkpt lat="33.355852398" lon="-107.834048578"> <name>RL0255.0-NM</name></trkpt>
+<trkpt lat="33.360797761" lon="-107.835407203"> <name>RL0255.5-NM</name></trkpt>
+<trkpt lat="33.36076179" lon="-107.828616288"> <name>RL0256.0-NM</name></trkpt>
+<trkpt lat="33.363166945" lon="-107.826191276"> <name>RL0256.5-NM</name></trkpt>
+<trkpt lat="33.367627319" lon="-107.821761297"> <name>RL0257.0-NM</name></trkpt>
+<trkpt lat="33.371872695" lon="-107.817929099"> <name>RL0257.5-NM</name></trkpt>
+<trkpt lat="33.372820991" lon="-107.82449473"> <name>RL0258.0-NM</name></trkpt>
+<trkpt lat="33.373044832" lon="-107.831124454"> <name>RL0258.5-NM</name></trkpt>
+<trkpt lat="33.376768792" lon="-107.837193421"> <name>RL0259.0-NM</name></trkpt>
+<trkpt lat="33.382640575" lon="-107.841040637"> <name>RL0259.5-NM</name></trkpt>
+<trkpt lat="33.385018028" lon="-107.845958814"> <name>RL0260.0-NM</name></trkpt>
+<trkpt lat="33.387833371" lon="-107.849957797"> <name>RL0260.5-NM</name></trkpt>
+<trkpt lat="33.3925049" lon="-107.850725029"> <name>RL0261.0-NM</name></trkpt>
+<trkpt lat="33.397992743" lon="-107.849331213"> <name>RL0261.5-NM</name></trkpt>
+<trkpt lat="33.404120374" lon="-107.847972222"> <name>RL0262.0-NM</name></trkpt>
+<trkpt lat="33.408233873" lon="-107.842985617"> <name>RL0262.5-NM</name></trkpt>
+<trkpt lat="33.411487633" lon="-107.841927588"> <name>RL0263.0-NM</name></trkpt>
+<trkpt lat="33.416697874" lon="-107.844766991"> <name>RL0263.5-NM</name></trkpt>
+<trkpt lat="33.421674842" lon="-107.849248182"> <name>RL0264.0-NM</name></trkpt>
+<trkpt lat="33.421829422" lon="-107.856878115"> <name>RL0264.5-NM</name></trkpt>
+<trkpt lat="33.425329616" lon="-107.863016602"> <name>RL0265.0-NM</name></trkpt>
+<trkpt lat="33.430044852" lon="-107.865956167"> <name>RL0265.5-NM</name></trkpt>
+<trkpt lat="33.435772261" lon="-107.869131818"> <name>RL0266.0-NM</name></trkpt>
+<trkpt lat="33.440244656" lon="-107.871572658"> <name>RL0266.5-NM</name></trkpt>
+<trkpt lat="33.445321326" lon="-107.876609525"> <name>RL0267.0-NM</name></trkpt>
+<trkpt lat="33.448950548" lon="-107.871163017"> <name>RL0267.5-NM</name></trkpt>
+<trkpt lat="33.453976879" lon="-107.866022622"> <name>RL0268.0-NM</name></trkpt>
+<trkpt lat="33.459531451" lon="-107.861934368"> <name>RL0268.5-NM</name></trkpt>
+<trkpt lat="33.462681421" lon="-107.854760417"> <name>RL0269.0-NM</name></trkpt>
+<trkpt lat="33.467553639" lon="-107.850348992"> <name>RL0269.5-NM</name></trkpt>
+<trkpt lat="33.473818005" lon="-107.84768869"> <name>RL0270.0-NM</name></trkpt>
+<trkpt lat="33.47963233" lon="-107.844131632"> <name>RL0270.5-NM</name></trkpt>
+<trkpt lat="33.485349953" lon="-107.841077834"> <name>RL0271.0-NM</name></trkpt>
+<trkpt lat="33.488937066" lon="-107.835904515"> <name>RL0271.5-NM</name></trkpt>
+<trkpt lat="33.495940496" lon="-107.836559605"> <name>RL0272.0-NM</name></trkpt>
+<trkpt lat="33.502705943" lon="-107.835682159"> <name>RL0272.5-NM</name></trkpt>
+<trkpt lat="33.508033829" lon="-107.833372076"> <name>RL0273.0-NM</name></trkpt>
+<trkpt lat="33.513660728" lon="-107.831454378"> <name>RL0273.5-NM</name></trkpt>
+<trkpt lat="33.516495711" lon="-107.82412725"> <name>RL0274.0-NM</name></trkpt>
+<trkpt lat="33.519280765" lon="-107.817088081"> <name>RL0274.5-NM</name></trkpt>
+<trkpt lat="33.522764148" lon="-107.81077509"> <name>RL0275.0-NM</name></trkpt>
+<trkpt lat="33.520667549" lon="-107.803441878"> <name>RL0275.5-NM</name></trkpt>
+<trkpt lat="33.52579989" lon="-107.801858566"> <name>RL0276.0-NM</name></trkpt>
+<trkpt lat="33.530713351" lon="-107.800154121"> <name>RL0276.5-NM</name></trkpt>
+<trkpt lat="33.535263851" lon="-107.803842052"> <name>RL0277.0-NM</name></trkpt>
+<trkpt lat="33.541210991" lon="-107.802933362"> <name>RL0277.5-NM</name></trkpt>
+<trkpt lat="33.546069688" lon="-107.809102382"> <name>RL0278.0-NM</name></trkpt>
+<trkpt lat="33.55212306" lon="-107.811470475"> <name>RL0278.5-NM</name></trkpt>
+<trkpt lat="33.557770448" lon="-107.81435162"> <name>RL0279.0-NM</name></trkpt>
+<trkpt lat="33.562524378" lon="-107.80970369"> <name>RL0279.5-NM</name></trkpt>
+<trkpt lat="33.569012066" lon="-107.810544222"> <name>RL0280.0-NM</name></trkpt>
+<trkpt lat="33.574990392" lon="-107.814768414"> <name>RL0280.5-NM</name></trkpt>
+<trkpt lat="33.578218742" lon="-107.809163558"> <name>RL0281.0-NM</name></trkpt>
+<trkpt lat="33.582049424" lon="-107.803904345"> <name>RL0281.5-NM</name></trkpt>
+<trkpt lat="33.588600007" lon="-107.802740685"> <name>RL0282.0-NM</name></trkpt>
+<trkpt lat="33.589316275" lon="-107.796197363"> <name>RL0282.5-NM</name></trkpt>
+<trkpt lat="33.594314106" lon="-107.794407132"> <name>RL0283.0-NM</name></trkpt>
+<trkpt lat="33.600215556" lon="-107.796371067"> <name>RL0283.5-NM</name></trkpt>
+<trkpt lat="33.604413761" lon="-107.802408508"> <name>RL0284.0-NM</name></trkpt>
+<trkpt lat="33.608193118" lon="-107.808548237"> <name>RL0284.5-NM</name></trkpt>
+<trkpt lat="33.614878661" lon="-107.809951944"> <name>RL0285.0-NM</name></trkpt>
+<trkpt lat="33.620433052" lon="-107.814567308"> <name>RL0285.5-NM</name></trkpt>
+<trkpt lat="33.623731666" lon="-107.814218285"> <name>RL0286.0-NM</name></trkpt>
+<trkpt lat="33.629187977" lon="-107.809509208"> <name>RL0286.5-NM</name></trkpt>
+<trkpt lat="33.633677313" lon="-107.806473741"> <name>RL0287.0-NM</name></trkpt>
+<trkpt lat="33.63934857" lon="-107.809893455"> <name>RL0287.5-NM</name></trkpt>
+<trkpt lat="33.645511295" lon="-107.812464195"> <name>RL0288.0-NM</name></trkpt>
+<trkpt lat="33.651100581" lon="-107.808707289"> <name>RL0288.5-NM</name></trkpt>
+<trkpt lat="33.656240815" lon="-107.805226319"> <name>RL0289.0-NM</name></trkpt>
+<trkpt lat="33.660369261" lon="-107.811920839"> <name>RL0289.5-NM</name></trkpt>
+<trkpt lat="33.664290124" lon="-107.819069635"> <name>RL0290.0-NM</name></trkpt>
+<trkpt lat="33.669721152" lon="-107.824505854"> <name>RL0290.5-NM</name></trkpt>
+<trkpt lat="33.674053963" lon="-107.831085555"> <name>RL0291.0-NM</name></trkpt>
+<trkpt lat="33.674158324" lon="-107.839621402"> <name>RL0291.5-NM</name></trkpt>
+<trkpt lat="33.677291904" lon="-107.846936582"> <name>RL0292.0-NM</name></trkpt>
+<trkpt lat="33.683696553" lon="-107.848168651"> <name>RL0292.5-NM</name></trkpt>
+<trkpt lat="33.684456989" lon="-107.854483606"> <name>RL0293.0-NM</name></trkpt>
+<trkpt lat="33.687368953" lon="-107.861939746"> <name>RL0293.5-NM</name></trkpt>
+<trkpt lat="33.689382902" lon="-107.86991615"> <name>RL0294.0-NM</name></trkpt>
+<trkpt lat="33.689803765" lon="-107.878542791"> <name>RL0294.5-NM</name></trkpt>
+<trkpt lat="33.6902144" lon="-107.887153832"> <name>RL0295.0-NM</name></trkpt>
+<trkpt lat="33.690632247" lon="-107.895800604"> <name>RL0295.5-NM</name></trkpt>
+<trkpt lat="33.691042138" lon="-107.904439609"> <name>RL0296.0-NM</name></trkpt>
+<trkpt lat="33.69145962" lon="-107.913085517"> <name>RL0296.5-NM</name></trkpt>
+<trkpt lat="33.690067477" lon="-107.920463322"> <name>RL0297.0-NM</name></trkpt>
+<trkpt lat="33.689223711" lon="-107.929043601"> <name>RL0297.5-NM</name></trkpt>
+<trkpt lat="33.692670312" lon="-107.934956886"> <name>RL0298.0-NM</name></trkpt>
+<trkpt lat="33.695482076" lon="-107.941357053"> <name>RL0298.5-NM</name></trkpt>
+<trkpt lat="33.696741239" lon="-107.949584059"> <name>RL0299.0-NM</name></trkpt>
+<trkpt lat="33.696779901" lon="-107.957869558"> <name>RL0299.5-NM</name></trkpt>
+<trkpt lat="33.698494364" lon="-107.966144833"> <name>RL0300.0-NM</name></trkpt>
+<trkpt lat="33.698682639" lon="-107.974002497"> <name>RL0300.5-NM</name></trkpt>
+<trkpt lat="33.699629232" lon="-107.982374897"> <name>RL0301.0-NM</name></trkpt>
+<trkpt lat="33.700220995" lon="-107.990954745"> <name>RL0301.5-NM</name></trkpt>
+<trkpt lat="33.695973687" lon="-107.997687008"> <name>RL0302.0-NM</name></trkpt>
+<trkpt lat="33.689449751" lon="-108.001283257"> <name>RL0302.5-NM</name></trkpt>
+<trkpt lat="33.686410686" lon="-108.008170513"> <name>RL0303.0-NM</name></trkpt>
+<trkpt lat="33.684862317" lon="-108.014789268"> <name>RL0303.5-NM</name></trkpt>
+<trkpt lat="33.684758091" lon="-108.023175345"> <name>RL0304.0-NM</name></trkpt>
+<trkpt lat="33.682357394" lon="-108.030992645"> <name>RL0304.5-NM</name></trkpt>
+<trkpt lat="33.678688491" lon="-108.03834333"> <name>RL0305.0-NM</name></trkpt>
+<trkpt lat="33.676618909" lon="-108.046132733"> <name>RL0305.5-NM</name></trkpt>
+<trkpt lat="33.677244559" lon="-108.053910211"> <name>RL0306.0-NM</name></trkpt>
+<trkpt lat="33.67584784" lon="-108.06182585"> <name>RL0306.5-NM</name></trkpt>
+<trkpt lat="33.672400949" lon="-108.068561208"> <name>RL0307.0-NM</name></trkpt>
+<trkpt lat="33.67190617" lon="-108.076934467"> <name>RL0307.5-NM</name></trkpt>
+<trkpt lat="33.671205839" lon="-108.085161375"> <name>RL0308.0-NM</name></trkpt>
+<trkpt lat="33.672794671" lon="-108.093517904"> <name>RL0308.5-NM</name></trkpt>
+<trkpt lat="33.671507401" lon="-108.10098014"> <name>RL0309.0-NM</name></trkpt>
+<trkpt lat="33.673318463" lon="-108.10574251"> <name>RL0309.5-NM</name></trkpt>
+<trkpt lat="33.674757004" lon="-108.113919332"> <name>RL0310.0-NM</name></trkpt>
+<trkpt lat="33.67572124" lon="-108.122009393"> <name>RL0310.5-NM</name></trkpt>
+<trkpt lat="33.677614857" lon="-108.130169941"> <name>RL0311.0-NM</name></trkpt>
+<trkpt lat="33.677930989" lon="-108.138701399"> <name>RL0311.5-NM</name></trkpt>
+<trkpt lat="33.680007702" lon="-108.146835272"> <name>RL0312.0-NM</name></trkpt>
+<trkpt lat="33.68256297" lon="-108.154647395"> <name>RL0312.5-NM</name></trkpt>
+<trkpt lat="33.683627987" lon="-108.163003513"> <name>RL0313.0-NM</name></trkpt>
+<trkpt lat="33.683398213" lon="-108.171287683"> <name>RL0313.5-NM</name></trkpt>
+<trkpt lat="33.684834266" lon="-108.178948918"> <name>RL0314.0-NM</name></trkpt>
+<trkpt lat="33.685878614" lon="-108.186970351"> <name>RL0314.5-NM</name></trkpt>
+<trkpt lat="33.690241193" lon="-108.190215001"> <name>RL0315.0-NM</name></trkpt>
+<trkpt lat="33.688726857" lon="-108.19858465"> <name>RL0315.5-NM</name></trkpt>
+<trkpt lat="33.692639187" lon="-108.201443884"> <name>RL0316.0-NM</name></trkpt>
+<trkpt lat="33.695870978" lon="-108.20603906"> <name>RL0316.5-NM</name></trkpt>
+<trkpt lat="33.701564664" lon="-108.206174131"> <name>RL0317.0-NM</name></trkpt>
+<trkpt lat="33.706379797" lon="-108.208929828"> <name>RL0317.5-NM</name></trkpt>
+<trkpt lat="33.702090974" lon="-108.213844006"> <name>RL0318.0-NM</name></trkpt>
+<trkpt lat="33.696015858" lon="-108.21765755"> <name>RL0318.5-NM</name></trkpt>
+<trkpt lat="33.694062242" lon="-108.224097901"> <name>RL0319.0-NM</name></trkpt>
+<trkpt lat="33.696448482" lon="-108.231877099"> <name>RL0319.5-NM</name></trkpt>
+<trkpt lat="33.694885316" lon="-108.239895251"> <name>RL0320.0-NM</name></trkpt>
+<trkpt lat="33.691112536" lon="-108.245502092"> <name>RL0320.5-NM</name></trkpt>
+<trkpt lat="33.684863009" lon="-108.241998115"> <name>RL0321.0-NM</name></trkpt>
+<trkpt lat="33.678166253" lon="-108.243135852"> <name>RL0321.5-NM</name></trkpt>
+<trkpt lat="33.671457534" lon="-108.245673696"> <name>RL0322.0-NM</name></trkpt>
+<trkpt lat="33.665293875" lon="-108.249226961"> <name>RL0322.5-NM</name></trkpt>
+<trkpt lat="33.659871548" lon="-108.254847367"> <name>RL0323.0-NM</name></trkpt>
+<trkpt lat="33.656822628" lon="-108.258169492"> <name>RL0323.5-NM</name></trkpt>
+<trkpt lat="33.653939634" lon="-108.258790896"> <name>RL0324.0-NM</name></trkpt>
+<trkpt lat="33.653154301" lon="-108.265164923"> <name>RL0324.5-NM</name></trkpt>
+<trkpt lat="33.652298201" lon="-108.272970831"> <name>RL0325.0-NM</name></trkpt>
+<trkpt lat="33.650466749" lon="-108.279030638"> <name>RL0325.5-NM</name></trkpt>
+<trkpt lat="33.645623261" lon="-108.284718846"> <name>RL0326.0-NM</name></trkpt>
+<trkpt lat="33.641261417" lon="-108.290973379"> <name>RL0326.5-NM</name></trkpt>
+<trkpt lat="33.636556147" lon="-108.297235195"> <name>RL0327.0-NM</name></trkpt>
+<trkpt lat="33.629795561" lon="-108.29922423"> <name>RL0327.5-NM</name></trkpt>
+<trkpt lat="33.624249021" lon="-108.30438523"> <name>RL0328.0-NM</name></trkpt>
+<trkpt lat="33.619273744" lon="-108.309768735"> <name>RL0328.5-NM</name></trkpt>
+<trkpt lat="33.613466879" lon="-108.314247387"> <name>RL0329.0-NM</name></trkpt>
+<trkpt lat="33.606395555" lon="-108.315030465"> <name>RL0329.5-NM</name></trkpt>
+<trkpt lat="33.604112914" lon="-108.32005092"> <name>RL0330.0-NM</name></trkpt>
+<trkpt lat="33.608448557" lon="-108.322941842"> <name>RL0330.5-NM</name></trkpt>
+<trkpt lat="33.608653261" lon="-108.330950016"> <name>RL0331.0-NM</name></trkpt>
+<trkpt lat="33.607604709" lon="-108.33833804"> <name>RL0331.5-NM</name></trkpt>
+<trkpt lat="33.606585614" lon="-108.346092043"> <name>RL0332.0-NM</name></trkpt>
+<trkpt lat="33.603169726" lon="-108.353113241"> <name>RL0332.5-NM</name></trkpt>
+<trkpt lat="33.604177853" lon="-108.35631254"> <name>RL0333.0-NM</name></trkpt>
+<trkpt lat="33.600189227" lon="-108.36271262"> <name>RL0333.5-NM</name></trkpt>
+<trkpt lat="33.601469949" lon="-108.370033639"> <name>RL0334.0-NM</name></trkpt>
+<trkpt lat="33.605711992" lon="-108.375945247"> <name>RL0334.5-NM</name></trkpt>
+<trkpt lat="33.60699088" lon="-108.383423287"> <name>RL0335.0-NM</name></trkpt>
+<trkpt lat="33.611879584" lon="-108.388639862"> <name>RL0335.5-NM</name></trkpt>
+<trkpt lat="33.61560648" lon="-108.394317009"> <name>RL0336.0-NM</name></trkpt>
+<trkpt lat="33.619383195" lon="-108.400248303"> <name>RL0336.5-NM</name></trkpt>
+<trkpt lat="33.623548025" lon="-108.405189729"> <name>RL0337.0-NM</name></trkpt>
+<trkpt lat="33.628297085" lon="-108.411142934"> <name>RL0337.5-NM</name></trkpt>
+<trkpt lat="33.633200307" lon="-108.417318827"> <name>RL0338.0-NM</name></trkpt>
+<trkpt lat="33.637757583" lon="-108.42356983"> <name>RL0338.5-NM</name></trkpt>
+<trkpt lat="33.642987174" lon="-108.42884172"> <name>RL0339.0-NM</name></trkpt>
+<trkpt lat="33.648518904" lon="-108.433364049"> <name>RL0339.5-NM</name></trkpt>
+<trkpt lat="33.654238623" lon="-108.437465424"> <name>RL0340.0-NM</name></trkpt>
+<trkpt lat="33.660181248" lon="-108.440232649"> <name>RL0340.5-NM</name></trkpt>
+<trkpt lat="33.664506214" lon="-108.446848584"> <name>RL0341.0-NM</name></trkpt>
+<trkpt lat="33.666067644" lon="-108.45488049"> <name>RL0341.5-NM</name></trkpt>
+<trkpt lat="33.667537939" lon="-108.462550701"> <name>RL0342.0-NM</name></trkpt>
+<trkpt lat="33.668028831" lon="-108.47079357"> <name>RL0342.5-NM</name></trkpt>
+<trkpt lat="33.670918861" lon="-108.47823783"> <name>RL0343.0-NM</name></trkpt>
+<trkpt lat="33.676023946" lon="-108.483681773"> <name>RL0343.5-NM</name></trkpt>
+<trkpt lat="33.680339595" lon="-108.489536206"> <name>RL0344.0-NM</name></trkpt>
+<trkpt lat="33.684709663" lon="-108.489454258"> <name>RL0344.5-NM</name></trkpt>
+<trkpt lat="33.691016794" lon="-108.488022534"> <name>RL0345.0-NM</name></trkpt>
+<trkpt lat="33.695496706" lon="-108.481959523"> <name>RL0345.5-NM</name></trkpt>
+<trkpt lat="33.700213815" lon="-108.476016459"> <name>RL0346.0-NM</name></trkpt>
+<trkpt lat="33.705256828" lon="-108.470562702"> <name>RL0346.5-NM</name></trkpt>
+<trkpt lat="33.710010672" lon="-108.464818216"> <name>RL0347.0-NM</name></trkpt>
+<trkpt lat="33.715195446" lon="-108.459708877"> <name>RL0347.5-NM</name></trkpt>
+<trkpt lat="33.721267456" lon="-108.45648499"> <name>RL0348.0-NM</name></trkpt>
+<trkpt lat="33.724409189" lon="-108.450665466"> <name>RL0348.5-NM</name></trkpt>
+<trkpt lat="33.728499504" lon="-108.444556245"> <name>RL0349.0-NM</name></trkpt>
+<trkpt lat="33.735127643" lon="-108.444646055"> <name>RL0349.5-NM</name></trkpt>
+<trkpt lat="33.7403858" lon="-108.440233418"> <name>RL0350.0-NM</name></trkpt>
+<trkpt lat="33.744291053" lon="-108.446531055"> <name>RL0350.5-NM</name></trkpt>
+<trkpt lat="33.748869657" lon="-108.451201657"> <name>RL0351.0-NM</name></trkpt>
+<trkpt lat="33.749866794" lon="-108.458881327"> <name>RL0351.5-NM</name></trkpt>
+<trkpt lat="33.749322979" lon="-108.467177945"> <name>RL0352.0-NM</name></trkpt>
+<trkpt lat="33.745153549" lon="-108.473265359"> <name>RL0352.5-NM</name></trkpt>
+<trkpt lat="33.744183302" lon="-108.477282738"> <name>RL0353.0-NM</name></trkpt>
+</trkseg></trk>
+
+
+<trk><name>unused RedLine - PieTown via Mangas</name><trkseg>
+<trkpt lat="33.933446742" lon="-108.419037616"> <name>RL0376.0-NM</name></trkpt>
+<trkpt lat="33.93885967" lon="-108.414525341"> <name>RL0376.5-NM</name></trkpt>
+<trkpt lat="33.945636838" lon="-108.414733084"> <name>RL0377.0-NM</name></trkpt>
+<trkpt lat="33.952271987" lon="-108.415128692"> <name>RL0377.5-NM</name></trkpt>
+<trkpt lat="33.958934284" lon="-108.414356061"> <name>RL0378.0-NM</name></trkpt>
+<trkpt lat="33.966039521" lon="-108.413499037"> <name>RL0378.5-NM</name></trkpt>
+<trkpt lat="33.972790909" lon="-108.413547935"> <name>RL0379.0-NM</name></trkpt>
+<trkpt lat="33.979628026" lon="-108.415872941"> <name>RL0379.5-NM</name></trkpt>
+<trkpt lat="33.985731274" lon="-108.417148691"> <name>RL0380.0-NM</name></trkpt>
+<trkpt lat="33.992527826" lon="-108.417739395"> <name>RL0380.5-NM</name></trkpt>
+<trkpt lat="33.997344382" lon="-108.416921898"> <name>RL0381.0-NM</name></trkpt>
+<trkpt lat="33.999532459" lon="-108.409668236"> <name>RL0381.5-NM</name></trkpt>
+<trkpt lat="34.005266669" lon="-108.407787534"> <name>RL0382.0-NM</name></trkpt>
+<trkpt lat="34.008694048" lon="-108.401854098"> <name>RL0382.5-NM</name></trkpt>
+<trkpt lat="34.009026576" lon="-108.393788954"> <name>RL0383.0-NM</name></trkpt>
+<trkpt lat="34.00934087" lon="-108.386172792"> <name>RL0383.5-NM</name></trkpt>
+<trkpt lat="34.015093078" lon="-108.388498277"> <name>RL0384.0-NM</name></trkpt>
+<trkpt lat="34.021372973" lon="-108.387083664"> <name>RL0384.5-NM</name></trkpt>
+<trkpt lat="34.023050618" lon="-108.380969325"> <name>RL0385.0-NM</name></trkpt>
+<trkpt lat="34.02518622" lon="-108.373419415"> <name>RL0385.5-NM</name></trkpt>
+<trkpt lat="34.030068123" lon="-108.367344029"> <name>RL0386.0-NM</name></trkpt>
+<trkpt lat="34.034465948" lon="-108.364898132"> <name>RL0386.5-NM</name></trkpt>
+<trkpt lat="34.039581206" lon="-108.363224839"> <name>RL0387.0-NM</name></trkpt>
+<trkpt lat="34.041141294" lon="-108.370579832"> <name>RL0387.5-NM</name></trkpt>
+<trkpt lat="34.045588967" lon="-108.37528893"> <name>RL0388.0-NM</name></trkpt>
+<trkpt lat="34.046023316" lon="-108.381995324"> <name>RL0388.5-NM</name></trkpt>
+<trkpt lat="34.048269714" lon="-108.384089533"> <name>RL0389.0-NM</name></trkpt>
+<trkpt lat="34.054842996" lon="-108.382130763"> <name>RL0389.5-NM</name></trkpt>
+<trkpt lat="34.058804201" lon="-108.376603816"> <name>RL0390.0-NM</name></trkpt>
+<trkpt lat="34.065088062" lon="-108.377634455"> <name>RL0390.5-NM</name></trkpt>
+<trkpt lat="34.071785792" lon="-108.378545136"> <name>RL0391.0-NM</name></trkpt>
+<trkpt lat="34.076894137" lon="-108.374194806"> <name>RL0391.5-NM</name></trkpt>
+<trkpt lat="34.08331986" lon="-108.373751071"> <name>RL0392.0-NM</name></trkpt>
+<trkpt lat="34.088439621" lon="-108.372666611"> <name>RL0392.5-NM</name></trkpt>
+<trkpt lat="34.093232471" lon="-108.366290854"> <name>RL0393.0-NM</name></trkpt>
+<trkpt lat="34.100203911" lon="-108.365251184"> <name>RL0393.5-NM</name></trkpt>
+<trkpt lat="34.107317464" lon="-108.363818889"> <name>RL0394.0-NM</name></trkpt>
+<trkpt lat="34.114431046" lon="-108.363678244"> <name>RL0394.5-NM</name></trkpt>
+<trkpt lat="34.121097738" lon="-108.366048632"> <name>RL0395.0-NM</name></trkpt>
+<trkpt lat="34.12795056" lon="-108.36437193"> <name>RL0395.5-NM</name></trkpt>
+<trkpt lat="34.134957746" lon="-108.36261342"> <name>RL0396.0-NM</name></trkpt>
+<trkpt lat="34.140128886" lon="-108.356970414"> <name>RL0396.5-NM</name></trkpt>
+<trkpt lat="34.145406197" lon="-108.352277403"> <name>RL0397.0-NM</name></trkpt>
+<trkpt lat="34.150439035" lon="-108.356341756"> <name>RL0397.5-NM</name></trkpt>
+<trkpt lat="34.157237402" lon="-108.356470652"> <name>RL0398.0-NM</name></trkpt>
+<trkpt lat="34.160929781" lon="-108.363311589"> <name>RL0398.5-NM</name></trkpt>
+<trkpt lat="34.165273409" lon="-108.366873756"> <name>RL0399.0-NM</name></trkpt>
+<trkpt lat="34.170642667" lon="-108.369427385"> <name>RL0399.5-NM</name></trkpt>
+<trkpt lat="34.174679227" lon="-108.375429897"> <name>RL0400.0-NM</name></trkpt>
+<trkpt lat="34.179904176" lon="-108.380074759"> <name>RL0400.5-NM</name></trkpt>
+<trkpt lat="34.18395736" lon="-108.38540293"> <name>RL0401.0-NM</name></trkpt>
+<trkpt lat="34.190141505" lon="-108.387677533"> <name>RL0401.5-NM</name></trkpt>
+<trkpt lat="34.193193526" lon="-108.394122505"> <name>RL0402.0-NM</name></trkpt>
+<trkpt lat="34.199354599" lon="-108.3970998"> <name>RL0402.5-NM</name></trkpt>
+<trkpt lat="34.205644952" lon="-108.396840105"> <name>RL0403.0-NM</name></trkpt>
+<trkpt lat="34.212524613" lon="-108.395985865"> <name>RL0403.5-NM</name></trkpt>
+<trkpt lat="34.21867933" lon="-108.392823982"> <name>RL0404.0-NM</name></trkpt>
+<trkpt lat="34.225474376" lon="-108.390629285"> <name>RL0404.5-NM</name></trkpt>
+<trkpt lat="34.23214011" lon="-108.388185711"> <name>RL0405.0-NM</name></trkpt>
+<trkpt lat="34.239311343" lon="-108.388397761"> <name>RL0405.5-NM</name></trkpt>
+<trkpt lat="34.246530605" lon="-108.388097562"> <name>RL0406.0-NM</name></trkpt>
+<trkpt lat="34.253576115" lon="-108.388630144"> <name>RL0406.5-NM</name></trkpt>
+<trkpt lat="34.259305349" lon="-108.383329287"> <name>RL0407.0-NM</name></trkpt>
+<trkpt lat="34.26518871" lon="-108.378250715"> <name>RL0407.5-NM</name></trkpt>
+<trkpt lat="34.271163193" lon="-108.373319933"> <name>RL0408.0-NM</name></trkpt>
+<trkpt lat="34.277747883" lon="-108.37068917"> <name>RL0408.5-NM</name></trkpt>
+<trkpt lat="34.284989113" lon="-108.370484694"> <name>RL0409.0-NM</name></trkpt>
+<trkpt lat="34.292212376" lon="-108.370416766"> <name>RL0409.5-NM</name></trkpt>
+<trkpt lat="34.299436369" lon="-108.37058354"> <name>RL0410.0-NM</name></trkpt>
+<trkpt lat="34.306667206" lon="-108.370654439"> <name>RL0410.5-NM</name></trkpt>
+<trkpt lat="34.313270852" lon="-108.368211142"> <name>RL0411.0-NM</name></trkpt>
+<trkpt lat="34.317486204" lon="-108.361212896"> <name>RL0411.5-NM</name></trkpt>
+<trkpt lat="34.320589422" lon="-108.353822212"> <name>RL0412.0-NM</name></trkpt>
+<trkpt lat="34.319496559" lon="-108.345179893"> <name>RL0412.5-NM</name></trkpt>
+<trkpt lat="34.318405463" lon="-108.336538125"> <name>RL0413.0-NM</name></trkpt>
+<trkpt lat="34.317291053" lon="-108.327900183"> <name>RL0413.5-NM</name></trkpt>
+<trkpt lat="34.31618599" lon="-108.319260575"> <name>RL0414.0-NM</name></trkpt>
+<trkpt lat="34.315087405" lon="-108.310619904"> <name>RL0414.5-NM</name></trkpt>
+<trkpt lat="34.313981762" lon="-108.301980694"> <name>RL0415.0-NM</name></trkpt>
+<trkpt lat="34.312879835" lon="-108.293341001"> <name>RL0415.5-NM</name></trkpt>
+<trkpt lat="34.311778675" lon="-108.284701186"> <name>RL0416.0-NM</name></trkpt>
+<trkpt lat="34.310679383" lon="-108.27606117"> <name>RL0416.5-NM</name></trkpt>
+<trkpt lat="34.30957606" lon="-108.267422085"> <name>RL0417.0-NM</name></trkpt>
+<trkpt lat="34.308469968" lon="-108.258783629"> <name>RL0417.5-NM</name></trkpt>
+<trkpt lat="34.307364185" lon="-108.250145282"> <name>RL0418.0-NM</name></trkpt>
+<trkpt lat="34.306251011" lon="-108.241508472"> <name>RL0418.5-NM</name></trkpt>
+<trkpt lat="34.305150979" lon="-108.23286939"> <name>RL0419.0-NM</name></trkpt>
+<trkpt lat="34.304701928" lon="-108.224186195"> <name>RL0419.5-NM</name></trkpt>
+<trkpt lat="34.306715756" lon="-108.215802797"> <name>RL0420.0-NM</name></trkpt>
+<trkpt lat="34.308955918" lon="-108.207489955"> <name>RL0420.5-NM</name></trkpt>
+<trkpt lat="34.31042602" lon="-108.198983513"> <name>RL0421.0-NM</name></trkpt>
+<trkpt lat="34.309801" lon="-108.190277269"> <name>RL0421.5-NM</name></trkpt>
+<trkpt lat="34.309138633" lon="-108.181579212"> <name>RL0422.0-NM</name></trkpt>
+<trkpt lat="34.308461794" lon="-108.172877069"> <name>RL0422.5-NM</name></trkpt>
+<trkpt lat="34.307785631" lon="-108.16417497"> <name>RL0423.0-NM</name></trkpt>
+<trkpt lat="34.30703242" lon="-108.155484649"> <name>RL0423.5-NM</name></trkpt>
+<trkpt lat="34.305004911" lon="-108.147111759"> <name>RL0424.0-NM</name></trkpt>
+<trkpt lat="34.301972262" lon="-108.13917295"> <name>RL0424.5-NM</name></trkpt>
+</trkseg></trk>
+
+Unused Cebolla-Wilderness  common with RL
+      <trkpt lat="34.346790000" lon="-108.142454000">         <name>CW-000M</name>       </trkpt>
+      <trkpt lat="34.351577000" lon="-108.136832000">         <name>CW-005M</name>       </trkpt>
+      <trkpt lat="34.356507000" lon="-108.129773000">         <name>CW-010M</name>       </trkpt>
+      <trkpt lat="34.360511000" lon="-108.122134000">         <name>CW-015M</name>       </trkpt>
+      <trkpt lat="34.364692000" lon="-108.115729000">         <name>CW-020M</name>       </trkpt>
+      <trkpt lat="34.369167000" lon="-108.108862000">         <name>CW-025M</name>       </trkpt>
+      <trkpt lat="34.373927000" lon="-108.101910000">         <name>CW-030M</name>       </trkpt>
+      <trkpt lat="34.379211000" lon="-108.096717000">         <name>CW-035M</name>       </trkpt>
+      <trkpt lat="34.385713000" lon="-108.092876000">         <name>CW-040M</name>       </trkpt>
+      <trkpt lat="34.392508000" lon="-108.090140000">         <name>CW-045M</name>       </trkpt>
+      <trkpt lat="34.399641000" lon="-108.089894000">         <name>CW-050M</name>       </trkpt>
+      <trkpt lat="34.407520000" lon="-108.090001000">         <name>CW-055M</name>       </trkpt>
+      <trkpt lat="34.414144000" lon="-108.090001000">         <name>CW-060M</name>       </trkpt>
+      <trkpt lat="34.420430000" lon="-108.087898000">         <name>CW-065M</name>       </trkpt>
+      <trkpt lat="34.425854000" lon="-108.081278000">         <name>CW-070M</name>       </trkpt>
+      <trkpt lat="34.430245000" lon="-108.074444000">         <name>CW-075M</name>       </trkpt>
+      <trkpt lat="34.434148000" lon="-108.067127000">         <name>CW-080M</name>       </trkpt>
+      <trkpt lat="34.438646000" lon="-108.060293000">         <name>CW-085M</name>       </trkpt>
+      <trkpt lat="34.443579000" lon="-108.053684000">         <name>CW-090M</name>       </trkpt>
+      <trkpt lat="34.448601000" lon="-108.047912000">         <name>CW-095M</name>       </trkpt>
+      <trkpt lat="34.453978000" lon="-108.042290000">         <name>CW-100M</name>       </trkpt>
+      <trkpt lat="34.458244000" lon="-108.035230000">         <name>CW-105M</name>       </trkpt>
+      <trkpt lat="34.464429000" lon="-108.030949000">         <name>CW-110M</name>       </trkpt>
+      <trkpt lat="34.470222000" lon="-108.025767000">         <name>CW-115M</name>       </trkpt>
+      <trkpt lat="34.476105000" lon="-108.020768000">         <name>CW-120M</name>       </trkpt>
+      <trkpt lat="34.482866000" lon="-108.020006000">         <name>CW-125M</name>       </trkpt>
+      <trkpt lat="34.486727000" lon="-108.020847000">         <name>CW-127WT</name>       </trkpt>
+      <trkpt lat="34.490124000" lon="-108.019856000">         <name>CW-130M</name>       </trkpt>
+      <trkpt lat="34.497879000" lon="-108.019684000">         <name>CW-135M</name>       </trkpt>
+      <trkpt lat="34.505029000" lon="-108.019791000">         <name>CW-140M</name>       </trkpt>
+      <trkpt lat="34.511646000" lon="-108.018204000">         <name>CW-145M</name>       </trkpt>
+      <trkpt lat="34.519132000" lon="-108.015725000">         <name>CW-150M</name>       </trkpt>
+      <trkpt lat="34.526041000" lon="-108.013526000">         <name>CW-155M</name>       </trkpt>
+      <trkpt lat="34.532860000" lon="-108.011348000">         <name>CW-160M</name>       </trkpt>
+      <trkpt lat="34.540229000" lon="-108.010007000">         <name>CW-165M</name>       </trkpt>
+      <trkpt lat="34.547242000" lon="-108.009824000">         <name>CW-170M</name>       </trkpt>
+      <trkpt lat="34.554974000" lon="-108.009588000">         <name>CW-175M</name>       </trkpt>
+      <trkpt lat="34.562137000" lon="-108.009352000">         <name>CW-180M</name>       </trkpt>
+      <trkpt lat="34.568865000" lon="-108.009309000">         <name>CW-185M</name>       </trkpt>
+      <trkpt lat="34.576470000" lon="-108.010307000">         <name>CW-190M</name>       </trkpt>
+      <trkpt lat="34.583667000" lon="-108.010962000">         <name>CW-195M</name>       </trkpt>
+      <trkpt lat="34.591363000" lon="-108.009241000">         <name>CW-199WT</name>       </trkpt>
+      <trkpt lat="34.590889000" lon="-108.011659000">         <name>CW-200M</name>       </trkpt>
+      <trkpt lat="34.598298000" lon="-108.012399000">         <name>CW-205M</name>       </trkpt>
+      <trkpt lat="34.604889000" lon="-108.011584000">         <name>CW-210M</name>       </trkpt>
+      <trkpt lat="34.611578000" lon="-108.008376000">         <name>CW-215M</name>       </trkpt>
+      <trkpt lat="34.618275000" lon="-108.005136000">         <name>CW-220M</name>       </trkpt>
+      <trkpt lat="34.626106000" lon="-108.003130000">         <name>CW-225M</name>       </trkpt>
+      <trkpt lat="34.633130000" lon="-108.001864000">         <name>CW-230M</name>       </trkpt>
+      <trkpt lat="34.640020000" lon="-108.000683000">         <name>CW-235M</name>       </trkpt>
+      <trkpt lat="34.647521000" lon="-107.999364000">         <name>CW-240M</name>       </trkpt>
+
+
+<trk><name>Unused RL at lava fields at Cebolla </name><trkseg>
+<trkpt lat="34.665967639" lon="-107.996234406"> <name>RL0453.0-NM</name></trkpt>
+<trkpt lat="34.673134722" lon="-107.994896799"> <name>RL0453.5-NM</name></trkpt>
+<trkpt lat="34.680305828" lon="-107.99359286"> <name>RL0454.0-NM</name></trkpt>
+<trkpt lat="34.687492238" lon="-107.992416955"> <name>RL0454.5-NM</name></trkpt>
+<trkpt lat="34.694678619" lon="-107.991240809"> <name>RL0455.0-NM</name></trkpt>
+<trkpt lat="34.701864972" lon="-107.990064421"> <name>RL0455.5-NM</name></trkpt>
+<trkpt lat="34.709060555" lon="-107.989043518"> <name>RL0456.0-NM</name></trkpt>
+<trkpt lat="34.709885932" lon="-107.995029622"> <name>RL0456.5-NM</name></trkpt>
+<trkpt lat="34.709267611" lon="-108.003779001"> <name>RL0457.0-NM</name></trkpt>
+<trkpt lat="34.707565695" lon="-108.012235387"> <name>RL0457.5-NM</name></trkpt>
+<trkpt lat="34.704995008" lon="-108.020446429"> <name>RL0458.0-NM</name></trkpt>
+<trkpt lat="34.703047656" lon="-108.028291561"> <name>RL0458.5-NM</name></trkpt>
+<trkpt lat="34.71002323" lon="-108.02729442"> <name>RL0459.0-NM</name></trkpt>
+<trkpt lat="34.717231964" lon="-108.027300949"> <name>RL0459.5-NM</name></trkpt>
+<trkpt lat="34.722750129" lon="-108.031380556"> <name>RL0460.0-NM</name></trkpt>
+<trkpt lat="34.727078297" lon="-108.034865937"> <name>RL0460.5-NM</name></trkpt>
+<trkpt lat="34.729148712" lon="-108.040962805"> <name>RL0461.0-NM</name></trkpt>
+<trkpt lat="34.732184238" lon="-108.048047154"> <name>RL0461.5-NM</name></trkpt>
+<trkpt lat="34.733045976" lon="-108.056649648"> <name>RL0462.0-NM</name></trkpt>
+<trkpt lat="34.732419169" lon="-108.064555702"> <name>RL0462.5-NM</name></trkpt>
+<trkpt lat="34.735108482" lon="-108.072290593"> <name>RL0463.0-NM</name></trkpt>
+<trkpt lat="34.738467225" lon="-108.080004565"> <name>RL0463.5-NM</name></trkpt>
+<trkpt lat="34.742444397" lon="-108.086971772"> <name>RL0464.0-NM</name></trkpt>
+<trkpt lat="34.744889164" lon="-108.094866602"> <name>RL0464.5-NM</name></trkpt>
+<trkpt lat="34.748967775" lon="-108.101978571"> <name>RL0465.0-NM</name></trkpt>
+<trkpt lat="34.752374198" lon="-108.109211511"> <name>RL0465.5-NM</name></trkpt>
+<trkpt lat="34.755335049" lon="-108.117061738"> <name>RL0466.0-NM</name></trkpt>
+<trkpt lat="34.755376433" lon="-108.125649813"> <name>RL0466.5-NM</name></trkpt>
+<trkpt lat="34.758804247" lon="-108.133214148"> <name>RL0467.0-NM</name></trkpt>
+<trkpt lat="34.760409985" lon="-108.141709795"> <name>RL0467.5-NM</name></trkpt>
+<trkpt lat="34.760850308" lon="-108.150140902"> <name>RL0468.0-NM</name></trkpt>
+<trkpt lat="34.760355735" lon="-108.158638676"> <name>RL0468.5-NM</name></trkpt>
+<trkpt lat="34.761273968" lon="-108.166996055"> <name>RL0469.0-NM</name></trkpt>
+<trkpt lat="34.759631655" lon="-108.174260483"> <name>RL0469.5-NM</name></trkpt>
+<trkpt lat="34.753982973" lon="-108.178781744"> <name>RL0470.0-NM</name></trkpt>
+<trkpt lat="34.754915665" lon="-108.186591483"> <name>RL0470.5-NM</name></trkpt>
+<trkpt lat="34.75763825" lon="-108.194520943"> <name>RL0471.0-NM</name></trkpt>
+<trkpt lat="34.762725344" lon="-108.200092227"> <name>RL0471.5-NM</name></trkpt>
+<trkpt lat="34.76928944" lon="-108.202561644"> <name>RL0472.0-NM</name></trkpt>
+<trkpt lat="34.775075839" lon="-108.207363815"> <name>RL0472.5-NM</name></trkpt>
+<trkpt lat="34.779589932" lon="-108.214156163"> <name>RL0473.0-NM</name></trkpt>
+<trkpt lat="34.784010933" lon="-108.220950716"> <name>RL0473.5-NM</name></trkpt>
+<trkpt lat="34.790066698" lon="-108.219615228"> <name>RL0474.0-NM</name></trkpt>
+<trkpt lat="34.796635544" lon="-108.216542476"> <name>RL0474.5-NM</name></trkpt>
+<trkpt lat="34.803564722" lon="-108.217003312"> <name>RL0475.0-NM</name></trkpt>
+<trkpt lat="34.810560501" lon="-108.217229985"> <name>RL0475.5-NM</name></trkpt>
+<trkpt lat="34.817433796" lon="-108.218062585"> <name>RL0476.0-NM</name></trkpt>
+<trkpt lat="34.823765182" lon="-108.221726865"> <name>RL0476.5-NM</name></trkpt>
+<trkpt lat="34.830523449" lon="-108.223485594"> <name>RL0477.0-NM</name></trkpt>
+<trkpt lat="34.837033465" lon="-108.22628705"> <name>RL0477.5-NM</name></trkpt>
+<trkpt lat="34.843835732" lon="-108.226689568"> <name>RL0478.0-NM</name></trkpt>
+<trkpt lat="34.849856869" lon="-108.223131126"> <name>RL0478.5-NM</name></trkpt>
+<trkpt lat="34.856456717" lon="-108.221632671"> <name>RL0479.0-NM</name></trkpt>
+<trkpt lat="34.862764725" lon="-108.218131675"> <name>RL0479.5-NM</name></trkpt>
+<trkpt lat="34.869037059" lon="-108.218203835"> <name>RL0480.0-NM</name></trkpt>
+<trkpt lat="34.875725222" lon="-108.218755776"> <name>RL0480.5-NM</name></trkpt>
+<trkpt lat="34.881644874" lon="-108.223182025"> <name>RL0481.0-NM</name></trkpt>
+<trkpt lat="34.888427855" lon="-108.22462393"> <name>RL0481.5-NM</name></trkpt>
+<trkpt lat="34.894674467" lon="-108.221894081"> <name>RL0482.0-NM</name></trkpt>
+<trkpt lat="34.900304284" lon="-108.218126361"> <name>RL0482.5-NM</name></trkpt>
+<trkpt lat="34.903737805" lon="-108.211503932"> <name>RL0483.0-NM</name></trkpt>
+<trkpt lat="34.907073107" lon="-108.204139607"> <name>RL0483.5-NM</name></trkpt>
+<trkpt lat="34.910678952" lon="-108.196575925"> <name>RL0484.0-NM</name></trkpt>
+<trkpt lat="34.913588557" lon="-108.188706649"> <name>RL0484.5-NM</name></trkpt>
+<trkpt lat="34.918894433" lon="-108.184562716"> <name>RL0485.0-NM</name></trkpt>
+<trkpt lat="34.925919292" lon="-108.185164445"> <name>RL0485.5-NM</name></trkpt>
+<trkpt lat="34.93255433" lon="-108.1835247"> <name>RL0486.0-NM</name></trkpt>
+<trkpt lat="34.938137833" lon="-108.178880957"> <name>RL0486.5-NM</name></trkpt>
+<trkpt lat="34.944217239" lon="-108.175394008"> <name>RL0487.0-NM</name></trkpt>
+<trkpt lat="34.949380148" lon="-108.169881954"> <name>RL0487.5-NM</name></trkpt>
+<trkpt lat="34.95282546" lon="-108.162467838"> <name>RL0488.0-NM</name></trkpt>
+<trkpt lat="34.954295013" lon="-108.154282293"> <name>RL0488.5-NM</name></trkpt>
+<trkpt lat="34.95381146" lon="-108.145696236"> <name>RL0489.0-NM</name></trkpt>
+<trkpt lat="34.959479938" lon="-108.141040665"> <name>RL0489.5-NM</name></trkpt>
+<trkpt lat="34.966418494" lon="-108.13925407"> <name>RL0490.0-NM</name></trkpt>
+<trkpt lat="34.973291113" lon="-108.136651452"> <name>RL0490.5-NM</name></trkpt>
+<trkpt lat="34.978397739" lon="-108.130468931"> <name>RL0491.0-NM</name></trkpt>
+<trkpt lat="34.981769391" lon="-108.122800606"> <name>RL0491.5-NM</name></trkpt>
+<trkpt lat="34.985736124" lon="-108.115756587"> <name>RL0492.0-NM</name></trkpt>
+<trkpt lat="34.98711918" lon="-108.108359441"> <name>RL0492.5-NM</name></trkpt>
+<trkpt lat="34.986618435" lon="-108.099733133"> <name>RL0493.0-NM</name></trkpt>
+<trkpt lat="34.990606928" lon="-108.093316146"> <name>RL0493.5-NM</name></trkpt>
+<trkpt lat="34.997384458" lon="-108.092679523"> <name>RL0494.0-NM</name></trkpt>
+<trkpt lat="35.00446748" lon="-108.09195514"> <name>RL0494.5-NM</name></trkpt>
+<trkpt lat="35.005402701" lon="-108.084909208"> <name>RL0495.0-NM</name></trkpt>
+<trkpt lat="35.002923525" lon="-108.077240942"> <name>RL0495.5-NM</name></trkpt>
+<trkpt lat="35.00005547" lon="-108.069952649"> <name>RL0496.0-NM</name></trkpt>
+<trkpt lat="35.003899645" lon="-108.063165346"> <name>RL0496.5-NM</name></trkpt>
+<trkpt lat="35.005841937" lon="-108.056223899"> <name>RL0497.0-NM</name></trkpt>
+<trkpt lat="35.002030682" lon="-108.048817833"> <name>RL0497.5-NM</name></trkpt>
+<trkpt lat="34.997247109" lon="-108.042195334"> <name>RL0498.0-NM</name></trkpt>
+<trkpt lat="34.992108636" lon="-108.03670442"> <name>RL0498.5-NM</name></trkpt>
+<trkpt lat="34.985920962" lon="-108.035024557"> <name>RL0499.0-NM</name></trkpt>
+<trkpt lat="34.983251516" lon="-108.027698237"> <name>RL0499.5-NM</name></trkpt>
+<trkpt lat="34.979982928" lon="-108.020810151"> <name>RL0500.0-NM</name></trkpt>
+<trkpt lat="34.975060187" lon="-108.014893508"> <name>RL0500.5-NM</name></trkpt>
+<trkpt lat="34.973825478" lon="-108.008413798"> <name>RL0501.0-NM</name></trkpt>
+<trkpt lat="34.970311046" lon="-108.002457262"> <name>RL0501.5-NM</name></trkpt>
+<trkpt lat="34.967696616" lon="-107.995635962"> <name>RL0502.0-NM</name></trkpt>
+<trkpt lat="34.962535706" lon="-107.991045551"> <name>RL0502.5-NM</name></trkpt>
+<trkpt lat="34.957184541" lon="-107.987093452"> <name>RL0503.0-NM</name></trkpt>
+<trkpt lat="34.952958812" lon="-107.980354755"> <name>RL0503.5-NM</name></trkpt>
+<trkpt lat="34.950554605" lon="-107.972377902"> <name>RL0504.0-NM</name></trkpt>
+<trkpt lat="34.947129377" lon="-107.96684271"> <name>RL0504.5-NM</name></trkpt>
+<trkpt lat="34.944840955" lon="-107.959034494"> <name>RL0505.0-NM</name></trkpt>
+<trkpt lat="34.940875712" lon="-107.952670776"> <name>RL0505.5-NM</name></trkpt>
+<trkpt lat="34.939758078" lon="-107.945247251"> <name>RL0506.0-NM</name></trkpt>
+<trkpt lat="34.941654817" lon="-107.937916671"> <name>RL0506.5-NM</name></trkpt>
+
+
+
+
+
+<trkpt lat="34.905595433" lon="-107.855537108"> <name>RL0514.5-NM</name></trkpt>
+<trkpt lat="34.911614351" lon="-107.851263435"> <name>RL0515.0-NM</name></trkpt>
+<trkpt lat="34.917421444" lon="-107.845992388"> <name>RL0515.5-NM</name></trkpt>
+<trkpt lat="34.924330719" lon="-107.843432486"> <name>RL0516.0-NM</name></trkpt>
+<trkpt lat="34.931327944" lon="-107.841287308"> <name>RL0516.5-NM</name></trkpt>
+<trkpt lat="34.937018812" lon="-107.835932726"> <name>RL0517.0-NM</name></trkpt>
+<trkpt lat="34.939364034" lon="-107.827666823"> <name>RL0517.5-NM</name></trkpt>
+<trkpt lat="34.944570033" lon="-107.822891694"> <name>RL0518.0-NM</name></trkpt>
+<trkpt lat="34.951465203" lon="-107.820242665"> <name>RL0518.5-NM</name></trkpt>
+<trkpt lat="34.958400541" lon="-107.817717426"> <name>RL0519.0-NM</name></trkpt>
+<trkpt lat="34.965158747" lon="-107.81453276"> <name>RL0519.5-NM</name></trkpt>
+<trkpt lat="34.971806114" lon="-107.811034691"> <name>RL0520.0-NM</name></trkpt>
+<trkpt lat="34.977899138" lon="-107.806271295"> <name>RL0520.5-NM</name></trkpt>
+<trkpt lat="34.984839253" lon="-107.805214552"> <name>RL0521.0-NM</name></trkpt>
+<trkpt lat="34.991385003" lon="-107.808901698"> <name>RL0521.5-NM</name></trkpt>
+<trkpt lat="34.998268791" lon="-107.811617505"> <name>RL0522.0-NM</name></trkpt>
+<trkpt lat="35.005253677" lon="-107.813981333"> <name>RL0522.5-NM</name></trkpt>
+<trkpt lat="35.012385781" lon="-107.815403736"> <name>RL0523.0-NM</name></trkpt>
+<trkpt lat="35.019590753" lon="-107.81563534"> <name>RL0523.5-NM</name></trkpt>
+<trkpt lat="35.026641025" lon="-107.813629617"> <name>RL0524.0-NM</name></trkpt>
+<trkpt lat="35.033565666" lon="-107.811017925"> <name>RL0524.5-NM</name></trkpt>
+<trkpt lat="35.040374118" lon="-107.807999503"> <name>RL0525.0-NM</name></trkpt>
+<trkpt lat="35.047103266" lon="-107.804716551"> <name>RL0525.5-NM</name></trkpt>
+<trkpt lat="35.054031139" lon="-107.802210433"> <name>RL0526.0-NM</name></trkpt>
+<trkpt lat="35.060784801" lon="-107.799102817"> <name>RL0526.5-NM</name></trkpt>
+<trkpt lat="35.067206938" lon="-107.795010549"> <name>RL0527.0-NM</name></trkpt>
+<trkpt lat="35.072575546" lon="-107.78935681"> <name>RL0527.5-NM</name></trkpt>
+<trkpt lat="35.077007153" lon="-107.782377938"> <name>RL0528.0-NM</name></trkpt>
+<trkpt lat="35.081436652" lon="-107.775404673"> <name>RL0528.5-NM</name></trkpt>
+<trkpt lat="35.085997182" lon="-107.769316448"> <name>RL0529.0-NM</name></trkpt>
+<trkpt lat="35.093066252" lon="-107.771271732"> <name>RL0529.5-NM</name></trkpt>
+<trkpt lat="35.099542479" lon="-107.775055223"> <name>RL0530.0-NM</name></trkpt>
+<trkpt lat="35.105724189" lon="-107.779657863"> <name>RL0530.5-NM</name></trkpt>
+<trkpt lat="35.112434999" lon="-107.782961491"> <name>RL0531.0-NM</name></trkpt>
+<trkpt lat="35.11733205" lon="-107.789384431"> <name>RL0531.5-NM</name></trkpt>
+<trkpt lat="35.121739008" lon="-107.796391683"> <name>RL0532.0-NM</name></trkpt>
+<trkpt lat="35.126144661" lon="-107.803400541"> <name>RL0532.5-NM</name></trkpt>
+<trkpt lat="35.130554598" lon="-107.810405602"> <name>RL0533.0-NM</name></trkpt>
+<trkpt lat="35.134394586" lon="-107.8178904"> <name>RL0533.5-NM</name></trkpt>
+<trkpt lat="35.138203247" lon="-107.825400864"> <name>RL0534.0-NM</name></trkpt>
+<trkpt lat="35.142009314" lon="-107.832912844"> <name>RL0534.5-NM</name></trkpt>
+<trkpt lat="35.145842398" lon="-107.840405381"> <name>RL0535.0-NM</name></trkpt>
+<trkpt lat="35.149656863" lon="-107.847912376"> <name>RL0535.5-NM</name></trkpt>
+
+Fin de la RL entre le depart de Bonita-Zuni et Grants
+
+<trk><name>Unused RedLine (Mount-Taylor)</name>
+<trkpt lat="35.220190472" lon="-107.656876303"> <name>RL0552.0-NM</name></trkpt>
+<trkpt lat="35.222908419" lon="-107.652206805"> <name>RL0552.5-NM</name></trkpt>
+<trkpt lat="35.225495264" lon="-107.645580286"> <name>RL0553.0-NM</name></trkpt>
+<trkpt lat="35.229254378" lon="-107.641594137"> <name>RL0553.5-NM</name></trkpt>
+<trkpt lat="35.233856762" lon="-107.639077787"> <name>RL0554.0-NM</name></trkpt>
+<trkpt lat="35.237705007" lon="-107.637289463"> <name>RL0554.5-NM</name></trkpt>
+<trkpt lat="35.243074728" lon="-107.64017146"> <name>RL0555.0-NM</name></trkpt>
+<trkpt lat="35.248744175" lon="-107.635972036"> <name>RL0555.5-NM</name></trkpt>
+<trkpt lat="35.254420056" lon="-107.633374896"> <name>RL0556.0-NM</name></trkpt>
+<trkpt lat="35.258298778" lon="-107.630821914"> <name>RL0556.5-NM</name></trkpt>
+<trkpt lat="35.264819488" lon="-107.629634025"> <name>RL0557.0-NM</name></trkpt>
+<trkpt lat="35.269390414" lon="-107.630074617"> <name>RL0557.5-NM</name></trkpt>
+<trkpt lat="35.271258107" lon="-107.628342041"> <name>RL0558.0-NM</name></trkpt>
+<trkpt lat="35.275105185" lon="-107.622137056"> <name>RL0558.5-NM</name></trkpt>
+<trkpt lat="35.275424774" lon="-107.614292524"> <name>RL0559.0-NM</name></trkpt>
+<trkpt lat="35.279310595" lon="-107.612653146"> <name>RL0559.5-NM</name></trkpt>
+<trkpt lat="35.27875054" lon="-107.605320026"> <name>RL0560.0-NM</name></trkpt>
+<trkpt lat="35.275727685" lon="-107.600828442"> <name>RL0560.5-NM</name></trkpt>
+<trkpt lat="35.277336953" lon="-107.597235784"> <name>RL0561.0-NM</name></trkpt>
+<trkpt lat="35.280611545" lon="-107.590803379"> <name>RL0561.5-NM</name></trkpt>
+<trkpt lat="35.284176744" lon="-107.587836184"> <name>RL0562.0-NM</name></trkpt>
+<trkpt lat="35.289362678" lon="-107.58316792"> <name>RL0562.5-NM</name></trkpt>
+<trkpt lat="35.294921606" lon="-107.582824579"> <name>RL0563.0-NM</name></trkpt>
+<trkpt lat="35.299659066" lon="-107.578243124"> <name>RL0563.5-NM</name></trkpt>
+<trkpt lat="35.303759904" lon="-107.575453159"> <name>RL0564.0-NM</name></trkpt>
+<trkpt lat="35.310371035" lon="-107.576095224"> <name>RL0564.5-NM</name></trkpt>
+<trkpt lat="35.316986827" lon="-107.575362281"> <name>RL0565.0-NM</name></trkpt>
+
+
+
+
+
+Unused RL car Ghost-Ranch
+<trkpt lat="36.331034564" lon="-106.622328051"> <name>RL0689.5-NM</name></trkpt>
+<trkpt lat="36.334723762" lon="-106.617650363"> <name>RL0690.0-NM</name></trkpt>
+<trkpt lat="36.338153375" lon="-106.615598799"> <name>RL0690.5-NM</name></trkpt>
+<trkpt lat="36.343472542" lon="-106.614862524"> <name>RL0691.0-NM</name></trkpt>
+<trkpt lat="36.346561368" lon="-106.611905444"> <name>RL0691.5-NM</name></trkpt>
+<trkpt lat="36.350754575" lon="-106.606751491"> <name>RL0692.0-NM</name></trkpt>
+<trkpt lat="36.349042382" lon="-106.601723462"> <name>RL0692.5-NM</name></trkpt>
+<trkpt lat="36.345672606" lon="-106.603557482"> <name>RL0693.0-NM</name></trkpt>
+<trkpt lat="36.339426598" lon="-106.600412629"> <name>RL0693.5-NM</name></trkpt>
+<trkpt lat="36.336251452" lon="-106.593392836"> <name>RL0694.0-NM</name></trkpt>
+<trkpt lat="36.334335454" lon="-106.586371084"> <name>RL0694.5-NM</name></trkpt>
+<trkpt lat="36.334323263" lon="-106.578765324"> <name>RL0695.0-NM</name></trkpt>
+<trkpt lat="36.335601752" lon="-106.571495642"> <name>RL0695.5-NM</name></trkpt>
+<trkpt lat="36.338086438" lon="-106.568736614"> <name>RL0696.0-NM</name></trkpt>
+<trkpt lat="36.342125596" lon="-106.56466167"> <name>RL0696.5-NM</name></trkpt>
+<trkpt lat="36.347023893" lon="-106.559264156"> <name>RL0697.0-NM</name></trkpt>
+<trkpt lat="36.347905861" lon="-106.552094813"> <name>RL0697.5-NM</name></trkpt>
+<trkpt lat="36.353561372" lon="-106.549615003"> <name>RL0698.0-NM</name></trkpt>
+<trkpt lat="36.357935599" lon="-106.543538019"> <name>RL0698.5-NM</name></trkpt>
+<trkpt lat="36.36376048" lon="-106.539659517"> <name>RL0699.0-NM</name></trkpt>
+<trkpt lat="36.37032627" lon="-106.539928716"> <name>RL0699.5-NM</name></trkpt>
+<trkpt lat="36.375368192" lon="-106.535098101"> <name>RL0700.0-NM</name></trkpt>
+<trkpt lat="36.379949204" lon="-106.530603427"> <name>RL0700.5-NM</name></trkpt>
+<trkpt lat="36.384773478" lon="-106.529911162"> <name>RL0701.0-NM</name></trkpt>
+<trkpt lat="36.391414976" lon="-106.529020997"> <name>RL0701.5-NM</name></trkpt>
+<trkpt lat="36.395428147" lon="-106.521800417"> <name>RL0702.0-NM</name></trkpt>
+<trkpt lat="36.400224011" lon="-106.516123287"> <name>RL0702.5-NM</name></trkpt>
+<trkpt lat="36.399567704" lon="-106.508733322"> <name>RL0703.0-NM</name></trkpt>
+<trkpt lat="36.40043464" lon="-106.500789014"> <name>RL0703.5-NM</name></trkpt>
+<trkpt lat="36.402958853" lon="-106.494404312"> <name>RL0704.0-NM</name></trkpt>
+<trkpt lat="36.405179204" lon="-106.488745533"> <name>RL0704.5-NM</name></trkpt>
+<trkpt lat="36.399798667" lon="-106.486635147"> <name>RL0705.0-NM</name></trkpt>
+<trkpt lat="36.395294438" lon="-106.480361257"> <name>RL0705.5-NM</name></trkpt>
+<trkpt lat="36.395412212" lon="-106.472441367"> <name>RL0706.0-NM</name></trkpt>
+<trkpt lat="36.395444898" lon="-106.463736659"> <name>RL0706.5-NM</name></trkpt>
+<trkpt lat="36.393829125" lon="-106.455493778"> <name>RL0707.0-NM</name></trkpt>
+<trkpt lat="36.389422809" lon="-106.449569566"> <name>RL0707.5-NM</name></trkpt>
+<trkpt lat="36.386461041" lon="-106.44324504"> <name>RL0708.0-NM</name></trkpt>
+<trkpt lat="36.390681752" lon="-106.437032414"> <name>RL0708.5-NM</name></trkpt>
+<trkpt lat="36.393686977" lon="-106.429241117"> <name>RL0709.0-NM</name></trkpt>
+<trkpt lat="36.397535765" lon="-106.422284282"> <name>RL0709.5-NM</name></trkpt>
+<trkpt lat="36.40063594" lon="-106.414882861"> <name>RL0710.0-NM</name></trkpt>
+<trkpt lat="36.404839133" lon="-106.408301172"> <name>RL0710.5-NM</name></trkpt>
+<trkpt lat="36.407103515" lon="-106.400538165"> <name>RL0711.0-NM</name></trkpt>
+<trkpt lat="36.407571174" lon="-106.395480913"> <name>RL0711.5-NM</name></trkpt>
+<trkpt lat="36.411700796" lon="-106.391415303"> <name>RL0712.0-NM</name></trkpt>
+<trkpt lat="36.416965377" lon="-106.387674093"> <name>RL0712.5-NM</name></trkpt>
+<trkpt lat="36.421146599" lon="-106.3839878"> <name>RL0713.0-NM</name></trkpt>
+<trkpt lat="36.42592011" lon="-106.379065756"> <name>RL0713.5-NM</name></trkpt>
+<trkpt lat="36.429183049" lon="-106.372209163"> <name>RL0714.0-NM</name></trkpt>
+<trkpt lat="36.43098182" lon="-106.366219545"> <name>RL0714.5-NM</name></trkpt>
+<trkpt lat="36.429619781" lon="-106.359850035"> <name>RL0715.0-NM</name></trkpt>
+<trkpt lat="36.429367429" lon="-106.351767714"> <name>RL0715.5-NM</name></trkpt>
+<trkpt lat="36.42752231" lon="-106.345800198"> <name>RL0716.0-NM</name></trkpt>
+<trkpt lat="36.422641366" lon="-106.339737073"> <name>RL0716.5-NM</name></trkpt>
+<trkpt lat="36.426415647" lon="-106.333552944"> <name>RL0717.0-NM</name></trkpt>
+
+
+Unused RL car Mirror Lake
+<trkpt lat="38.696017307" lon="-106.40988248"> <name>RL1110.5-CO</name></trkpt>
+<trkpt lat="38.697438115" lon="-106.413083641"> <name>RL1111.0-CO</name></trkpt>
+<trkpt lat="38.699958858" lon="-106.417256028"> <name>RL1111.5-CO</name></trkpt>
+<trkpt lat="38.702208484" lon="-106.418144867"> <name>RL1112.0-CO</name></trkpt>
+<trkpt lat="38.704726331" lon="-106.417051655"> <name>RL1112.5-CO</name></trkpt>
+<trkpt lat="38.710850277" lon="-106.419562712"> <name>RL1113.0-CO</name></trkpt>
+<trkpt lat="38.716453945" lon="-106.416070159"> <name>RL1113.5-CO</name></trkpt>
+<trkpt lat="38.71923476" lon="-106.411701117"> <name>RL1114.0-CO</name></trkpt>
+<trkpt lat="38.723166715" lon="-106.407987771"> <name>RL1114.5-CO</name></trkpt>
+<trkpt lat="38.728128123" lon="-106.408407421"> <name>RL1115.0-CO</name></trkpt>
+<trkpt lat="38.733834063" lon="-106.408204145"> <name>RL1115.5-CO</name></trkpt>
+<trkpt lat="38.736498533" lon="-106.409053785"> <name>RL1116.0-CO</name></trkpt>
+<trkpt lat="38.741307766" lon="-106.410477503"> <name>RL1116.5-CO</name></trkpt>
+<trkpt lat="38.745057166" lon="-106.409900754"> <name>RL1117.0-CO</name></trkpt>
+<trkpt lat="38.749754075" lon="-106.412715923"> <name>RL1117.5-CO</name></trkpt>
+<trkpt lat="38.753751873" lon="-106.407896899"> <name>RL1118.0-CO</name></trkpt>
+<trkpt lat="38.758488288" lon="-106.403517467"> <name>RL1118.5-CO</name></trkpt>
+<trkpt lat="38.763048863" lon="-106.408664494"> <name>RL1119.0-CO</name></trkpt>
+<trkpt lat="38.767344786" lon="-106.412761288"> <name>RL1119.5-CO</name></trkpt>
+<trkpt lat="38.772905244" lon="-106.412184842"> <name>RL1120.0-CO</name></trkpt>
+<trkpt lat="38.777824243" lon="-106.416103055"> <name>RL1120.5-CO</name></trkpt>
+<trkpt lat="38.782265402" lon="-106.419685736"> <name>RL1121.0-CO</name></trkpt>
+<trkpt lat="38.786455167" lon="-106.42170665"> <name>RL1121.5-CO</name></trkpt>
+<trkpt lat="38.792108472" lon="-106.420200785"> <name>RL1122.0-CO</name></trkpt>
+<trkpt lat="38.796040626" lon="-106.41614543"> <name>RL1122.5-CO</name></trkpt>
+<trkpt lat="38.801879232" lon="-106.418520056"> <name>RL1123.0-CO</name></trkpt>
+<trkpt lat="38.806399504" lon="-106.421296291"> <name>RL1123.5-CO</name></trkpt>
+<trkpt lat="38.811241024" lon="-106.41890243"> <name>RL1124.0-CO</name></trkpt>
+<trkpt lat="38.817524109" lon="-106.415578875"> <name>RL1124.5-CO</name></trkpt>
+<trkpt lat="38.823961341" lon="-106.416806352"> <name>RL1125.0-CO</name></trkpt>
+<trkpt lat="38.825503412" lon="-106.413581477"> <name>RL1125.5-CO</name></trkpt>
+<trkpt lat="38.827919661" lon="-106.406567711"> <name>RL1126.0-CO</name></trkpt>
+<trkpt lat="38.830235704" lon="-106.404572227"> <name>RL1126.5-CO</name></trkpt>
+<trkpt lat="38.8369632" lon="-106.402881315"> <name>RL1127.0-CO</name></trkpt>
+<trkpt lat="38.841394224" lon="-106.397046487"> <name>RL1127.5-CO</name></trkpt>
+<trkpt lat="38.847639486" lon="-106.393983288"> <name>RL1128.0-CO</name></trkpt>
+<trkpt lat="38.852105873" lon="-106.38773572"> <name>RL1128.5-CO</name></trkpt>
+<trkpt lat="38.857830267" lon="-106.388356735"> <name>RL1129.0-CO</name></trkpt>
+<trkpt lat="38.86423379" lon="-106.387595661"> <name>RL1129.5-CO</name></trkpt>
+<trkpt lat="38.870147667" lon="-106.387357777"> <name>RL1130.0-CO</name></trkpt>
+<trkpt lat="38.874830915" lon="-106.387324494"> <name>RL1130.5-CO</name></trkpt>
+<trkpt lat="38.876286232" lon="-106.395881424"> <name>RL1131.0-CO</name></trkpt>
+<trkpt lat="38.878746683" lon="-106.402017408"> <name>RL1131.5-CO</name></trkpt>
+<trkpt lat="38.87791581" lon="-106.408539077"> <name>RL1132.0-CO</name></trkpt>
+<trkpt lat="38.876220643" lon="-106.416807376"> <name>RL1132.5-CO</name></trkpt>
+
+
+Unused RL at Argentine
+<trkpt lat="39.577785579" lon="-105.838559087"> <name>RL1272.5-CO</name></trkpt>
+<trkpt lat="39.581165873" lon="-105.842312358"> <name>RL1273.0-CO</name></trkpt>
+<trkpt lat="39.586572459" lon="-105.839227441"> <name>RL1273.5-CO</name></trkpt>
+<trkpt lat="39.587863692" lon="-105.834689121"> <name>RL1274.0-CO</name></trkpt>
+<trkpt lat="39.594561363" lon="-105.834655768"> <name>RL1274.5-CO</name></trkpt>
+<trkpt lat="39.59871989" lon="-105.835501097"> <name>RL1275.0-CO</name></trkpt>
+<trkpt lat="39.600456864" lon="-105.837101195"> <name>RL1275.5-CO</name></trkpt>
+<trkpt lat="39.598174939" lon="-105.82881679"> <name>RL1276.0-CO</name></trkpt>
+<trkpt lat="39.602131649" lon="-105.82189012"> <name>RL1276.5-CO</name></trkpt>
+<trkpt lat="39.602704641" lon="-105.812731984"> <name>RL1277.0-CO</name></trkpt>
+<trkpt lat="39.605046071" lon="-105.803986168"> <name>RL1277.5-CO</name></trkpt>
+<trkpt lat="39.610512371" lon="-105.798333483"> <name>RL1278.0-CO</name></trkpt>
+<trkpt lat="39.611324115" lon="-105.793154272"> <name>RL1278.5-CO</name></trkpt>
+<trkpt lat="39.607559359" lon="-105.789495268"> <name>RL1279.0-CO</name></trkpt>
+<trkpt lat="39.613706457" lon="-105.787069078"> <name>RL1279.5-CO</name></trkpt>
+<trkpt lat="39.619875532" lon="-105.784801739"> <name>RL1280.0-CO</name></trkpt>
+
+
+
+Unused RL at Cirque of the Towers
+<trkpt lat="42.6212518" lon="-109.141110722"> <name>RL1784.0-WY</name></trkpt>
+<trkpt lat="42.618221198" lon="-109.14693851"> <name>RL1784.5-WY</name></trkpt>
+<trkpt lat="42.613960559" lon="-109.153855167"> <name>RL1785.0-WY</name></trkpt>
+<trkpt lat="42.607104948" lon="-109.15625811"> <name>RL1785.5-WY</name></trkpt>
+<trkpt lat="42.601850856" lon="-109.161750402"> <name>RL1786.0-WY</name></trkpt>
+<trkpt lat="42.6009099" lon="-109.166865335"> <name>RL1786.5-WY</name></trkpt>
+<trkpt lat="42.604984823" lon="-109.174290376"> <name>RL1787.0-WY</name></trkpt>
+<trkpt lat="42.610114569" lon="-109.179242235"> <name>RL1787.5-WY</name></trkpt>
+<trkpt lat="42.611300556" lon="-109.185068045"> <name>RL1788.0-WY</name></trkpt>
+<trkpt lat="42.612655699" lon="-109.192994205"> <name>RL1788.5-WY</name></trkpt>
+<trkpt lat="42.616965428" lon="-109.198826072"> <name>RL1789.0-WY</name></trkpt>
+<trkpt lat="42.623060676" lon="-109.197060218"> <name>RL1789.5-WY</name></trkpt>
+<trkpt lat="42.627184744" lon="-109.202860182"> <name>RL1790.0-WY</name></trkpt>
+<trkpt lat="42.630109604" lon="-109.209139986"> <name>RL1790.5-WY</name></trkpt>
+<trkpt lat="42.633636811" lon="-109.213957425"> <name>RL1791.0-WY</name></trkpt>
+<trkpt lat="42.639605933" lon="-109.214417889"> <name>RL1791.5-WY</name></trkpt>
+<trkpt lat="42.644458999" lon="-109.218242718"> <name>RL1792.0-WY</name></trkpt>
+<trkpt lat="42.647695078" lon="-109.22203235"> <name>RL1792.5-WY</name></trkpt>
+<trkpt lat="42.6503992" lon="-109.229318708"> <name>RL1793.0-WY</name></trkpt>
+<trkpt lat="42.652422477" lon="-109.236672155"> <name>RL1793.5-WY</name></trkpt>
+<trkpt lat="42.653444749" lon="-109.244327061"> <name>RL1794.0-WY</name></trkpt>
+<trkpt lat="42.659346404" lon="-109.248805531"> <name>RL1794.5-WY</name></trkpt>
+<trkpt lat="42.66595569" lon="-109.250569658"> <name>RL1795.0-WY</name></trkpt>
+<trkpt lat="42.672003029" lon="-109.249364042"> <name>RL1795.5-WY</name></trkpt>
+<trkpt lat="42.677088245" lon="-109.251503849"> <name>RL1796.0-WY</name></trkpt>
+<trkpt lat="42.681353063" lon="-109.257369196"> <name>RL1796.5-WY</name></trkpt>
+<trkpt lat="42.686220802" lon="-109.26064336"> <name>RL1797.0-WY</name></trkpt>
+<trkpt lat="42.689988193" lon="-109.263453548"> <name>RL1797.5-WY</name></trkpt>
+<trkpt lat="42.695889134" lon="-109.265785718"> <name>RL1798.0-WY</name></trkpt>
+<trkpt lat="42.701307054" lon="-109.265332923"> <name>RL1798.5-WY</name></trkpt>
+<trkpt lat="42.706563922" lon="-109.268870739"> <name>RL1799.0-WY</name></trkpt>
+<trkpt lat="42.711971657" lon="-109.269947832"> <name>RL1799.5-WY</name></trkpt>
+<trkpt lat="42.718181018" lon="-109.270576261"> <name>RL1800.0-WY</name></trkpt>
+<trkpt lat="42.723912424" lon="-109.274986432"> <name>RL1800.5-WY</name></trkpt>
+<trkpt lat="42.730633106" lon="-109.277397532"> <name>RL1801.0-WY</name></trkpt>
+<trkpt lat="42.736304415" lon="-109.282166873"> <name>RL1801.5-WY</name></trkpt>
+<trkpt lat="42.741759066" lon="-109.284042461"> <name>RL1802.0-WY</name></trkpt>
+<trkpt lat="42.748579591" lon="-109.284106817"> <name>RL1802.5-WY</name></trkpt>
+<trkpt lat="42.754734627" lon="-109.2872318"> <name>RL1803.0-WY</name></trkpt>
+<trkpt lat="42.760825123" lon="-109.288754851"> <name>RL1803.5-WY</name></trkpt>
+<trkpt lat="42.76645673" lon="-109.291306943"> <name>RL1804.0-WY</name></trkpt>
+<trkpt lat="42.772392232" lon="-109.295469531"> <name>RL1804.5-WY</name></trkpt>
+<trkpt lat="42.778590764" lon="-109.299837942"> <name>RL1805.0-WY</name></trkpt>
+<trkpt lat="42.784691379" lon="-109.303915956"> <name>RL1805.5-WY</name></trkpt>
+<trkpt lat="42.791339176" lon="-109.301728883"> <name>RL1806.0-WY</name></trkpt>
+<trkpt lat="42.794878415" lon="-109.30543433"> <name>RL1806.5-WY</name></trkpt>
+
+
+Unused RL at Knapsack
+<trkpt lat="43.072456255" lon="-109.645926842"> <name>RL1839.0-WY</name></trkpt>
+<trkpt lat="43.078931811" lon="-109.646501524"> <name>RL1839.5-WY</name></trkpt>
+<trkpt lat="43.082848757" lon="-109.651699062"> <name>RL1840.0-WY</name></trkpt>
+<trkpt lat="43.08752657" lon="-109.655051653"> <name>RL1840.5-WY</name></trkpt>
+<trkpt lat="43.091759307" lon="-109.661167045"> <name>RL1841.0-WY</name></trkpt>
+<trkpt lat="43.096400588" lon="-109.660251008"> <name>RL1841.5-WY</name></trkpt>
+<trkpt lat="43.101320138" lon="-109.664701456"> <name>RL1842.0-WY</name></trkpt>
+<trkpt lat="43.107167288" lon="-109.669359271"> <name>RL1842.5-WY</name></trkpt>
+<trkpt lat="43.112856732" lon="-109.672710682"> <name>RL1843.0-WY</name></trkpt>
+<trkpt lat="43.11866042" lon="-109.676543645"> <name>RL1843.5-WY</name></trkpt>
+<trkpt lat="43.124452402" lon="-109.681819205"> <name>RL1844.0-WY</name></trkpt>
+<trkpt lat="43.12966651" lon="-109.687068795"> <name>RL1844.5-WY</name></trkpt>
+<trkpt lat="43.134677908" lon="-109.693163839"> <name>RL1845.0-WY</name></trkpt>
+<trkpt lat="43.132924772" lon="-109.697611839"> <name>RL1845.5-WY</name></trkpt>
+<trkpt lat="43.128474489" lon="-109.703081355"> <name>RL1846.0-WY</name></trkpt>
+<trkpt lat="43.123305513" lon="-109.706275991"> <name>RL1846.5-WY</name></trkpt>
+<trkpt lat="43.121929301" lon="-109.713951116"> <name>RL1847.0-WY</name></trkpt>
+<trkpt lat="43.122080797" lon="-109.720623409"> <name>RL1847.5-WY</name></trkpt>
+<trkpt lat="43.117939287" lon="-109.724367704"> <name>RL1848.0-WY</name></trkpt>
+<trkpt lat="43.117247524" lon="-109.73305262"> <name>RL1848.5-WY</name></trkpt>
+<trkpt lat="43.122199039" lon="-109.737930077"> <name>RL1849.0-WY</name></trkpt>
+<trkpt lat="43.127712646" lon="-109.739881319"> <name>RL1849.5-WY</name></trkpt>
+<trkpt lat="43.132680345" lon="-109.744852318"> <name>RL1850.0-WY</name></trkpt>
+<trkpt lat="43.139140413" lon="-109.746763513"> <name>RL1850.5-WY</name></trkpt>
+<trkpt lat="43.1455937" lon="-109.742979806"> <name>RL1851.0-WY</name></trkpt>
+<trkpt lat="43.152061747" lon="-109.743995273"> <name>RL1851.5-WY</name></trkpt>
+<trkpt lat="43.157707926" lon="-109.744035374"> <name>RL1852.0-WY</name></trkpt>
+<trkpt lat="43.164282884" lon="-109.743311305"> <name>RL1852.5-WY</name></trkpt>
+
+
+-->
+
+
+<!-- TAG BearCreekSurvey tracks
+
+  <trk><name>Knife-Edge?</name>
+    <trkseg>
+      <trkpt lat="39.574899000" lon="-105.837273030">         <name>29X-000M</name>       </trkpt>
+      <trkpt lat="39.578482010" lon="-105.830194010">         <name>29X-005M</name>       </trkpt>
+      <trkpt lat="39.580845960" lon="-105.822274030">         <name>29X-010M</name>       </trkpt>
+      <trkpt lat="39.582210030" lon="-105.813456020">         <name>29X-015M</name>       </trkpt>
+      <trkpt lat="39.586409030" lon="-105.806571040">         <name>29X-020M</name>       </trkpt>
+      <trkpt lat="39.591815030" lon="-105.800933040">         <name>29X-025M</name>       </trkpt>
+      <trkpt lat="39.595872030" lon="-105.794033980">         <name>29X-030M</name>       </trkpt>
+      <trkpt lat="39.599076020" lon="-105.786725040">         <name>29X-035M</name>       </trkpt>
+      <trkpt lat="39.602443030" lon="-105.779561030">         <name>29X-040M</name>       </trkpt>
+      <trkpt lat="39.607503010" lon="-105.775964020">         <name>29X-045M</name>       </trkpt>
+      <trkpt lat="39.613938970" lon="-105.778460990">         <name>29X-050M</name>       </trkpt>
+      <trkpt lat="39.619401040" lon="-105.782327980">         <name>29X-055M</name>       </trkpt>
+      <trkpt lat="39.625560990" lon="-105.782352030">         <name>29X-059M</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk><name>Creede-cutoff</name>
+    <trkseg>
+      <trkpt lat="37.564047990" lon="-106.906478990">         <name>CR-000M</name>       </trkpt>
+      <trkpt lat="37.567022980" lon="-106.908314040">         <name>CR-005M</name>       </trkpt>
+      <trkpt lat="37.573574030" lon="-106.906626010">         <name>CR-010M</name>       </trkpt>
+      <trkpt lat="37.576052980" lon="-106.903785970">         <name>CR-015M</name>       </trkpt>
+      <trkpt lat="37.588106990" lon="-106.902377980">         <name>CR-027WT</name>       </trkpt>
+      <trkpt lat="37.589433010" lon="-106.902076980">         <name>CR-028XR</name>       </trkpt>
+      <trkpt lat="37.597767970" lon="-106.897824010">         <name>CR-035M</name>       </trkpt>
+      <trkpt lat="37.605006000" lon="-106.897209030">         <name>CR-040M</name>       </trkpt>
+      <trkpt lat="37.611021020" lon="-106.897458970">         <name>CR-045M</name>       </trkpt>
+      <trkpt lat="37.617078030" lon="-106.893790970">         <name>CR-050M</name>       </trkpt>
+      <trkpt lat="37.622603970" lon="-106.888177020">         <name>CR-055M</name>       </trkpt>
+      <trkpt lat="37.627599000" lon="-106.882077010">         <name>CR-060M</name>       </trkpt>
+      <trkpt lat="37.633071960" lon="-106.877684970">         <name>CR-065M</name>       </trkpt>
+      <trkpt lat="37.639107020" lon="-106.874569000">         <name>CR-070M</name>       </trkpt>
+      <trkpt lat="37.646508990" lon="-106.874589040">         <name>CR-075M</name>       </trkpt>
+      <trkpt lat="37.653333030" lon="-106.876875030">         <name>CR-080M</name>       </trkpt>
+      <trkpt lat="37.659854990" lon="-106.876232980">         <name>CR-085M</name>       </trkpt>
+      <trkpt lat="37.666348030" lon="-106.873808010">         <name>CR-090M</name>       </trkpt>
+      <trkpt lat="37.671408020" lon="-106.870834030">         <name>CR-095XL</name>       </trkpt>
+      <trkpt lat="37.676247980" lon="-106.877775000">         <name>CR-100M</name>       </trkpt>
+      <trkpt lat="37.678246980" lon="-106.884041980">         <name>CR-105M</name>       </trkpt>
+      <trkpt lat="37.680570030" lon="-106.891689040">         <name>CR-110M</name>       </trkpt>
+      <trkpt lat="37.685620960" lon="-106.897260990">         <name>CR-115M</name>       </trkpt>
+      <trkpt lat="37.692608030" lon="-106.907781960">         <name>CR-123XX</name>       </trkpt>
+      <trkpt lat="37.694424980" lon="-106.911670990">         <name>CR-125M</name>       </trkpt>
+      <trkpt lat="37.696533030" lon="-106.913866970">         <name>CR-127RR</name>       </trkpt>
+      <trkpt lat="37.703525960" lon="-106.907556990">         <name>CR-135M</name>       </trkpt>
+      <trkpt lat="37.709688000" lon="-106.904846030">         <name>CR-140M</name>       </trkpt>
+      <trkpt lat="37.712940020" lon="-106.910725010">         <name>CR-145M</name>       </trkpt>
+      <trkpt lat="37.715571010" lon="-106.912124040">         <name>CR-150M</name>       </trkpt>
+      <trkpt lat="37.721558960" lon="-106.906452000">         <name>CR-155M</name>       </trkpt>
+      <trkpt lat="37.728011010" lon="-106.904747040">         <name>CR-160M</name>       </trkpt>
+      <trkpt lat="37.735863010" lon="-106.909802000">         <name>CR-168RL</name>       </trkpt>
+      <trkpt lat="37.733107040" lon="-106.913860010">         <name>CR-172XX</name>       </trkpt>
+      <trkpt lat="37.734221000" lon="-106.917800010">         <name>CR-175M</name>       </trkpt>
+      <trkpt lat="37.735269990" lon="-106.925790980">         <name>CR-180M</name>       </trkpt>
+      <trkpt lat="37.740283960" lon="-106.931687990">         <name>CR-185M</name>       </trkpt>
+      <trkpt lat="37.746021040" lon="-106.936022020">         <name>CR-190WT</name>       </trkpt>
+      <trkpt lat="37.752104040" lon="-106.935095980">         <name>CR-195M</name>       </trkpt>
+      <trkpt lat="37.757766010" lon="-106.938850990">         <name>CR-200M</name>       </trkpt>
+      <trkpt lat="37.764372970" lon="-106.938225030">         <name>CR-205M</name>       </trkpt>
+      <trkpt lat="37.770872040" lon="-106.934866990">         <name>CR-210M</name>       </trkpt>
+      <trkpt lat="37.777656020" lon="-106.930405970">         <name>CR-215M</name>       </trkpt>
+      <trkpt lat="37.783635000" lon="-106.926396990">         <name>CR-220M</name>       </trkpt>
+      <trkpt lat="37.789429990" lon="-106.922498990">         <name>CR-225M</name>       </trkpt>
+      <trkpt lat="37.796765000" lon="-106.920894020">         <name>CR-230M</name>       </trkpt>
+      <trkpt lat="37.803592980" lon="-106.919619970">         <name>CR-235M</name>       </trkpt>
+      <trkpt lat="37.809293010" lon="-106.914981010">         <name>CR-240M</name>       </trkpt>
+      <trkpt lat="37.815194040" lon="-106.915403960">         <name>CR-245RR</name>       </trkpt>
+      <trkpt lat="37.812952970" lon="-106.914051040">         <name>CR-247RL</name>       </trkpt>
+      <trkpt lat="37.824955020" lon="-106.916638030">         <name>CR-255M</name>       </trkpt>
+      <trkpt lat="37.831971000" lon="-106.919116970">         <name>CR-260M</name>       </trkpt>
+      <trkpt lat="37.838222980" lon="-106.923514040">         <name>CR-265M</name>       </trkpt>
+      <trkpt lat="37.845090020" lon="-106.925246990">         <name>CR-270M</name>       </trkpt>
+      <trkpt lat="37.852191000" lon="-106.926895970">         <name>CR-275OP</name>       </trkpt>
+      <trkpt lat="37.856160000" lon="-106.927899030">         <name>CR-278RX</name>       </trkpt>
+      <trkpt lat="37.864247030" lon="-106.925744960">         <name>CR-283RL</name>       </trkpt>
+      <trkpt lat="37.872220990" lon="-106.927800960">         <name>CR-290M</name>       </trkpt>
+      <trkpt lat="37.878646970" lon="-106.928859010">         <name>CR-295M</name>       </trkpt>
+      <trkpt lat="37.885060970" lon="-106.932070030">         <name>CR-300M</name>       </trkpt>
+      <trkpt lat="37.894224990" lon="-106.929804990">         <name>CR-307RL</name>       </trkpt>
+      <trkpt lat="37.892279970" lon="-106.934199040">         <name>CR-310M</name>       </trkpt>
+      <trkpt lat="37.897344990" lon="-106.939607040">         <name>CR-315M</name>       </trkpt>
+      <trkpt lat="37.902786010" lon="-106.945738990">         <name>CR-320M</name>       </trkpt>
+      <trkpt lat="37.906257970" lon="-106.952113010">         <name>CR-325M</name>       </trkpt>
+      <trkpt lat="37.910163010" lon="-106.959334020">         <name>CR-330M</name>       </trkpt>
+      <trkpt lat="37.917128960" lon="-106.961457990">         <name>CR-335M</name>       </trkpt>
+      <trkpt lat="37.923700040" lon="-106.962688030">         <name>CR-340M</name>       </trkpt>
+      <trkpt lat="37.929902980" lon="-106.960398020">         <name>CR-345M</name>       </trkpt>
+      <trkpt lat="37.935968040" lon="-106.961712970">         <name>CR-350M</name>       </trkpt>
+      <trkpt lat="37.943016970" lon="-106.962269020">         <name>CR-355M</name>       </trkpt>
+      <trkpt lat="37.948157000" lon="-106.964271960">         <name>CR-360M</name>       </trkpt>
+      <trkpt lat="37.955371980" lon="-106.966587970">         <name>CR-366XR</name>       </trkpt>
+      <trkpt lat="37.959576010" lon="-106.965191040">         <name>CR-370M</name>       </trkpt>
+      <trkpt lat="37.966460990" lon="-106.968615970">         <name>CR-375M</name>       </trkpt>
+      <trkpt lat="37.971729010" lon="-106.972195960">         <name>CR-379XR</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk><name>Elwood-Pass</name>
+    <trkseg>
+      <trkpt lat="37.405532040" lon="-106.644313010">         <name>EP-000RR</name>       </trkpt>
+      <trkpt lat="37.404712040" lon="-106.644601010">         <name>EP-001RL</name>       </trkpt>
+      <trkpt lat="37.404501990" lon="-106.640215010">         <name>EP-004RX</name>       </trkpt>
+      <trkpt lat="37.406147020" lon="-106.632249020">         <name>EP-010M</name>       </trkpt>
+      <trkpt lat="37.412039000" lon="-106.629927990">         <name>EP-015M</name>       </trkpt>
+      <trkpt lat="37.415225040" lon="-106.626543040">         <name>EP-020M</name>       </trkpt>
+      <trkpt lat="37.421671980" lon="-106.625637960">         <name>EP-025M</name>       </trkpt>
+      <trkpt lat="37.424699020" lon="-106.621392030">         <name>EP-030M</name>       </trkpt>
+      <trkpt lat="37.429250980" lon="-106.628644970">         <name>EP-035RL</name>       </trkpt>
+      <trkpt lat="37.433114030" lon="-106.634191020">         <name>EP-040M</name>       </trkpt>
+      <trkpt lat="37.438967030" lon="-106.639830030">         <name>EP-045M</name>       </trkpt>
+      <trkpt lat="37.443656040" lon="-106.644690030">         <name>EP-050M</name>       </trkpt>
+      <trkpt lat="37.449003020" lon="-106.647714970">         <name>EP-055M</name>       </trkpt>
+      <trkpt lat="37.455430010" lon="-106.653143010">         <name>EP-060M</name>       </trkpt>
+      <trkpt lat="37.461542010" lon="-106.655241000">         <name>EP-065M</name>       </trkpt>
+      <trkpt lat="37.466454980" lon="-106.661242020">         <name>EP-070M</name>       </trkpt>
+      <trkpt lat="37.472786000" lon="-106.664932990">         <name>EP-075M</name>       </trkpt>
+      <trkpt lat="37.478233990" lon="-106.669246990">         <name>EP-080M</name>       </trkpt>
+      <trkpt lat="37.482195020" lon="-106.676512010">         <name>EP-085M</name>       </trkpt>
+      <trkpt lat="37.487373030" lon="-106.682900020">         <name>EP-090M</name>       </trkpt>
+      <trkpt lat="37.490420020" lon="-106.690864000">         <name>EP-095M</name>       </trkpt>
+      <trkpt lat="37.495931030" lon="-106.694918000">         <name>EP-100M</name>       </trkpt>
+      <trkpt lat="37.502533960" lon="-106.698615000">         <name>EP-105M</name>       </trkpt>
+      <trkpt lat="37.509063970" lon="-106.703110970">         <name>EP-110RX</name>       </trkpt>
+      <trkpt lat="37.515789020" lon="-106.701282040">         <name>EP-115RX</name>       </trkpt>
+      <trkpt lat="37.521536990" lon="-106.700256010">         <name>EP-120M</name>       </trkpt>
+      <trkpt lat="37.527765000" lon="-106.700509980">         <name>EP-125M</name>       </trkpt>
+      <trkpt lat="37.534677970" lon="-106.699193020">         <name>EP-130M</name>       </trkpt>
+      <trkpt lat="37.541687000" lon="-106.697500040">         <name>EP-135M</name>       </trkpt>
+      <trkpt lat="37.548393030" lon="-106.695949980">         <name>EP-140M</name>       </trkpt>
+      <trkpt lat="37.556534960" lon="-106.700090970">         <name>EP-145RL</name>       </trkpt>
+      <trkpt lat="37.559211970" lon="-106.705611960">         <name>EP-150M</name>       </trkpt>
+      <trkpt lat="37.561154980" lon="-106.712604990">         <name>EP-154RX</name>       </trkpt>
+      <trkpt lat="37.565042000" lon="-106.720835010">         <name>EP-160M</name>       </trkpt>
+      <trkpt lat="37.567890010" lon="-106.727858960">         <name>EP-165M</name>       </trkpt>
+      <trkpt lat="37.575499010" lon="-106.730379980">         <name>EP-170M</name>       </trkpt>
+      <trkpt lat="37.581818970" lon="-106.728446030">         <name>EP-175M</name>       </trkpt>
+      <trkpt lat="37.588390970" lon="-106.725798020">         <name>EP-180M</name>       </trkpt>
+      <trkpt lat="37.596646980" lon="-106.727816970">         <name>EP-186RR</name>       </trkpt>
+      <trkpt lat="37.601352990" lon="-106.726703010">         <name>EP-190M</name>       </trkpt>
+      <trkpt lat="37.607817030" lon="-106.721063000">         <name>EP-195M</name>       </trkpt>
+      <trkpt lat="37.609950980" lon="-106.713051990">         <name>EP-200M</name>       </trkpt>
+      <trkpt lat="37.611644970" lon="-106.704159970">         <name>EP-205M</name>       </trkpt>
+      <trkpt lat="37.615054980" lon="-106.697350010">         <name>EP-210M</name>       </trkpt>
+      <trkpt lat="37.618889030" lon="-106.690283980">         <name>EP-215M</name>       </trkpt>
+      <trkpt lat="37.624037020" lon="-106.683966030">         <name>EP-220M</name>       </trkpt>
+      <trkpt lat="37.629993040" lon="-106.679121960">         <name>EP-225M</name>       </trkpt>
+      <trkpt lat="37.635048000" lon="-106.672952970">         <name>EP-230M</name>       </trkpt>
+      <trkpt lat="37.640132040" lon="-106.666744990">         <name>EP-235M</name>       </trkpt>
+      <trkpt lat="37.646198020" lon="-106.661391980">         <name>EP-240M</name>       </trkpt>
+      <trkpt lat="37.651365970" lon="-106.655638970">         <name>EP-245M</name>       </trkpt>
+      <trkpt lat="37.657506970" lon="-106.651307040">         <name>EP-250M</name>       </trkpt>
+      <trkpt lat="37.664379960" lon="-106.646310000">         <name>EP-255M</name>       </trkpt>
+      <trkpt lat="37.669270970" lon="-106.640926970">         <name>EP-260RL</name>       </trkpt>
+      <trkpt lat="37.673183980" lon="-106.649571980">         <name>EP-265M</name>       </trkpt>
+      <trkpt lat="37.678100970" lon="-106.655286010">         <name>EP-270M</name>       </trkpt>
+      <trkpt lat="37.683062970" lon="-106.662062030">         <name>EP-275M</name>       </trkpt>
+      <trkpt lat="37.686783030" lon="-106.669341960">         <name>EP-280M</name>       </trkpt>
+      <trkpt lat="37.691933960" lon="-106.675441970">         <name>EP-285M</name>       </trkpt>
+      <trkpt lat="37.697181030" lon="-106.681129010">         <name>EP-290M</name>       </trkpt>
+      <trkpt lat="37.703656970" lon="-106.687110000">         <name>EP-295M</name>       </trkpt>
+      <trkpt lat="37.710098970" lon="-106.691272040">         <name>EP-300M</name>       </trkpt>
+      <trkpt lat="37.715632030" lon="-106.695906980">         <name>EP-305M</name>       </trkpt>
+      <trkpt lat="37.721238010" lon="-106.701681020">         <name>EP-310M</name>       </trkpt>
+      <trkpt lat="37.726156010" lon="-106.709146030">         <name>EP-315M</name>       </trkpt>
+      <trkpt lat="37.729294030" lon="-106.716948990">         <name>EP-320M</name>       </trkpt>
+      <trkpt lat="37.733778010" lon="-106.723193010">         <name>EP-325M</name>       </trkpt>
+      <trkpt lat="37.736328040" lon="-106.731970030">         <name>EP-330M</name>       </trkpt>
+      <trkpt lat="37.740214980" lon="-106.739906020">         <name>EP-335M</name>       </trkpt>
+      <trkpt lat="37.743658010" lon="-106.747264990">         <name>EP-340M</name>       </trkpt>
+      <trkpt lat="37.743786000" lon="-106.755877990">         <name>EP-345M</name>       </trkpt>
+      <trkpt lat="37.749368020" lon="-106.761051970">         <name>EP-350M</name>       </trkpt>
+      <trkpt lat="37.754327000" lon="-106.768148000">         <name>EP-355M</name>       </trkpt>
+      <trkpt lat="37.757808010" lon="-106.776875990">         <name>EP-360M</name>       </trkpt>
+      <trkpt lat="37.760922970" lon="-106.783927020">         <name>EP-365M</name>       </trkpt>
+      <trkpt lat="37.764484030" lon="-106.791254980">         <name>EP-370M</name>       </trkpt>
+      <trkpt lat="37.769198010" lon="-106.797967040">         <name>EP-375M</name>       </trkpt>
+      <trkpt lat="37.767405040" lon="-106.806986980">         <name>EP-380M</name>       </trkpt>
+      <trkpt lat="37.766214970" lon="-106.815830970">         <name>EP-385M</name>       </trkpt>
+      <trkpt lat="37.765651040" lon="-106.825031030">         <name>EP-390M</name>       </trkpt>
+      <trkpt lat="37.770361000" lon="-106.829963030">         <name>EP-395M</name>       </trkpt>
+      <trkpt lat="37.776775000" lon="-106.833686020">         <name>EP-400M</name>       </trkpt>
+      <trkpt lat="37.778141000" lon="-106.842594980">         <name>EP-405M</name>       </trkpt>
+      <trkpt lat="37.782484000" lon="-106.849795030">         <name>EP-410M</name>       </trkpt>
+      <trkpt lat="37.788748970" lon="-106.855299010">         <name>EP-415M</name>       </trkpt>
+      <trkpt lat="37.794967000" lon="-106.858034020">         <name>EP-420M</name>       </trkpt>
+      <trkpt lat="37.801687020" lon="-106.861352000">         <name>EP-425M</name>       </trkpt>
+      <trkpt lat="37.806605020" lon="-106.868229020">         <name>EP-430M</name>       </trkpt>
+      <trkpt lat="37.810891020" lon="-106.875090020">         <name>EP-435M</name>       </trkpt>
+      <trkpt lat="37.816433970" lon="-106.881026000">         <name>EP-440M</name>       </trkpt>
+      <trkpt lat="37.820987020" lon="-106.888047020">         <name>EP-445M</name>       </trkpt>
+      <trkpt lat="37.825076970" lon="-106.895778990">         <name>EP-450M</name>       </trkpt>
+      <trkpt lat="37.827674020" lon="-106.904534980">         <name>EP-455M</name>       </trkpt>
+      <trkpt lat="37.831949960" lon="-106.911855980">         <name>EP-460M</name>       </trkpt>
+      <trkpt lat="37.838261030" lon="-106.918052970">         <name>EP-465M</name>       </trkpt>
+      <trkpt lat="37.844101960" lon="-106.921620980">         <name>EP-470M</name>       </trkpt>
+      <trkpt lat="37.848403970" lon="-106.924267990">         <name>EP-474RX</name>       </trkpt>
+      <trkpt lat="37.856310040" lon="-106.927898020">         <name>EP-480RX</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk><name>Great-Divide</name>		<cmt> NON : sur la crete des San Juans sauf grosse neige </cmt>
+    <trkseg>
+      <trkpt lat="37.018285010" lon="-106.449170990">         <name>GD0000RR</name>       </trkpt>
+      <trkpt lat="37.126979020" lon="-106.358587010">         <name>GD0127RL</name>       </trkpt>
+      <trkpt lat="37.126708030" lon="-106.360202030">         <name>GD0128RR</name>       </trkpt>
+      <trkpt lat="37.133627040" lon="-106.360190970">         <name>GD0133RL</name>       </trkpt>
+      <trkpt lat="37.309481970" lon="-106.476439000">         <name>GD0301CG</name>       </trkpt>
+      <trkpt lat="37.354950020" lon="-106.530898990">         <name>GD0357OP</name>       </trkpt>
+      <trkpt lat="37.384683980" lon="-106.566626010">         <name>GD0416RL</name>       </trkpt>
+      <trkpt lat="37.404514980" lon="-106.644718020">         <name>GD0502HP</name>       </trkpt>
+      <trkpt lat="37.429249980" lon="-106.629059040">         <name>GD0536RR</name>       </trkpt>
+      <trkpt lat="37.496996960" lon="-106.531499970">         <name>GD0658RL</name>       </trkpt>
+      <trkpt lat="37.679392030" lon="-106.361610020">         <name>GD0834RR</name>       </trkpt>
+      <trkpt lat="37.678692980" lon="-106.351881990">         <name>GD0840RL</name>       </trkpt>
+      <trkpt lat="37.686491000" lon="-106.350305020">         <name>GD0845RL</name>       </trkpt>
+      <trkpt lat="37.704540010" lon="-106.350881020">         <name>GD0858RL</name>       </trkpt>
+      <trkpt lat="37.704561970" lon="-106.362792960">         <name>GD0864RR</name>       </trkpt>
+      <trkpt lat="37.718851020" lon="-106.363179030">         <name>GD0877RR</name>       </trkpt>
+      <trkpt lat="37.721961040" lon="-106.345864030">         <name>GD0887RL</name>       </trkpt>
+      <trkpt lat="37.761357990" lon="-106.360407980">         <name>GD0917XX</name>       </trkpt>
+      <trkpt lat="37.770658970" lon="-106.357312040">         <name>GD0925XX</name>       </trkpt>
+      <trkpt lat="37.792621990" lon="-106.373654990">         <name>GD0946RR</name>       </trkpt>
+      <trkpt lat="37.795214010" lon="-106.302302020">         <name>GD0989RL</name>       </trkpt>
+      <trkpt lat="37.836406040" lon="-106.270249960">         <name>GD1023RR</name>       </trkpt>
+      <trkpt lat="37.839072990" lon="-106.255968040">         <name>GD1032RL</name>       </trkpt>
+      <trkpt lat="37.863686030" lon="-106.346856030">         <name>GD1088OP</name>       </trkpt>
+      <trkpt lat="37.958051000" lon="-106.432815970">         <name>GD1174CG</name>       </trkpt>
+      <trkpt lat="38.004504010" lon="-106.430729040">         <name>GD1211RR</name>       </trkpt>
+      <trkpt lat="38.124697990" lon="-106.354419020">         <name>GD1321RL</name>       </trkpt>
+      <trkpt lat="38.132318980" lon="-106.463099030">         <name>GD1321RL1</name>       </trkpt>
+      <trkpt lat="38.132339020" lon="-106.463099030">         <name>GD1383RL</name>       </trkpt>
+      <trkpt lat="38.179049020" lon="-106.583373980">         <name>GD1469CG</name>       </trkpt>
+      <trkpt lat="38.161358000" lon="-106.620575960">         <name>GD1469CG1</name>       </trkpt>
+      <trkpt lat="38.161338980" lon="-106.620550980">         <name>GD1501XR</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+ 
+  <trk><name>Walnut-Creek</name>
+    <trkseg>
+      <trkpt lat="32.780839000" lon="-108.277328000">         <name>WC-000RR</name>       </trkpt>
+      <trkpt lat="32.786946000" lon="-108.279617000">         <name>WC-005M</name>       </trkpt>
+      <trkpt lat="32.793826000" lon="-108.280486000">         <name>WC-010M</name>       </trkpt>
+      <trkpt lat="32.800585000" lon="-108.280725000">         <name>WC-015M</name>       </trkpt>
+      <trkpt lat="32.807373000" lon="-108.279820000">         <name>WC-020M</name>       </trkpt>
+      <trkpt lat="32.814146000" lon="-108.278217000">         <name>WC-025M</name>       </trkpt>
+      <trkpt lat="32.820960000" lon="-108.278517000">         <name>WC-030M</name>       </trkpt>
+      <trkpt lat="32.827362000" lon="-108.277115000">         <name>WC-035M</name>       </trkpt>
+      <trkpt lat="32.834093000" lon="-108.276084000">         <name>WC-040M</name>       </trkpt>
+      <trkpt lat="32.840436000" lon="-108.274430000">         <name>WC-045M</name>       </trkpt>
+      <trkpt lat="32.846522000" lon="-108.275768000">         <name>WC-050M</name>       </trkpt>
+      <trkpt lat="32.852002000" lon="-108.273885000">         <name>WC-055M</name>       </trkpt>
+      <trkpt lat="32.856539000" lon="-108.275461000">         <name>WC-060M</name>       </trkpt>
+      <trkpt lat="32.862094000" lon="-108.274529000">         <name>WC-065M</name>       </trkpt>
+      <trkpt lat="32.863287000" lon="-108.282559000">         <name>WC-070RL</name>       </trkpt>
+      <trkpt lat="32.862590000" lon="-108.289948000">         <name>WC-075XX</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+-->
+
+
+
+
+<!-- Alternates NON PRIS
+
+  <trk><name>Columbus</name>		<cmt> NON : depart Crazy Cook </cmt>
+    <trkseg>
+      <trkpt lat="31.783748000" lon="-107.627834000">         <name>CG-0000TH</name>       </trkpt>
+      <trkpt lat="31.828473000" lon="-107.640485000">         <name>CG-0031OP</name>       </trkpt>
+      <trkpt lat="31.843021000" lon="-107.644620000">         <name>CG-0042RL</name>       </trkpt>
+      <trkpt lat="31.842977000" lon="-107.663108000">         <name>CG-0053RL</name>       </trkpt>
+      <trkpt lat="31.840586000" lon="-107.663099000">         <name>CG-0055RR</name>       </trkpt>
+      <trkpt lat="31.850600000" lon="-107.682877000">         <name>CG-0068RX</name>       </trkpt>
+      <trkpt lat="31.855119000" lon="-107.688676000">         <name>CG-0073XR</name>       </trkpt>
+      <trkpt lat="31.866319000" lon="-107.688622000">         <name>CG-0080XL</name>       </trkpt>
+      <trkpt lat="31.870115000" lon="-107.688990000">         <name>CG-0085XL</name>       </trkpt>
+      <trkpt lat="31.875561000" lon="-107.697074000">         <name>CG-0090M</name>       </trkpt>
+      <trkpt lat="31.877469000" lon="-107.702401000">         <name>CG-0093XR</name>       </trkpt>
+      <trkpt lat="31.884864000" lon="-107.701502000">         <name>CG-0100M</name>       </trkpt>
+      <trkpt lat="31.888551000" lon="-107.696502000">         <name>CG-0105M</name>       </trkpt>
+      <trkpt lat="31.894931000" lon="-107.699142000">         <name>CG-0110M</name>       </trkpt>
+      <trkpt lat="31.901110000" lon="-107.696427000">         <name>CG-0115M</name>       </trkpt>
+      <trkpt lat="31.907332000" lon="-107.694344000">         <name>CG-0119RL</name>       </trkpt>
+      <trkpt lat="31.914874000" lon="-107.697318000">         <name>CG-0125M</name>       </trkpt>
+      <trkpt lat="31.921778000" lon="-107.699748000">         <name>CG-0130M</name>       </trkpt>
+      <trkpt lat="31.929534000" lon="-107.703784000">         <name>CG-0137RR</name>       </trkpt>
+      <trkpt lat="31.930020000" lon="-107.702800000">         <name>CG-0138RL</name>       </trkpt>
+      <trkpt lat="31.931140000" lon="-107.703670000">         <name>CG-0139RL</name>       </trkpt>
+      <trkpt lat="31.939714000" lon="-107.703144000">         <name>CG-0145M</name>       </trkpt>
+      <trkpt lat="31.944664000" lon="-107.712896000">         <name>CG-0152RR</name>       </trkpt>
+      <trkpt lat="31.952107000" lon="-107.712134000">         <name>CG-0157XL</name>       </trkpt>
+      <trkpt lat="31.966477000" lon="-107.722664000">         <name>CG-0169XR</name>       </trkpt>
+      <trkpt lat="31.980972000" lon="-107.722626000">         <name>CG-0179RR</name>       </trkpt>
+      <trkpt lat="31.980937000" lon="-107.684015000">         <name>CG-0201RL</name>       </trkpt>
+      <trkpt lat="31.985810000" lon="-107.685457000">         <name>CG-0205M</name>       </trkpt>
+      <trkpt lat="31.992606000" lon="-107.687423000">         <name>CG-0210M</name>       </trkpt>
+      <trkpt lat="31.999511000" lon="-107.689421000">         <name>CG-0215M</name>       </trkpt>
+      <trkpt lat="32.009851000" lon="-107.692338000">         <name>CG-0222RR</name>       </trkpt>
+      <trkpt lat="32.012189000" lon="-107.688821000">         <name>CG-0225M</name>       </trkpt>
+      <trkpt lat="32.017607000" lon="-107.684990000">         <name>CG-0230M</name>       </trkpt>
+      <trkpt lat="32.021447000" lon="-107.672383000">         <name>CG-0239WT</name>       </trkpt>
+      <trkpt lat="32.024561000" lon="-107.671605000">         <name>CG-0240RR</name>       </trkpt>
+      <trkpt lat="32.025543000" lon="-107.664734000">         <name>CG-0245M</name>       </trkpt>
+      <trkpt lat="32.026611000" lon="-107.656894000">         <name>CG-0250M</name>       </trkpt>
+      <trkpt lat="32.030611000" lon="-107.650771000">         <name>CG-0255M</name>       </trkpt>
+      <trkpt lat="32.036578000" lon="-107.644711000">         <name>CG-0260XX</name>       </trkpt>
+      <trkpt lat="32.039222000" lon="-107.637816000">         <name>CG-0266WP</name>       </trkpt>
+      <trkpt lat="32.042307000" lon="-107.633157000">         <name>CG-0270M</name>       </trkpt>
+      <trkpt lat="32.047038000" lon="-107.632971000">         <name>CG-0276WP</name>       </trkpt>
+      <trkpt lat="32.053053000" lon="-107.633800000">         <name>CG-0280M</name>       </trkpt>
+      <trkpt lat="32.056020000" lon="-107.637477000">         <name>CG-0283HP</name>       </trkpt>
+      <trkpt lat="32.060968000" lon="-107.635944000">         <name>CG-0290M</name>       </trkpt>
+      <trkpt lat="32.060254000" lon="-107.627954000">         <name>CG-0295M</name>       </trkpt>
+      <trkpt lat="32.059716000" lon="-107.620081000">         <name>CG-0300M</name>       </trkpt>
+      <trkpt lat="32.056884000" lon="-107.613751000">         <name>CG-0305RR</name>       </trkpt>
+      <trkpt lat="32.054129000" lon="-107.609819000">         <name>CG-0310XL</name>       </trkpt>
+      <trkpt lat="32.052710000" lon="-107.602780000">         <name>CG-0314XR</name>       </trkpt>
+      <trkpt lat="32.053645000" lon="-107.593836000">         <name>CG-0320M</name>       </trkpt>
+      <trkpt lat="32.055891000" lon="-107.586073000">         <name>CG-0325M</name>       </trkpt>
+      <trkpt lat="32.054290000" lon="-107.580401000">         <name>CG-0329RL</name>       </trkpt>
+      <trkpt lat="32.062881000" lon="-107.578206000">         <name>CG-0335M</name>       </trkpt>
+      <trkpt lat="32.069617000" lon="-107.579941000">         <name>CG-0340M</name>       </trkpt>
+      <trkpt lat="32.077256000" lon="-107.587314000">         <name>CG-0348RR</name>       </trkpt>
+      <trkpt lat="32.078611000" lon="-107.586507000">         <name>CG-0349RR</name>       </trkpt>
+      <trkpt lat="32.082668000" lon="-107.585588000">         <name>CG-0352RL</name>       </trkpt>
+      <trkpt lat="32.083098000" lon="-107.586047000">         <name>CG-0353RX</name>       </trkpt>
+      <trkpt lat="32.088070000" lon="-107.591188000">         <name>CG-0358RR</name>       </trkpt>
+      <trkpt lat="32.090560000" lon="-107.589638000">         <name>CG-0360RL</name>       </trkpt>
+      <trkpt lat="32.091522000" lon="-107.589501000">         <name>CG-0360RX</name>       </trkpt>
+      <trkpt lat="32.097361000" lon="-107.588566000">         <name>CG-0365M</name>       </trkpt>
+      <trkpt lat="32.105861000" lon="-107.587182000">         <name>CG-0371RX</name>       </trkpt>
+      <trkpt lat="32.108280000" lon="-107.586840000">         <name>CG-0372RX</name>       </trkpt>
+      <trkpt lat="32.116731000" lon="-107.585398000">         <name>CG-0378WT</name>       </trkpt>
+      <trkpt lat="32.124882000" lon="-107.582421000">         <name>CG-0385M</name>       </trkpt>
+      <trkpt lat="32.128096000" lon="-107.582309000">         <name>CG-0387RX</name>       </trkpt>
+      <trkpt lat="32.132053000" lon="-107.588111000">         <name>CG-0393RX</name>       </trkpt>
+      <trkpt lat="32.139191000" lon="-107.583397000">         <name>CG-0400M</name>       </trkpt>
+      <trkpt lat="32.141687000" lon="-107.591227000">         <name>CG-0405M</name>       </trkpt>
+      <trkpt lat="32.144151000" lon="-107.598666000">         <name>CG-0410M</name>       </trkpt>
+      <trkpt lat="32.151023000" lon="-107.599409000">         <name>CG-0415M</name>       </trkpt>
+      <trkpt lat="32.154423000" lon="-107.601598000">         <name>CG-0420M</name>       </trkpt>
+      <trkpt lat="32.160652000" lon="-107.602424000">         <name>CG-0425M</name>       </trkpt>
+      <trkpt lat="32.167235000" lon="-107.606068000">         <name>CG-0430M</name>       </trkpt>
+      <trkpt lat="32.172593000" lon="-107.611013000">         <name>CG-0435M</name>       </trkpt>
+      <trkpt lat="32.175419000" lon="-107.613859000">         <name>CG-0438RX</name>       </trkpt>
+      <trkpt lat="32.181836000" lon="-107.622781000">         <name>CG-0445RL</name>       </trkpt>
+      <trkpt lat="32.184670000" lon="-107.632524000">         <name>CG-0450M</name>       </trkpt>
+      <trkpt lat="32.187963000" lon="-107.638478000">         <name>CG-0455M</name>       </trkpt>
+      <trkpt lat="32.193091000" lon="-107.645120000">         <name>CG-0460M</name>       </trkpt>
+      <trkpt lat="32.196391000" lon="-107.648179000">         <name>CG-0463RL</name>       </trkpt>
+      <trkpt lat="32.196458000" lon="-107.660300000">         <name>CG-0470M</name>       </trkpt>
+      <trkpt lat="32.196430000" lon="-107.669549000">         <name>CG-0475M</name>       </trkpt>
+      <trkpt lat="32.196412000" lon="-107.677424000">         <name>CG-0480M</name>       </trkpt>
+      <trkpt lat="32.196393000" lon="-107.685224000">         <name>CG-0485M</name>       </trkpt>
+      <trkpt lat="32.196339000" lon="-107.694193000">         <name>CG-0490M</name>       </trkpt>
+      <trkpt lat="32.196302000" lon="-107.702572000">         <name>CG-0495M</name>       </trkpt>
+      <trkpt lat="32.196239000" lon="-107.716533000">         <name>CG-0503RR</name>       </trkpt>
+      <trkpt lat="32.198875000" lon="-107.716670000">         <name>CG-0505M</name>       </trkpt>
+      <trkpt lat="32.207076000" lon="-107.716981000">         <name>CG-0510M</name>       </trkpt>
+      <trkpt lat="32.214154000" lon="-107.717121000">         <name>CG-0515M</name>       </trkpt>
+      <trkpt lat="32.225116000" lon="-107.717197000">         <name>CG-0522RL</name>       </trkpt>
+      <trkpt lat="32.225319000" lon="-107.734258000">         <name>CG-0532RR</name>       </trkpt>
+      <trkpt lat="32.235257000" lon="-107.734362000">         <name>CG-0540M</name>       </trkpt>
+      <trkpt lat="32.242488000" lon="-107.734351000">         <name>CG-0545M</name>       </trkpt>
+      <trkpt lat="32.249582000" lon="-107.734351000">         <name>CG-0550M</name>       </trkpt>
+      <trkpt lat="32.256744000" lon="-107.734351000">         <name>CG-0555M</name>       </trkpt>
+      <trkpt lat="32.264574000" lon="-107.734367000">         <name>CG-0560M</name>       </trkpt>
+      <trkpt lat="32.268518000" lon="-107.734298000">         <name>CG-0563RL</name>       </trkpt>
+      <trkpt lat="32.268504000" lon="-107.745783000">         <name>CG-0570M</name>       </trkpt>
+      <trkpt lat="32.268551000" lon="-107.748415000">         <name>CG-0573RL</name>       </trkpt>
+      <trkpt lat="32.267669000" lon="-107.758481000">         <name>CG-0578RR</name>       </trkpt>
+      <trkpt lat="32.278366000" lon="-107.760302000">         <name>CG-0585M</name>       </trkpt>
+      <trkpt lat="32.285564000" lon="-107.761422000">         <name>CG-0590M</name>       </trkpt>
+      <trkpt lat="32.292292000" lon="-107.764540000">         <name>CG-0595M</name>       </trkpt>
+      <trkpt lat="32.295216000" lon="-107.767435000">         <name>CG-0598RR</name>       </trkpt>
+      <trkpt lat="32.295800000" lon="-107.759946000">         <name>CG-0603RL</name>       </trkpt>
+      <trkpt lat="32.306860000" lon="-107.759943000">         <name>CG-0610M</name>       </trkpt>
+      <trkpt lat="32.314165000" lon="-107.759919000">         <name>CG-0615M</name>       </trkpt>
+      <trkpt lat="32.319627000" lon="-107.759892000">         <name>CG-0618M</name>       </trkpt>
+      <trkpt lat="32.319752000" lon="-107.751422000">         <name>CG-0623RL</name>       </trkpt>
+      <trkpt lat="32.323168000" lon="-107.751501000">         <name>CG-0625RR</name>       </trkpt>
+      <trkpt lat="32.324651000" lon="-107.744201000">         <name>CG-0631RR</name>       </trkpt>
+      <trkpt lat="32.329536000" lon="-107.740135000">         <name>CG-0635XR</name>       </trkpt>
+      <trkpt lat="32.334911000" lon="-107.735033000">         <name>CG-0640M</name>       </trkpt>
+      <trkpt lat="32.339968000" lon="-107.729328000">         <name>CG-0645M</name>       </trkpt>
+      <trkpt lat="32.344978000" lon="-107.723215000">         <name>CG-0650M</name>       </trkpt>
+      <trkpt lat="32.349511000" lon="-107.716880000">         <name>CG-0655M</name>       </trkpt>
+      <trkpt lat="32.353708000" lon="-107.712135000">         <name>CG-0659WT</name>       </trkpt>
+      <trkpt lat="32.361935000" lon="-107.710590000">         <name>CG-0665M</name>       </trkpt>
+      <trkpt lat="32.369140000" lon="-107.709713000">         <name>CG-0670M</name>       </trkpt>
+      <trkpt lat="32.376399000" lon="-107.708935000">         <name>CG-0675M</name>       </trkpt>
+      <trkpt lat="32.383812000" lon="-107.708131000">         <name>CG-0680M</name>       </trkpt>
+      <trkpt lat="32.391525000" lon="-107.707817000">         <name>CG-0686RR</name>       </trkpt>
+      <trkpt lat="32.392316000" lon="-107.705438000">         <name>CG-0688RX</name>       </trkpt>
+      <trkpt lat="32.398968000" lon="-107.708464000">         <name>CG-0692RR</name>       </trkpt>
+      <trkpt lat="32.409268000" lon="-107.706731000">         <name>CG-0700M</name>       </trkpt>
+      <trkpt lat="32.415500000" lon="-107.709335000">         <name>CG-0705XR</name>       </trkpt>
+      <trkpt lat="32.417853000" lon="-107.707756000">         <name>CG-0707WT</name>       </trkpt>
+      <trkpt lat="32.425398000" lon="-107.709183000">         <name>CG-0712RR</name>       </trkpt>
+      <trkpt lat="32.425530000" lon="-107.704759000">         <name>CG-0715M</name>       </trkpt>
+      <trkpt lat="32.432100000" lon="-107.700760000">         <name>CG-0721RX</name>       </trkpt>
+      <trkpt lat="32.434495000" lon="-107.696519000">         <name>CG-0725M</name>       </trkpt>
+      <trkpt lat="32.440748000" lon="-107.691866000">         <name>CG-0730M</name>       </trkpt>
+      <trkpt lat="32.444639000" lon="-107.689381000">         <name>CG-0735M</name>       </trkpt>
+      <trkpt lat="32.449415000" lon="-107.683633000">         <name>CG-0740M</name>       </trkpt>
+      <trkpt lat="32.455152000" lon="-107.680129000">         <name>CG-0745M</name>       </trkpt>
+      <trkpt lat="32.456685000" lon="-107.672467000">         <name>CG-0750M</name>       </trkpt>
+      <trkpt lat="32.457769000" lon="-107.665360000">         <name>CG-0755M</name>       </trkpt>
+      <trkpt lat="32.456843000" lon="-107.658850000">         <name>CG-0760M</name>       </trkpt>
+      <trkpt lat="32.464194000" lon="-107.654959000">         <name>CG-0766XR</name>       </trkpt>
+      <trkpt lat="32.460723000" lon="-107.647995000">         <name>CG-0771XL</name>       </trkpt>
+      <trkpt lat="32.462350000" lon="-107.647410000">         <name>CG-0773RR</name>       </trkpt>
+      <trkpt lat="32.461979000" lon="-107.641454000">         <name>CG-0776XL</name>       </trkpt>
+      <trkpt lat="32.463291000" lon="-107.637083000">         <name>CG-0779WP</name>       </trkpt>
+      <trkpt lat="32.462224000" lon="-107.628846000">         <name>CG-0784XX</name>       </trkpt>
+      <trkpt lat="32.465620000" lon="-107.625458000">         <name>CG-0787RL</name>       </trkpt>
+      <trkpt lat="32.476387000" lon="-107.629869000">         <name>CG-0795M</name>       </trkpt>
+      <trkpt lat="32.485601000" lon="-107.631536000">         <name>CG-0801RR</name>       </trkpt>
+      <trkpt lat="32.489571000" lon="-107.629136000">         <name>CG-0805M</name>       </trkpt>
+      <trkpt lat="32.493440000" lon="-107.626430000">         <name>CG-0808XX</name>       </trkpt>
+      <trkpt lat="32.501611000" lon="-107.619268000">         <name>CG-0815WP</name>       </trkpt>
+      <trkpt lat="32.507175000" lon="-107.614505000">         <name>CG-0820WP</name>       </trkpt>
+      <trkpt lat="32.511758000" lon="-107.609208000">         <name>CG-0825WP</name>       </trkpt>
+      <trkpt lat="32.517744000" lon="-107.605340000">         <name>CG-0830WP</name>       </trkpt>
+      <trkpt lat="32.523633000" lon="-107.599999000">         <name>CG-0835WT</name>       </trkpt>
+      <trkpt lat="32.526330000" lon="-107.597282000">         <name>CG-0837XX</name>       </trkpt>
+      <trkpt lat="32.535224000" lon="-107.590499000">         <name>CG-0845M</name>       </trkpt>
+      <trkpt lat="32.542058000" lon="-107.587409000">         <name>CG-0850M</name>       </trkpt>
+      <trkpt lat="32.547042000" lon="-107.583006000">         <name>CG-0855M</name>       </trkpt>
+      <trkpt lat="32.555303000" lon="-107.576938000">         <name>CG-0860M</name>       </trkpt>
+      <trkpt lat="32.560813000" lon="-107.572990000">         <name>CG-0865M</name>       </trkpt>
+      <trkpt lat="32.567362000" lon="-107.567934000">         <name>CG-0870M</name>       </trkpt>
+      <trkpt lat="32.572913000" lon="-107.563752000">         <name>CG-0875M</name>       </trkpt>
+      <trkpt lat="32.576287000" lon="-107.560064000">         <name>CG-0878RL</name>       </trkpt>
+      <trkpt lat="32.584692000" lon="-107.564042000">         <name>CG-0885M</name>       </trkpt>
+      <trkpt lat="32.590938000" lon="-107.563232000">         <name>CG-0890M</name>       </trkpt>
+      <trkpt lat="32.597092000" lon="-107.560654000">         <name>CG-0895M</name>       </trkpt>
+      <trkpt lat="32.603776000" lon="-107.564152000">         <name>CG-0900M</name>       </trkpt>
+      <trkpt lat="32.610550000" lon="-107.566837000">         <name>CG-0905M</name>       </trkpt>
+      <trkpt lat="32.616871000" lon="-107.569347000">         <name>CG-0910RR</name>       </trkpt>
+      <trkpt lat="32.620005000" lon="-107.566653000">         <name>CG-0913RL</name>       </trkpt>
+      <trkpt lat="32.622167000" lon="-107.568459000">         <name>CG-0915WT</name>       </trkpt>
+      <trkpt lat="32.629239000" lon="-107.573092000">         <name>CG-0920M</name>       </trkpt>
+      <trkpt lat="32.635421000" lon="-107.576718000">         <name>CG-0925M</name>       </trkpt>
+      <trkpt lat="32.641753000" lon="-107.580811000">         <name>CG-0930M</name>       </trkpt>
+      <trkpt lat="32.646763000" lon="-107.586712000">         <name>CG-0935M</name>       </trkpt>
+      <trkpt lat="32.651688000" lon="-107.593557000">         <name>CG-0940M</name>       </trkpt>
+      <trkpt lat="32.654345000" lon="-107.598915000">         <name>CG-0944WT</name>       </trkpt>
+      <trkpt lat="32.658531000" lon="-107.606893000">         <name>CG-0950M</name>       </trkpt>
+      <trkpt lat="32.664630000" lon="-107.611157000">         <name>CG-0955M</name>       </trkpt>
+      <trkpt lat="32.670923000" lon="-107.615621000">         <name>CG-0960M</name>       </trkpt>
+      <trkpt lat="32.677572000" lon="-107.616822000">         <name>CG-0965M</name>       </trkpt>
+      <trkpt lat="32.684300000" lon="-107.620057000">         <name>CG-0970M</name>       </trkpt>
+      <trkpt lat="32.689583000" lon="-107.625137000">         <name>CG-0975M</name>       </trkpt>
+      <trkpt lat="32.692381000" lon="-107.628312000">         <name>CG-0978WT</name>       </trkpt>
+      <trkpt lat="32.699674000" lon="-107.635305000">         <name>CG-0985M</name>       </trkpt>
+      <trkpt lat="32.704652000" lon="-107.641182000">         <name>CG-0990M</name>       </trkpt>
+      <trkpt lat="32.708342000" lon="-107.647767000">         <name>CG-0995M</name>       </trkpt>
+      <trkpt lat="32.709460000" lon="-107.651029000">         <name>CG-0997RR</name>       </trkpt>
+      <trkpt lat="32.712455000" lon="-107.648161000">         <name>CG-1000M</name>       </trkpt>
+      <trkpt lat="32.719351000" lon="-107.647772000">         <name>CG-1005M</name>       </trkpt>
+      <trkpt lat="32.726536000" lon="-107.648818000">         <name>CG-1010M</name>       </trkpt>
+      <trkpt lat="32.732793000" lon="-107.645852000">         <name>CG-1015M</name>       </trkpt>
+      <trkpt lat="32.739032000" lon="-107.639864000">         <name>CG-1021XL</name>       </trkpt>
+      <trkpt lat="32.741471000" lon="-107.646026000">         <name>CG-1025M</name>       </trkpt>
+      <trkpt lat="32.745082000" lon="-107.653290000">         <name>CG-1030M</name>       </trkpt>
+      <trkpt lat="32.748801000" lon="-107.660239000">         <name>CG-1035M</name>       </trkpt>
+      <trkpt lat="32.755025000" lon="-107.663324000">         <name>CG-1040M</name>       </trkpt>
+      <trkpt lat="32.758976000" lon="-107.669198000">         <name>CG-1045M</name>       </trkpt>
+      <trkpt lat="32.764118000" lon="-107.674444000">         <name>CG-1050M</name>       </trkpt>
+      <trkpt lat="32.770561000" lon="-107.678516000">         <name>CG-1055M</name>       </trkpt>
+      <trkpt lat="32.776545000" lon="-107.681520000">         <name>CG-1060M</name>       </trkpt>
+      <trkpt lat="32.780800000" lon="-107.688362000">         <name>CG-1065M</name>       </trkpt>
+      <trkpt lat="32.782450000" lon="-107.696578000">         <name>CG-1070M</name>       </trkpt>
+      <trkpt lat="32.784160000" lon="-107.704675000">         <name>CG-1075M</name>       </trkpt>
+      <trkpt lat="32.783945000" lon="-107.712625000">         <name>CG-1080M</name>       </trkpt>
+      <trkpt lat="32.785615000" lon="-107.720326000">         <name>CG-1085M</name>       </trkpt>
+      <trkpt lat="32.787414000" lon="-107.727889000">         <name>CG-1090M</name>       </trkpt>
+      <trkpt lat="32.792344000" lon="-107.733455000">         <name>CG-1095M</name>       </trkpt>
+      <trkpt lat="32.797591000" lon="-107.738326000">         <name>CG-1100M</name>       </trkpt>
+      <trkpt lat="32.803580000" lon="-107.740439000">         <name>CG-1105M</name>       </trkpt>
+      <trkpt lat="32.809986000" lon="-107.742864000">         <name>CG-1110M</name>       </trkpt>
+      <trkpt lat="32.815191000" lon="-107.747456000">         <name>CG-1115M</name>       </trkpt>
+      <trkpt lat="32.821016000" lon="-107.749875000">         <name>CG-1120M</name>       </trkpt>
+      <trkpt lat="32.825193000" lon="-107.753089000">         <name>CG-1125M</name>       </trkpt>
+      <trkpt lat="32.830037000" lon="-107.755004000">         <name>CG-1130M</name>       </trkpt>
+      <trkpt lat="32.828762000" lon="-107.758619000">         <name>CG-1135M</name>       </trkpt>
+      <trkpt lat="32.827530000" lon="-107.763812000">         <name>CG-1140M</name>       </trkpt>
+      <trkpt lat="32.825082000" lon="-107.768533000">         <name>CG-1145M</name>       </trkpt>
+      <trkpt lat="32.823724000" lon="-107.773684000">         <name>CG-1149WT</name>       </trkpt>
+      <trkpt lat="32.829842000" lon="-107.769777000">         <name>CG-1155M</name>       </trkpt>
+      <trkpt lat="32.836653000" lon="-107.769592000">         <name>CG-1160M</name>       </trkpt>
+      <trkpt lat="32.843306000" lon="-107.772039000">         <name>CG-1165M</name>       </trkpt>
+      <trkpt lat="32.849045000" lon="-107.771612000">         <name>CG-1170M</name>       </trkpt>
+      <trkpt lat="32.855901000" lon="-107.772449000">         <name>CG-1175M</name>       </trkpt>
+      <trkpt lat="32.862909000" lon="-107.773811000">         <name>CG-1180M</name>       </trkpt>
+      <trkpt lat="32.869392000" lon="-107.775979000">         <name>CG-1185M</name>       </trkpt>
+      <trkpt lat="32.876029000" lon="-107.775592000">         <name>CG-1190M</name>       </trkpt>
+      <trkpt lat="32.882837000" lon="-107.775668000">         <name>CG-1195M</name>       </trkpt>
+      <trkpt lat="32.889526000" lon="-107.775807000">         <name>CG-1200M</name>       </trkpt>
+      <trkpt lat="32.894016000" lon="-107.774562000">         <name>CG-1205M</name>       </trkpt>
+      <trkpt lat="32.900533000" lon="-107.773940000">         <name>CG-1210M</name>       </trkpt>
+      <trkpt lat="32.905339000" lon="-107.771537000">         <name>CG-1215M</name>       </trkpt>
+      <trkpt lat="32.910253000" lon="-107.766177000">         <name>CG-1221OP</name>       </trkpt>
+      <trkpt lat="32.915624000" lon="-107.764957000">         <name>CG-1225M</name>       </trkpt>
+      <trkpt lat="32.921773000" lon="-107.767396000">         <name>CG-1230M</name>       </trkpt>
+      <trkpt lat="32.925704000" lon="-107.770646000">         <name>CG-1235M</name>       </trkpt>
+      <trkpt lat="32.931339000" lon="-107.773042000">         <name>CG-1240M</name>       </trkpt>
+      <trkpt lat="32.936625000" lon="-107.774359000">         <name>CG-1245M</name>       </trkpt>
+      <trkpt lat="32.942143000" lon="-107.771521000">         <name>CG-1250M</name>       </trkpt>
+      <trkpt lat="32.948589000" lon="-107.772669000">         <name>CG-1255M</name>       </trkpt>
+      <trkpt lat="32.952464000" lon="-107.779124000">         <name>CG-1263HP</name>       </trkpt>
+      <trkpt lat="32.956205000" lon="-107.783557000">         <name>CG-1265WT</name>       </trkpt>
+      <trkpt lat="32.949950000" lon="-107.785291000">         <name>CG-1270M</name>       </trkpt>
+      <trkpt lat="32.951407000" lon="-107.788816000">         <name>CG-1275M</name>       </trkpt>
+      <trkpt lat="32.953229000" lon="-107.796412000">         <name>CG-1280M</name>       </trkpt>
+      <trkpt lat="32.957037000" lon="-107.802136000">         <name>CG-1285M</name>       </trkpt>
+      <trkpt lat="32.958779000" lon="-107.809292000">         <name>CG-1290M</name>       </trkpt>
+      <trkpt lat="32.957331000" lon="-107.815472000">         <name>CG-1295M</name>       </trkpt>
+      <trkpt lat="32.961334000" lon="-107.821265000">         <name>CG-1300M</name>       </trkpt>
+      <trkpt lat="32.963617000" lon="-107.828974000">         <name>CG-1305M</name>       </trkpt>
+      <trkpt lat="32.970163000" lon="-107.830165000">         <name>CG-1310M</name>       </trkpt>
+      <trkpt lat="32.973821000" lon="-107.836071000">         <name>CG-1315M</name>       </trkpt>
+      <trkpt lat="32.980547000" lon="-107.838753000">         <name>CG-1320M</name>       </trkpt>
+      <trkpt lat="32.987030000" lon="-107.839880000">         <name>CG-1325M</name>       </trkpt>
+      <trkpt lat="32.989291000" lon="-107.845094000">         <name>CG-1330M</name>       </trkpt>
+      <trkpt lat="32.987627000" lon="-107.850780000">         <name>CG-1335M</name>       </trkpt>
+      <trkpt lat="32.987048000" lon="-107.858086000">         <name>CG-1340M</name>       </trkpt>
+      <trkpt lat="32.985728000" lon="-107.864331000">         <name>CG-1345M</name>       </trkpt>
+      <trkpt lat="32.989092000" lon="-107.871562000">         <name>CG-1350M</name>       </trkpt>
+      <trkpt lat="32.989343000" lon="-107.879008000">         <name>CG-1355M</name>       </trkpt>
+      <trkpt lat="32.990721000" lon="-107.884009000">         <name>CG-1359WT</name>       </trkpt>
+      <trkpt lat="32.991065000" lon="-107.893685000">         <name>CG-1365M</name>       </trkpt>
+      <trkpt lat="32.993267000" lon="-107.901238000">         <name>CG-1370M</name>       </trkpt>
+      <trkpt lat="32.996101000" lon="-107.908807000">         <name>CG-1375M</name>       </trkpt>
+      <trkpt lat="32.997118000" lon="-107.914332000">         <name>CG-1380M</name>       </trkpt>
+      <trkpt lat="32.998076000" lon="-107.921848000">         <name>CG-1385M</name>       </trkpt>
+      <trkpt lat="32.996047000" lon="-107.929675000">         <name>CG-1390M</name>       </trkpt>
+      <trkpt lat="32.989650000" lon="-107.933279000">         <name>CG-1395M</name>       </trkpt>
+      <trkpt lat="32.984232000" lon="-107.939027000">         <name>CG-1400M</name>       </trkpt>
+      <trkpt lat="32.980696000" lon="-107.945476000">         <name>CG-1405M</name>       </trkpt>
+      <trkpt lat="32.978399000" lon="-107.951827000">         <name>CG-1410M</name>       </trkpt>
+      <trkpt lat="32.976136000" lon="-107.959729000">         <name>CG-1415M</name>       </trkpt>
+      <trkpt lat="32.969964000" lon="-107.964503000">         <name>CG-1420M</name>       </trkpt>
+      <trkpt lat="32.965042000" lon="-107.970356000">         <name>CG-1425M</name>       </trkpt>
+      <trkpt lat="32.960658000" lon="-107.976957000">         <name>CG-1430M</name>       </trkpt>
+      <trkpt lat="32.954353000" lon="-107.980355000">         <name>CG-1435M</name>       </trkpt>
+      <trkpt lat="32.950692000" lon="-107.987516000">         <name>CG-1440M</name>       </trkpt>
+      <trkpt lat="32.950563000" lon="-107.992047000">         <name>CG-1445M</name>       </trkpt>
+      <trkpt lat="32.946379000" lon="-107.998897000">         <name>CG-1450M</name>       </trkpt>
+      <trkpt lat="32.943607000" lon="-108.005265000">         <name>CG-1455M</name>       </trkpt>
+      <trkpt lat="32.944552000" lon="-108.009958000">         <name>CG-1460M</name>       </trkpt>
+      <trkpt lat="32.948714000" lon="-108.019424000">         <name>CG-1467RL</name>       </trkpt>
+      <trkpt lat="32.943776000" lon="-108.019376000">         <name>CG-1470M</name>       </trkpt>
+      <trkpt lat="32.933482000" lon="-108.014190000">         <name>CG-1478WT</name>       </trkpt>
+      <trkpt lat="32.931139000" lon="-108.012855000">         <name>CG-1480XR</name>       </trkpt>
+      <trkpt lat="32.929489000" lon="-108.020658000">         <name>CG-1485M</name>       </trkpt>
+      <trkpt lat="32.930565000" lon="-108.028275000">         <name>CG-1490M</name>       </trkpt>
+      <trkpt lat="32.930226000" lon="-108.036199000">         <name>CG-1495M</name>       </trkpt>
+      <trkpt lat="32.927521000" lon="-108.042464000">         <name>CG-1500M</name>       </trkpt>
+      <trkpt lat="32.922535000" lon="-108.047587000">         <name>CG-1505M</name>       </trkpt>
+      <trkpt lat="32.919646000" lon="-108.054751000">         <name>CG-1510M</name>       </trkpt>
+      <trkpt lat="32.918411000" lon="-108.061905000">         <name>CG-1515M</name>       </trkpt>
+      <trkpt lat="32.919455000" lon="-108.069359000">         <name>CG-1520M</name>       </trkpt>
+      <trkpt lat="32.918147000" lon="-108.076552000">         <name>CG-1525M</name>       </trkpt>
+      <trkpt lat="32.918319000" lon="-108.084374000">         <name>CG-1530M</name>       </trkpt>
+      <trkpt lat="32.918860000" lon="-108.092348000">         <name>CG-1535M</name>       </trkpt>
+      <trkpt lat="32.915399000" lon="-108.100306000">         <name>CG-1540WT</name>       </trkpt>
+      <trkpt lat="32.913480000" lon="-108.107881000">         <name>CG-1545M</name>       </trkpt>
+      <trkpt lat="32.916987000" lon="-108.115439000">         <name>CG-1550M</name>       </trkpt>
+      <trkpt lat="32.918928000" lon="-108.122912000">         <name>CG-1555M</name>       </trkpt>
+      <trkpt lat="32.920290000" lon="-108.130851000">         <name>CG-1560M</name>       </trkpt>
+      <trkpt lat="32.922527000" lon="-108.135366000">         <name>CG-1564XX</name>       </trkpt>
+      <trkpt lat="32.918963000" lon="-108.138074000">         <name>CG-1570M</name>       </trkpt>
+      <trkpt lat="32.918542000" lon="-108.144356000">         <name>CG-1575M</name>       </trkpt>
+      <trkpt lat="32.917052000" lon="-108.149258000">         <name>CG-1580M</name>       </trkpt>
+      <trkpt lat="32.919108000" lon="-108.156801000">         <name>CG-1585M</name>       </trkpt>
+      <trkpt lat="32.918919000" lon="-108.164602000">         <name>CG-1590RX</name>       </trkpt>
+      <trkpt lat="32.920943000" lon="-108.173283000">         <name>CG-1595M</name>       </trkpt>
+      <trkpt lat="32.924486000" lon="-108.179819000">         <name>CG-1601OP</name>       </trkpt>
+      <trkpt lat="32.925332000" lon="-108.183025000">         <name>CG-1605M</name>       </trkpt>
+      <trkpt lat="32.929014000" lon="-108.189564000">         <name>CG-1610M</name>       </trkpt>
+      <trkpt lat="32.932760000" lon="-108.191795000">         <name>CG-1615M</name>       </trkpt>
+      <trkpt lat="32.935440000" lon="-108.192503000">         <name>CG-1620M</name>       </trkpt>
+      <trkpt lat="32.939041000" lon="-108.197063000">         <name>CG-1625M</name>       </trkpt>
+      <trkpt lat="32.944804000" lon="-108.200910000">         <name>CG-1630M</name>       </trkpt>
+      <trkpt lat="32.945620000" lon="-108.207738000">         <name>CG-1635M</name>       </trkpt>
+      <trkpt lat="32.946054000" lon="-108.216016000">         <name>CG-1640M</name>       </trkpt>
+      <trkpt lat="32.946774000" lon="-108.222968000">         <name>CG-1645M</name>       </trkpt>
+      <trkpt lat="32.950605000" lon="-108.229411000">         <name>CG-1650M</name>       </trkpt>
+      <trkpt lat="32.950605000" lon="-108.236277000">         <name>CG-1655M</name>       </trkpt>
+      <trkpt lat="32.954051000" lon="-108.243793000">         <name>CG-1660M</name>       </trkpt>
+      <trkpt lat="32.958904000" lon="-108.247891000">         <name>CG-1665M</name>       </trkpt>
+      <trkpt lat="32.960599000" lon="-108.256104000">         <name>CG-1670M</name>       </trkpt>
+      <trkpt lat="32.962123000" lon="-108.264253000">         <name>CG-1675M</name>       </trkpt>
+      <trkpt lat="32.964864000" lon="-108.271564000">         <name>CG-1680M</name>       </trkpt>
+      <trkpt lat="32.967948000" lon="-108.279219000">         <name>CG-1685M</name>       </trkpt>
+      <trkpt lat="32.969644000" lon="-108.287497000">         <name>CG-1690M</name>       </trkpt>
+      <trkpt lat="32.965391000" lon="-108.292829000">         <name>CG-1695XR</name>       </trkpt>
+      <trkpt lat="32.965391000" lon="-108.292829000">         <name>Cg-1695xr1</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk><name>Gila-River-High-Route</name>			<cmt> NON : dans le canyon </cmt>
+    <trkseg>
+      <trkpt lat="33.220041000" lon="-108.243253000">         <name>GH-000AP</name>       </trkpt>
+      <trkpt lat="33.226969000" lon="-108.251759000">         <name>GH-007XR</name>       </trkpt>
+      <trkpt lat="33.228575000" lon="-108.253231000">         <name>GH-009XR</name>       </trkpt>
+      <trkpt lat="33.253919000" lon="-108.250711000">         <name>GH-029XL</name>       </trkpt>
+      <trkpt lat="33.272124000" lon="-108.294271000">         <name>GH-063XR</name>       </trkpt>
+      <trkpt lat="33.278022000" lon="-108.298105000">         <name>GH-069XR</name>       </trkpt>
+      <trkpt lat="33.286993000" lon="-108.310390000">         <name>GH-080WT</name>       </trkpt>
+      <trkpt lat="33.297340000" lon="-108.322893000">         <name>GH-091XX</name>       </trkpt>
+      <trkpt lat="33.312752000" lon="-108.372448000">         <name>GH-125XR</name>       </trkpt>
+      <trkpt lat="33.313176000" lon="-108.371471000">         <name>GH-126WT</name>       </trkpt>
+      <trkpt lat="33.320118000" lon="-108.377457000">         <name>GH-133XL</name>       </trkpt>
+      <trkpt lat="33.330035000" lon="-108.437832000">         <name>GH-171XX</name>       </trkpt>
+      <trkpt lat="33.339371000" lon="-108.448132000">         <name>GH-183WT</name>       </trkpt>
+      <trkpt lat="33.339354000" lon="-108.448154000">         <name>GH-183XR</name>       </trkpt>
+      <trkpt lat="33.358211000" lon="-108.433101000">         <name>GH-205XX</name>       </trkpt>
+      <trkpt lat="33.372996000" lon="-108.433555000">         <name>GH-216XR</name>       </trkpt>
+      <trkpt lat="33.375073000" lon="-108.429784000">         <name>GH-218XL</name>       </trkpt>
+      <trkpt lat="33.375272000" lon="-108.430030000">         <name>GH-219WT</name>       </trkpt>
+      <trkpt lat="33.413863000" lon="-108.440294000">         <name>GH-250XL</name>       </trkpt>
+      <trkpt lat="33.417346000" lon="-108.440970000">         <name>GH-254RL</name>       </trkpt>
+      <trkpt lat="33.417871000" lon="-108.442374000">         <name>GH-255RL</name>       </trkpt>
+      <trkpt lat="33.432683000" lon="-108.499424000">         <name>GH-295RR</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+
+  <trk><name>Mirror-Lake-simplified</name>		<cmt> NON: 9% pris en 2021 </cmt> 
+    <trkseg>
+      <trkpt lat="38.692264230" lon="-106.414400260">         <name>ML000RL</name>       </trkpt>
+      <trkpt lat="38.709190400" lon="-106.434409870">         <name>ML0221HP</name>       </trkpt>
+      <trkpt lat="38.747423520" lon="-106.430582780">         <name>ML057CG</name>       </trkpt>
+      <trkpt lat="38.751530820" lon="-106.434523030">         <name>ML061TH</name>       </trkpt>
+      <trkpt lat="38.761413420" lon="-106.434521940">         <name>ML070WT</name>       </trkpt>
+      <trkpt lat="38.763065920" lon="-106.431102120">         <name>ML074XX</name>       </trkpt>
+      <trkpt lat="38.766269230" lon="-106.441777480">         <name>ML083HP</name>       </trkpt>
+      <trkpt lat="38.779388750" lon="-106.443297370">         <name>ML098WT</name>       </trkpt>
+      <trkpt lat="38.797448480" lon="-106.437612850">         <name>ML117WT</name>       </trkpt>
+      <trkpt lat="38.801499290" lon="-106.446014280">         <name>ML123XR</name>       </trkpt>
+      <trkpt lat="38.828068240" lon="-106.446260790">         <name>ML148WT</name>       </trkpt>
+      <trkpt lat="38.844312960" lon="-106.446452990">         <name>ML164TH</name>       </trkpt>
+      <trkpt lat="38.847229530" lon="-106.454459970">         <name>ML170RX</name>       </trkpt>
+      <trkpt lat="38.862378560" lon="-106.443688720">         <name>ML185WT</name>       </trkpt>
+      <trkpt lat="38.865669040" lon="-106.459665720">         <name>ML206RR</name>       </trkpt>
+      <trkpt lat="38.873095830" lon="-106.426665580">         <name>ML226XL</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+ <trk><name>Silverthorne</name>     <cmt>NON : fait rater GraysPeak</cmt>
+    <trkseg>
+      <trkpt lat="39.498655030" lon="-106.156017030">         <name>S-000XL</name>       </trkpt>
+      <trkpt lat="39.502807010" lon="-106.155454010">         <name>S-005M</name>       </trkpt>
+      <trkpt lat="39.501981980" lon="-106.146610020">         <name>S-010M</name>       </trkpt>
+      <trkpt lat="39.504478020" lon="-106.141402000">         <name>S-013XL</name>       </trkpt>
+      <trkpt lat="39.507692990" lon="-106.144591990">         <name>S-017XL</name>       </trkpt>
+      <trkpt lat="39.506582970" lon="-106.154815980">         <name>S-025M</name>       </trkpt>
+      <trkpt lat="39.511314970" lon="-106.160737970">         <name>S-030M</name>       </trkpt>
+      <trkpt lat="39.515798040" lon="-106.167716990">         <name>S-035M</name>       </trkpt>
+      <trkpt lat="39.520187970" lon="-106.173395980">         <name>S-040M</name>       </trkpt>
+      <trkpt lat="39.524044990" lon="-106.183345970">         <name>S-047WT</name>       </trkpt>
+      <trkpt lat="39.528354960" lon="-106.183583010">         <name>S-050M</name>       </trkpt>
+      <trkpt lat="39.536257000" lon="-106.183152010">         <name>S-058WT</name>       </trkpt>
+      <trkpt lat="39.546246980" lon="-106.183547970">         <name>S-065HP</name>       </trkpt>
+      <trkpt lat="39.548775040" lon="-106.191339960">         <name>S-070WT</name>       </trkpt>
+      <trkpt lat="39.552183040" lon="-106.185779990">         <name>S-075M</name>       </trkpt>
+      <trkpt lat="39.559075980" lon="-106.183602960">         <name>S-080M</name>       </trkpt>
+      <trkpt lat="39.564736030" lon="-106.180367960">         <name>S-085M</name>       </trkpt>
+      <trkpt lat="39.569653020" lon="-106.176414970">         <name>S-090M</name>       </trkpt>
+      <trkpt lat="39.572506980" lon="-106.174598030">         <name>S-094WT</name>       </trkpt>
+      <trkpt lat="39.572918020" lon="-106.174354030">         <name>S-095XX</name>       </trkpt>
+      <trkpt lat="39.575536030" lon="-106.172011040">         <name>S-100M</name>       </trkpt>
+      <trkpt lat="39.577660000" lon="-106.170363990">         <name>S-105M</name>       </trkpt>
+      <trkpt lat="39.582830970" lon="-106.166829010">         <name>S-110M</name>       </trkpt>
+      <trkpt lat="39.589339010" lon="-106.168874030">         <name>S-115M</name>       </trkpt>
+      <trkpt lat="39.594895040" lon="-106.169749010">         <name>S-120WT</name>       </trkpt>
+      <trkpt lat="39.601937010" lon="-106.171300000">         <name>S-125WT</name>       </trkpt>
+      <trkpt lat="39.602744020" lon="-106.170736990">         <name>S-126XL</name>       </trkpt>
+      <trkpt lat="39.607390030" lon="-106.172037020">         <name>S-130HP</name>       </trkpt>
+      <trkpt lat="39.614220020" lon="-106.171708030">         <name>S-135WT</name>       </trkpt>
+      <trkpt lat="39.619576980" lon="-106.172653010">         <name>S-140XR</name>       </trkpt>
+      <trkpt lat="39.623615960" lon="-106.165655960">         <name>S-145M</name>       </trkpt>
+      <trkpt lat="39.625348000" lon="-106.156924030">         <name>S-150WT</name>       </trkpt>
+      <trkpt lat="39.629089010" lon="-106.149912990">         <name>S-155M</name>       </trkpt>
+      <trkpt lat="39.629380030" lon="-106.140678980">         <name>S-160M</name>       </trkpt>
+      <trkpt lat="39.631756970" lon="-106.133187990">         <name>S-165M</name>       </trkpt>
+      <trkpt lat="39.632405980" lon="-106.124199990">         <name>S-170M</name>       </trkpt>
+      <trkpt lat="39.637227000" lon="-106.112113040">         <name>S-177XR</name>       </trkpt>
+      <trkpt lat="39.635887990" lon="-106.102260030">         <name>S-185M</name>       </trkpt>
+      <trkpt lat="39.631593020" lon="-106.103205000">         <name>S-190M</name>       </trkpt>
+      <trkpt lat="39.631436030" lon="-106.095493990">         <name>S-195M</name>       </trkpt>
+      <trkpt lat="39.629700970" lon="-106.087142010">         <name>S-200M</name>       </trkpt>
+      <trkpt lat="39.623741020" lon="-106.081565020">         <name>S-205RL</name>       </trkpt>
+      <trkpt lat="39.622119040" lon="-106.078674020">         <name>S-210M</name>       </trkpt>
+      <trkpt lat="39.624030030" lon="-106.074691020">         <name>S-215M</name>       </trkpt>
+      <trkpt lat="39.626289960" lon="-106.071812010">         <name>S-219RL</name>       </trkpt>
+      <trkpt lat="39.631010980" lon="-106.067936970">         <name>S-224RR</name>       </trkpt>
+      <trkpt lat="39.633751030" lon="-106.057879020">         <name>S-230M</name>       </trkpt>
+      <trkpt lat="39.636758040" lon="-106.058269030">         <name>S-237RR</name>       </trkpt>
+      <trkpt lat="39.641019980" lon="-106.059340990">         <name>S-240RR</name>       </trkpt>
+      <trkpt lat="39.639359020" lon="-106.054359960">         <name>S-243XL</name>       </trkpt>
+      <trkpt lat="39.645354010" lon="-106.053671980">         <name>S-248XX</name>       </trkpt>
+      <trkpt lat="39.655354960" lon="-106.053760990">         <name>S-255M</name>       </trkpt>
+      <trkpt lat="39.661006960" lon="-106.053419010">         <name>S-260M</name>       </trkpt>
+      <trkpt lat="39.666857030" lon="-106.056757020">         <name>S-265M</name>       </trkpt>
+      <trkpt lat="39.668627960" lon="-106.049110960">         <name>S-270M</name>       </trkpt>
+      <trkpt lat="39.672638030" lon="-106.044019960">         <name>S-275M</name>       </trkpt>
+      <trkpt lat="39.674083990" lon="-106.039382000">         <name>S-280M</name>       </trkpt>
+      <trkpt lat="39.678343000" lon="-106.036937000">         <name>S-283XR</name>       </trkpt>
+      <trkpt lat="39.681586970" lon="-106.025941040">         <name>S-290M</name>       </trkpt>
+      <trkpt lat="39.684909970" lon="-106.010576000">         <name>S-300M</name>       </trkpt>
+      <trkpt lat="39.686528020" lon="-106.003718010">         <name>S-304HP</name>       </trkpt>
+      <trkpt lat="39.690409000" lon="-105.994824980">         <name>S-310M</name>       </trkpt>
+      <trkpt lat="39.696004010" lon="-105.989581010">         <name>S-315M</name>       </trkpt>
+      <trkpt lat="39.700691000" lon="-105.988064980">         <name>S-320M</name>       </trkpt>
+      <trkpt lat="39.703496000" lon="-105.982064960">         <name>S-325WT</name>       </trkpt>
+      <trkpt lat="39.706997960" lon="-105.974788960">         <name>S-330M</name>       </trkpt>
+      <trkpt lat="39.710589020" lon="-105.970070040">         <name>S-335M</name>       </trkpt>
+      <trkpt lat="39.715828970" lon="-105.969587990">         <name>S-340M</name>       </trkpt>
+      <trkpt lat="39.716800010" lon="-105.960061960">         <name>S-345M</name>       </trkpt>
+      <trkpt lat="39.722565000" lon="-105.955094010">         <name>S-350M</name>       </trkpt>
+      <trkpt lat="39.723492040" lon="-105.945745000">         <name>S-355M</name>       </trkpt>
+      <trkpt lat="39.723799990" lon="-105.939844980">         <name>S-360M</name>       </trkpt>
+      <trkpt lat="39.724546990" lon="-105.932237980">         <name>S-365M</name>       </trkpt>
+      <trkpt lat="39.728309040" lon="-105.925527010">         <name>S-370M</name>       </trkpt>
+      <trkpt lat="39.731358040" lon="-105.919418030">         <name>S-375WT</name>       </trkpt>
+      <trkpt lat="39.736345020" lon="-105.913150040">         <name>S-380M</name>       </trkpt>
+      <trkpt lat="39.742573020" lon="-105.908275040">         <name>S-385M</name>       </trkpt>
+      <trkpt lat="39.749747010" lon="-105.906226000">         <name>S-390M</name>       </trkpt>
+      <trkpt lat="39.755779970" lon="-105.905101990">         <name>S-395M</name>       </trkpt>
+      <trkpt lat="39.761038020" lon="-105.906557000">         <name>S-400RR</name>       </trkpt>
+      <trkpt lat="39.764588010" lon="-105.902522040">         <name>S-405M</name>       </trkpt>
+      <trkpt lat="39.765565000" lon="-105.899386030">         <name>S-410M</name>       </trkpt>
+      <trkpt lat="39.767413970" lon="-105.896639030">         <name>S-415M</name>       </trkpt>
+      <trkpt lat="39.769328980" lon="-105.892884020">         <name>S-420M</name>       </trkpt>
+      <trkpt lat="39.773826040" lon="-105.889641990">         <name>S-427XL</name>       </trkpt>
+    </trkseg>
+  </trk>
+
+
+
+
+
+
+
+-->
+
+
+</gpx>

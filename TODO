@@ -1,9 +1,23 @@
 Auto extend des 3 divs
 Test InReach : le TA est OK d'un autre PC
 Cas smartphone
-Cas mapbox 3D
+Cas mapbox 3D   https://codepen.io/guillaumeportails/pen/KKxNKJM
 Tri des multiples "Show More" de drive
 Milestone des Alternates
+Photo: bouton ShowMore en fin de liste ou plutot laisser ShowMore et AutoFly visibles
+GPX et KML renommes en XML ... pour neocities.org  ou inclus en geoJSON.js + bundle  
+Tooltip photo avec time-out avant close, pour clic ? Sinon Popup avec autoclose
+Poignées des div en haut (moins chargé qu'en bas)
+Paddings dans le div photo
+GDT (et attribution), pas allumé par défaut
+Suppression des Milestone pour zoom<=4
+Ajouter MtElbert, MtMassive, Ptarmigan, ChineseWall,
+        Atlantic City, South Pass City, 
+        East Temple Peak, Cirque of The Towers (Texas Pass, Jackass Pass), Knapsack Col, Square Top Mountain
+        Old Faithfull, 
+        Mettre ces WayPoints dans un Layer "PoI" controlé (dans un KML dedié)
+Alternate Flora-Eva-Parry-Bancroft ? Jasper-Neva-Carribou ? Sweetwater ?
+Eteindre Native Land apres délai
 
 NOT-TODO:
 Fond Google ou Bing
