@@ -16,7 +16,7 @@
 <name>Red-Line start (Crazy Cook)</name>
 </wpt>
 
-<trk><name>Red-Line</name><trkseg>
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="31.497064429" lon="-108.208508738"> <name>RL0000.0-NM</name></trkpt>
 <trkpt lat="31.497341533" lon="-108.216562773"> <name>RL0000.5-NM</name></trkpt>
 <trkpt lat="31.496132421" lon="-108.224070304"> <name>RL0001.0-NM</name></trkpt>
@@ -584,11 +584,8 @@
       <trkpt lat="33.742145000" lon="-108.477282000">         <name>G-1055RX</name>       </trkpt>
     </trkseg></trk>
 <!-- TAG crossing end of Gila -->
-<wpt lat="33.742145000" lon="-108.477282000">
-<name>Gila Alternate end</name>
-</wpt>
 
-<trk><name>Red-Line</name><trkseg>
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="33.746794262" lon="-108.484190781"> <name>RL0353.5-NM</name></trkpt>
 <trkpt lat="33.752294924" lon="-108.485407268"> <name>RL0354.0-NM</name></trkpt>
 <trkpt lat="33.758722016" lon="-108.482155197"> <name>RL0354.5-NM</name></trkpt>
@@ -641,7 +638,7 @@
 <name>Pie Town Alternate start</name>
 </wpt>
 
-  <trk><name>Pie-Town via Mangas</name>
+  <trk><name>Pie Town via Mangas</name>
     <trkseg>
       <trkpt lat="33.932663000" lon="-108.418897000">         <name>PT-000TH</name>       </trkpt>
       <trkpt lat="33.938041000" lon="-108.416158000">         <name>PT-005RX</name>       </trkpt>
@@ -738,7 +735,8 @@
     </trkseg>
   </trk>
 
-<trk><name>Back on RedLine at PieTown (Mangas Alt)</name><trkseg>
+<!-- Back on RedLine at PieTown (Mangas Alt) -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="34.30815109" lon="-108.140259986"> <name>RL0425.0-NM</name></trkpt>
 <trkpt lat="34.315166577" lon="-108.142358321"> <name>RL0425.5-NM</name></trkpt>
 <trkpt lat="34.322349202" lon="-108.141737166"> <name>RL0426.0-NM</name></trkpt>
@@ -798,7 +796,7 @@
 </trkseg></trk>
 
 
-<wpt lat="34.83952" lon="-107.91163"> <name>Mesa climb to Ventana Arch</name></wpt>
+<wpt lat="34.83952" lon="-107.91163"> <name>Narrows, Mesa climb to Ventana Arch</name></wpt>
 
   <trk><name>Cebolla-Wilderness Mesa</name>		<cmt> Pour Ventana/Mesa plutot que le lava field </cmt>
     <trkseg>
@@ -861,7 +859,8 @@
   </trk>
 
 
-<trk><name>Inverted Red-Line from Cebolla to Bonita-Zuni</name><trkseg>
+<!-- Ventana do Bonita-Zuni -->
+<trk><name>Red Line CDT (short SouthBound)</name><trkseg>
 <trkpt lat="34.942091546" lon="-107.926589517"> <name>RL0507.5-NM</name></trkpt>
 <trkpt lat="34.942677263" lon="-107.918584594"> <name>RL0508.0-NM</name></trkpt>
 <trkpt lat="34.94171623" lon="-107.910717983"> <name>RL0508.5-NM</name></trkpt>
@@ -881,7 +880,7 @@
 
 
 
-<wpt lat="34.9674" lon="-108.0038"> <name>Lava caves</name></wpt>
+<wpt lat="34.9674" lon="-108.0038"> <name>Lava cave</name></wpt>
 
 <wpt lat="34.942381000" lon="-107.934697000"> <name>Bonita-Zuni Alternate start</name></wpt>
   <trk><name>Bonita-Zuni</name>
@@ -942,7 +941,8 @@
   </trk>
 
 
-<trk><name>Back on RedLine at Grants (Bonita-Zuni)</name><trkseg>
+<!-- Grants -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="35.155488772" lon="-107.845427798"> <name>RL0536.0-NM</name></trkpt>
 <trkpt lat="35.161132" lon="-107.840349994"> <name>RL0536.5-NM</name></trkpt>
 <trkpt lat="35.163081411" lon="-107.833147569"> <name>RL0537.0-NM</name></trkpt>
@@ -1012,7 +1012,8 @@
     </trkseg>
   </trk>
 
-<trk><name>Back on RedLine (Mount-Taylor)</name><trkseg>
+<!-- After Taylor -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="35.323073912" lon="-107.573913452"> <name>RL0565.5-NM</name></trkpt>
 <trkpt lat="35.329089088" lon="-107.572436279"> <name>RL0566.0-NM</name></trkpt>
 <trkpt lat="35.333129991" lon="-107.572217816"> <name>RL0566.5-NM</name></trkpt>
@@ -1322,9 +1323,9 @@
     </trkseg>
   </trk>
 
-<!-- GhostRanch Alternate crossing -->
 
-<trk><name>RL (after Ghost Ranch)</name><trkseg>
+<!-- After Ghost Ranch -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="36.43154384" lon="-106.330044877"> <name>RL0717.5-NM</name></trkpt>
 <trkpt lat="36.438056513" lon="-106.329894194"> <name>RL0718.0-NM</name></trkpt>
 <trkpt lat="36.440854434" lon="-106.323233623"> <name>RL0718.5-NM</name></trkpt>
@@ -1705,7 +1706,8 @@
 <wpt lat="37.98694" lon="-106.93143">  <name>San Luis Peak</name></wpt>
 
 
-<trk><name>RL</name><trkseg>
+<!--  -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="37.634886288" lon="-107.142690401"> <name>RL0903.5-CO</name></trkpt>
 <trkpt lat="37.636701048" lon="-107.149361812"> <name>RL0904.0-CO</name></trkpt>
 <trkpt lat="37.636006836" lon="-107.156465709"> <name>RL0904.5-CO</name></trkpt>
@@ -2183,7 +2185,8 @@
 
 
 
-<trk><name>RL after Mirror Lake</name><trkseg>
+<!-- After Mirror Lake -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="38.874383478" lon="-106.424747084"> <name>RL1133.0-CO</name></trkpt>
 <trkpt lat="38.872993232" lon="-106.432941394"> <name>RL1133.5-CO</name></trkpt>
 <trkpt lat="38.876616077" lon="-106.436283715"> <name>RL1134.0-CO</name></trkpt>
@@ -2489,7 +2492,8 @@
 
 <wpt lat="39.63364" lon="-105.81715"><name>Grays Peak</name></wpt>
 
-<trk><name>RL after Argentine</name><trkseg>
+<!-- After Argentine -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="39.626249457" lon="-105.782252385"> <name>RL1280.5-CO</name></trkpt>
 <trkpt lat="39.631701926" lon="-105.785934529"> <name>RL1281.0-CO</name></trkpt>
 <trkpt lat="39.635329608" lon="-105.792365289"> <name>RL1281.5-CO</name></trkpt>
@@ -3552,7 +3556,8 @@
   </trk>
 
 
-<trk><name>RL (after Cirque of Towers)</name><trkseg>
+<!-- After Cirque -->
+<trk><name>Red Line CDT</name><trkseg>
       <trkpt lat="42.795148000" lon="-109.302286000">         <name>CT-214XR</name>       </trkpt>
 <trkpt lat="42.796106705" lon="-109.312006775"> <name>RL1807.0-WY</name></trkpt>
 <trkpt lat="42.798174137" lon="-109.317682405"> <name>RL1807.5-WY</name></trkpt>
@@ -3660,7 +3665,8 @@
   </trk>
 
 
-<trk><name>RL (after Knapsack)</name><trkseg>
+<!-- After Knapsack -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="43.170560726" lon="-109.742443807"> <name>RL1853.0-WY</name></trkpt>
 <trkpt lat="43.177048249" lon="-109.744259596"> <name>RL1853.5-WY</name></trkpt>
 <trkpt lat="43.18296796" lon="-109.745006604"> <name>RL1854.0-WY</name></trkpt>

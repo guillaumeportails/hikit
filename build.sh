@@ -18,6 +18,9 @@
 
 trap exit ERR
 
+rm -rf tmp
+mkdir tmp
+
 # GPX/KML to geoJSON
 for ext in gpx kml
 do

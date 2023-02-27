@@ -518,9 +518,13 @@ async function loadInfos() {
     lgStart.addTo(map);
 
     //------ Layer : The Plan
-    const layerPlan = layerGpx(geoCDT2023_plan, { color: 'DarkOrchid', weight: 3, opacity: 1.0 });
-    mapCtrlLayers.addOverlay(layerPlan, 'The Plan (hopefully)');
-    layerPlan.addTo(map);
+    const lgPlan = L.featureGroup();
+    lgPlan.addLayer(layerGpx(geoCDT2023_plan, { color: 'DarkOrchid', weight: 3, opacity: 1.0 }));
+    const lgPOI = L.markerClusterGroup({showCoverageOnHover: false});
+    lgPOI.addLayer(layerKml(geoPlaces));
+    lgPlan.addLayer(lgPOI);
+    mapCtrlLayers.addOverlay(lgPlan, 'The Plan (hopefully)');
+    lgPlan.addTo(map);
 
     //------ Layer : Offical trail
     // ! Le GPX lu est "en dur" avec un point par 0.5mi, donc on peut reconstruire les 3000 tooltip
