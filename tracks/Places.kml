@@ -25,6 +25,7 @@
 			</IconStyle>
 		</Style>
 
+<!-- References -->
 
 		<Placemark id="CDG">
 			<name>CDG</name>
@@ -297,6 +298,7 @@
 			</Point>
 		</Placemark>
 
+
     <Placemark>
       <name>Rabbit Ears</name>
       <styleUrl>#Visit</styleUrl>
@@ -308,7 +310,7 @@
     </Placemark>
 
     <Placemark>
-      <name>Mt Taylor</name>
+      <name>Mt Taylor, 3445m</name>
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
