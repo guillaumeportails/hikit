@@ -27,33 +27,6 @@
 
 <!-- References -->
 
-		<Placemark id="CDG">
-			<name>CDG</name>
-			<description>Aéroport de Paris-Charles de Gaulle, France</description>
-			<styleUrl>#Reference</styleUrl>
-			<Point>
-				<coordinates>2.5509443,49.0080713</coordinates>
-			</Point>
-		</Placemark>
-
-		<Placemark id="YYC">
-			<name>YYC</name>
-			<description>Aéroport de Calgary, Canada</description>
-			<styleUrl>#Reference</styleUrl>
-			<Point>
-				<coordinates>-114.0101401,51.131069</coordinates>
-			</Point>
-		</Placemark>
-
-		<Placemark id="PHX">
-			<name>PHX</name>
-			<description>Aéroport de Phoenix-Sky Harbor, Arizona</description>
-			<styleUrl>#Reference</styleUrl>
-			<Point>
-				<coordinates>-112.010124,33.435249</coordinates>
-			</Point>
-		</Placemark>
-
     <Placemark>
       <name>Greyhound: Bus Station</name>
       <styleUrl>#Reference</styleUrl>
@@ -322,11 +295,31 @@
     </Placemark>
 
     <Placemark>
+      <name>Hachita Peak, 2016m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -108.45332, 31.841664  
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
       <name>Old Hachita Mine</name>
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
           -108.4283793,31.9150938
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Pyramide Peak, 1827m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -108.71878, 32.237497
         </coordinates>
       </Point>
     </Placemark>
@@ -438,6 +431,16 @@
       <Point>
         <coordinates>
           -107.9672801,34.6556055
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Mesa climb, perfect camp</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -107.912286, 34.839996
         </coordinates>
       </Point>
     </Placemark>

@@ -618,9 +618,11 @@ async function loadInfos() {
         }).bindPopup(layer => layer.feature.properties.Name);
         lgNative.addLayer(layerNative).addTo(map);
         mapCtrlLayers.addOverlay(lgNative, 'Native Land');
-        setTimeout(function () { lgNative.remove(); }, 2000);
-    });
-
+        setTimeout(function () { lgNative.remove(); }, 2500);
+        setTimeout(function () {
+            map.flyTo(L.latLng(42.3, -106.8), 5, { animate: true, duration: 3.0, easeLinearity: 0.2 });
+        }, 500);
+        });
 
 
     // // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
@@ -770,8 +772,16 @@ function mapFlyTo(lat, lon, ref) {
             lgPlaces = L.markerClusterGroup();
             mapCtrlLayers.addOverlay(lgPlaces, 'Places');
         }
-        const p = L.circleMarker([lat, lon], { interactive: true, radius: 8 }).bindTooltip(ref);
-        lgPlaces.addLayer(p).addTo(map);
+        const m = L.circleMarker([lat, lon], { interactive: true, radius: 8
+        }).bindPopup(ref, { interactive: true, closeButton: false });
+        lgPlaces.addLayer(m).addTo(map);
+//      let tid = -1;
+        m.on('mouseover', function () {
+//          if (tid >= 0) { clearTimeout(tid); tid = -1; }
+            m.openPopup().getPopup().on('mouseout', function () {
+                /*tid =*/ setTimeout(function () { m.closePopup(); }, 1000);  // TODO: unset si mouseover again
+            });
+        });
     }
     const z = (firstfly) ? 8 : map.getZoom();
     firstfly = false;

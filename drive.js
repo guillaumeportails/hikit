@@ -61,7 +61,7 @@ function fileAdd(gf) {
 //      const tooltip = `'<img src="${gf.thumbnailLink}"><br><center>${gf.imageMediaMetadata.time}</center>'`;
         const tooltip = `'${gf.imageMediaMetadata.time}'`;
         o = ` onmouseover="flyToIf(this,${lat.toFixed(6)},${lon.toFixed(6)},${n})"`;
-        t = `<br><center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
+        t = `<center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
     } catch { };
     r = '<hr>'
         + `<a href="${gf.webViewLink}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
