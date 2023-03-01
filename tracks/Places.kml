@@ -32,7 +32,7 @@
 			<description>Aéroport de Paris-Charles de Gaulle, France</description>
 			<styleUrl>#Reference</styleUrl>
 			<Point>
-				<coordinates>2.5509443,49.0080713,0</coordinates>
+				<coordinates>2.5509443,49.0080713</coordinates>
 			</Point>
 		</Placemark>
 
@@ -41,7 +41,7 @@
 			<description>Aéroport de Calgary, Canada</description>
 			<styleUrl>#Reference</styleUrl>
 			<Point>
-				<coordinates>-114.0101401,51.131069,0</coordinates>
+				<coordinates>-114.0101401,51.131069</coordinates>
 			</Point>
 		</Placemark>
 
@@ -50,7 +50,7 @@
 			<description>Aéroport de Phoenix-Sky Harbor, Arizona</description>
 			<styleUrl>#Reference</styleUrl>
 			<Point>
-				<coordinates>-112.010124,33.435249,0</coordinates>
+				<coordinates>-112.010124,33.435249</coordinates>
 			</Point>
 		</Placemark>
 
@@ -59,7 +59,7 @@
       <styleUrl>#Reference</styleUrl>
       <Point>
         <coordinates>
-          -108.7130521,32.3439495,0
+          -108.7130521,32.3439495
         </coordinates>
       </Point>
     </Placemark>
@@ -81,7 +81,7 @@
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
-          -108.7145105,32.3401683,0
+          -108.7145105,32.3401683
         </coordinates>
       </Point>
     </Placemark>
@@ -91,57 +91,7 @@
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
-          -108.7105556,32.3444444,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Lander</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -108.7306725,42.833014,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Pinedale</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -109.8633501,42.8678809,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Big Sky</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -111.3080244,45.2617806,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Pony Bar</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -111.8959301,45.6573307,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Ennis</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -111.7318796,45.3491133,0
+          -108.7105556,32.3444444
         </coordinates>
       </Point>
     </Placemark>
@@ -151,97 +101,7 @@
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
-          -108.2069931,33.1959024,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>West Yellowstone</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -111.1041092,44.6621493,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Silverthorne</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -106.0712941,39.6296191,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Breckenridge</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -106.0383518,39.4816537,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Grand Lake</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -105.8230671,40.2522073,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Steamboat Springs</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -106.8317158,40.4849769,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Encampment</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -106.8001396,41.2060709,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Lander</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -108.7306725,42.833014,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Brooks Lake Lodge</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -110.0076715,43.7474746,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Anaconda</name>
-      <styleUrl>#Supplies</styleUrl>
-      <Point>
-        <coordinates>
-          -112.9478359,46.1262998,0
+          -108.2069931,33.1959024
         </coordinates>
       </Point>
     </Placemark>
@@ -251,17 +111,17 @@
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
-          -107.6645057,37.811941,0
+          -107.6645057,37.811941
         </coordinates>
       </Point>
     </Placemark>
 
     <Placemark>
-      <name>Leadville</name>
+      <name>Creede, 2700m</name>
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
-          -106.2925238,39.2508229,0
+          -106.926444, 37.85051
         </coordinates>
       </Point>
     </Placemark>
@@ -271,10 +131,161 @@
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
-          -105.9989022,38.5347193,0
+          -105.9989022,38.5347193
         </coordinates>
       </Point>
     </Placemark>
+
+    <Placemark>
+      <name>Leadville</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -106.2925238,39.2508229
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Silverthorne</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -106.0712941,39.6296191
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Breckenridge</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -106.0383518,39.4816537
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Grand Lake</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -105.8230671,40.2522073
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Steamboat Springs</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -106.8317158,40.4849769
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Encampment</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -106.8001396,41.2060709
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Rawlins (Georges "Big Nose" Parrot lynch)</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+       -107.23907, 41.790993
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Lander</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -108.7306725,42.833014
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Pinedale</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -109.8633501,42.8678809
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Brooks Lake Lodge</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -110.0076715,43.7474746
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>West Yellowstone</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -111.1041092,44.6621493
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Big Sky</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -111.3080244,45.2617806
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Pony Bar</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -111.8959301,45.6573307
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Ennis</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -111.7318796,45.3491133
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Anaconda</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+          -112.9478359,46.1262998
+        </coordinates>
+      </Point>
+    </Placemark>
+
 
 
 <!-- Visit    POI du trajet ou pas loin -->
@@ -285,7 +296,7 @@
 			<description>Southern point of the CDT, New Mexico, USA/Mexico border</description>
 			<styleUrl>#Visit</styleUrl>
 			<Point>
-				<coordinates>-108.2087403,31.4969981,0</coordinates>
+				<coordinates>-108.2087403,31.4969981</coordinates>
 			</Point>
 		</Placemark>
 
@@ -299,342 +310,13 @@
 		</Placemark>
 
 
-    <Placemark>
-      <name>Rabbit Ears</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -106.6100084,40.4293784,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Mt Taylor, 3445m</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.608011,35.2394608,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Parting of the Waters</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -110.1753248,44.0426808,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Old Faithful</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -110.8278164,44.4606587,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Lonestar Geyser</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -110.8064777,44.4185229,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Cirque of the Towers</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -109.20922,42.7776954,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Squaretop Mountain</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -109.79183,43.2236269,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Knapsack Col</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -109.6612446,43.1549231,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Grays Peak, 4350m</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -105.8171533,39.6336457,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Armijo Canyon</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.9672801,34.6556055,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>La Ventana Natural Arch</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.8889194,34.8692456,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Knife Edge</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.1472222,37.6333333,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Jordan Hot Springs</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -108.2695291,33.2927142,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Manned Fire tower lookout</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -108.3075273,34.0519064,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Ice Cave and Bandera Volcano (closed)</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -108.0807978,34.9932711,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Junction Cave</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -108.0029782,34.9690332,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Rim trail</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -106.5676432,36.3421459,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Minute Man Geyser</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -110.7984081,44.3547645,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Grand Canyon of the Yellowstone</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -110.48532,44.719745,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Mont Elbert</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -106.4452306,39.1178157,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Start of the Missouri River</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -111.5047804,45.9267059,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>West above Missouri</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -112.3118658,47.0179729,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Goldstone Pass</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -113.5658899,45.1435357,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>The Narrows</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.9097794,34.8597674,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Route 66 Neon Drive-Thru Sign</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.8560312,35.1535274,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Berthoud Pass</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -105.7777849,39.7983203,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>East Temple Peak</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -109.1565168,42.710508,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Photographers Point</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -109.6951495,43.0252264,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>San Luis Peak</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -106.9314343,37.9869408,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>El Malpais Ranger Station (BLM)</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -107.8103614,34.9706563,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>James Peak</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -105.6900038,39.8522094,0
-        </coordinates>
-      </Point>
-    </Placemark>
 
     <Placemark>
       <name>Cloverdale Cemetery</name>
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -108.9200457,31.4058034,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Shakespeare Ghost Town</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -108.7383405,32.3253423,0
-        </coordinates>
-      </Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Shakespeare Cemetery</name>
-      <styleUrl>#Visit</styleUrl>
-      <Point>
-        <coordinates>
-          -108.72817,32.3239572,0
+          -108.9200457,31.4058034
         </coordinates>
       </Point>
     </Placemark>
@@ -644,7 +326,27 @@
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -108.4283793,31.9150938,0
+          -108.4283793,31.9150938
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Shakespeare Cemetery</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.72817,32.3239572
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Shakespeare Ghost Town (private)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.7383405,32.3253423
         </coordinates>
       </Point>
     </Placemark>
@@ -655,17 +357,237 @@
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -108.5282889,32.4339901,0
+          -108.5282889,32.4339901
         </coordinates>
       </Point>
     </Placemark>
 
     <Placemark>
-      <name>Argentine Peak</name>
+      <name>Billy the Kid home site</name>
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -105.77723,39.6122092,0
+         -108.275461, 32.769965
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Catherine McCarthy Grave</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.256603, 32.783470
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Mongollon cliff dwellings</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+       -108.270244, 33.229655
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Jordan Hot Springs</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.2695291,33.2927142
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>The Toaster House</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -108.138512, 34.299234
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>VLBA station</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -108.119083, 34.301265
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Manned Fire tower lookout</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.3075273,34.0519064
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Armijo Canyon</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.9672801,34.6556055
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>The Narrows</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.9097794,34.8597674
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>La Ventana Natural Arch</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.8889194,34.8692456
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>El Malpais Ranger Station (BLM)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.8103614,34.9706563
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Ice Cave and Bandera Volcano (closed)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.0807978,34.9932711
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Junction Cave (public)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -108.0029782,34.9690332
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Lava cave (public)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -108.0038,34.9674
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Route 66 Neon Drive-Thru Sign</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.8560312,35.1535274
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Mount Taylor, 3445m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.608011,35.2394608
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Ghost Ranch retreat center</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -106.472547, 36.330927
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Rim trail</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -106.5676432,36.3421459
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Cumbres Pass, 3055m (Chama)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -106.450714, 37.017691
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Wolf Creek Pass, 3055m (Pagosa Spring)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -106.801644, 37.483219
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Spring Creek Pass, 3319m (Lake City)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -107.15877, 37.940001
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Argentine Peak, 4189m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -105.77723,39.6122092
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Knife Edge</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -107.1472222,37.6333333
         </coordinates>
       </Point>
     </Placemark>
@@ -675,17 +597,17 @@
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -107.58256,37.7852753,0
+          -107.58256,37.7852753
         </coordinates>
       </Point>
     </Placemark>
 
     <Placemark>
-      <name>Rio Grande River Source</name>
+      <name>Rio Grande source</name>
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -107.5386561,37.7978866,0
+          -107.53865,37.79788
         </coordinates>
       </Point>
     </Placemark>
@@ -695,7 +617,7 @@
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -106.9366418,37.8839185,0
+          -106.9366418,37.8839185
         </coordinates>
       </Point>
     </Placemark>
@@ -705,7 +627,227 @@
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -107.2877639,37.9145796,0
+          -107.2877639,37.9145796
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>San Luis Peak, 4271m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -106.93143,37.98694
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Monarch Pass, 3448m (Salida)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -106.326099, 38.495787 
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Berthoud Pass, 3446m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -105.7777849,39.7983203
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>James Peak, 4052m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -105.6900038,39.8522094
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Mont Elbert, Rockies summit, 4399m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -106.4452306,39.1178157
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Grays Peak, CDT highest, 4349m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -105.8171533,39.6336457
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Ptarmigan Point, 3740m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+       -105.702328, 40.313043
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Rabbit Ears</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -106.6100084,40.4293784
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Battle Pass (Encampment)</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+       -106.981776, 41.156015
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>East Temple Peak, 3850m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -109.1565168,42.710508
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Cirque of the Towers</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -109.20922,42.7776954
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Photographers Point</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -109.6951495,43.0252264
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Knapsack Col, 3737m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -109.6612446,43.1549231
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Squaretop Mountain</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -109.79183,43.2236269
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Parting of the Waters</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -110.1753248,44.0426808
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Lonestar Geyser</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -110.8064777,44.4185229
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Old Faithful</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -110.8278164,44.4606587
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Minute Man Geyser</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -110.7984081,44.3547645
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Grand Canyon of the Yellowstone</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -110.48532,44.719745
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Goldstone Pass, 2760m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -113.5658899,45.1435357
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Start of the Missouri River</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -111.5047804,45.9267059
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>West above Missouri</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+          -112.3118658,47.0179729
         </coordinates>
       </Point>
     </Placemark>
@@ -715,7 +857,7 @@
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
-          -113.1508951,47.6893859,0
+          -113.1508951,47.6893859
         </coordinates>
       </Point>
     </Placemark>

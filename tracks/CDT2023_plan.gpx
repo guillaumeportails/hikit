@@ -12,9 +12,7 @@
 
 <!-- TAG begin of RedLine -->
 
-<wpt lat="31.497064429" lon="-108.208508738">
-<name>Red-Line start (Crazy Cook)</name>
-</wpt>
+<!-- <wpt lat="31.497064429" lon="-108.208508738"> <name>Red-Line start (Crazy Cook)</name></wpt> -->
 
 <trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="31.497064429" lon="-108.208508738"> <name>RL0000.0-NM</name></trkpt>
@@ -367,9 +365,8 @@
 </trkseg></trk>
 
 <!-- TAG crossing Gila Alternate -->
-<wpt lat="32.862572000" lon="-108.289883000">
-<name>Gila Alternate start</name>
-</wpt>
+
+<wpt lat="32.862572000" lon="-108.289883000">  <name>Gila Alternate start</name></wpt>
 
 <trk><name>Gila Alt</name><trkseg>
       <trkpt lat="32.862572000" lon="-108.289883000">         <name>G-0000OP</name>       </trkpt>
@@ -634,9 +631,8 @@
 </trkseg></trk>
 
 <!-- PieTown via Manga : evite 14mi de US60, plus court de 9mi -->
-<wpt lat="33.932663000" lon="-108.418897000">
-<name>Pie Town Alternate start</name>
-</wpt>
+
+<wpt lat="33.932663000" lon="-108.418897000">   <name>Pie Town Alternate start</name></wpt>
 
   <trk><name>Pie Town via Mangas</name>
     <trkseg>
@@ -796,9 +792,9 @@
 </trkseg></trk>
 
 
-<wpt lat="34.83952" lon="-107.91163"> <name>Narrows, Mesa climb to Ventana Arch</name></wpt>
+<wpt lat="34.654676" lon="-107.998098"> <name>Cebolla-Wilderness Alt start (Narrows, Mesa climb to Ventana Arch)</name></wpt>
 
-  <trk><name>Cebolla-Wilderness Mesa</name>		<cmt> Pour Ventana/Mesa plutot que le lava field </cmt>
+  <trk><name>Cebolla-Wilderness Narrows/Mesa Alt</name>		<cmt> Pour Ventana/Mesa plutot que le lava field </cmt>
     <trkseg>
       <trkpt lat="34.654676000" lon="-107.998098000">         <name>CW-245M</name>       </trkpt>
       <trkpt lat="34.656476000" lon="-107.992905000">         <name>CW-250M</name>       </trkpt>
@@ -878,9 +874,6 @@
 </trkseg></trk>
 
 
-
-
-<wpt lat="34.9674" lon="-108.0038"> <name>Lava cave</name></wpt>
 
 <wpt lat="34.942381000" lon="-107.934697000"> <name>Bonita-Zuni Alternate start</name></wpt>
   <trk><name>Bonita-Zuni</name>
@@ -977,7 +970,11 @@
 <trkpt lat="35.215025747" lon="-107.656580142"> <name>RL0551.5-NM</name></trkpt>
 </trkseg></trk>
 
-  <trk><name>Mount-Taylor</name>
+
+
+<wpt lat="35.217999000" lon="-107.656227000">   <name>Mount Taylor Alt start</name> </wpt>
+
+  <trk><name>Mount Taylor Alt</name>
     <trkseg>
       <trkpt lat="35.217999000" lon="-107.656227000">         <name>MT-000M</name>       </trkpt>
       <trkpt lat="35.218476000" lon="-107.640247000">         <name>MT-010M</name>       </trkpt>
@@ -986,8 +983,8 @@
       <trkpt lat="35.225789000" lon="-107.620484000">         <name>MT-025M</name>       </trkpt>
       <trkpt lat="35.226108000" lon="-107.611994000">         <name>MT-030M</name>       </trkpt>
       <trkpt lat="35.231336000" lon="-107.607432000">         <name>MT-035M</name>       </trkpt>
-      <trkpt lat="35.242637000" lon="-107.606901000">         <name>MT-045M</name>       </trkpt>
       <trkpt lat="35.238685000" lon="-107.608382000">         <name>MT-047HP</name>       </trkpt>
+      <trkpt lat="35.242637000" lon="-107.606901000">         <name>MT-045M</name>       </trkpt>
       <trkpt lat="35.246242000" lon="-107.600797000">         <name>MT-050M</name>       </trkpt>
       <trkpt lat="35.250413000" lon="-107.596543000">         <name>MT-055M</name>       </trkpt>
       <trkpt lat="35.254086000" lon="-107.589713000">         <name>MT-060M</name>       </trkpt>
@@ -1264,6 +1261,8 @@
 <trkpt lat="36.327540896" lon="-106.627422694"> <name>RL0689.0-NM</name></trkpt>
 </trkseg></trk>
 
+
+<wpt lat="36.329611000" lon="-106.624066000">         <name>Ghost Ranch Alt start</name> </wpt>
 
   <trk><name>Ghost Ranch Alternate</name>			<cmt> Populaire, vraiment plus scenique que le balcon ? </cmt>
     <trkseg>
@@ -1699,16 +1698,6 @@
 <trkpt lat="37.625686293" lon="-107.138238023"> <name>RL0902.5-CO</name></trkpt>
 <trkpt lat="37.629720438" lon="-107.143108525"> <name>RL0903.0-CO</name></trkpt>
 <trkpt lat="37.634886288" lon="-107.142690401"> <name>RL0903.5-CO</name></trkpt>
-</trkseg></trk>
-
-<wpt lat="37.63333" lon="-107.14722">  <name>Knife Edge</name></wpt>
-<wpt lat="37.79788" lon="-107.53865">  <name>Rio Grande river source</name></wpt>
-<wpt lat="37.98694" lon="-106.93143">  <name>San Luis Peak</name></wpt>
-
-
-<!--  -->
-<trk><name>Red Line CDT</name><trkseg>
-<trkpt lat="37.634886288" lon="-107.142690401"> <name>RL0903.5-CO</name></trkpt>
 <trkpt lat="37.636701048" lon="-107.149361812"> <name>RL0904.0-CO</name></trkpt>
 <trkpt lat="37.636006836" lon="-107.156465709"> <name>RL0904.5-CO</name></trkpt>
 <trkpt lat="37.632421843" lon="-107.160415993"> <name>RL0905.0-CO</name></trkpt>
@@ -2125,8 +2114,9 @@
 </trkseg></trk>
 
 
+<wpt lat="38.692332960" lon="-106.414117030">         <name>Mirror Lake Alt start</name> </wpt>
 
-  <trk><name>Mirror Lake</name>		<cmt> NON ? 9% pris en 2021 </cmt> 
+  <trk><name>Mirror Lake Alt</name>		<cmt> NON ? 9% pris en 2021 </cmt> 
     <trkseg>
       <trkpt lat="38.692332960" lon="-106.414117030">         <name>CL-000RL</name>       </trkpt>
       <trkpt lat="38.693766020" lon="-106.420914000">         <name>CL-005M</name>       </trkpt>
@@ -2181,8 +2171,6 @@
       <trkpt lat="38.873091970" lon="-106.426672030">         <name>CL-226XL</name>       </trkpt>
     </trkseg>
   </trk>
-
-
 
 
 <!-- After Mirror Lake -->
@@ -2469,7 +2457,7 @@
 </trkseg></trk>
 
 
-<wpt lat="39.57489" lon="-105.83727"><name>Edge to Argentine Peak then Grays</name></wpt>
+<wpt lat="39.57489" lon="-105.83727"><name>Argentine Alt start (Edge to Argentine Peak then Grays)</name></wpt>
 
 <trk><name>Argentine Peak Alternate (fill up water before)</name><trkseg>
 <trkpt lat="39.57284846" lon="-105.838546519"> <name>RL1272.0-CO</name></trkpt>
@@ -2489,8 +2477,6 @@
 <trkpt lat="39.626249457" lon="-105.782252385"> <name>RL1280.5-CO</name></trkpt>
 </trkseg></trk>
 
-
-<wpt lat="39.63364" lon="-105.81715"><name>Grays Peak</name></wpt>
 
 <!-- After Argentine -->
 <trk><name>Red Line CDT</name><trkseg>
@@ -3504,10 +3490,9 @@
 </trkseg></trk>
 
 
-<wpt lat="42.621719000" lon="-109.131662000">     <name>Cirque of the Towers Alternate</name></wpt>
+<wpt lat="42.621719000" lon="-109.131662000">     <name>Cirque of the Towers Alternate start</name></wpt>
 
-<trk><name>Cirque-of-the-Towers</name>
-    <trkseg>
+<trk><name>Cirque of the Towers Alternate</name> <trkseg>
 <trkpt lat="42.621388046" lon="-109.132451423"> <name>RL1783.5-WY</name></trkpt>
       <trkpt lat="42.621719000" lon="-109.131662000">         <name>CT-000XR</name>       </trkpt>
       <trkpt lat="42.625440000" lon="-109.128656000">         <name>CT-003XL</name>       </trkpt>
@@ -3627,10 +3612,9 @@
   </trk>
 
 
-<wpt lat="43.070862000" lon="-109.645934000">         <name>Knapsack Col Alternate</name> </wpt>
+<wpt lat="43.070862000" lon="-109.645934000">         <name>Knapsack Col Alternate start</name> </wpt>
 
-  <trk><name>Knapsack Col Alternate</name>
-    <trkseg>
+  <trk><name>Knapsack Col Alternate</name> <trkseg>
 <trkpt lat="43.067184347" lon="-109.648819876"> <name>RL1838.5-WY</name></trkpt>
       <trkpt lat="43.070862000" lon="-109.645934000">         <name>KC-000M</name>       </trkpt>
       <trkpt lat="43.075047000" lon="-109.639990000">         <name>KC-005M</name>       </trkpt>
@@ -6024,9 +6008,6 @@
 <trkpt lat="49.045079124" lon="-113.917250358"> <name>RL3030.0-MT</name></trkpt>
 <trkpt lat="49.046817352" lon="-113.916811945"> <name>RL3030.5-MT</name></trkpt>
 </trkseg></trk>
-
-
-<wpt lat="47.68938" lon="-113.15089"><name>Chinese Wall</name></wpt>
 
 
 
