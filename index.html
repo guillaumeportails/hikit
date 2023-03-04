@@ -35,19 +35,20 @@
 	<div id="divphoto">
 		<button type="button" onclick="photoUpdate()">Show more</button>
 		<span style="float:right;">
-			<label for="autoFlyTo">auto fly to</label>
+			<label for="photo:autoFlyTo">auto fly to</label>
 			<input type="checkbox" id="photo:autoFlyTo" name="FlyTo">&rarr;
 		</span>
-		<pre id="photo:debug" style="white-space: pre-wrap;">DEBUGZONE</pre>
-		<div id="photo:feed" style="justify-content: center;"></div>
+		<div id="photofeed"></div>
+		<!-- <div id="photobottom">- -</div>  <!-- to let the resize handle not cleared by the scroll bar -->
 		<script src="drive.js"></script>
 	</div>
 
 	<!-- ======= MAP div (tracks/*.js ignored (with error) when minified/bundled -->
 	<div id="divmap">
 		<p id="msgmap">Planned and actual routes</p>
-		<a id="logo" href="https://continentaldividetrail.org/" target="_blank"></a>
-		<div id="eltmap" style="width:100%; height:100%"></div>
+		<div id="eltmap" style="width:100%; height:100%">
+			<a id="logo" href="https://continentaldividetrail.org/" target="_blank"></a>
+		</div>
 		<script src="tracks/CDG_CrazyCook.js"></script>
 		<script src="tracks/Places.js"></script>
 		<script src="tracks/CDT2023_plan.js"></script>
@@ -57,7 +58,6 @@
 
 	<!-- ======= INSTAGRAM div -->
 	<div id="divinsta"> <!-- onmousemove="toto()"> -->
-		<button onclick="tutu()">HERE</button>
 		<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 		<iframe id="igfeed" src="https://cdn.lightwidget.com/widgets/b9c78f86ff165262b3093e1cbc23bbd1.html"
 			scrolling="no" allowtransparency="true" class="lightwidget-widget"

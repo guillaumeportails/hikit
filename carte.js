@@ -773,14 +773,15 @@ function mapFlyTo(lat, lon, ref) {
             mapCtrlLayers.addOverlay(lgPlaces, 'Places');
         }
         const m = L.circleMarker([lat, lon], { interactive: true, radius: 8
-        }).bindPopup(ref, { interactive: true, closeButton: false });
+        }).bindPopup(ref, { interactive: true, closeButton: true });
         lgPlaces.addLayer(m).addTo(map);
 //      let tid = -1;
         m.on('mouseover', function () {
+            m.openPopup();
 //          if (tid >= 0) { clearTimeout(tid); tid = -1; }
-            m.openPopup().getPopup().on('mouseout', function () {
-                /*tid =*/ setTimeout(function () { m.closePopup(); }, 1000);  // TODO: unset si mouseover again
-            });
+            // m.openPopup().getPopup().on('mouseout', function () {
+            //     /*tid =*/ setTimeout(function () { m.closePopup(); }, 1000);  // TODO: unset si mouseover again
+            // });
         });
     }
     const z = (firstfly) ? 8 : map.getZoom();

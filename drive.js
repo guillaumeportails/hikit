@@ -8,8 +8,7 @@
 // + iframe is not supported byt gapi.drive (can't insert a drive UI with a simple iframe)
 
 // Script is loaded after these DOM elements, cf index.html
-var domtof = document.getElementById("photo:feed");
-var domdbg = document.getElementById('photo:debug');
+var domtof = document.getElementById("photofeed");
 var domfly = document.getElementById('photo:autoFlyTo');
 
 let tof = {};
@@ -39,8 +38,7 @@ async function initializeGapiClient() {
         discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
     });
     console.log('gapi.client.init-ed');
-    domdbg.innerHTML = 'initClient feeds';
-    //  feedDrive();     No auto load, to spare GAPI usage
+    feedDrive();   //  No auto load, to spare GAPI usage during dev
 }
 
 //------------------------------------------------------
@@ -64,12 +62,14 @@ function fileAdd(gf) {
         t = `<center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
     } catch { };
     r = '<hr>'
-        + `<a href="${gf.webViewLink}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
-        +   `<figure id="photo${n}">`
+        + `<div ${o}>`
+//      + `<a href="${gf.webViewLink}" id="photo${n}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
+        + `<a href="${gf.webViewLink}" id="photo${n}" target="_blank">`
+        +   `<figure>`
         +     `<img src="${gf.thumbnailLink}" alt="${gf.name}">`
         +     `<figcaption>${t}</figcaption>`
         +   '</figure>'
-        + '</a>';
+        + '</a></div>';
     return r;
 }
 
@@ -82,7 +82,7 @@ function flyToIf(img, lat, lon, ref) {
     if (domfly.checked) {
         if (typeof(ref) == 'number')
             ref = document.getElementById(`photo${ref}`).cloneNode(true);
-        img.firstChild.firstChild.style.borderStyle = 'solid';  // 'ridge'
+//      img.firstChild.firstChild.style.borderStyle = 'solid';  // 'ridge'
         mapFlyTo(lat, lon, ref);
     }
 }
@@ -114,8 +114,7 @@ async function feedDrive() {
     try {
         response = await gapi.client.drive.files.list(fileSelection);
     } catch (err) {
-        console.log(`Error: ${err}`);
-        domdbg.innerText = err;
+        console.log(`photo: Error: ${err}`);
         return;
     }
     // Token for the next page
@@ -124,7 +123,7 @@ async function feedDrive() {
     // Gotten files[]
     const files = response.result.files;
     if (!files || files.length == 0) {
-        domdbg.innerText = 'No files found.';
+        console.log('photo: No files found.');
         return;
     }
     console.log(`${who} got files[${files.length}]`);
@@ -138,6 +137,6 @@ async function feedDrive() {
 // User update request
 function photoUpdate() {
     console.log('photoUpdate');
-    feedDrive().catch(function handle(e) { domdbg.innerText = `catch1=${e}`; });
+    feedDrive().catch(function handle(e) { console.log(`photo: catch1=${e}`); });
 }
 
