@@ -47,7 +47,9 @@ async function initializeGapiClient() {
 
 
 // GoogleDrive JPG file to HTML presentation in the divphoto
-//
+// HTML UL or DIV, which one is lighter ? UL needs to remove the bullet
+// NB: Minify does not concat literals
+// r = ...+ `<a href="${gf.webViewLink}" id="photo${n}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
 var numPhoto = 0;
 function fileAdd(gf) {
     let n = ++numPhoto;
@@ -61,16 +63,8 @@ function fileAdd(gf) {
         o = ` onmouseover="flyToIf(this,${lat.toFixed(6)},${lon.toFixed(6)},${n})"`;
         t = `<center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
     } catch { };
-    r = '<hr>'
-        + `<div ${o}>`
-//      + `<a href="${gf.webViewLink}" id="photo${n}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
-        + `<a href="${gf.webViewLink}" id="photo${n}" target="_blank">`
-        +   `<figure>`
-        +     `<img src="${gf.thumbnailLink}" alt="${gf.name}">`
-        +     `<figcaption>${t}</figcaption>`
-        +   '</figure>'
-        + '</a></div>';
-    return r;
+    return `<hr><div ${o}><a href="${gf.webViewLink}" id="photo${n}" target="_blank">`
+           +    `<figure><img src="${gf.thumbnailLink}" alt="${gf.name}"><figcaption>${t}</figcaption></figure></a></div>`;
 }
 
 // Center the map here

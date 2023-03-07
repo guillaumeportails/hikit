@@ -48,7 +48,7 @@ function addslashes(str) {
 //
 // Cf https://leaflet-extras.github.io/leaflet-providers/preview/
 //
-// Cf http://wiki.openstreetmap.org/wiki/Zoom_levels
+// Cf https://wiki.openstreetmap.org/wiki/Zoom_levels
 //    Z    m/pixel    km/tile   (256pixels/tile, m pour lat=0)
 //    9                 80.0
 //   10    152.0        39.0
@@ -74,13 +74,13 @@ const Zoom2Mile = [
 
 
 const tilesWatercolor = new L.TileLayer(
-    'http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
+    'http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {      // NOT https
     maxZoom: 17,
     attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
 });
 
 const tilesToner = new L.TileLayer(
-    'http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+    'http://tile.stamen.com/toner/{z}/{x}/{y}.png', {          // NOT https
     maxZoom: 15,
     attribution: 'Stamen.com, Sourced from LINZ. CC-BY 3.0'
 });
@@ -88,13 +88,13 @@ const tilesToner = new L.TileLayer(
 const tilesTerrain = L.tileLayer(
     'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
     maxZoom: 18,
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    attribution: 'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     subdomains: 'abcd',
     ext: 'png'
 });
 
 const tilesOSM = new L.TileLayer(
-    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     subdomains: 'abc',
     attribution: 'OpenStreetMap. CC-BY 3.0'
@@ -104,7 +104,7 @@ const tilesOTM = new L.TileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', /* https pour le site OTM uniquement ?*/ {
     maxZoom: 17,
     subdomains: 'abc',
-    attribution: '&copy; <a href="http://opentopomap.org/credits">OpenTopoMap</a> CC-BY-SA'
+    attribution: '&copy; <a href="https://opentopomap.org/credits">OpenTopoMap</a> CC-BY-SA'
 });
 
 const tilesUSGS = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
@@ -125,14 +125,14 @@ const tilesOutdoors = new L.TileLayer(
 });
 
 const tilesHikeBike = new L.TileLayer(
-    'http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+    'https://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
     maxZoom: 17,
     subdomains: 'abc',
     attribution: '<a href="https://www.thunderforest.com">Thunderforest, CC-BY 3.0</a>'
 });
 
 const tilesDelorme = new L.TileLayer(
-    'http://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
+    'https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
     minZoom: 1,
     maxZoom: 11,
     attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme'
@@ -149,14 +149,14 @@ const tilesImagery = L.tileLayer(
 });
 
 const tilesKorona = new L.TileLayer(
-    'http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+    'https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
     minZoom: 1,
     maxZoom: 18,
     attribution: 'Tiles &copy; Korona Uni-Heidelberg'
 });
 
 const tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
-    'http://localhost:3000/tiles/{z}/{x}/{y}.png', {
+    'https://localhost:3000/tiles/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: 'OSM, LINZ, et al., CC-BY-SA'
 });
@@ -164,13 +164,13 @@ const tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
 const basemaps = {
     'OSM': tilesOSM,
     'OTM (m)': tilesOTM,
-    //  'Hike,Bike': tilesHikeBike,
+//  'Hike,Bike': tilesHikeBike,
     'USGS (ft)': tilesUSGS,
     'USGS imagery': tilesUSGSimageryTopo,
     'Outdoors (m)': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
-    //  'Korona': tilesKorona,
+//  'Korona': tilesKorona,
     'watercolor': tilesWatercolor,
     'toner': tilesToner,
     'terrain': tilesTerrain,
@@ -332,7 +332,7 @@ var control = L.Control.fileLayerLoad({
     //you can pass L.Proj.geoJson and load the files into the
     //L.Proj.GeoJson instead of the L.geoJson.
     layer: L.geoJson,
-    //See http://leafletjs.com/reference.html#geojson-options
+    //See https://leafletjs.com/reference.html#geojson-options
     layerOptions: {
         style: {
             color: 'black'
@@ -685,7 +685,7 @@ async function loadInfos() {
     //         //    (meme localhost) different de inreachfeed.
     //         // Quelques contournement possibles :
     //         // 1) Utiliser un proxy
-    //         //  Cf http://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
+    //         //  Cf https://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
     //         //    Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
     //         //    plusieurs, en trouvant la taille limite
     //         // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
