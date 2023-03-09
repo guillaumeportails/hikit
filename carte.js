@@ -164,13 +164,13 @@ const tilesLocal = new L.TileLayer( // Special : server HTTP local pour mix
 const basemaps = {
     'OSM': tilesOSM,
     'OTM (m)': tilesOTM,
-//  'Hike,Bike': tilesHikeBike,
+    //  'Hike,Bike': tilesHikeBike,
     'USGS (ft)': tilesUSGS,
     'USGS imagery': tilesUSGSimageryTopo,
     'Outdoors (m)': tilesOutdoors,
     'DeLorme': tilesDelorme,
     'WorldStreets': tilesWorldStreets,
-//  'Korona': tilesKorona,
+    //  'Korona': tilesKorona,
     'watercolor': tilesWatercolor,
     'toner': tilesToner,
     'terrain': tilesTerrain,
@@ -386,7 +386,7 @@ function addGpx(f, s = { color: 'red' }) {
 
 // KML layer from a JSON   (KML is more style'able than GPX)
 // ! GpsBabel de transcode pas les styles (il s'occupe de geometrie)
-function layerKml(geojson, style = { color: '', weight: 3, opacity: 1} ) {
+function layerKml(geojson, style = { color: '', weight: 3, opacity: 1 }) {
     return L.geoJson(geojson, {
         style: function (f) {   // https://leafletjs.com/reference.html#path-option
             return {            // Transcode the styling found in KML  !Placemarks not caught here
@@ -425,12 +425,20 @@ function inreachBubble(prop) {
 }
 
 
+// Convertir le texte XML en layer Leaflet dans la map / overlay
+// ! toGeoJson.kml() de mapbox 0.3.1 perd les <TimeStamp>
+//   La spec KML dit juste que TimeStamp est au format std de date XML,
+//   qui demande que le suffixe indique le type de temps, ex: Z = UTC
+//   Cf https://developers.google.com/kml/documentation/kmlreference#timestamp
+//      https://www.w3.org/TR/xmlschema-2/#isoformats
+// TODO : si on peut filter-out YQL de ExtendedData pour permettre plus de Placemark,
+//        alors suivre le TimeStamp pour trouver les "Je dors ici".
 // Cf https://github.com/mapbox/leaflet-omnivore/blob/master/index.js
 //  pour les param de kml.Parse, qui est kmlParse, qui appelle toGEOJSON mais sans lui passer
 //  d'options : fait a la main en incluant ici le code d'appel de toGeoJSON
 
-function myKmlParse(xmldoc, title, cmt) {
-    var line = []; // Pour reconstruire une L.Polyline des kml <Placemark>
+function inreachKmlParse(xmldoc, title, cmt) {
+    var line = [];          // Pour reconstruire une L.Polyline des kml <Placemark>
     var prev = null;
     var wasz = false;
     var timl = new Date();
@@ -438,15 +446,7 @@ function myKmlParse(xmldoc, title, cmt) {
         animate: true,
         disableClusteringAtZoom: 12
     });
-    // Convertir le XMLDocument data en texte geoJSON puis en layer geojson
-    // ! toGeoJson.kml() de mapbox 0.3.1 perd les <TimeStamp>
-    //   La spec KML dit juste que TimeStamp est au format std de date XML,
-    //   qui demande que le suffixe indique le type de temps, ex: Z = UTC
-    //   Cf https://developers.google.com/kml/documentation/kmlreference#timestamp
-    //      https://www.w3.org/TR/xmlschema-2/#isoformats
-    // TODO : si on peut filter-out YQL de ExtendedData pour permettre plus de Placemark,
-    //        alors suivre le TimeStamp pour trouver les "Je dors ici".
-    var lgeo = L.geoJson(toGeoJSON.kml(xmldoc), options = {
+    var inreachLayer = L.geoJson(null, {
         filter: function (f) {
             // L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
             return f.geometry.type == 'Point';
@@ -475,7 +475,7 @@ function myKmlParse(xmldoc, title, cmt) {
             return prev;
         }
     });
-    setInfo(line.length + " InReach points " + cmt);
+    var lgeo = omnivore.kml.parse(xmldoc, null, inreachLayer);
     if (line.length > 0) {
         mlin = L.polyline(line, {
             color: 'firebrick',
@@ -485,6 +485,7 @@ function myKmlParse(xmldoc, title, cmt) {
         lgeo.bindPopup(function (layer) {
             return inreachBubble(layer.feature.properties);
         }).addTo(mgrp);
+        mapCtrlLayers.addOverlay(mgrp, cmt);
         map.addLayer(mgrp);
     }
 }
@@ -520,7 +521,7 @@ async function loadInfos() {
     //------ Layer : The Plan
     const lgPlan = L.featureGroup();
     lgPlan.addLayer(layerGpx(geoCDT2023_plan, { color: 'DarkOrchid', weight: 3, opacity: 1.0 }));
-    const lgPOI = L.markerClusterGroup({showCoverageOnHover: false});
+    const lgPOI = L.markerClusterGroup({ showCoverageOnHover: false });
     lgPOI.addLayer(layerKml(geoPlaces));
     lgPlan.addLayer(lgPOI);
     mapCtrlLayers.addOverlay(lgPlan, 'The Plan (hopefully)');
@@ -622,136 +623,136 @@ async function loadInfos() {
         setTimeout(function () {
             map.flyTo(L.latLng(42.3, -106.8), 5, { animate: true, duration: 3.0, easeLinearity: 0.2 });
         }, 500);
-        });
+    });
 
 
-    // // Lecture du eventuel tracks/feed.kml qui serait arrive ici par ses propres moyens ...
-    // $.ajax({
-    //     type: 'GET',
-    //     url: 'tracks/feed.kml',
-    //     dataType: 'xml',
-    //     contentType: 'text/plain',
-    //     xhrFields: {
-    //         withCredentials: true
-    //     },
-    //     headers: {},
-    //     success: function(data, textstatus, xhdr) { // data : XMLDocument
-    //         console.log("GOT " + data.getElementsByTagName(
-    //                 '*').length +
-    //             " elements (same-domain)");
-    //         myKmlParse(xmldoc = data, title = "InReach feed", cmt = "(hosted)");
-    //     },
-    //     error: function() {
-    //         console.log("GET tracks/feed.kml error");
-    //     }
-    // });
 
-    // Recherche du feed sur le domaine InReach
+    //------ Layer : Inreach feed
+    //
+    // Si un fichier tracks/feed.kml est present (uploade depuis le terrain ...)
+    // Alors on l'ajoute
+    // Sinon on tente de charger l'URL InReach
+    //
+    // TODO: c'est la meme fonction seule l'URL change ... :
+    //
+    fetch('tracks/feed.kml', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+        }
+    }).then(resp => {
+        if (!resp.ok) {
+            console.log(`fetch(feed): failed ${resp.status}`);
+            return resp;
+        } else {
+            console.log(`fetch(feed): GOT`);
+            return resp.text();
+        }
+    }).then(xml => {
+        console.log(`fetch(feed): XML ${xml.substring(1, 30)}...`);
+        // Le KML du feed InReach est particulier, on utilise un parser particulier
+        // plutot que :
+        //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
+        //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
+        //   lInreach.addTo(map);
+        inreachKmlParse(xmldoc = xml, title = 'InReach', cmt = 'Actual track');
+    });
+//  return; // FIX ME : continuer sur garmin si le feed.kml est absent, gerer les erreurs du fetch()
+
+    // Recherche du feed KML sur le domaine InReach delorme (devenu garmin)
+    // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
+    // 
+    // NB: HTTP-301 https://inreach.garmin.com/Feed/Share/...
+    //              https://explore.garmin.com/Feed/Share/ThierryBernier
+    //   .../ShareLoader/...    : rend un petit KML contenant juste un <href>...
+    //   .../Share/...          : rend un KML brut autoportant
+    //     ?d1=<date format JSON du point le plus ancien>
+    //     ?d2=<date format JSON du point le plus recent>
+    //   Sans d1, seul le point le plus recent est rendu
+    //   Le KML contient des placemark par date croissante
     //
     // + Expansion XML du feed InReach = 47 eltXML par Placemark
-    // + YQL accepte au moins 84 Placemark = 8 jours
-    //       vu un succes avec 320 points (14764 eltXML)
-    const days = getParameterByName('days') || 30;
+    const days = getParameterByName('days') || (3 * 365);
     console.log('days = ' + days);
-    var d1 = new Date();
-    d1.setTime(Date.now() - days * 86400 * 1000)
+    const date1 = new Date(Date.now() - days * 1000 * 86400);   // Commencer a cette date
+    const date2 = new Date(Date.now() - 3 * 1000 * 86400);      // Cacher les 3 derniers jours
+    const d1 = '2017-09-01'; //date1.toJSON().substring(0, 10);                 // YYYY-MM-DD suffit a inreach
+    const d2 = '2018-03-30'; //date2.toJSON().substring(0, 10);
+    const inreachfeed = `https://share.garmin.com/Feed/Share/ThierryB?d1=${d1}&d2=${d2}`;
+    //
+    // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
+    //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
+    //    (meme localhost) different de inreachfeed.
+    // Quelques contournement possibles :
+    // 1) Utiliser un proxy
+    //  1a) Cf https://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
+    //      Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
+    //      plusieurs, en trouvant la taille limite
+    //  1b) query.yahooapis.com ... Supprimee en 2019
+    //      limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
+    //      const url ='https://query.yahooapis.com/v1/public/' + encodeURI('yql?q=select * from xml where url=')
+    //                    + '%22' + inreachfeed + '%22';
+    //      fetch(yql_query, {
+    //          method: 'GET',
+    //          mode: 'cors',
+    //          headers: {
+    //              'Accept': 'application/xml',
+    //              'Content-Type': 'application/xml'
+    //          }
+    //      }).then(resp => resp.json()).then(json => {
+    //          console.log("YQL " + json);
+    //          myKmlParse(xmldoc = data, title = "Inreach since " + d1, cmt = "(proxyed)");
+    //      });
+    //  1c) google 'CORS proxy' :
+    //      https://nordicapis.com/10-free-to-use-cors-proxies/
+    //      https://corsproxy.io/
+    // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
+    //  2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
+    //         alors il suffit de precharger le inreachfeed.
+    //         Par exemple en profitant du code node.js qui permet de servir localement
+    //         des tuiles de a Leaflet.
+    //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
+    // 3) Cf https://github.com/rndme/download : hors-sujet
+    //    var xhr = createCORSRequest('GET', inreachfeed);
+    //    if (!xhr) { console.log('CORS not supported'); } else {
+    //      xhr.onload  = function() { console.log(xhr.responseText); };
+    //      xhr.onerror = function() { console.log("error"); };
+    //      xhr.withCredentials = true;
+    //      xhr.send();
+    //    }
+    // 4) Faire que le browser accepte un GET cross domain.
+    //    C'est possible pour firefox avec ce plugin :
+    //      https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/
+    // 5) Ajouter une iframe cachee dans la page, y inclure un script de fetch(inreachfeed)
+    //    et communiquer avec via window.postMessage()
+    //
+    // => Utiliser un proxy CORS
+    const url = 'https://corsproxy.io/?' + encodeURIComponent(inreachfeed);
 
-    // KML du tracking emis par la balise InReach :
-    // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
-    const inreachfeed = 'https://inreach.garmin.com/Feed/Share/' +
-        'ThierryBernier?d1=' + d1.toJSON();
-    //                                  + '%26d2=' + d2.toJSON();
-
-    // Tentative de GET Cross-Domain (en principe cela echoue avec un browser moderne / par defaut)
-    // omnivore.kml(inreachfeed).addTo(map);
-    // $.ajax({
-    //     type: 'GET',
-    //     url: inreachfeed,
-    //     dataType: 'xml',
-    //     contentType: 'text/plain',
-    //     xhrFields: {
-    //         withCredentials: true
-    //     },
-    //     headers: {},
-    //     crossDomain: true,
-    //     success: function (data, textstatus, xhdr) { // data : XMLDocument
-    //         console.log("GOT " + data.getElementsByTagName(
-    //             '*').length + " elements (CORS)");
-    //         myKmlParse(xmldoc = data, title = "InReach since " + d1, cmt = "(CORS)");
-    //     },
-    //     error: function () {
-    //         // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
-    //         //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
-    //         //    (meme localhost) different de inreachfeed.
-    //         // Quelques contournement possibles :
-    //         // 1) Utiliser un proxy
-    //         //  Cf https://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
-    //         //    Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
-    //         //    plusieurs, en trouvant la taille limite
-    //         // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
-    //         //  2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
-    //         //         alors il suffit de precharger le inreachfeed.
-    //         //         Par exemple en profitant du code node.js qui permet de servir localement
-    //         //         des tuiles de a Leaflet.
-    //         //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
-    //         // 3) ?
-    //         //    Cf https://github.com/rndme/download : hors-sujet
-    //         //    var xhr = createCORSRequest('GET', inreachfeed);
-    //         //    if (!xhr) { console.log('CORS not supported'); } else {
-    //         //      xhr.onload  = function() { console.log(xhr.responseText); };
-    //         //      xhr.onerror = function() { console.log("error"); };
-    //         //      xhr.withCredentials = true;
-    //         //      xhr.send();
-    //         //    }
-    //         // 4) Faire que le browser accepte un GET cross domain.
-    //         //    C'est possible pour firefox avec ce plugin :
-    //         //      https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/
-    //         console.log(
-    //             "GET tracks/feed.kml error reverting to YQL"
-    //         );
-    //         // Emploi du web service publique YQL pour resoudre CORS :
-    //         // + limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
-    //         // Limiter via https://developer.yahoo.com/yql/guide/paging.html ne semble pas marcher
-    //         // => Changer les dates d1 et d2 dans l'URL de feed inreach
-    //         //    Ex: chartreuse 2017/07 3 jours = 658 items, 1608 Document.elements : ok
-
-    //         const yql_query =
-    //             'https://query.yahooapis.com/v1/public/' +
-    //             encodeURI(
-    //                 'yql?q=select * from xml where url=') +
-    //             "%22" + inreachfeed + '%22';
-    //         console.log("ajax GET " + yql_query);
-    //         $.ajax({
-    //             type: 'GET',
-    //             url: yql_query,
-    //             dataType: 'xml',
-    //             contentType: 'text/plain',
-    //             xhrFields: {
-    //                 withCredentials: true
-    //             },
-    //             headers: {},
-    //             crossDomain: true,
-    //             timeout: 7 * 1000, // YQL peut etre lent
-    //             success: function (data,
-    //                 textstatus, xhdr) { // data : XMLDocument
-    //                 console.log("GOT " + data
-    //                     .getElementsByTagName(
-    //                         '*').length +
-    //                     " XML elements (proxyed)"
-    //                 );
-    //                 if (data.getElementsByTagName(
-    //                     '*').length < 40)
-    //                     console.log(data); // TODO: recommencer avec 0.8*days
-    //                 myKmlParse(xmldoc = data, title = "Inreach since " + d1, cmt = "(proxyed)");
-    //             },
-    //             error: function () {
-    //                 console.log(
-    //                     "ajax/YQL error");
-    //             }
-    //         });
-    //     } // Cas error du ajax.GET direct
-    // });
-
+    console.log(`fetch ${inreachfeed}`);
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+        }
+    }).then(resp => {
+        if (!resp.ok) {
+            console.log(`fetch(inreach): failed ${resp.status}`);
+            // Echec: voir si un feed local est present dans tracks/     TODO
+            return resp;
+        } else {
+            console.log(`fetch(inreach): GOT `);
+            return resp.text();
+        }
+    }).then(xml => {
+        console.log(`fetch(inreach): XML ${xml.substring(1, 30)}...`);
+        // Le KML du feed InReach est particulier, on utilise un parser particulier
+        // plutot que :
+        //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
+        //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
+        //   lInreach.addTo(map);
+        inreachKmlParse(xmldoc = xml, title = 'InReach since ' + d1, cmt = 'Actual online');
+    });
 
 } // loadInfos()
 
@@ -772,13 +773,14 @@ function mapFlyTo(lat, lon, ref) {
             lgPlaces = L.markerClusterGroup();
             mapCtrlLayers.addOverlay(lgPlaces, 'Places');
         }
-        const m = L.circleMarker([lat, lon], { interactive: true, radius: 8
+        const m = L.circleMarker([lat, lon], {
+            interactive: true, radius: 8
         }).bindPopup(ref, { interactive: true, closeButton: true });
         lgPlaces.addLayer(m).addTo(map);
-//      let tid = -1;
+        //      let tid = -1;
         m.on('mouseover', function () {
             m.openPopup();
-//          if (tid >= 0) { clearTimeout(tid); tid = -1; }
+            //          if (tid >= 0) { clearTimeout(tid); tid = -1; }
             // m.openPopup().getPopup().on('mouseout', function () {
             //     /*tid =*/ setTimeout(function () { m.closePopup(); }, 1000);  // TODO: unset si mouseover again
             // });

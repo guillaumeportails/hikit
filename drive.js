@@ -8,11 +8,13 @@
 // + iframe is not supported byt gapi.drive (can't insert a drive UI with a simple iframe)
 
 // Script is loaded after these DOM elements, cf index.html
-var domtof = document.getElementById("photofeed");
-var domfly = document.getElementById('photo:autoFlyTo');
+const domtof = document.getElementById("photofeed");
+const domfly = document.getElementById('photo:autoFlyTo');
 
+// The variable/object of the drive.js feature
 let tof = {};
 tof.nextPageToken = '';
+tof.files = [];
 
 
 //-------------------------------------------------------
@@ -58,14 +60,31 @@ function fileAdd(gf) {
     try {
         const lat = gf.imageMediaMetadata.location.latitude;
         const lon = gf.imageMediaMetadata.location.longitude;
-//      const tooltip = `'<img src="${gf.thumbnailLink}"><br><center>${gf.imageMediaMetadata.time}</center>'`;
+        //      const tooltip = `'<img src="${gf.thumbnailLink}"><br><center>${gf.imageMediaMetadata.time}</center>'`;
         const tooltip = `'${gf.imageMediaMetadata.time}'`;
         o = ` onmouseover="flyToIf(this,${lat.toFixed(6)},${lon.toFixed(6)},${n})"`;
         t = `<center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
     } catch { };
     return `<hr><div ${o}><a href="${gf.webViewLink}" id="photo${n}" target="_blank">`
-           +    `<figure><img src="${gf.thumbnailLink}" alt="${gf.name}"><figcaption>${t}</figcaption></figure></a></div>`;
+        + `<figure><img src="${gf.thumbnailLink}" alt="${gf.name}"><figcaption>${t}</figcaption></figure></a></div>`;
 }
+
+// To sort tof.files "most recent first"
+function fileSub(a, b) {
+    try {
+        const ta = a.imageMediaMetadata.time;
+        const tb = b.imageMediaMetadata.time;
+        if (ta == tb) return 0;
+        if (ta < tb) return 1;
+        return -1;
+    } catch { };
+    return 1;
+}
+function onlyUnique(file, index, filesarray) {
+    // "The first element of filesarray with the id of file.id is file"
+    return filesarray.findIndex((v) => v.id == file.id) === index;
+}
+
 
 // Center the map here
 // ! Il semble etre un bug de passer un DOM Element a bindTooltip(), qui devient
@@ -74,9 +93,9 @@ function fileAdd(gf) {
 function flyToIf(img, lat, lon, ref) {
     console.log(`flyTo lat,lon=${lat},${lon} enabled=${domfly.checked} ref=${ref}`);
     if (domfly.checked) {
-        if (typeof(ref) == 'number')
+        if (typeof (ref) == 'number')
             ref = document.getElementById(`photo${ref}`).cloneNode(true);
-//      img.firstChild.firstChild.style.borderStyle = 'solid';  // 'ridge'
+        //      img.firstChild.firstChild.style.borderStyle = 'solid';  // 'ridge'
         mapFlyTo(lat, lon, ref);
     }
 }
@@ -97,9 +116,9 @@ async function feedDrive() {
         q: "'1O_tzaI6HPBCR9AlqRbQqzw4JqzZoqfOv' in parents",
         corpora: "user",
         trashed: false,
-        pageSize: 4,
+        pageSize: 8,
         pageToken: tof.nextPageToken,
-        fields: 'nextPageToken,files(name,thumbnailLink,webViewLink,imageMediaMetadata)',
+        fields: 'nextPageToken,files(id,name,thumbnailLink,webViewLink,imageMediaMetadata)',
         orderBy: 'createdTime desc'  // Most recent first
     };
 
@@ -114,16 +133,29 @@ async function feedDrive() {
     // Token for the next page
     tof.nextPageToken = response.result.nextPageToken;
     console.log(`${who} nextToken ${tof.nextPageToken}`);
-    // Gotten files[]
-    const files = response.result.files;
-    if (!files || files.length == 0) {
+    if (tof.nextPageToken && tof.nextPageToken != '')
+        document.getElementById('photomore').innerText = 'Show more';
+    else {
+        document.getElementById('photomore').innerText = 'Done';
+        tof.nextPageToken = '';
+    }
+
+    // Gotten response.result.files[]
+    if (!response.result.files || response.result.files.length == 0) {
         console.log('photo: No files found.');
         return;
     }
-    console.log(`${who} got files[${files.length}]`);
+    tof.files.push(...response.result.files);
+    console.log(`${who} got files[${response.result.files.length}], total=${tof.files.length}`);
+
+    // Sort (and remove duplicates in case of reload)
+    tof.files.sort((a, b) => fileSub(a, b));
+    tof.files = tof.files.filter(onlyUnique);
+    console.log(`${who} filtered to ${tof.files.length}`);
+
     // console.log(JSON.stringify(files[0]));  // ... or use browser debugger (firefox=CTRL-SHIFT-K, breakpoint, ...)
     // Populate the HTML list
-    domtof.innerHTML += files.reduce(
+    domtof.innerHTML = tof.files.reduce(
         (str, file) => `${str}${fileAdd(file)}`, '');
 }
 
