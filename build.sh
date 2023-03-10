@@ -26,6 +26,7 @@ for ext in gpx kml
 do
   for geo in ./tracks/*.$ext
   do
+    if [ "$geo" == "./tracks/feed.kml" ]; then continue; fi
     b=$(basename $geo .$ext)
     echo "JSONinfy $b = $geo"
     npx @tmcw/togeojson-cli $geo | npx js-beautify > tmp/$b.json

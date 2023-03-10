@@ -10,7 +10,11 @@ body {
 	display: flex;
 }
 
-
+/* Smartphone : only the map */
+@media only screen and (max-width: 760px) {
+	#divphoto {		display: none;	}
+	#divinsta {		display: none;	}
+}
 
 #divmap {
 	flex: 1 1 auto;
@@ -39,14 +43,17 @@ body {
 	padding: 0;
 	overflow-y: hidden;
 }
+
 #photofeed {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 	max-height: 100%;
-	overflow-y: auto;					/* scroll-bars if ... */
-/*	border: 1px solid black; */
+	overflow-y: auto;
+	/* scroll-bars if ... */
+	/*	border: 1px solid black; */
 }
+
 #photobottom {
 	justify-content: center;
 	background-color: darkgreen;
@@ -58,10 +65,12 @@ body {
 
 #logo {
 	display: block;
-	position: absolute;  /* absolute means relative to its ancestor */ 
+	position: absolute;
+	/* absolute means relative to its ancestor */
 	bottom: 20px;
 	right: 8px;
-	width: 92px;  /* No way to reference png size ? 100% is enclosing element size */
+	width: 92px;
+	/* No way to reference png size ? 100% is enclosing element size */
 	height: 95px;
 	background: transparent url("logo.png") center center no-repeat;
 	z-index: 800;
@@ -82,7 +91,8 @@ body {
 	padding: 2px;
 }
 
-.phototitle {  /* else button disabled */
+.phototitle {
+	/* else button disabled */
 	border-style: groove;
 	border-width: 1px;
 	border-radius: 5px;
@@ -93,7 +103,7 @@ body {
 
 .leaflet-tooltip.milestone {
 	color: rgb(255, 0, 0);
-	background-color:  rgba(255, 220, 220, 0.6);
+	background-color: rgba(255, 220, 220, 0.6);
 	font-weight: bold;
 	padding: 2px 0.5em 2px 0.5em;
 	border: 2px;
@@ -106,15 +116,19 @@ body {
 /*---- Collapisble elements */
 
 .collapsible {
-	border: none;         /* contrer le style button */
+	border: none;
+	/* contrer le style button */
 	cursor: pointer;
 	text-align: left;
-  }
-  .active, .collapsible:hover {
+}
+
+.active,
+.collapsible:hover {
 	background-color: #e0e0e0;
-  }
-  .content {
+}
+
+.content {
 	padding: 0 18px;
 	display: none;
 	overflow: hidden;
-  }
+}

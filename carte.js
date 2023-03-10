@@ -15,20 +15,9 @@
 
 
 
-// Decoder un parametre "?param=valeur" de l'URI
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function addslashes(str) {
-    return (str + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0');
-}
+// function addslashes(str) {
+//     return (str + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0');
+// }
 
 
 // Static map features (tracks, etc)
@@ -449,36 +438,63 @@ function inreachKmlParse(xmldoc, title, cmt) {
     var inreachLayer = L.geoJson(null, {
         filter: function (f) {
             // L'objet LineString du XML n'est pas inclus il est redondant avec l'ensemble de Point
+            // f.properties contient tous les champs du KML :
+            //       "Course": "0.00 ° True"
+            //       "Device Identifier": ""
+            //       "Device Type": "inReach 2.5"
+            //       "Elevation": "1259.72 m from MSL"
+            //       "Event": "Le suivi a été activé depuis l'appareil."
+            //       "IMEI": "30...60"
+            //       "Id": "40..50"
+            //       "In Emergency": "False"
+            //       "Incident Id": ""
+            //       "Latitude": "46.080083"
+            //       "Longitude": "6.618876"
+            //       "Map Display Name": "T...r"
+            //       "Name": "T...r"
+            //       "SpatialRefSystem": "WGS84"
+            //       "Text": ""
+            //       "Time": "6/19/2020 11:59:15 AM"
+            //       "Time UTC": "6/19/2020 9:59:15 AM"
+            //       "Valid GPS Fix": "True"
+            //       "Velocity": "0.0 km/h"
+            //       "styleHash": "347c351a"
+            //       "styleUrl": "#style_118255"
             return f.geometry.type == 'Point';
         },
         pointToLayer: function (p, latlng) {
+            // Vu filter ci-dessus, p est un Point et p.properties contient la meme chose que f.properties ci-dessus
+            // On peut donc reconstruire une polyline unique (ce Feed est suppose etre une seule sortie) en detectant
+            // les bivouacs via le temps entre deux points :
+            // NB: Date() compte du temps UTC ... mais ses methodes affichent par defaut du temps Zulu/local
             line.push([latlng.lat, latlng.lng]);
-            const ts = new Date(p.properties.timestamp);
+            // Choix de l'icone (du point precedent)
+            const ts = new Date(p.properties['Time UTC']);
             wasz = (ts > timl); //(p.properties.Text == 'OK, je dors ici.');
             timl.setTime(ts.getTime() + 5 * 3600 * 1000); // Arret de plus de 5h = Zzzz
-            if (prev && wasz) {
+            if (prev && (wasz /*|| (p.properties.Text != '')*/)) {
                 prev.setIcon(iconCamp);
-                prev.setZIndexOffset(100);
+                prev.setZIndexOffset(100);  // Les campements "au dessus" des points de marche
             }
-            //console.log("togeoJson.pointToLayer " + p.properties.timestamp + " " + wasz + " " + p.properties.Text);
+            // Icone horaire (en UTC) et message
             var t = null;
             if (p.properties.timestamp)
                 t = new Date(p.properties.timestamp).toLocaleString();
             else
                 t = "UTC: " + new Date(p.properties['Time UTC']).toLocaleString();
+            if (p.properties.Text != '') t += '\n' + p.properties.Text;
             prev = L.marker(latlng, options = {
                 title: t, // no HTML
-                icon: iconPoint,
+                icon: (p.properties.Text == '') ? iconPoint : iconCamp,  // Camp or something
                 zIndexOffset: 0
             });
-            //mgrp.addLayer(prev);
             return prev;
         }
     });
     var lgeo = omnivore.kml.parse(xmldoc, null, inreachLayer);
     if (line.length > 0) {
         mlin = L.polyline(line, {
-            color: 'firebrick',
+            color: 'olive',
             weight: 2,
             smoothFactor: 2
         }).bindPopup(title).addTo(mgrp);
@@ -488,6 +504,33 @@ function inreachKmlParse(xmldoc, title, cmt) {
         mapCtrlLayers.addOverlay(mgrp, cmt);
         map.addLayer(mgrp);
     }
+}
+
+async function fetchInreach(url, cmt) {
+    console.log('fetchInreach ' + cmt);
+    try {
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+            }
+        }).then(resp => {
+            if (resp.status < 200 || resp.status > 299) {
+                throw resp.statusText;
+            } else {
+                console.log(`fetchInreach ${cmt} GOT`);
+                return resp.text();
+            }
+        }).then(xml => {
+            console.log(`fetchInreach ${cmt}: XML ${xml.substring(1, 30)}...`);
+            // Le KML du feed InReach est particulier, on utilise un parser particulier
+            // plutot que :
+            //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
+            //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
+            //   lInreach.addTo(map);
+            inreachKmlParse(xmldoc = xml, title = 'InReach', cmt = cmt);
+        });
+    } catch (e) { console.log(`fetchInreach ${cmt} caught ${e}`); }
 }
 
 
@@ -631,33 +674,11 @@ async function loadInfos() {
     //
     // Si un fichier tracks/feed.kml est present (uploade depuis le terrain ...)
     // Alors on l'ajoute
-    // Sinon on tente de charger l'URL InReach
+    // (Sinon) on tente de charger l'URL InReach
     //
     // TODO: c'est la meme fonction seule l'URL change ... :
     //
-    fetch('tracks/feed.kml', {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
-        }
-    }).then(resp => {
-        if (!resp.ok) {
-            console.log(`fetch(feed): failed ${resp.status}`);
-            return resp;
-        } else {
-            console.log(`fetch(feed): GOT`);
-            return resp.text();
-        }
-    }).then(xml => {
-        console.log(`fetch(feed): XML ${xml.substring(1, 30)}...`);
-        // Le KML du feed InReach est particulier, on utilise un parser particulier
-        // plutot que :
-        //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
-        //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
-        //   lInreach.addTo(map);
-        inreachKmlParse(xmldoc = xml, title = 'InReach', cmt = 'Actual track');
-    });
-//  return; // FIX ME : continuer sur garmin si le feed.kml est absent, gerer les erreurs du fetch()
+    fetchInreach('tracks/feed.kml', 'Actual track');
 
     // Recherche du feed KML sur le domaine InReach delorme (devenu garmin)
     // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
@@ -666,18 +687,23 @@ async function loadInfos() {
     //              https://explore.garmin.com/Feed/Share/ThierryBernier
     //   .../ShareLoader/...    : rend un petit KML contenant juste un <href>...
     //   .../Share/...          : rend un KML brut autoportant
-    //     ?d1=<date format JSON du point le plus ancien>
+    //     ?d1=<date format JSON du point le plus ancien>   mais YYYY-MM-DD suffit
     //     ?d2=<date format JSON du point le plus recent>
     //   Sans d1, seul le point le plus recent est rendu
     //   Le KML contient des placemark par date croissante
     //
     // + Expansion XML du feed InReach = 47 eltXML par Placemark
-    const days = getParameterByName('days') || (3 * 365);
+    //
+    // + Option ?days :
+    //      ?days=0 : NZ
+    //      ?days>0 : now - days
+    //      default : depuis 20230401 
+    const days = getParameterByName('days');
     console.log('days = ' + days);
-    const date1 = new Date(Date.now() - days * 1000 * 86400);   // Commencer a cette date
+    const date1 = new Date((days > 0) ? (Date.now() - days * 1000 * 86400) : '2021-04-01');  // ! UPDATE THIS !
     const date2 = new Date(Date.now() - 3 * 1000 * 86400);      // Cacher les 3 derniers jours
-    const d1 = '2017-09-01'; //date1.toJSON().substring(0, 10);                 // YYYY-MM-DD suffit a inreach
-    const d2 = '2018-03-30'; //date2.toJSON().substring(0, 10);
+    const d1 = (days == 0) ? '2017-10-24' : date1.toJSON().substring(0, 10);
+    const d2 = (days == 0) ? '2018-02-23' : date2.toJSON().substring(0, 10);
     const inreachfeed = `https://share.garmin.com/Feed/Share/ThierryB?d1=${d1}&d2=${d2}`;
     //
     // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
@@ -728,31 +754,7 @@ async function loadInfos() {
     //
     // => Utiliser un proxy CORS
     const url = 'https://corsproxy.io/?' + encodeURIComponent(inreachfeed);
-
-    console.log(`fetch ${inreachfeed}`);
-    fetch(url, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
-        }
-    }).then(resp => {
-        if (!resp.ok) {
-            console.log(`fetch(inreach): failed ${resp.status}`);
-            // Echec: voir si un feed local est present dans tracks/     TODO
-            return resp;
-        } else {
-            console.log(`fetch(inreach): GOT `);
-            return resp.text();
-        }
-    }).then(xml => {
-        console.log(`fetch(inreach): XML ${xml.substring(1, 30)}...`);
-        // Le KML du feed InReach est particulier, on utilise un parser particulier
-        // plutot que :
-        //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
-        //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
-        //   lInreach.addTo(map);
-        inreachKmlParse(xmldoc = xml, title = 'InReach since ' + d1, cmt = 'Actual online');
-    });
+    fetchInreach(url, 'Actual online');
 
 } // loadInfos()
 
@@ -764,14 +766,17 @@ function zAnim() {
 if (!zanim) loadInfos();
 
 
+//------ Layer : Inreach feed
+//
 // External call (from divphoto / drive.js)
+
 function mapFlyTo(lat, lon, ref) {
     const s = `${lat} ${lon}`;
     if (!flownTo.has(s)) {
         flownTo.add(s);
         if (lgPlaces == null) {
             lgPlaces = L.markerClusterGroup();
-            mapCtrlLayers.addOverlay(lgPlaces, 'Places');
+            mapCtrlLayers.addOverlay(lgPlaces, 'Photos');
         }
         const m = L.circleMarker([lat, lon], {
             interactive: true, radius: 8

@@ -7,14 +7,23 @@
 //
 // + iframe is not supported byt gapi.drive (can't insert a drive UI with a simple iframe)
 
+var activedrive = true;
+
+const homediv = document.getElementById('divphoto');
+if ((homediv.style.display == 'none') || (getParameterByName('tof') == 'off')) {
+    homediv.style.display = 'none';
+    activedrive = false;
+}
+
 // Script is loaded after these DOM elements, cf index.html
-const domtof = document.getElementById("photofeed");
+const domtof = document.getElementById('photofeed');
 const domfly = document.getElementById('photo:autoFlyTo');
 
 // The variable/object of the drive.js feature
 let tof = {};
 tof.nextPageToken = '';
 tof.files = [];
+
 
 
 //-------------------------------------------------------
@@ -29,8 +38,12 @@ tof.files = [];
 const API_KEY = 'AIzaSyA1IFKmTOXEHiA5w9QHRNOR64pLTk2ZCSw';
 
 function gapiLoaded() {
-    console.log('gapi.load');
-    gapi.load('client', initializeGapiClient);
+    if (activedrive) {
+        console.log('gapi.load');
+        gapi.load('client', initializeGapiClient);
+    } else {
+        console.log('gapi.load  disabled');
+    }
 }
 
 async function initializeGapiClient() {
@@ -165,4 +178,3 @@ function photoUpdate() {
     console.log('photoUpdate');
     feedDrive().catch(function handle(e) { console.log(`photo: catch1=${e}`); });
 }
-
