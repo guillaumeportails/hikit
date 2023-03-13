@@ -246,10 +246,15 @@ const mapCtrlLayers = L.control.layers(basemaps, overlays, {
 var lgPlaces = null;
 //mapCtrlLayers.addOverlay(lgPlaces, 'Places');
 
+// Control : zoom
 L.control.scale({
     metric: true,
     imperial: true
 }).addTo(map);
+
+// Control : search an address
+//      https://github.com/perliedman/leaflet-control-geocoder
+L.Control.geocoder().addTo(map);
 
 
 /*--------------------------------------------------------------------
@@ -509,28 +514,30 @@ function inreachKmlParse(xmldoc, title, cmt) {
 async function fetchInreach(url, cmt) {
     console.log('fetchInreach ' + cmt);
     try {
-        fetch(url, {
+        const resp = await fetch(url, {
             method: 'GET',
             headers: {
                 'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
             }
-        }).then(resp => {
-            if (resp.status < 200 || resp.status > 299) {
-                throw resp.statusText;
-            } else {
-                console.log(`fetchInreach ${cmt} GOT`);
-                return resp.text();
-            }
-        }).then(xml => {
-            console.log(`fetchInreach ${cmt}: XML ${xml.substring(1, 30)}...`);
-            // Le KML du feed InReach est particulier, on utilise un parser particulier
-            // plutot que :
-            //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
-            //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
-            //   lInreach.addTo(map);
-            inreachKmlParse(xmldoc = xml, title = 'InReach', cmt = cmt);
         });
-    } catch (e) { console.log(`fetchInreach ${cmt} caught ${e}`); }
+        if ((resp.status < 200) || (resp.status > 299)) {
+            console.log(`fetchInreach ${cmt} FAILED ${resp.status}`);
+            return false;
+        }
+        console.log(`fetchInreach ${cmt} GOT`);
+        const xmlstr = await resp.text();
+        console.log(`fetchInreach ${cmt}: XML ${xmlstr.substring(1, 30)}...`);
+        // Le KML du feed InReach est particulier, on utilise un parser particulier
+        // plutot que :
+        //   const lInreach = omnivore.kml.parse(xml, null, layerKml(null, 'darkgreen'));
+        //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
+        //   lInreach.addTo(map);
+        inreachKmlParse(xmldoc = xmlstr, title = 'InReach', cmt = cmt);
+    } catch (e) {
+        console.log(`fetchInreach ${cmt} caught ${e}`);
+        return false;
+    }
+    return true;
 }
 
 
@@ -674,87 +681,75 @@ async function loadInfos() {
     //
     // Si un fichier tracks/feed.kml est present (uploade depuis le terrain ...)
     // Alors on l'ajoute
-    // (Sinon) on tente de charger l'URL InReach
+    // Sinon on tente de charger l'URL InReach
     //
-    // TODO: c'est la meme fonction seule l'URL change ... :
-    //
-    fetchInreach('tracks/feed.kml', 'Actual track');
-
-    // Recherche du feed KML sur le domaine InReach delorme (devenu garmin)
-    // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
-    // 
-    // NB: HTTP-301 https://inreach.garmin.com/Feed/Share/...
-    //              https://explore.garmin.com/Feed/Share/ThierryBernier
-    //   .../ShareLoader/...    : rend un petit KML contenant juste un <href>...
-    //   .../Share/...          : rend un KML brut autoportant
-    //     ?d1=<date format JSON du point le plus ancien>   mais YYYY-MM-DD suffit
-    //     ?d2=<date format JSON du point le plus recent>
-    //   Sans d1, seul le point le plus recent est rendu
-    //   Le KML contient des placemark par date croissante
-    //
-    // + Expansion XML du feed InReach = 47 eltXML par Placemark
-    //
-    // + Option ?days :
-    //      ?days=0 : NZ
-    //      ?days>0 : now - days
-    //      default : depuis 20230401 
-    const days = getParameterByName('days');
-    console.log('days = ' + days);
-    const date1 = new Date((days > 0) ? (Date.now() - days * 1000 * 86400) : '2021-04-01');  // ! UPDATE THIS !
-    const date2 = new Date(Date.now() - 3 * 1000 * 86400);      // Cacher les 3 derniers jours
-    const d1 = (days == 0) ? '2017-10-24' : date1.toJSON().substring(0, 10);
-    const d2 = (days == 0) ? '2018-02-23' : date2.toJSON().substring(0, 10);
-    const inreachfeed = `https://share.garmin.com/Feed/Share/ThierryB?d1=${d1}&d2=${d2}`;
-    //
-    // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
-    //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
-    //    (meme localhost) different de inreachfeed.
-    // Quelques contournement possibles :
-    // 1) Utiliser un proxy
-    //  1a) Cf https://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
-    //      Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
-    //      plusieurs, en trouvant la taille limite
-    //  1b) query.yahooapis.com ... Supprimee en 2019
-    //      limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
-    //      const url ='https://query.yahooapis.com/v1/public/' + encodeURI('yql?q=select * from xml where url=')
-    //                    + '%22' + inreachfeed + '%22';
-    //      fetch(yql_query, {
-    //          method: 'GET',
-    //          mode: 'cors',
-    //          headers: {
-    //              'Accept': 'application/xml',
-    //              'Content-Type': 'application/xml'
-    //          }
-    //      }).then(resp => resp.json()).then(json => {
-    //          console.log("YQL " + json);
-    //          myKmlParse(xmldoc = data, title = "Inreach since " + d1, cmt = "(proxyed)");
-    //      });
-    //  1c) google 'CORS proxy' :
-    //      https://nordicapis.com/10-free-to-use-cors-proxies/
-    //      https://corsproxy.io/
-    // 2) Amener par le InReachFeed par un autre moyen sur le serveur de ce JS :
-    //  2.1) si ce JS est execute sur un PC local et non pas en provenance du Web,
-    //         alors il suffit de precharger le inreachfeed.
-    //         Par exemple en profitant du code node.js qui permet de servir localement
-    //         des tuiles de a Leaflet.
-    //    2.2) si ce JS provient du Web, alors il faut qu'un PC y uploade le InReachFeed.
-    // 3) Cf https://github.com/rndme/download : hors-sujet
-    //    var xhr = createCORSRequest('GET', inreachfeed);
-    //    if (!xhr) { console.log('CORS not supported'); } else {
-    //      xhr.onload  = function() { console.log(xhr.responseText); };
-    //      xhr.onerror = function() { console.log("error"); };
-    //      xhr.withCredentials = true;
-    //      xhr.send();
-    //    }
-    // 4) Faire que le browser accepte un GET cross domain.
-    //    C'est possible pour firefox avec ce plugin :
-    //      https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/
-    // 5) Ajouter une iframe cachee dans la page, y inclure un script de fetch(inreachfeed)
-    //    et communiquer avec via window.postMessage()
-    //
-    // => Utiliser un proxy CORS
-    const url = 'https://corsproxy.io/?' + encodeURIComponent(inreachfeed);
-    fetchInreach(url, 'Actual online');
+    // Permet de garder du controle sur les utilisateur de cette page. Si le fichier est present,
+    // Alors le feed online est inhibe (mais visible sur le MapShare direct "prive")
+    if (! fetchInreach('tracks/feed.kml', 'Actual track')) {
+        console.log('no Inreach feed on host, going to online feed');
+        // Recherche du feed KML sur le domaine InReach delorme (devenu garmin)
+        // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
+        // 
+        // NB: HTTP-301 https://inreach.garmin.com/Feed/Share/...
+        //              https://explore.garmin.com/Feed/Share/ThierryBernier
+        //   .../ShareLoader/...    : rend un petit KML contenant juste un <href>...
+        //   .../Share/...          : rend un KML brut autoportant
+        //     ?d1=<date format JSON du point le plus ancien>   mais YYYY-MM-DD suffit
+        //     ?d2=<date format JSON du point le plus recent>
+        //   Sans d1, seul le point le plus recent est rendu
+        //   Le KML contient des placemark par date croissante
+        //
+        // + Expansion XML du feed InReach = 47 eltXML par Placemark
+        //
+        // + Option ?days :
+        //      ?days=0 : NZ
+        //      ?days>0 : now - days
+        //      default : depuis 20230401 
+        const days = parseInt(getParameterByName('days'), 10);  // To reduce code injection
+        console.log('days = ' + days);
+        const date1 = new Date((days > 0) ? (Date.now() - days * 1000 * 86400) : '2023-04-10');
+        const date2 = new Date(Date.now() - 3 * 1000 * 86400);      // Cacher les 3 derniers jours
+        const d1 = (days == 0) ? '2017-10-24' : date1.toJSON().substring(0, 10);
+        const d2 = (days == 0) ? '2018-02-23' : date2.toJSON().substring(0, 10);
+        const inreachfeed = `https://share.garmin.com/Feed/Share/ThierryB?d1=${d1}&d2=${d2}`;
+        console.log(inreachfeed);
+        //
+        // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
+        //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
+        //    (meme localhost) different de inreachfeed.
+        // Quelques contournement possibles :
+        // 1) Utiliser un proxy
+        //  1a) Cf https://geographika.co.uk/archive/accessing-cross-domain-data-with-yql.html
+        //      Mais le proxy YQL est limite en taille par requete. Il faudrait en concatener
+        //      plusieurs, en trouvant la taille limite
+        //  1b) query.yahooapis.com ... Supprimee en 2019
+        //      limite en taille  25 Placemark = 1194 XMLelt : 48 eltXML / Placemark
+        //      const url ='https://query.yahooapis.com/v1/public/' + encodeURI('yql?q=select * from xml where url=')
+        //                    + '%22' + inreachfeed + '%22';
+        //      fetch(yql_query, { method: 'GET', mode: 'cors', headers: {
+        //              'Accept': 'application/xml',
+        //              'Content-Type': 'application/xml' }}).then(resp => ...
+        //  1c) google 'CORS proxy' :
+        //      https://nordicapis.com/10-free-to-use-cors-proxies/
+        //      https://corsproxy.io/
+        //      Possiblement pas compatible avec des firewalls "stricts". Alternatives :
+        //          https://nordicapis.com/10-free-to-use-cors-proxies/
+        //          https://github.com/Freeboard/thingproxy  a installer sur free ou neocities, ...
+        // 2) Amener le InReachFeed par un autre moyen sur le serveur de ce JS :
+        //  2a) si ce JS est execute sur un PC local et non pas en provenance du Web,
+        //      alors il suffit de precharger le inreachfeed (curl, node.js, ...)
+        //  2b) si ce JS provient du Web, alors il faut qu'un PC/Smartphone y uploade le InReachFeed
+        // 3) Cf https://github.com/rndme/download : hors-sujet
+        // 4) Faire que le browser accepte un GET cross domain.
+        //    C'est possible pour firefox avec ce plugin :
+        //      https://addons.mozilla.org/fr/firefox/addon/cross-domain-cors/
+        // 5) Ajouter une iframe cachee dans la page, y inclure un script de fetch(inreachfeed)
+        //    et communiquer avec via window.postMessage()
+        //
+        // => 1c + 2b : Utiliser un proxy CORS
+        const url = 'https://corsproxy.io/?' + encodeURIComponent(inreachfeed);
+        fetchInreach(url, 'Actual online');
+    }
 
 } // loadInfos()
 

@@ -80,11 +80,41 @@
     </Placemark>
 
     <Placemark>
+      <name>Chama (Ice Axe ?)</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+        -106.578755,36.902377
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Pagosa Springs</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+        -107.005248,37.268862
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
       <name>Silverton</name>
       <styleUrl>#Supplies</styleUrl>
       <Point>
         <coordinates>
           -107.6645057,37.811941
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Lake City</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+         -107.31514,38.03038
         </coordinates>
       </Point>
     </Placemark>
@@ -215,6 +245,16 @@
       <Point>
         <coordinates>
           -111.1041092,44.6621493
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Grant Village</name>
+      <styleUrl>#Supplies</styleUrl>
+      <Point>
+        <coordinates>
+        -110.554605,44.392357
         </coordinates>
       </Point>
     </Placemark>
@@ -686,11 +726,31 @@
     </Placemark>
 
     <Placemark>
-      <name>Grays Peak, CDT highest, 4349m</name>
+      <name>Grays Peak, CDT highest, 4352m</name>
       <styleUrl>#Visit</styleUrl>
       <Point>
         <coordinates>
           -105.8171533,39.6336457
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Torreys Peak, 4351m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -105.821471,39.642644
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Mount Eva, 4002m</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -105.7189,39.82752
         </coordinates>
       </Point>
     </Placemark>
@@ -721,6 +781,26 @@
       <Point>
         <coordinates>
        -106.981776, 41.156015
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Atlantic City</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+         -108.730316,42.49653
+        </coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>South Pass City</name>
+      <styleUrl>#Visit</styleUrl>
+      <Point>
+        <coordinates>
+        -108.802789,42.468979
         </coordinates>
       </Point>
     </Placemark>

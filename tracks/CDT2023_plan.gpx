@@ -837,13 +837,56 @@
       <trkpt lat="34.821811000" lon="-107.908687000">         <name>CW-425M</name>       </trkpt>
       <trkpt lat="34.829207000" lon="-107.909041000">         <name>CW-430M</name>       </trkpt>
       <trkpt lat="34.835718000" lon="-107.912035000">         <name>CW-435M</name>       </trkpt>
-      <trkpt lat="34.840389000" lon="-107.917968000">         <name>CW-440M</name>       </trkpt>
-      <trkpt lat="34.847828000" lon="-107.917206000">         <name>CW-445M</name>       </trkpt>
-      <trkpt lat="34.854098000" lon="-107.912958000">         <name>CW-450M</name>       </trkpt>
-      <trkpt lat="34.860378000" lon="-107.909567000">         <name>CW-455M</name>       </trkpt>
-      <trkpt lat="34.867081000" lon="-107.906080000">         <name>CW-460M</name>       </trkpt>
-      <trkpt lat="34.873491000" lon="-107.901960000">         <name>CW-465M</name>       </trkpt>
-      <trkpt lat="34.877285000" lon="-107.894847000">         <name>CW-470M</name>       </trkpt>
+</trkseg></trk>
+
+
+<wpt lat="34.83620711935852" lon="-107.91186129810433">  <name>Mesa to Ventana Alt start</name></wpt>
+
+<trk><name>Mesa to Ventana Alt</name><trkseg>
+      <trkpt lat="34.835718000" lon="-107.912035000">         <name>CW-435M</name>       </trkpt>
+  <trkpt lat="34.835962" lon="-107.911984"> </trkpt>
+  <trkpt lat="34.835997" lon="-107.911148"> </trkpt>
+  <trkpt lat="34.838850" lon="-107.911405"> </trkpt>
+  <trkpt lat="34.840189" lon="-107.912735"> </trkpt>
+  <trkpt lat="34.840647" lon="-107.914302"> </trkpt>
+  <trkpt lat="34.840154" lon="-107.916812"> </trkpt>
+  <trkpt lat="34.842091" lon="-107.917070"> </trkpt>
+  <trkpt lat="34.842848" lon="-107.917306"> </trkpt>
+  <trkpt lat="34.845965" lon="-107.916598"> </trkpt>
+  <trkpt lat="34.848466" lon="-107.915654"> </trkpt>
+  <trkpt lat="34.849998" lon="-107.914602"> </trkpt>
+  <trkpt lat="34.850385" lon="-107.913486"> </trkpt>
+  <trkpt lat="34.851371" lon="-107.913057"> </trkpt>
+  <trkpt lat="34.852956" lon="-107.911126"> </trkpt>
+  <trkpt lat="34.856337" lon="-107.909731"> </trkpt>
+  <trkpt lat="34.856865" lon="-107.909967"> </trkpt>
+  <trkpt lat="34.858115" lon="-107.909131"> </trkpt>
+  <trkpt lat="34.859313" lon="-107.907757"> </trkpt>
+  <trkpt lat="34.861513" lon="-107.906727"> </trkpt>
+  <trkpt lat="34.862675" lon="-107.905762"> </trkpt>
+  <trkpt lat="34.864172" lon="-107.905526"> </trkpt>
+  <trkpt lat="34.864771" lon="-107.904667"> </trkpt>
+  <trkpt lat="34.866654" lon="-107.904624"> </trkpt>
+  <trkpt lat="34.868380" lon="-107.902779"> </trkpt>
+  <trkpt lat="34.871179" lon="-107.901942"> </trkpt>
+  <trkpt lat="34.873256" lon="-107.899432"> </trkpt>
+  <trkpt lat="34.874418" lon="-107.897393"> </trkpt>
+  <trkpt lat="34.874788" lon="-107.895398"> </trkpt>
+  <trkpt lat="34.874084" lon="-107.894861"> </trkpt>
+  <trkpt lat="34.873380" lon="-107.895827"> </trkpt>
+  <trkpt lat="34.872464" lon="-107.896020"> </trkpt>
+  <trkpt lat="34.868239" lon="-107.894389"> </trkpt>
+  <trkpt lat="34.867887" lon="-107.892866"> </trkpt>
+  <trkpt lat="34.868873" lon="-107.891793"> </trkpt>
+  <trkpt lat="34.869806" lon="-107.890312"> </trkpt>
+  <trkpt lat="34.870422" lon="-107.889261"> </trkpt>
+  <trkpt lat="34.871214" lon="-107.889325"> </trkpt>
+  <trkpt lat="34.872059" lon="-107.889969"> </trkpt>
+  <trkpt lat="34.872869" lon="-107.889518"> </trkpt>
+</trkseg></trk>
+
+<trk><name>Back to Cebolla Wilderness after the Mesa episode</name><trkseg>
+  <trkpt lat="34.872869" lon="-107.889518"> </trkpt>
       <trkpt lat="34.872740000" lon="-107.888785000">         <name>CW-475M</name>       </trkpt>
       <trkpt lat="34.875198000" lon="-107.880964000">         <name>CW-480M</name>       </trkpt>
       <trkpt lat="34.878098000" lon="-107.872799000">         <name>CW-485M</name>       </trkpt>
@@ -851,12 +894,11 @@
       <trkpt lat="34.889565000" lon="-107.862210000">         <name>CW-495M</name>       </trkpt>
       <trkpt lat="34.896796000" lon="-107.859464000">         <name>CW-500M</name>       </trkpt>
       <trkpt lat="34.898793000" lon="-107.858788000">         <name>CW-501TH</name>       </trkpt>
-    </trkseg>
-  </trk>
+</trkseg></trk>
 
 
-<!-- Ventana do Bonita-Zuni -->
-<trk><name>Red Line CDT (short SouthBound)</name><trkseg>
+<!-- Ventana to Bonita-Zuni -->
+<trk><name>Red Line CDT (short SouthBound from Ventana to Bonita-Zuni)</name><trkseg>
 <trkpt lat="34.942091546" lon="-107.926589517"> <name>RL0507.5-NM</name></trkpt>
 <trkpt lat="34.942677263" lon="-107.918584594"> <name>RL0508.0-NM</name></trkpt>
 <trkpt lat="34.94171623" lon="-107.910717983"> <name>RL0508.5-NM</name></trkpt>
@@ -878,6 +920,7 @@
 <wpt lat="34.942381000" lon="-107.934697000"> <name>Bonita-Zuni Alternate start</name></wpt>
   <trk><name>Bonita-Zuni</name>
     <trkseg>
+<trkpt lat="34.942091546" lon="-107.926589517"> <name>RL0507.5-NM</name></trkpt>
       <trkpt lat="34.942381000" lon="-107.934697000">         <name>BZ-000M</name>       </trkpt>
       <trkpt lat="34.948640000" lon="-107.936419000">         <name>BZ-005M</name>       </trkpt>
       <trkpt lat="34.956209000" lon="-107.943404000">         <name>BZ-010TH</name>       </trkpt>
@@ -936,6 +979,7 @@
 
 <!-- Grants -->
 <trk><name>Red Line CDT</name><trkseg>
+      <trkpt lat="35.150231000" lon="-107.849218000">         <name>BZ-249RL</name>       </trkpt>
 <trkpt lat="35.155488772" lon="-107.845427798"> <name>RL0536.0-NM</name></trkpt>
 <trkpt lat="35.161132" lon="-107.840349994"> <name>RL0536.5-NM</name></trkpt>
 <trkpt lat="35.163081411" lon="-107.833147569"> <name>RL0537.0-NM</name></trkpt>
@@ -976,6 +1020,7 @@
 
   <trk><name>Mount Taylor Alt</name>
     <trkseg>
+<trkpt lat="35.215025747" lon="-107.656580142"> <name>RL0551.5-NM</name></trkpt>
       <trkpt lat="35.217999000" lon="-107.656227000">         <name>MT-000M</name>       </trkpt>
       <trkpt lat="35.218476000" lon="-107.640247000">         <name>MT-010M</name>       </trkpt>
       <trkpt lat="35.219993000" lon="-107.632889000">         <name>MT-015M</name>       </trkpt>
@@ -1011,6 +1056,7 @@
 
 <!-- After Taylor -->
 <trk><name>Red Line CDT</name><trkseg>
+      <trkpt lat="35.320453000" lon="-107.574298000">         <name>MT-147M</name>       </trkpt>
 <trkpt lat="35.323073912" lon="-107.573913452"> <name>RL0565.5-NM</name></trkpt>
 <trkpt lat="35.329089088" lon="-107.572436279"> <name>RL0566.0-NM</name></trkpt>
 <trkpt lat="35.333129991" lon="-107.572217816"> <name>RL0566.5-NM</name></trkpt>
@@ -1259,30 +1305,45 @@
 <trkpt lat="36.319401427" lon="-106.641243761"> <name>RL0688.0-NM</name></trkpt>
 <trkpt lat="36.322603513" lon="-106.633614585"> <name>RL0688.5-NM</name></trkpt>
 <trkpt lat="36.327540896" lon="-106.627422694"> <name>RL0689.0-NM</name></trkpt>
+<!-- ignore Ghost Ranch Alt start here -->
+<trkpt lat="36.331034564" lon="-106.622328051"> <name>RL0689.5-NM</name></trkpt>
+<trkpt lat="36.334723762" lon="-106.617650363"> <name>RL0690.0-NM</name></trkpt>
+<trkpt lat="36.338153375" lon="-106.615598799"> <name>RL0690.5-NM</name></trkpt>
+<trkpt lat="36.343472542" lon="-106.614862524"> <name>RL0691.0-NM</name></trkpt>
+<trkpt lat="36.346561368" lon="-106.611905444"> <name>RL0691.5-NM</name></trkpt>
+<trkpt lat="36.350754575" lon="-106.606751491"> <name>RL0692.0-NM</name></trkpt>
+<trkpt lat="36.349042382" lon="-106.601723462"> <name>RL0692.5-NM</name></trkpt>
+<trkpt lat="36.345672606" lon="-106.603557482"> <name>RL0693.0-NM</name></trkpt>
+<trkpt lat="36.339426598" lon="-106.600412629"> <name>RL0693.5-NM</name></trkpt>
+<trkpt lat="36.336251452" lon="-106.593392836"> <name>RL0694.0-NM</name></trkpt>
+<trkpt lat="36.334335454" lon="-106.586371084"> <name>RL0694.5-NM</name></trkpt>
+<trkpt lat="36.334323263" lon="-106.578765324"> <name>RL0695.0-NM</name></trkpt>
+<trkpt lat="36.335601752" lon="-106.571495642"> <name>RL0695.5-NM</name></trkpt>
+<trkpt lat="36.338086438" lon="-106.568736614"> <name>RL0696.0-NM</name></trkpt>
+<trkpt lat="36.342125596" lon="-106.56466167"> <name>RL0696.5-NM</name></trkpt>
+<trkpt lat="36.347023893" lon="-106.559264156"> <name>RL0697.0-NM</name></trkpt>
+<trkpt lat="36.347905861" lon="-106.552094813"> <name>RL0697.5-NM</name></trkpt>
+<trkpt lat="36.353561372" lon="-106.549615003"> <name>RL0698.0-NM</name></trkpt>
 </trkseg></trk>
 
+<wpt lat="36.329611000" lon="-106.624066000">     <name>Ghost Ranch Alt start (but miss Rim Vista)</name> </wpt>
+<wpt lat="36.353561372" lon="-106.549615003">     <name>Ghost Ranch Alt Catch from Rim Vista</name></trkpt>
 
-<wpt lat="36.329611000" lon="-106.624066000">         <name>Ghost Ranch Alt start</name> </wpt>
-
-  <trk><name>Ghost Ranch Alternate</name>			<cmt> Populaire, vraiment plus scenique que le balcon ? </cmt>
+  <trk><name>Ghost Ranch Alternate</name>			<cmt> Populaire, mais debut boring donc Rim Vista </cmt>
     <trkseg>
-      <trkpt lat="36.329611000" lon="-106.624066000">         <name>GR-000RR</name>       </trkpt>
-      <trkpt lat="36.326545000" lon="-106.617521000">         <name>GR-005M</name>       </trkpt>
-      <trkpt lat="36.323046000" lon="-106.609932000">         <name>GR-010M</name>       </trkpt>
-      <trkpt lat="36.320529000" lon="-106.602686000">         <name>GR-015M</name>       </trkpt>
-      <trkpt lat="36.318614000" lon="-106.594938000">         <name>GR-020M</name>       </trkpt>
-      <trkpt lat="36.314135000" lon="-106.589286000">         <name>GR-025M</name>       </trkpt>
-      <trkpt lat="36.313582000" lon="-106.581372000">         <name>GR-030M</name>       </trkpt>
-      <trkpt lat="36.310880000" lon="-106.575890000">         <name>GR-035M</name>       </trkpt>
-      <trkpt lat="36.310203000" lon="-106.568622000">         <name>GR-040M</name>       </trkpt>
-      <trkpt lat="36.311594000" lon="-106.561832000">         <name>GR-045M</name>       </trkpt>
-      <trkpt lat="36.310112000" lon="-106.555287000">         <name>GR-050M</name>       </trkpt>
-      <trkpt lat="36.313412000" lon="-106.547971000">         <name>GR-055M</name>       </trkpt>
-      <trkpt lat="36.318236000" lon="-106.541133000">         <name>GR-060M</name>       </trkpt>
-      <trkpt lat="36.322853000" lon="-106.534408000">         <name>GR-065M</name>       </trkpt>
-      <trkpt lat="36.331270000" lon="-106.526509000">         <name>GR-073RR</name>       </trkpt>
-      <trkpt lat="36.330800000" lon="-106.523431000">         <name>GR-075XX</name>       </trkpt>
-      <trkpt lat="36.329843000" lon="-106.519638000">         <name>GR-078RR</name>       </trkpt>
+<trkpt lat="36.353561372" lon="-106.549615003"> <name>RL0698.0-NM</name></trkpt>
+
+  <trkpt lat="36.350968" lon="-106.549675"> </trkpt>
+  <trkpt lat="36.347287" lon="-106.551895"> </trkpt>
+  <trkpt lat="36.344125" lon="-106.553802"> </trkpt>
+  <trkpt lat="36.340703" lon="-106.550737"> </trkpt>
+  <trkpt lat="36.340629" lon="-106.544668"> </trkpt>
+  <trkpt lat="36.341363" lon="-106.541755"> </trkpt>
+  <trkpt lat="36.338038" lon="-106.535139"> </trkpt>
+  <trkpt lat="36.336889" lon="-106.529768"> </trkpt>
+  <trkpt lat="36.334323" lon="-106.527098"> </trkpt>
+  <trkpt lat="36.333394" lon="-106.522940"> </trkpt>
+
       <trkpt lat="36.328723000" lon="-106.516002000">         <name>GR-080RR</name>       </trkpt>
       <trkpt lat="36.324550000" lon="-106.512883000">         <name>GR-085RL</name>       </trkpt>
       <trkpt lat="36.325813000" lon="-106.506350000">         <name>GR-088RR</name>       </trkpt>
@@ -1325,6 +1386,7 @@
 
 <!-- After Ghost Ranch -->
 <trk><name>Red Line CDT</name><trkseg>
+      <trkpt lat="36.431393000" lon="-106.330323000">         <name>GR-254XR</name>       </trkpt>
 <trkpt lat="36.43154384" lon="-106.330044877"> <name>RL0717.5-NM</name></trkpt>
 <trkpt lat="36.438056513" lon="-106.329894194"> <name>RL0718.0-NM</name></trkpt>
 <trkpt lat="36.440854434" lon="-106.323233623"> <name>RL0718.5-NM</name></trkpt>
@@ -1896,23 +1958,34 @@
 <trkpt lat="37.966179311" lon="-106.93798362"> <name>RL1001.5-CO</name></trkpt>
 <trkpt lat="37.965837356" lon="-106.929699662"> <name>RL1002.0-CO</name></trkpt>
 <trkpt lat="37.969264467" lon="-106.924192716"> <name>RL1002.5-CO</name></trkpt>
-<trkpt lat="37.972881164" lon="-106.920262909"> <name>RL1003.0-CO</name></trkpt>
-<trkpt lat="37.976376743" lon="-106.913688015"> <name>RL1003.5-CO</name></trkpt>
-<trkpt lat="37.975626984" lon="-106.904724722"> <name>RL1004.0-CO</name></trkpt>
-<trkpt lat="37.974782376" lon="-106.896448274"> <name>RL1004.5-CO</name></trkpt>
-<trkpt lat="37.975156049" lon="-106.88887034"> <name>RL1005.0-CO</name></trkpt>
-<trkpt lat="37.976605574" lon="-106.880614168"> <name>RL1005.5-CO</name></trkpt>
-<trkpt lat="37.977789828" lon="-106.872609272"> <name>RL1006.0-CO</name></trkpt>
-<trkpt lat="37.980657602" lon="-106.864773776"> <name>RL1006.5-CO</name></trkpt>
-<trkpt lat="37.981978968" lon="-106.856274837"> <name>RL1007.0-CO</name></trkpt>
-<trkpt lat="37.984754411" lon="-106.84876057"> <name>RL1007.5-CO</name></trkpt>
-<trkpt lat="37.987759322" lon="-106.841270962"> <name>RL1008.0-CO</name></trkpt>
-<trkpt lat="37.992076053" lon="-106.834368607"> <name>RL1008.5-CO</name></trkpt>
-<trkpt lat="37.997132049" lon="-106.828659811"> <name>RL1009.0-CO</name></trkpt>
-<trkpt lat="38.003734455" lon="-106.825481131"> <name>RL1009.5-CO</name></trkpt>
-<trkpt lat="38.010715967" lon="-106.825854313"> <name>RL1010.0-CO</name></trkpt>
-<trkpt lat="38.015588529" lon="-106.831770334"> <name>RL1010.5-CO</name></trkpt>
-<trkpt lat="38.021477702" lon="-106.836391432"> <name>RL1011.0-CO</name></trkpt>
+</trkseg></trk>
+
+
+<!-- San Luis Peak Alt -->
+<wpt lat="37.969264467" lon="-106.924192716">         <name>San Luis Peak Alt start</name> </wpt>
+
+<trk><trkseg>
+<trkpt lat="37.969264467" lon="-106.924192716"> <name>RL1002.5-CO</name></trkpt>
+  <trkpt lat="37.969829" lon="-106.924060"> </trkpt>
+  <trkpt lat="37.973634" lon="-106.925437"> </trkpt>
+  <trkpt lat="37.977622" lon="-106.923899"> </trkpt>
+  <trkpt lat="37.986615" lon="-106.931001"> </trkpt>
+  <trkpt lat="37.991255" lon="-106.928268"> </trkpt>
+  <trkpt lat="37.991877" lon="-106.918436"> </trkpt>
+  <trkpt lat="37.998544" lon="-106.911437"> </trkpt>
+  <trkpt lat="38.007723" lon="-106.898917"> </trkpt>
+  <trkpt lat="38.012633" lon="-106.889669"> </trkpt>
+  <trkpt lat="38.013858" lon="-106.877849"> </trkpt>
+  <trkpt lat="38.018295" lon="-106.859183"> </trkpt>
+  <trkpt lat="38.021909" lon="-106.851979"> </trkpt>
+  <trkpt lat="38.024455" lon="-106.845116"> </trkpt>
+  <trkpt lat="38.025740" lon="-106.835782"> </trkpt>
+<trkpt lat="38.027468424" lon="-106.834284744"> <name>RL1011.5-CO</name></trkpt>
+</trkseg></trk>
+
+
+<!-- After San Luis Peak Alt -->
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="38.027468424" lon="-106.834284744"> <name>RL1011.5-CO</name></trkpt>
 <trkpt lat="38.034275721" lon="-106.832475968"> <name>RL1012.0-CO</name></trkpt>
 <trkpt lat="38.040382499" lon="-106.828643899"> <name>RL1012.5-CO</name></trkpt>
@@ -2251,12 +2324,44 @@
 <trkpt lat="39.099215448" lon="-106.39070949"> <name>RL1169.5-CO</name></trkpt>
 <trkpt lat="39.104898179" lon="-106.395602817"> <name>RL1170.0-CO</name></trkpt>
 <trkpt lat="39.11090949" lon="-106.392985502"> <name>RL1170.5-CO</name></trkpt>
-<trkpt lat="39.116251775" lon="-106.389302803"> <name>RL1171.0-CO</name></trkpt>
-<trkpt lat="39.122039911" lon="-106.388921715"> <name>RL1171.5-CO</name></trkpt>
-<trkpt lat="39.126793575" lon="-106.390420705"> <name>RL1172.0-CO</name></trkpt>
-<trkpt lat="39.132309219" lon="-106.395158595"> <name>RL1172.5-CO</name></trkpt>
-<trkpt lat="39.136586593" lon="-106.401169041"> <name>RL1173.0-CO</name></trkpt>
-<trkpt lat="39.140332751" lon="-106.406970794"> <name>RL1173.5-CO</name></trkpt>
+</trkseg></trk>
+
+
+<!-- Mount Elbert Alt -->
+<trk><name>Mount Elbert Alt</name><trkseg>
+<trkpt lat="39.11090949" lon="-106.392985502"> <name>RL1170.5-CO</name></trkpt>
+    <trkpt lat="39.1105828" lon="-106.3934469"> </trkpt>
+    <trkpt lat="39.1145120" lon="-106.3948631"> </trkpt>
+    <trkpt lat="39.1132800" lon="-106.3994979"> </trkpt>
+    <trkpt lat="39.1164932" lon="-106.4006780"> </trkpt>
+    <trkpt lat="39.1133853" lon="-106.4039553"> </trkpt>
+    <trkpt lat="39.1163990" lon="-106.4105100"> </trkpt>
+    <trkpt lat="39.1190524" lon="-106.4121920"> </trkpt>
+    <trkpt lat="39.1221436" lon="-106.4141515"> </trkpt>
+    <trkpt lat="39.1198835" lon="-106.4170647"> </trkpt>
+    <trkpt lat="39.1222377" lon="-106.4254401"> </trkpt>
+    <trkpt lat="39.1179058" lon="-106.4339369"> </trkpt>
+    <trkpt lat="39.1156456" lon="-106.4442545"> </trkpt>
+    <trkpt lat="39.1180471" lon="-106.4449524"> </trkpt>
+    <trkpt lat="39.1212254" lon="-106.4412199"> </trkpt>
+    <trkpt lat="39.1232736" lon="-106.4387922"> </trkpt>
+    <trkpt lat="39.1241682" lon="-106.4362128"> </trkpt>
+    <trkpt lat="39.1258632" lon="-106.4326017"> </trkpt>
+    <trkpt lat="39.1275581" lon="-106.4287781"> </trkpt>
+    <trkpt lat="39.1291824" lon="-106.4292637"> </trkpt>
+    <trkpt lat="39.1298179" lon="-106.4274429"> </trkpt>
+    <trkpt lat="39.1304064" lon="-106.4283533"> </trkpt>
+    <trkpt lat="39.1329957" lon="-106.4252277"> </trkpt>
+    <trkpt lat="39.1353260" lon="-106.4230124"> </trkpt>
+    <trkpt lat="39.1384800" lon="-106.4178840"> </trkpt>
+    <trkpt lat="39.1360557" lon="-106.4156688"> </trkpt>
+    <trkpt lat="39.1407631" lon="-106.4109955"> </trkpt>
+    <trkpt lat="39.1395627" lon="-106.4096603"> </trkpt>
+    <trkpt lat="39.1429990" lon="-106.4089320"> </trkpt>
+</trkseg></trk>
+
+<trk><name>Red Line CDT</name><trkseg>
+    <trkpt lat="39.14299901078827 " lon="-106.40893207565739">
 <trkpt lat="39.145697857" lon="-106.410787637"> <name>RL1174.0-CO</name></trkpt>
 <trkpt lat="39.148579006" lon="-106.411315914"> <name>RL1174.5-CO</name></trkpt>
 <trkpt lat="39.150985948" lon="-106.416712631"> <name>RL1175.0-CO</name></trkpt>
@@ -2554,28 +2659,32 @@
 <trkpt lat="39.798680663" lon="-105.755692076"> <name>RL1316.0-CO</name></trkpt>
 <trkpt lat="39.80159693" lon="-105.748570402"> <name>RL1316.5-CO</name></trkpt>
 <trkpt lat="39.804763008" lon="-105.74108047"> <name>RL1317.0-CO</name></trkpt>
-<trkpt lat="39.803863642" lon="-105.733743957"> <name>RL1317.5-CO</name></trkpt>
-<trkpt lat="39.801194898" lon="-105.725721672"> <name>RL1318.0-CO</name></trkpt>
-<trkpt lat="39.799681881" lon="-105.717016169"> <name>RL1318.5-CO</name></trkpt>
-<trkpt lat="39.798038073" lon="-105.710164897"> <name>RL1319.0-CO</name></trkpt>
-<trkpt lat="39.796484544" lon="-105.705931249"> <name>RL1319.5-CO</name></trkpt>
-<trkpt lat="39.799846478" lon="-105.706018124"> <name>RL1320.0-CO</name></trkpt>
-<trkpt lat="39.805008863" lon="-105.708549099"> <name>RL1320.5-CO</name></trkpt>
-<trkpt lat="39.80661768" lon="-105.700518666"> <name>RL1321.0-CO</name></trkpt>
-<trkpt lat="39.809887312" lon="-105.69267071"> <name>RL1321.5-CO</name></trkpt>
-<trkpt lat="39.808463226" lon="-105.684680088"> <name>RL1322.0-CO</name></trkpt>
-<trkpt lat="39.81043442" lon="-105.677757355"> <name>RL1322.5-CO</name></trkpt>
-<trkpt lat="39.811171242" lon="-105.674004134"> <name>RL1323.0-CO</name></trkpt>
-<trkpt lat="39.810960849" lon="-105.668663202"> <name>RL1323.5-CO</name></trkpt>
-<trkpt lat="39.811797098" lon="-105.662101817"> <name>RL1324.0-CO</name></trkpt>
-<trkpt lat="39.816066871" lon="-105.668434414"> <name>RL1324.5-CO</name></trkpt>
-<trkpt lat="39.822853664" lon="-105.66982561"> <name>RL1325.0-CO</name></trkpt>
-<trkpt lat="39.829533354" lon="-105.667470366"> <name>RL1325.5-CO</name></trkpt>
-<trkpt lat="39.836428655" lon="-105.667156331"> <name>RL1326.0-CO</name></trkpt>
-<trkpt lat="39.842505839" lon="-105.670886256"> <name>RL1326.5-CO</name></trkpt>
-<trkpt lat="39.842504737" lon="-105.678488731"> <name>RL1327.0-CO</name></trkpt>
-<trkpt lat="39.84546768" lon="-105.685619291"> <name>RL1327.5-CO</name></trkpt>
-<trkpt lat="39.850381789" lon="-105.688256504"> <name>RL1328.0-CO</name></trkpt>
+</trkseg></trk>
+
+
+<wpt lat="39.805107" lon="-105.736112"><name>Mount Flora, 4001m (Alt start)</name></wpt>
+
+<trk><name>Parry Peak Alternate</name><trkseg>
+<trkpt lat="39.804763008" lon="-105.74108047"> <name>RL1317.0-CO</name></trkpt>
+    <trkpt lat="39.8051073818256 " lon="-105.7361125946045 ">
+    <trkpt lat="39.81104149226642" lon="-105.73439598083496">
+    <trkpt lat="39.81420614172949" lon="-105.73164939880373">
+    <trkpt lat="39.81783212345085" lon="-105.72426795959473">
+    <trkpt lat="39.82462208372805" lon="-105.72418212890626">
+    <trkpt lat="39.82719286444515" lon="-105.71877479553227">
+    <trkpt lat="39.8314772852108 " lon="-105.71937561035156">
+    <trkpt lat="39.83576143876655" lon="-105.71705818176271">
+    <trkpt lat="39.83806818000005" lon="-105.71336746215822">
+    <trkpt lat="39.8366182374119 " lon="-105.70838928222658">
+    <trkpt lat="39.83740911898208" lon="-105.70023536682129">
+    <trkpt lat="39.83912266447319" lon="-105.695858001709  ">
+    <trkpt lat="39.84564692710759" lon="-105.69371223449708">
+    <trkpt lat="39.84821692096961" lon="-105.69354057312012">
+    <trkpt lat="39.85230235419586" lon="-105.68984985351564">
+</trkseg></trk>
+
+<trk><name>Red Line CDT</name><trkseg>
+    <trkpt lat="39.85230235419586" lon="-105.68984985351564">
 <trkpt lat="39.854938131" lon="-105.689965652"> <name>RL1328.5-CO</name></trkpt>
 <trkpt lat="39.859162323" lon="-105.693887803"> <name>RL1329.0-CO</name></trkpt>
 <trkpt lat="39.865000847" lon="-105.697301877"> <name>RL1329.5-CO</name></trkpt>
@@ -6443,6 +6552,8 @@
 
 <!-- TAG unused RedLine chunks
 
+
+
 <trk><name>unused RedLine - Gila</name><trkseg>
 <trkpt lat="32.866292656" lon="-108.291820428"> <name>RL0173.5-NM</name></trkpt>
 <trkpt lat="32.868440296" lon="-108.297713172"> <name>RL0174.0-NM</name></trkpt>
@@ -6908,6 +7019,18 @@
 <trkpt lat="34.301972262" lon="-108.13917295"> <name>RL0424.5-NM</name></trkpt>
 </trkseg></trk>
 
+
+
+Unused Cebolla Wilderness Alt at Mesa alt
+      <trkpt lat="34.840389000" lon="-107.917968000">         <name>CW-440M</name>       </trkpt>
+      <trkpt lat="34.847828000" lon="-107.917206000">         <name>CW-445M</name>       </trkpt>
+      <trkpt lat="34.854098000" lon="-107.912958000">         <name>CW-450M</name>       </trkpt>
+      <trkpt lat="34.860378000" lon="-107.909567000">         <name>CW-455M</name>       </trkpt>
+      <trkpt lat="34.867081000" lon="-107.906080000">         <name>CW-460M</name>       </trkpt>
+      <trkpt lat="34.873491000" lon="-107.901960000">         <name>CW-465M</name>       </trkpt>
+      <trkpt lat="34.877285000" lon="-107.894847000">         <name>CW-470M</name>       </trkpt>
+
+
 Unused Cebolla-Wilderness  common with RL
       <trkpt lat="34.346790000" lon="-108.142454000">         <name>CW-000M</name>       </trkpt>
       <trkpt lat="34.351577000" lon="-108.136832000">         <name>CW-005M</name>       </trkpt>
@@ -7153,27 +7276,28 @@ Fin de la RL entre le depart de Bonita-Zuni et Grants
 
 
 
+Unused Ghost Ranch Alt beginning, to see the Rim Vista Trail
+      <trkpt lat="36.329611000" lon="-106.624066000">         <name>GR-000RR</name>       </trkpt>
+      <trkpt lat="36.326545000" lon="-106.617521000">         <name>GR-005M</name>       </trkpt>
+      <trkpt lat="36.323046000" lon="-106.609932000">         <name>GR-010M</name>       </trkpt>
+      <trkpt lat="36.320529000" lon="-106.602686000">         <name>GR-015M</name>       </trkpt>
+      <trkpt lat="36.318614000" lon="-106.594938000">         <name>GR-020M</name>       </trkpt>
+      <trkpt lat="36.314135000" lon="-106.589286000">         <name>GR-025M</name>       </trkpt>
+      <trkpt lat="36.313582000" lon="-106.581372000">         <name>GR-030M</name>       </trkpt>
+      <trkpt lat="36.310880000" lon="-106.575890000">         <name>GR-035M</name>       </trkpt>
+      <trkpt lat="36.310203000" lon="-106.568622000">         <name>GR-040M</name>       </trkpt>
+      <trkpt lat="36.311594000" lon="-106.561832000">         <name>GR-045M</name>       </trkpt>
+      <trkpt lat="36.310112000" lon="-106.555287000">         <name>GR-050M</name>       </trkpt>
+      <trkpt lat="36.313412000" lon="-106.547971000">         <name>GR-055M</name>       </trkpt>
+      <trkpt lat="36.318236000" lon="-106.541133000">         <name>GR-060M</name>       </trkpt>
+      <trkpt lat="36.322853000" lon="-106.534408000">         <name>GR-065M</name>       </trkpt>
+      <trkpt lat="36.331270000" lon="-106.526509000">         <name>GR-073RR</name>       </trkpt>
+      <trkpt lat="36.330800000" lon="-106.523431000">         <name>GR-075XX</name>       </trkpt>
+      <trkpt lat="36.329843000" lon="-106.519638000">         <name>GR-078RR</name>       </trkpt>
+
 
 
 Unused RL car Ghost-Ranch
-<trkpt lat="36.331034564" lon="-106.622328051"> <name>RL0689.5-NM</name></trkpt>
-<trkpt lat="36.334723762" lon="-106.617650363"> <name>RL0690.0-NM</name></trkpt>
-<trkpt lat="36.338153375" lon="-106.615598799"> <name>RL0690.5-NM</name></trkpt>
-<trkpt lat="36.343472542" lon="-106.614862524"> <name>RL0691.0-NM</name></trkpt>
-<trkpt lat="36.346561368" lon="-106.611905444"> <name>RL0691.5-NM</name></trkpt>
-<trkpt lat="36.350754575" lon="-106.606751491"> <name>RL0692.0-NM</name></trkpt>
-<trkpt lat="36.349042382" lon="-106.601723462"> <name>RL0692.5-NM</name></trkpt>
-<trkpt lat="36.345672606" lon="-106.603557482"> <name>RL0693.0-NM</name></trkpt>
-<trkpt lat="36.339426598" lon="-106.600412629"> <name>RL0693.5-NM</name></trkpt>
-<trkpt lat="36.336251452" lon="-106.593392836"> <name>RL0694.0-NM</name></trkpt>
-<trkpt lat="36.334335454" lon="-106.586371084"> <name>RL0694.5-NM</name></trkpt>
-<trkpt lat="36.334323263" lon="-106.578765324"> <name>RL0695.0-NM</name></trkpt>
-<trkpt lat="36.335601752" lon="-106.571495642"> <name>RL0695.5-NM</name></trkpt>
-<trkpt lat="36.338086438" lon="-106.568736614"> <name>RL0696.0-NM</name></trkpt>
-<trkpt lat="36.342125596" lon="-106.56466167"> <name>RL0696.5-NM</name></trkpt>
-<trkpt lat="36.347023893" lon="-106.559264156"> <name>RL0697.0-NM</name></trkpt>
-<trkpt lat="36.347905861" lon="-106.552094813"> <name>RL0697.5-NM</name></trkpt>
-<trkpt lat="36.353561372" lon="-106.549615003"> <name>RL0698.0-NM</name></trkpt>
 <trkpt lat="36.357935599" lon="-106.543538019"> <name>RL0698.5-NM</name></trkpt>
 <trkpt lat="36.36376048" lon="-106.539659517"> <name>RL0699.0-NM</name></trkpt>
 <trkpt lat="36.37032627" lon="-106.539928716"> <name>RL0699.5-NM</name></trkpt>
@@ -7212,6 +7336,37 @@ Unused RL car Ghost-Ranch
 <trkpt lat="36.42752231" lon="-106.345800198"> <name>RL0716.0-NM</name></trkpt>
 <trkpt lat="36.422641366" lon="-106.339737073"> <name>RL0716.5-NM</name></trkpt>
 <trkpt lat="36.426415647" lon="-106.333552944"> <name>RL0717.0-NM</name></trkpt>
+
+
+Unused RL at San Luis Peak
+<trkpt lat="37.970779611" lon="-106.988685725"> <name>RL0997.5-CO</name></trkpt>
+<trkpt lat="37.968634143" lon="-106.980630188"> <name>RL0998.0-CO</name></trkpt>
+<trkpt lat="37.968669434" lon="-106.972663914"> <name>RL0998.5-CO</name></trkpt>
+<trkpt lat="37.972130865" lon="-106.969049751"> <name>RL0999.0-CO</name></trkpt>
+<trkpt lat="37.969445581" lon="-106.961392925"> <name>RL0999.5-CO</name></trkpt>
+<trkpt lat="37.968513178" lon="-106.953384353"> <name>RL1000.0-CO</name></trkpt>
+<trkpt lat="37.963912543" lon="-106.948646858"> <name>RL1000.5-CO</name></trkpt>
+<trkpt lat="37.961585792" lon="-106.940938343"> <name>RL1001.0-CO</name></trkpt>
+<trkpt lat="37.966179311" lon="-106.93798362"> <name>RL1001.5-CO</name></trkpt>
+<trkpt lat="37.965837356" lon="-106.929699662"> <name>RL1002.0-CO</name></trkpt>
+<trkpt lat="37.969264467" lon="-106.924192716"> <name>RL1002.5-CO</name></trkpt>
+<trkpt lat="37.972881164" lon="-106.920262909"> <name>RL1003.0-CO</name></trkpt>
+<trkpt lat="37.976376743" lon="-106.913688015"> <name>RL1003.5-CO</name></trkpt>
+<trkpt lat="37.975626984" lon="-106.904724722"> <name>RL1004.0-CO</name></trkpt>
+<trkpt lat="37.974782376" lon="-106.896448274"> <name>RL1004.5-CO</name></trkpt>
+<trkpt lat="37.975156049" lon="-106.88887034"> <name>RL1005.0-CO</name></trkpt>
+<trkpt lat="37.976605574" lon="-106.880614168"> <name>RL1005.5-CO</name></trkpt>
+<trkpt lat="37.977789828" lon="-106.872609272"> <name>RL1006.0-CO</name></trkpt>
+<trkpt lat="37.980657602" lon="-106.864773776"> <name>RL1006.5-CO</name></trkpt>
+<trkpt lat="37.981978968" lon="-106.856274837"> <name>RL1007.0-CO</name></trkpt>
+<trkpt lat="37.984754411" lon="-106.84876057"> <name>RL1007.5-CO</name></trkpt>
+<trkpt lat="37.987759322" lon="-106.841270962"> <name>RL1008.0-CO</name></trkpt>
+<trkpt lat="37.992076053" lon="-106.834368607"> <name>RL1008.5-CO</name></trkpt>
+<trkpt lat="37.997132049" lon="-106.828659811"> <name>RL1009.0-CO</name></trkpt>
+<trkpt lat="38.003734455" lon="-106.825481131"> <name>RL1009.5-CO</name></trkpt>
+<trkpt lat="38.010715967" lon="-106.825854313"> <name>RL1010.0-CO</name></trkpt>
+<trkpt lat="38.015588529" lon="-106.831770334"> <name>RL1010.5-CO</name></trkpt>
+<trkpt lat="38.021477702" lon="-106.836391432"> <name>RL1011.0-CO</name></trkpt>
 
 
 Unused RL car Mirror Lake
@@ -7262,6 +7417,15 @@ Unused RL car Mirror Lake
 <trkpt lat="38.876220643" lon="-106.416807376"> <name>RL1132.5-CO</name></trkpt>
 
 
+Unused RL at Mount Elbert
+<trkpt lat="39.116251775" lon="-106.389302803"> <name>RL1171.0-CO</name></trkpt>
+<trkpt lat="39.122039911" lon="-106.388921715"> <name>RL1171.5-CO</name></trkpt>
+<trkpt lat="39.126793575" lon="-106.390420705"> <name>RL1172.0-CO</name></trkpt>
+<trkpt lat="39.132309219" lon="-106.395158595"> <name>RL1172.5-CO</name></trkpt>
+<trkpt lat="39.136586593" lon="-106.401169041"> <name>RL1173.0-CO</name></trkpt>
+<trkpt lat="39.140332751" lon="-106.406970794"> <name>RL1173.5-CO</name></trkpt>
+
+
 Unused RL at Argentine
 <trkpt lat="39.577785579" lon="-105.838559087"> <name>RL1272.5-CO</name></trkpt>
 <trkpt lat="39.581165873" lon="-105.842312358"> <name>RL1273.0-CO</name></trkpt>
@@ -7280,6 +7444,29 @@ Unused RL at Argentine
 <trkpt lat="39.613706457" lon="-105.787069078"> <name>RL1279.5-CO</name></trkpt>
 <trkpt lat="39.619875532" lon="-105.784801739"> <name>RL1280.0-CO</name></trkpt>
 
+Unused RL at Mont Flora
+<trkpt lat="39.803863642" lon="-105.733743957"> <name>RL1317.5-CO</name></trkpt>
+<trkpt lat="39.801194898" lon="-105.725721672"> <name>RL1318.0-CO</name></trkpt>
+<trkpt lat="39.799681881" lon="-105.717016169"> <name>RL1318.5-CO</name></trkpt>
+<trkpt lat="39.798038073" lon="-105.710164897"> <name>RL1319.0-CO</name></trkpt>
+<trkpt lat="39.796484544" lon="-105.705931249"> <name>RL1319.5-CO</name></trkpt>
+<trkpt lat="39.799846478" lon="-105.706018124"> <name>RL1320.0-CO</name></trkpt>
+<trkpt lat="39.805008863" lon="-105.708549099"> <name>RL1320.5-CO</name></trkpt>
+<trkpt lat="39.80661768" lon="-105.700518666"> <name>RL1321.0-CO</name></trkpt>
+<trkpt lat="39.809887312" lon="-105.69267071"> <name>RL1321.5-CO</name></trkpt>
+<trkpt lat="39.808463226" lon="-105.684680088"> <name>RL1322.0-CO</name></trkpt>
+<trkpt lat="39.81043442" lon="-105.677757355"> <name>RL1322.5-CO</name></trkpt>
+<trkpt lat="39.811171242" lon="-105.674004134"> <name>RL1323.0-CO</name></trkpt>
+<trkpt lat="39.810960849" lon="-105.668663202"> <name>RL1323.5-CO</name></trkpt>
+<trkpt lat="39.811797098" lon="-105.662101817"> <name>RL1324.0-CO</name></trkpt>
+<trkpt lat="39.816066871" lon="-105.668434414"> <name>RL1324.5-CO</name></trkpt>
+<trkpt lat="39.822853664" lon="-105.66982561"> <name>RL1325.0-CO</name></trkpt>
+<trkpt lat="39.829533354" lon="-105.667470366"> <name>RL1325.5-CO</name></trkpt>
+<trkpt lat="39.836428655" lon="-105.667156331"> <name>RL1326.0-CO</name></trkpt>
+<trkpt lat="39.842505839" lon="-105.670886256"> <name>RL1326.5-CO</name></trkpt>
+<trkpt lat="39.842504737" lon="-105.678488731"> <name>RL1327.0-CO</name></trkpt>
+<trkpt lat="39.84546768" lon="-105.685619291"> <name>RL1327.5-CO</name></trkpt>
+<trkpt lat="39.850381789" lon="-105.688256504"> <name>RL1328.0-CO</name></trkpt>
 
 
 Unused RL at Cirque of the Towers
