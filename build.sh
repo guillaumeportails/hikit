@@ -21,6 +21,8 @@ trap exit ERR
 rm -rf tmp
 mkdir tmp
 
+xmllint --noout tracks/*.{gpx,kml}
+
 # GPX/KML to geoJSON
 for ext in gpx kml
 do
