@@ -517,7 +517,7 @@ async function fetchInreach(url, cmt) {
         const resp = await fetch(url, {
             method: 'GET',
             headers: {
-                'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+                'Accept': 'application/vnd.google-earth.kml+xml,text/html,application/xhtml+xml,application/xml,*/*;'
             }
         });
         if ((resp.status < 200) || (resp.status > 299)) {
@@ -533,11 +533,11 @@ async function fetchInreach(url, cmt) {
         //   mapCtrlLayers.addOverlay(lInreach, `Actual ${d2}`);
         //   lInreach.addTo(map);
         inreachKmlParse(xmldoc = xmlstr, title = 'InReach', cmt = cmt);
+        return true;
     } catch (e) {
         console.log(`fetchInreach ${cmt} caught ${e}`);
         return false;
     }
-    return true;
 }
 
 
@@ -685,8 +685,8 @@ async function loadInfos() {
     //
     // Permet de garder du controle sur les utilisateur de cette page. Si le fichier est present,
     // Alors le feed online est inhibe (mais visible sur le MapShare direct "prive")
-    if (! fetchInreach('tracks/feed.kml', 'Actual track')) {
-        console.log('no Inreach feed on host, going to online feed');
+    const r = await fetchInreach('tracks/feed.kml', 'Actual track');
+    if (! r) {
         // Recherche du feed KML sur le domaine InReach delorme (devenu garmin)
         // Cf https://files.delorme.com/support/inreachwebdocs/KML%20Feeds.pdf
         // 
@@ -705,14 +705,13 @@ async function loadInfos() {
         //      ?days=0 : NZ
         //      ?days>0 : now - days
         //      default : depuis 20230401 
-        const days = parseInt(getParameterByName('days'), 10);  // To reduce code injection
-        console.log('days = ' + days);
+        const days = Math.min(200,parseInt(getParameterByName('days'), 10));  // To reduce code injection, NaN if nothing
         const date1 = new Date((days > 0) ? (Date.now() - days * 1000 * 86400) : '2023-04-10');
         const date2 = new Date(Date.now() - 3 * 1000 * 86400);      // Cacher les 3 derniers jours
         const d1 = (days == 0) ? '2017-10-24' : date1.toJSON().substring(0, 10);
         const d2 = (days == 0) ? '2018-02-23' : date2.toJSON().substring(0, 10);
         const inreachfeed = `https://share.garmin.com/Feed/Share/ThierryB?d1=${d1}&d2=${d2}`;
-        console.log(inreachfeed);
+//      console.log(inreachfeed);
         //
         // => CORS problem : le site de garmin n'allume pas "Access-Control-Allow-Origin"
         //    On ne peut donc pas lire le feed InReach depuis ce JS qui provient d'un domaine
@@ -748,7 +747,7 @@ async function loadInfos() {
         //
         // => 1c + 2b : Utiliser un proxy CORS
         const url = 'https://corsproxy.io/?' + encodeURIComponent(inreachfeed);
-        fetchInreach(url, 'Actual online');
+        const s = await fetchInreach(url, 'Actual online');
     }
 
 } // loadInfos()
