@@ -37,7 +37,14 @@ BEGIN {
 /^ +\[-?[0-9\.]+, +-?[0-9\.]+, +-?[0-9\.]+\],?$/ {
   lng = substr($1, 2) + 0.0
   lat = $2 + 0.0
-  end = (substr($3, length($3), 1) == ",")
+  end = (substr($(NF), length($(NF)), 1) == ",")
+  printf "  [ %.5f, %.5f ]%s    // %s\n", lng, lat, (end) ? "," : " ", $0
+  next
+}
+/^ +\[-?[0-9\.]+, +-?[0-9\.]+],?$/ {
+  lng = substr($1, 2) + 0.0
+  lat = $2 + 0.0
+  end = (substr($(NF), length($(NF)), 1) == ",")
   printf "  [ %.5f, %.5f ]%s    // %s\n", lng, lat, (end) ? "," : " ", $0
   next
 }
