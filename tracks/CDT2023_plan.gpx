@@ -40,15 +40,124 @@
 <trkpt lat="31.584732654" lon="-108.332420264"> <name>RL0011.0-NM</name></trkpt>
 <trkpt lat="31.590370414" lon="-108.336419677"> <name>RL0011.5-NM</name></trkpt>
 <trkpt lat="31.595266890" lon="-108.33240406"> <name>RL0012.0-NM</name></trkpt>
-<trkpt lat="31.598809464" lon="-108.327013979"> <name>RL0012.5-NM</name></trkpt>
-<trkpt lat="31.600626387" lon="-108.32064096"> <name>RL0013.0-NM</name></trkpt>
-<trkpt lat="31.601252563" lon="-108.313305583"> <name>RL0013.5-NM</name></trkpt>
-<trkpt lat="31.607399174" lon="-108.312764738"> <name>RL0014.0-NM</name></trkpt>
-<trkpt lat="31.612475530" lon="-108.317974058"> <name>RL0014.5-NM</name></trkpt>
-<trkpt lat="31.618242761" lon="-108.32232073"> <name>RL0015.0-NM</name></trkpt>
-<trkpt lat="31.623145231" lon="-108.327782428"> <name>RL0015.5-NM</name></trkpt>
-<trkpt lat="31.627730158" lon="-108.333397535"> <name>RL0016.0-NM</name></trkpt>
-<trkpt lat="31.633323351" lon="-108.337051802"> <name>RL0016.5-NM</name></trkpt>
+</trkseg></trk>
+
+
+<!-- TAG Big Hatchet via Sheridan Creek Alternate -->
+
+<wpt lat="31.595266890" lon="-108.33240406">  <name>Big Hatchet Alternate start</name></wpt>
+
+<trk><name>Big Hatchet Alt</name><trkseg>
+<trkpt lat="31.595266890" lon="-108.33240406"> <name>RL0012.0-NM</name></trkpt>
+    <trkpt lat="31.5964324513612" lon="-108.33667497857958"> </trkpt>
+    <trkpt lat="31.595915504599045" lon="-108.34262274184147"> </trkpt>
+    <trkpt lat="31.59622567300059" lon="-108.3480242819466"> </trkpt>
+    <trkpt lat="31.597879887032278" lon="-108.35026986603526"> </trkpt>
+    <trkpt lat="31.597983274433787" lon="-108.35603555491154"> </trkpt>
+    <trkpt lat="31.59824174243549" lon="-108.35876667069506"> </trkpt>
+    <trkpt lat="31.59762141802641" lon="-108.36210470109711"> </trkpt>
+    <trkpt lat="31.59989592066146" lon="-108.36629241196515"> </trkpt>
+    <trkpt lat="31.602118676387544" lon="-108.36793108143527"> </trkpt>
+    <trkpt lat="31.601875" lon="-108.373881"> </trkpt>
+    <trkpt lat="31.603478" lon="-108.375513"> </trkpt>
+    <trkpt lat="31.605016" lon="-108.376199"> </trkpt>
+    <trkpt lat="31.606194" lon="-108.376723"> </trkpt>
+    <trkpt lat="31.609399" lon="-108.380411"> </trkpt>
+    <trkpt lat="31.609784" lon="-108.380734"> </trkpt>
+    <trkpt lat="31.611137" lon="-108.381865"> </trkpt>
+    <trkpt lat="31.61266" lon="-108.383358"> </trkpt>
+    <trkpt lat="31.613995" lon="-108.384175"> </trkpt>
+    <trkpt lat="31.614586" lon="-108.384314"> </trkpt>
+    <trkpt lat="31.614977" lon="-108.384405"> </trkpt>
+    <trkpt lat="31.615729" lon="-108.384232"> </trkpt>
+    <trkpt lat="31.616743" lon="-108.384424"> </trkpt>
+    <trkpt lat="31.617163" lon="-108.384247"> </trkpt>
+    <trkpt lat="31.618002" lon="-108.38308"> </trkpt>
+    <trkpt lat="31.61906" lon="-108.381758"> </trkpt>
+    <trkpt lat="31.62005" lon="-108.382793"> </trkpt>
+    <trkpt lat="31.621048" lon="-108.387043"> </trkpt>
+    <trkpt lat="31.622025" lon="-108.388423"> </trkpt>
+    <trkpt lat="31.623317" lon="-108.389944"> </trkpt>
+    <trkpt lat="31.624048" lon="-108.390763"> </trkpt>
+    <trkpt lat="31.625036" lon="-108.391753"> </trkpt>
+    <trkpt lat="31.627809" lon="-108.394624"> </trkpt>
+    <trkpt lat="31.628024" lon="-108.39475"> </trkpt>
+    <trkpt lat="31.629281" lon="-108.395312"> </trkpt>
+    <trkpt lat="31.631939823648043" lon="-108.3973967861662"> </trkpt>
+    <trkpt lat="31.6335934030876" lon="-108.39800370078476"> </trkpt>
+    <trkpt lat="31.634523528603623" lon="-108.39870165259612"> </trkpt>
+    <trkpt lat="31.635737845139207" lon="-108.39870165259612"> </trkpt>
+    <trkpt lat="31.63465271196741" lon="-108.39842854101774"> </trkpt>
+    <trkpt lat="31.633050825574408" lon="-108.39812508370848"> </trkpt>
+    <trkpt lat="31.630001" lon="-108.396015"> </trkpt>
+    <trkpt lat="31.629937" lon="-108.395957"> </trkpt>
+    <trkpt lat="31.628805" lon="-108.394977"> </trkpt>
+    <trkpt lat="31.624918" lon="-108.391574"> </trkpt>
+    <trkpt lat="31.623896" lon="-108.39061"> </trkpt>
+    <trkpt lat="31.622953" lon="-108.389677"> </trkpt>
+    <trkpt lat="31.621897" lon="-108.38848"> </trkpt>
+    <trkpt lat="31.620971" lon="-108.38704"> </trkpt>
+    <trkpt lat="31.619823" lon="-108.382586"> </trkpt>
+    <trkpt lat="31.618905" lon="-108.381693"> </trkpt>
+    <trkpt lat="31.619171" lon="-108.380567"> </trkpt>
+    <trkpt lat="31.619502" lon="-108.379972"> </trkpt>
+    <trkpt lat="31.620061" lon="-108.379254"> </trkpt>
+    <trkpt lat="31.620349" lon="-108.378912"> </trkpt>
+    <trkpt lat="31.619868" lon="-108.378663"> </trkpt>
+    <trkpt lat="31.619452" lon="-108.377935"> </trkpt>
+    <trkpt lat="31.620999" lon="-108.377529"> </trkpt>
+    <trkpt lat="31.621087" lon="-108.377507"> </trkpt>
+    <trkpt lat="31.622007" lon="-108.376904"> </trkpt>
+    <trkpt lat="31.621989" lon="-108.376794"> </trkpt>
+    <trkpt lat="31.622008" lon="-108.376556"> </trkpt>
+    <trkpt lat="31.622476" lon="-108.375752"> </trkpt>
+    <trkpt lat="31.622713" lon="-108.374868"> </trkpt>
+    <trkpt lat="31.623093" lon="-108.374096"> </trkpt>
+    <trkpt lat="31.623247" lon="-108.373778"> </trkpt>
+    <trkpt lat="31.623951" lon="-108.372514"> </trkpt>
+    <trkpt lat="31.624023" lon="-108.372457"> </trkpt>
+    <trkpt lat="31.623962" lon="-108.372162"> </trkpt>
+    <trkpt lat="31.624009" lon="-108.371895"> </trkpt>
+    <trkpt lat="31.624119" lon="-108.370753"> </trkpt>
+    <trkpt lat="31.624383" lon="-108.369657"> </trkpt>
+    <trkpt lat="31.624542" lon="-108.367086"> </trkpt>
+    <trkpt lat="31.624481" lon="-108.365843"> </trkpt>
+    <trkpt lat="31.624458" lon="-108.364933"> </trkpt>
+    <trkpt lat="31.624914" lon="-108.363307"> </trkpt>
+    <trkpt lat="31.624931" lon="-108.362885"> </trkpt>
+    <trkpt lat="31.624954" lon="-108.361997"> </trkpt>
+    <trkpt lat="31.625036" lon="-108.361745"> </trkpt>
+    <trkpt lat="31.625823" lon="-108.361374"> </trkpt>
+    <trkpt lat="31.626015" lon="-108.361245"> </trkpt>
+    <trkpt lat="31.627043" lon="-108.360393"> </trkpt>
+    <trkpt lat="31.628086" lon="-108.359354"> </trkpt>
+    <trkpt lat="31.629026" lon="-108.358438"> </trkpt>
+    <trkpt lat="31.630046" lon="-108.358186"> </trkpt>
+    <trkpt lat="31.630571" lon="-108.356961"> </trkpt>
+    <trkpt lat="31.631477" lon="-108.356139"> </trkpt>
+    <trkpt lat="31.631903" lon="-108.355719"> </trkpt>
+    <trkpt lat="31.632275" lon="-108.355262"> </trkpt>
+    <trkpt lat="31.633029" lon="-108.354051"> </trkpt>
+    <trkpt lat="31.634015" lon="-108.352072"> </trkpt>
+    <trkpt lat="31.634709" lon="-108.350857"> </trkpt>
+    <trkpt lat="31.635171" lon="-108.350114"> </trkpt>
+    <trkpt lat="31.636151" lon="-108.348194"> </trkpt>
+    <trkpt lat="31.635447" lon="-108.349526"> </trkpt>
+    <trkpt lat="31.636151" lon="-108.348194"> </trkpt>
+    <trkpt lat="31.636747" lon="-108.347189"> </trkpt>
+    <trkpt lat="31.637314" lon="-108.346052"> </trkpt>
+    <trkpt lat="31.637405" lon="-108.345882"> </trkpt>
+    <trkpt lat="31.637735" lon="-108.344896"> </trkpt>
+    <trkpt lat="31.638105" lon="-108.343861"> </trkpt>
+    <trkpt lat="31.638588" lon="-108.342649"> </trkpt>
+    <trkpt lat="31.638969" lon="-108.341926"> </trkpt>
+    <trkpt lat="31.639748" lon="-108.340541"> </trkpt>
+    <trkpt lat="31.640461" lon="-108.339871"> </trkpt>
+    <trkpt lat="31.640404" lon="-108.339844"> </trkpt>
+<trkpt lat="31.639332452" lon="-108.339399338"> <name>RL0017.0-NM</name></trkpt>
+</trkseg></trk>
+
+<trk><name>Red Line CDT</name><trkseg>
 <trkpt lat="31.639332452" lon="-108.339399338"> <name>RL0017.0-NM</name></trkpt>
 <trkpt lat="31.643528691" lon="-108.345460876"> <name>RL0017.5-NM</name></trkpt>
 <trkpt lat="31.645758524" lon="-108.351168683"> <name>RL0018.0-NM</name></trkpt>
@@ -723,16 +832,13 @@
       <trkpt lat="34.280744000" lon="-108.134719000">         <name>PT-385M</name>       </trkpt>
       <trkpt lat="34.287970000" lon="-108.133122000">         <name>PT-390M</name>       </trkpt>
       <trkpt lat="34.294760000" lon="-108.135786000">         <name>PT-395M</name>       </trkpt>
-      <trkpt lat="34.301755000" lon="-108.138521000">         <name>PT-400AP</name>       </trkpt>
-      <trkpt lat="34.298992000" lon="-108.130573000">         <name>PT-999OP</name>       </trkpt>
-      <trkpt lat="34.301702000" lon="-108.138558000">         <name>Pt-400ap1</name>       </trkpt>
-      <trkpt lat="34.300033000" lon="-108.134550000">         <name>Pt-999op1</name>       </trkpt>
       <trkpt lat="34.299207000" lon="-108.138560000">         <name>Pt-999op2</name>       </trkpt>
     </trkseg>
   </trk>
 
 <!-- Back on RedLine at PieTown (Mangas Alt) -->
 <trk><name>Red Line CDT</name><trkseg>
+      <trkpt lat="34.299207000" lon="-108.138560000">         <name>Pt-999op2</name>       </trkpt>
 <trkpt lat="34.30815109" lon="-108.140259986"> <name>RL0425.0-NM</name></trkpt>
 <trkpt lat="34.315166577" lon="-108.142358321"> <name>RL0425.5-NM</name></trkpt>
 <trkpt lat="34.322349202" lon="-108.141737166"> <name>RL0426.0-NM</name></trkpt>
@@ -6552,6 +6658,16 @@
 
 <!-- TAG unused RedLine chunks
 
+<trkpt lat="31.595266890" lon="-108.33240406"> <name>RL0012.0-NM</name></trkpt>
+<trkpt lat="31.598809464" lon="-108.327013979"> <name>RL0012.5-NM</name></trkpt>
+<trkpt lat="31.600626387" lon="-108.32064096"> <name>RL0013.0-NM</name></trkpt>
+<trkpt lat="31.601252563" lon="-108.313305583"> <name>RL0013.5-NM</name></trkpt>
+<trkpt lat="31.607399174" lon="-108.312764738"> <name>RL0014.0-NM</name></trkpt>
+<trkpt lat="31.612475530" lon="-108.317974058"> <name>RL0014.5-NM</name></trkpt>
+<trkpt lat="31.618242761" lon="-108.32232073"> <name>RL0015.0-NM</name></trkpt>
+<trkpt lat="31.623145231" lon="-108.327782428"> <name>RL0015.5-NM</name></trkpt>
+<trkpt lat="31.627730158" lon="-108.333397535"> <name>RL0016.0-NM</name></trkpt>
+<trkpt lat="31.633323351" lon="-108.337051802"> <name>RL0016.5-NM</name></trkpt>
 
 
 <trk><name>unused RedLine - Gila</name><trkseg>
@@ -6917,6 +7033,12 @@
 <trkpt lat="33.744183302" lon="-108.477282738"> <name>RL0353.0-NM</name></trkpt>
 </trkseg></trk>
 
+
+Unused Pie Town alternate (ziagzag a la fin)
+      <trkpt lat="34.301755000" lon="-108.138521000">         <name>PT-400AP</name>       </trkpt>
+      <trkpt lat="34.298992000" lon="-108.130573000">         <name>PT-999OP</name>       </trkpt>
+      <trkpt lat="34.301702000" lon="-108.138558000">         <name>Pt-400ap1</name>       </trkpt>
+      <trkpt lat="34.300033000" lon="-108.134550000">         <name>Pt-999op1</name>       </trkpt>
 
 <trk><name>unused RedLine - PieTown via Mangas</name><trkseg>
 <trkpt lat="33.933446742" lon="-108.419037616"> <name>RL0376.0-NM</name></trkpt>

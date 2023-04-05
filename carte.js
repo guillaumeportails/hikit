@@ -748,6 +748,7 @@ async function loadInfos() {
         // => 1c + 2b : Utiliser un proxy CORS
         const url = 'https://corsproxy.io/?' + encodeURIComponent(inreachfeed);
         const s = await fetchInreach(url, 'Actual online');
+        console.log('online');  // bidon pour echapper a "optimiseur" minify (bug ?!)
     }
 
 } // loadInfos()
