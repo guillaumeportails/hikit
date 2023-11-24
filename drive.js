@@ -5,7 +5,7 @@
 //   https://medium.com/google-cloud/gapi-the-google-apis-client-library-for-browser-javascript-5896b12dbbd5
 //   https://bretcameron.medium.com/how-to-use-the-google-drive-api-with-javascript-57a6cc9e5262
 //
-// + iframe is not supported byt gapi.drive (can't insert a drive UI with a simple iframe)
+// + iframe is not supported by gapi.drive (can't insert a drive UI with a simple iframe)
 
 var activedrive = true;
 
@@ -53,7 +53,7 @@ async function initializeGapiClient() {
         discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
     });
     console.log('gapi.client.init-ed');
-    feedDrive();   //  No auto load, to spare GAPI usage during dev
+    feedDrive(8);   //  No auto load, to spare GAPI usage during dev
 }
 
 //------------------------------------------------------
@@ -119,9 +119,12 @@ function flyToIf(img, lat, lon, ref) {
 //       load a copy
 //       or else keep tof.files[], sort them, add map markers relations, link with IG feed 
 
-async function feedDrive() {
+async function feedDrive(cnt) {
     const who = 'feedDrive';
-    console.log(`${who}: start`);
+    console.log(`${who}: start ${cnt}`);
+
+    done = (cnt != 0);
+    do {
 
     //   https://developers.google.com/drive/api/v3/reference/files/list
     const fileSelection =
@@ -129,7 +132,7 @@ async function feedDrive() {
         q: "'1O_tzaI6HPBCR9AlqRbQqzw4JqzZoqfOv' in parents",
         corpora: "user",
         trashed: false,
-        pageSize: 8,
+        pageSize: cnt ? cnt : 32,
         pageToken: tof.nextPageToken,
         fields: 'nextPageToken,files(id,name,thumbnailLink,webViewLink,imageMediaMetadata)',
         orderBy: 'createdTime desc'  // Most recent first
@@ -151,6 +154,7 @@ async function feedDrive() {
     else {
         document.getElementById('photomore').innerText = 'Done';
         tof.nextPageToken = '';
+        done = true;
     }
 
     // Gotten response.result.files[]
@@ -170,11 +174,13 @@ async function feedDrive() {
     // Populate the HTML list
     domtof.innerHTML = tof.files.reduce(
         (str, file) => `${str}${fileAdd(file)}`, '');
+
+    } while (! done);
 }
 
 
 // User update request
-function photoUpdate() {
-    console.log('photoUpdate');
-    feedDrive().catch(function handle(e) { console.log(`photo: catch1=${e}`); });
+function photoUpdate(cnt) {
+    console.log(`photoUpdate ${cnt}`);
+    feedDrive(cnt).catch(function handle(e) { console.log(`photo: catch1=${e}`); });
 }

@@ -31,7 +31,7 @@ do
     if [ "$geo" == "./tracks/feed.kml" ]; then continue; fi
     b=$(basename $geo .$ext)
     echo "JSONinfy $b = $geo"
-    npx @tmcw/togeojson-cli $geo | npx js-beautify > tmp/$b.json
+    npx --yes @tmcw/togeojson-cli $geo | npx --yes js-beautify > tmp/$b.json
     awk -f json2js.awk -v var=$b tmp/$b.json > tracks/$b.js
   done
 done
