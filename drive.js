@@ -65,21 +65,25 @@ async function initializeGapiClient() {
 // HTML UL or DIV, which one is lighter ? UL needs to remove the bullet
 // NB: Minify does not concat literals
 // r = ...+ `<a href="${gf.webViewLink}" id="photo${n}" target="_blank" onmouseout="this.firstChild.firstChild.style.borderStyle='none';"${o}>`
+// The default size of thumbnailLink is "...=s220", but it's free to be changed ... Mais le meme
+// HTML rendu ici sert pour le bandeau de gauche et pour les popup des marker
 var numPhoto = 0;
 function fileAdd(gf) {
     let n = ++numPhoto;
     let o = '';
     let t = '';
+    let i = '';
     try {
         const lat = gf.imageMediaMetadata.location.latitude;
         const lon = gf.imageMediaMetadata.location.longitude;
+        i = gf.thumbnailLink; // .replace(/=s220$/, "=s512");    // Bigger popup
         //      const tooltip = `'<img src="${gf.thumbnailLink}"><br><center>${gf.imageMediaMetadata.time}</center>'`;
         const tooltip = `'${gf.imageMediaMetadata.time}'`;
         o = ` onmouseover="flyToIf(this,${lat.toFixed(6)},${lon.toFixed(6)},${n})"`;
         t = `<center><button disabled="yes">${gf.imageMediaMetadata.time}</button></center>`;
     } catch { };
     return `<hr><div ${o}><a href="${gf.webViewLink}" id="photo${n}" target="_blank">`
-        + `<figure><img src="${gf.thumbnailLink}" alt="${gf.name}"><figcaption>${t}</figcaption></figure></a></div>`;
+        + `<figure><img src="${i}" alt="${gf.name}"><figcaption>${t}</figcaption></figure></a></div>`;
 }
 
 // To sort tof.files "most recent first"
@@ -91,6 +95,7 @@ function fileSub(a, b) {
         if (ta < tb) return 1;
         return -1;
     } catch { };
+    console.log(`fileSub ${a} ${b} `);
     return 1;
 }
 function onlyUnique(file, index, filesarray) {
@@ -107,7 +112,11 @@ function flyToIf(img, lat, lon, ref) {
     console.log(`flyTo lat,lon=${lat},${lon} enabled=${domfly.checked} ref=${ref}`);
     if (domfly.checked) {
         if (typeof (ref) == 'number')
-            ref = document.getElementById(`photo${ref}`).cloneNode(true);
+            ref = document.getElementById(`photo${ref}`);
+        ref = ref.cloneNode(true);                                      // deep
+        let i = ref.querySelector('img');                               // Cf le div de fileAdd()
+        i.src = i.src.replace(/=s[0-9]+$/,'=s512');                     // =s220 -> =s512
+        // i.setAttribute('src', s);
         //      img.firstChild.firstChild.style.borderStyle = 'solid';  // 'ridge'
         mapFlyTo(lat, lon, ref);
     }
@@ -123,7 +132,7 @@ async function feedDrive(cnt) {
     const who = 'feedDrive';
     console.log(`${who}: start ${cnt}`);
 
-    done = (cnt != 0);
+    done = (cnt != 0);  // cnt=0 == ALL
     do {
 
     //   https://developers.google.com/drive/api/v3/reference/files/list
@@ -144,12 +153,12 @@ async function feedDrive(cnt) {
         response = await gapi.client.drive.files.list(fileSelection);
     } catch (err) {
         console.log(`photo: Error: ${err}`);
-        return;
+        break;
     }
     // Token for the next page
     tof.nextPageToken = response.result.nextPageToken;
     console.log(`${who} nextToken ${tof.nextPageToken}`);
-    if (tof.nextPageToken && tof.nextPageToken != '')
+    if (tof.nextPageToken && (tof.nextPageToken != undefined) && (tof.nextPageToken != ''))
         document.getElementById('photomore').innerText = 'Show more';
     else {
         document.getElementById('photomore').innerText = 'Done';
@@ -160,10 +169,14 @@ async function feedDrive(cnt) {
     // Gotten response.result.files[]
     if (!response.result.files || response.result.files.length == 0) {
         console.log('photo: No files found.');
-        return;
+        done = true;
+    } else {
+      tof.files.push(...response.result.files);
+      console.log(`${who} got files[${response.result.files.length}], total=${tof.files.length}`);
     }
-    tof.files.push(...response.result.files);
-    console.log(`${who} got files[${response.result.files.length}], total=${tof.files.length}`);
+    if (cnt == 0) document.getElementById('photoall').innerText = tof.files.length;
+
+    } while (! done);
 
     // Sort (and remove duplicates in case of reload)
     tof.files.sort((a, b) => fileSub(a, b));
@@ -172,10 +185,10 @@ async function feedDrive(cnt) {
 
     // console.log(JSON.stringify(files[0]));  // ... or use browser debugger (firefox=CTRL-SHIFT-K, breakpoint, ...)
     // Populate the HTML list
+    if (cnt == 0) numPhoto = 0;
     domtof.innerHTML = tof.files.reduce(
         (str, file) => `${str}${fileAdd(file)}`, '');
-
-    } while (! done);
+    if (cnt == 0) document.getElementById('photoall').innerText = tof.files.length;
 }
 
 
